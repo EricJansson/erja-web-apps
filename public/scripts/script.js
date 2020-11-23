@@ -19,8 +19,8 @@ addEventListener('submit', (e) => {
             if (data.error) {
                 weatherResults.textContent = data.error;
             } else {
-                weatherResults.textContent = data.location;
-                weatherResults2.textContent = data.forecast;
+                weatherResults.innerHTML = data.location;
+                weatherResults2.innerHTML = data.forecast;
             }
         })
     })
