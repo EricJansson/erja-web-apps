@@ -118,12 +118,12 @@ app.get('/steam/getuser', (req, res) => {
     }
     idconverter(req.query.steamid, (error, userdata) => {
         if (error) {
-            console.log("error")
+            // console.log("error")
             return res.send({
                 error: error
             })
         }
-        console.log("Success")
+        // console.log("Success")
         res.send({
             userdata
         })
@@ -215,12 +215,12 @@ app.get('/steam/friendlist', (req, res) => {
         }
         // recurrsion, check if all names are present. When they are, run => res.send 
         sendResults = () => {
-            console.log(chalk.red("retrying..."))
+            // console.log(chalk.red("retrying..."))
             // check if all names are present
             if (error) {
                 // if steamuser is hidden
                 if (usernameVariable.length > 0) {
-                    console.log("Done")
+                    // console.log("Done")
                     res.send({
                         error: error,
                         username: usernameVariable,
@@ -233,7 +233,7 @@ app.get('/steam/friendlist', (req, res) => {
             }
             // if the search worked post the data
             else if (friendids.length === friendidarray.length + 1 && steamuser != "") {
-                console.log(chalk.green("Search complete"))
+                // console.log(chalk.green("Search complete"))
                 res.send({
                     steamusername: steamuser.playerName,
                     steamuseravatar: steamuser.playerAvatar,
@@ -271,7 +271,7 @@ app.get('/products', (req, res) => {
             error: "You must prove a search term."
         })
     }
-    console.log(req.query)
+    // console.log(req.query)
     res.send({
         products: [req.query.search]
     })
