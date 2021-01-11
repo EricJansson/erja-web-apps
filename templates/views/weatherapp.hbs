@@ -8,14 +8,16 @@
 
 <body>
     <div class="main-content">
-        <h1>{{title}}</h1>
+        {{>header}}
         <p>{{body}}</p>
         <br>
-        <a href="/weatherapp">Weather App</a>
-        <br>
-        <a href="/steam">Lookup Steam Users</a>
+        <form>
+            <input placeholder="Location">
+            <button>Search</button>
+        </form>
+        <p id="weather-content-1"></p>
+        <p id="weather-content-2"></p>
     </div>
-    
 
     {{>footer}}
 

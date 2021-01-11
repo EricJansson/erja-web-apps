@@ -1,8 +1,13 @@
 const express = require('express')
+const chalk = require('chalk')
 const path = require('path')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
+const friendlist = require('./utils/friendlist')
+const idconverter = require('./utils/idconverter')
+const recentlyplayed = require('./utils/recentlyplayed')
+const ownedgames = require('./utils/ownedgames')
 
 
 const app = express();
@@ -25,13 +30,22 @@ app.use(express.static(publicDirectoryPath))
 
 app.get('', (req, res) => {
     res.render('index', {
+        title: 'My Projects',
+        body: 'This is a hub for some of my projects. Pick one to try it out!',
+        name: 'Eric Jansson'
+    })
+})
+
+
+app.get('/weatherapp', (req, res) => {
+    res.render('weatherapp', {
         title: 'Weather App',
         body: 'Use this site to get your weather!',
         name: 'Eric Jansson'
     })
 })
 
-app.get('/about', (req, res) => {
+app.get('/weatherapp/about', (req, res) => {
     res.render('about', {
         title: 'About',
         body: 'Information is gathered here.',
@@ -39,7 +53,7 @@ app.get('/about', (req, res) => {
     })
 })
 
-app.get('/help', (req, res) => {
+app.get('/weatherapp/help', (req, res) => {
     res.render('help', {
         title: 'Help',
         body: 'Help is coming!',
@@ -74,13 +88,189 @@ app.get('/weather', (req, res) => {
     })
 })
 
+
+
+app.get('/steam/ownedgames', (req, res) => {
+    if (!req.query.steamid) {
+        return res.send({
+            error: "You must provide a SteamID."
+        })
+    }
+    ownedgames(req.query.steamid, (error, { owned_games } = {}) => {
+        if (error) {
+            return res.send({
+                error: error
+                // "SteamID invalid. Try again."
+            })
+        }
+        res.send({
+            owned_games
+        })
+    })
+})
+
+
+app.get('/steam/getuser', (req, res) => {
+    if (!req.query.steamid) {
+        return res.send({
+            error: "You must provide a SteamID."
+        })
+    }
+    idconverter(req.query.steamid, (error, userdata) => {
+        if (error) {
+            console.log("error")
+            return res.send({
+                error: error
+            })
+        }
+        console.log("Success")
+        res.send({
+            userdata
+        })
+    })
+})
+
+
+app.get('/steam/recentlyplayed', (req, res) => {
+    if (!req.query.steamid) {
+        return res.send({
+            error: "You must provide a SteamID."
+        })
+    }
+    recentlyplayed(req.query.steamid, (error, { games } = {}) => {
+        if (error) {
+            return res.send({
+                error: error
+                // "SteamID invalid. Try again."
+            })
+        }
+        res.send({
+            games
+        })
+    })
+})
+
+
+
+
+app.get('/steam/friendlist', (req, res) => {
+    if (!req.query.steamid) {
+        return res.send({
+            error: "You must provide a SteamID."
+        })
+    }
+    // use steam_ID to find array of steam_IDs from friends.
+    friendlist(req.query.steamid, (error, { friendids } = {}) => {
+        var usernameVariable = "";
+        // if user is hidden, GET name 
+        if (error === " is hidden. Friendlist unavailable.") {
+            idconverter(req.query.steamid, (error, hiddenusername) => {
+                if (error) {
+                    return res.send({
+                        error: "An error has occurred while converting ID to name."
+                    })
+                }
+                usernameVariable = hiddenusername.playerName;
+            })
+        } else if (error) {
+            return res.send({
+                error: error
+                // "SteamID invalid. Try again."
+            })
+        } else {
+            // Store steam User personastate (On/Offline)
+            var playerStatus = ""
+            // Store friend NAMES here
+            var friendarray = []
+            // Store friend IDS here (so ids and names will be in sync)
+            var friendidarray = []
+            // Store friend avatar links here
+            var friendAvatars = []
+            // this is friendids (and where we add the users name)
+            var temporaryFriendids = friendids
+            // users name will be stored here
+            var steamuser = ""
+            // add users name FIRST in friendid array
+            temporaryFriendids.unshift(req.query.steamid)
+            for (let i = 0; i < temporaryFriendids.length; i++) {
+                idconverter(temporaryFriendids[i], (error, friendnames) => {
+                    if (error) {
+                        return res.send({
+                            error: "An error has occurred while converting IDs to names."
+                        })
+                    }
+                    // save users name in different variable
+                    if (i === 0) {
+                        steamuser = friendnames
+                        usercreated = friendnames.playerCreated
+                        playerStatus = friendnames.playerStatus
+                        // save all names in ids/name arrays
+                    } else {
+                        friendidarray.push(temporaryFriendids[i])
+                        friendarray.push(friendnames.playerName)
+                        friendAvatars.push(friendnames.playerAvatar)
+                    }
+                })
+            }
+        }
+        // recurrsion, check if all names are present. When they are, run => res.send 
+        sendResults = () => {
+            console.log(chalk.red("retrying..."))
+            // check if all names are present
+            if (error) {
+                // if steamuser is hidden
+                if (usernameVariable.length > 0) {
+                    console.log("Done")
+                    res.send({
+                        error: error,
+                        username: usernameVariable,
+                        hidden: "true"
+                        // "SteamID invalid. Try again."
+                    })
+                } else {
+                    return setTimeout(sendResults, 250)
+                }
+            }
+            // if the search worked post the data
+            else if (friendids.length === friendidarray.length + 1 && steamuser != "") {
+                console.log(chalk.green("Search complete"))
+                res.send({
+                    steamusername: steamuser.playerName,
+                    steamuseravatar: steamuser.playerAvatar,
+                    usercreated: usercreated,
+                    steamuserid: req.query.steamid,
+                    playerStatus: playerStatus,
+                    friendids: friendidarray,
+                    friendnames: friendarray,
+                    friendAvatars: friendAvatars
+                })
+            } else {
+                // retry
+                setTimeout(sendResults, 250)
+            }
+        }
+        // run function once
+        sendResults();
+    })
+})
+
+
+app.get('/steam', (req, res) => {
+    res.render('steam', {
+        title: 'Steam User data',
+        body: 'Powered by: ',
+        link: 'Steamworks',
+        name: 'Eric Jansson',
+        errormessage: 'Article not found.'
+    })
+})
+
 app.get('/products', (req, res) => {
     if (!req.query.search) {
         return res.send({
             error: "You must prove a search term."
         })
     }
-
     console.log(req.query)
     res.send({
         products: [req.query.search]
@@ -94,10 +284,12 @@ app.get('/help/*', (req, res) => {
     })
 })
 
+
 app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
-        errormessage: 'Page not found.'
+        errormessage: 'Page not found.',
+        name: 'Eric Jansson'
     })
 })
 
@@ -106,7 +298,7 @@ app.get('*', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log('Server is up on port ' + port + '.')
+    console.log(chalk.blue.bold('Server is up on port ' + port + '.'))
 });
 
 

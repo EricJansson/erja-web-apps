@@ -1,0 +1,489 @@
+body {
+    background-color: #6e6e6e;
+    color: white;
+}
+
+footer {
+    position: fixed;
+    border-top: 1px solid rgb(196, 196, 196);
+    padding: 16px 0;
+    background: #6e6e6ebe; 
+    width: 99%;
+    bottom: 0;
+    text-align: center;
+}
+
+#title {
+    text-align: center;
+    font-family: arial;
+    min-width: 650px;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+form {
+    
+    grid-column: span 5;
+    grid-row: 2;
+}
+
+#toolbar {
+    display: grid;
+    padding: 10px;
+    width: fit-content;
+    background-color: #2b2b2b;
+    border: 1px solid black;
+    margin: auto auto auto auto;
+}
+
+
+#main-content {
+    margin: 20px;
+    display: none;
+    grid-template-columns: 300px 500px 295px;
+    justify-content: center;
+    grid-gap: 50px;
+    font-family: arial;
+    min-height: 502px;
+}
+
+
+
+
+#leftContent {
+    border: 1px solid black;
+    grid-column: 1;    
+    padding: 30px 20px 40px 20px;
+    background-color: #2b2b2b;
+    width: 260px;
+    min-height: 50px;
+    height: fit-content;
+}
+
+#gameHistoryGrid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#leftContentHeader {
+    margin-bottom: 20px;
+    grid-column: span 2;
+}
+
+.gameHistoryNames {
+    grid-column: 1;
+    color: red;
+    font-weight: bold;
+    width: 175px;
+}
+
+.gameHistoryTimes {
+    grid-column: 2;
+    color: green;
+
+}
+
+
+
+
+
+#centerContent {
+    grid-column: 2;
+    border: 1px solid black;
+    background-color: #2b2b2b;
+    min-height: 300px;
+    margin-bottom: 150px;
+    overflow: hidden;
+}
+
+#help-centerContent {
+    border: 1px solid black;
+    background-color: #2b2b2b;
+    font-family: arial;
+    margin: 20px auto 200px auto;
+    padding: 20px 150px 50px 50px;
+    width: 870px;
+    min-width: 400px;
+    display: none;
+}
+
+#second-centerContent {
+    border: 1px solid black;
+    background-color: #2b2b2b;
+    margin: 20px auto;
+    width: 398px;
+    font-family: arial;
+    padding: 50px;
+    text-align: center;
+    font-size: 1.4em;
+
+    display: block;
+}
+
+#profileGrid {
+    display: grid;
+    padding: 50px;
+    grid-gap: 10px;
+    grid-template-columns: 60px auto auto;
+    justify-content: left;
+}
+
+#profileHeader {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column: span 2;
+    justify-content: left;
+}
+
+#profileImage {
+    grid-column: 1;
+    border: 1px solid black;
+}
+
+#profileName {
+    grid-column: 2;
+    padding: 15px 15px 15px 30px;
+    text-align: left;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#userPublic {
+    display: grid; 
+    justify-content: left; 
+    grid-template-columns: 60px auto; 
+    grid-gap: 10px;
+}
+
+#userHidden {
+    margin: 30px;
+    font-size: 1.4em;
+    grid-column: span 2;
+    display: none;
+}
+
+.profileSubjects {
+    grid-column: 1;
+}
+
+#profileConstStatus {
+    grid-column: 1;
+}
+
+#profileStatus {
+    grid-column: 2;
+    font-weight: bold;
+    
+    color: green;
+}
+
+#profileCreation {
+    grid-column: 2;
+    font-style: oblique;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+#profileIngameBlock {
+    grid-column: span 2;
+    display: none;
+}
+
+#profileIngame {
+    padding-left: 12px;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: left;
+    column-gap: 6px;
+
+}
+
+#profileAllTimeGameGrid {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-column: span 2;
+    width: 400px;
+    font-size: 1.2em;
+}
+
+#profileAllTimeGameHeader {
+    margin-bottom: 20px;
+}
+
+#profileallTimeGameList {
+    display: grid;
+    grid-template-columns: 32px 282px auto;
+    column-gap: 6px;
+    row-gap: 6px;
+}
+
+.profileGameAvatars {
+    grid-column: 1;
+}
+
+.profileGamesOwned {
+    font-size: 0.8em;
+    grid-column: 2;
+    padding: 6px;
+}
+
+.profileGamesAllTime{
+    grid-column: 3;
+    padding: 6px;
+}
+
+.toggle-btns {
+    padding: 0px 10px 0px 10px;
+    height: 25px;
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #6e6e6e;
+    color: white;
+}
+
+#togglePresetIDs-btn {
+    width: fit-content;
+}
+
+#hideFriendList-Btn {
+    margin: 5px;
+    margin-left: 10px;
+}
+
+
+#allIDcopies {
+    display: none;
+    grid-template-columns: auto auto auto;
+    width: fit-content;
+}
+
+.idcopynames {
+    border: 1px solid black;
+    padding: 6px;
+}
+
+.copy-id-btns {
+    margin-bottom: 5px;
+}
+
+
+.idcopyfieldshidden {
+    width: 1px;
+    height: 1px;
+    border: none;
+    cursor: default;
+}
+
+#steamIDinputfield {
+    border: 1px solid #cccccc;
+    font-size: 1.2em;
+    padding: 8px;
+    animation: linear 0.5s forwards;
+}
+
+
+@keyframes idCopied {
+    0%    { background-color: rgba(15, 180, 0, 0.5);  }
+    100%  { background-color: white;  }
+}
+
+@keyframes searchFailed {
+    0%    { background-color: rgba(255, 101, 74, 0.5);  }
+    100%  { background-color: white;  }
+}
+
+
+#friendSearch {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #6e6e6e;
+    color: white;
+    font-size: 1.2em;
+    padding: 8px;
+}
+
+
+#friendlist-block {
+    border: 1px solid black;
+    padding: 30px 25px 20px 20px;
+    width: 250px;
+    height: fit-content;
+    max-height: 450px;
+    background-color: #2b2b2b;
+    color: white;
+    overflow: auto;
+    overflow-x: hidden;
+    grid-column: 3;
+}
+
+#friendlistResultUser {
+    grid-column: span 2;
+}
+
+#friendlist-output {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 250px;
+}
+
+#friendlist-avatar {
+    grid-column: 0;
+}
+
+#friendlist-names {
+    margin-top: 10px;
+}
+
+.friendListResults {
+    border: white;
+    background-color: #888888;
+    color: white;
+    margin: 2px;
+    padding: 8px;
+    font-size: 1em;
+    width: 210px;
+    text-align: left;
+    overflow-x: hidden;
+    cursor: pointer;
+}
+
+.friendListAvatar {
+    padding: 4px;
+}
+
+.friendListResults:hover, .toggle-btns:hover, #friendSearch:hover, #dropbtn:hover, #help_toolbar_btn:hover, #user_toolbar_btn:hover {
+    background-color: #424242;
+}
+
+#help_find_steamid_img {
+    display: none;
+}
+
+#help_find_privacy_settings_img {
+    display: none;
+}
+
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+    color: aqua;
+}
+
+.link:active {
+    color: rgb(0, 199, 133)
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #555; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #cccccc; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+#dropbtn, #help_toolbar_btn, #user_toolbar_btn {
+    border: none;
+    position: relative;
+    color: white;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    font-weight: bolder;
+    background-color: #838383;
+}
+
+#user_toolbar_btn {
+    background-color: #424242;
+    /* border-top: 2px solid black;
+    border-left: 2px solid black; */
+    box-shadow: inset 2px -2px 0 0 #000000a3, inset -2px 2px 0 0 #ffffff1f;
+}
+
+/*
+.toolbar_inactive {
+    border: 2px solid #888888;
+}
+
+.toolbar_active {
+}
+*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #888;
+  min-width: 160px;
+  overflow: auto;
+  left: -175px;
+  top: 0px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  display: block;
+  font-family: arial;
+}
+
+.dropdown a:hover {background-color: #424242;}
+
+.show {display: block;}

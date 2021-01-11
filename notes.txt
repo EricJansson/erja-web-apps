@@ -1,0 +1,17 @@
+rapidall = 76561198035585856
+http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=4AB055F4351D22E1C36B75ECF5B347AF&steamids=76561198035585856
+
+GetPlayerSummaries
+"personastate": 0
+The user's current status. 0 - Offline, 1 - Online, 2 - Busy, 3 - Away, 4 - Snooze, 5 - looking to trade, 6 - looking to play. 
+If the player's profile is private, this will always be "0".
+
+
+https://api.steampowered.com/IPlayerService/GetRecentlyPlayedGames/v1/?key=4AB055F4351D22E1C36B75ECF5B347AF&steamid=76561198035585856
+
+GetRecentlyPlayedGames
+"appid": 570
+"name": "Dota 2"
+"playtime_2weeks": 3413
+"playtime_forever": 516931
+

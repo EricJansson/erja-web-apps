@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="/images/steam_logo.png">
+    <link rel="stylesheet" href="./css/steamstyle.css">
+</head>
+
+<body>
+    <div id="title">{{title}}</div>
+    <div id="toolbar">
+        <div id="allIDcopies"></div>
+        <form style="display: inline-block">
+            <input placeholder="SteamID / Steam32 ID" id="steamIDinputfield">
+            <button id="friendSearch">Search</button>
+        </form>
+
+        <div class="dropdown">
+            <button onclick="showSampleUsers()" id="dropbtn">◀ Sample Users</button> {{!--   ◀ ▶ ᐊ ᐅ ▲ ▼    --}}
+            <div id="myDropdown" class="dropdown-content"></div>
+        </div>
+        <button id="user_toolbar_btn" onclick="toolbar_go_to('user profile')" class="toolbar_active">User profile</button>
+        <button id="help_toolbar_btn" onclick="toolbar_go_to('help')">Help</button>
+    </div>
+    <div id="help-centerContent">
+        <div>
+            <p style="text-align: center; font-size: 2.4em; font-weight: bold;">Help</p>
+            <h3>What is "Steam ID"?</h3>
+            <p>
+                Steam ID is a unique number that each and every user has. There are different types of Steam IDs.
+                <br>These IDs are:
+            <ul>
+                <li>Steam ID</li>
+                <li>Steam ID3</li>
+                <li>Steam32 ID</li>
+                <li>Steam64 ID</li>
+            </ul>
+            This website requires the user's Steam32 ID. This type of ID only consists of 17 numbers.
+            You can see some sample users above the search field as examples.
+            <br>
+            </p>
+            <br>
+            <h3>Where can I see my Steam32 ID?</h3>
+            <p>
+                <a class="link" onclick="showhelp_steps_steamid()">Click here</a> to show steps to find your own
+                SteamID32.
+            </p>
+            <img id="help_find_steamid_img" src="/images/help_steps.png">
+            <br><br>
+            <h3>Why can't I see the "Game history" or "All time games"?</h3>
+            <p>
+                There are a few possible reasons the "Game history" and "All time games" sections are not available.
+                <br><br>
+                One of the possibilities is that the user is not a friend (on steam) with the creator of this website.
+                This is because Steam only allows you to see your friends' data.
+                So unfortunately this website can only display the games from friends of <b>Rapidall</b>.
+                <br><br>
+                Another reason could be that the privacy settings for the searched user is set to private.
+            </p>
+            <br><br>
+            <h3>How do I change my privacy settings? (visibility status)</h3>
+            <p>
+                <a class="link" onclick="showhelp_steps_visibilityStatus()">Click here</a> to show steps to change your privacy settings. 
+                <br>
+                Note that "friends-only" also blocks the accessibility from this website. 
+            </p>
+            <img id="help_find_privacy_settings_img" src="/images/help_steps_privacy_settings.png">
+        </div>
+    </div>
+    <div id="second-centerContent">
+        This website uses a Steam user's ID to find their information. <br>
+        Enter ID in searchbar above.
+        <br><br>
+        For help, press "Help" above the searchbar.
+    </div>
+    <div id="main-content">
+        <div id="leftContent">
+            <div id="gameHistoryGrid"></div>
+        </div>
+        <div id="centerContent">
+            <div id="profileGrid">
+                <div id="profileHeader">
+                    <img id="profileImage" src="/images/avatar_medium.jpg" alt="avatar">
+                    <div id="profileName"></div>
+                </div><br>
+                <div id="userPublic">
+                    <div class="profileSubjects" style="font-style: oblique; font-size: 0.9em;">Created: </div>
+                    <div id="profileCreation">May 30, 2010</div>
+                    <div class="profileSubjects">Status:</div>
+                    <div id="profileStatus">Online</div>
+                    <div id="profileIngameBlock">
+                        <div class="profileSubjects">Ingame:</div>
+                        <div id="profileIngame">Dota</div>
+                    </div>
+                    <div id="profileAllTimeGameGrid">
+                        <div id="profileAllTimeGameHeader">All time most played games</div>
+                        <div id="profileallTimeGameList">
+                        </div>
+                    </div>
+
+                </div>
+                <div id="userHidden">The user status is set to private. Information is limited.</div>
+            </div>
+        </div>
+        <div id="friendlist-block">
+            <div id="friendlist-user"><b>Friendlist</b></div>
+            <div id="friendlist-output">
+                <div id="friendlist-avatar"></div>
+                <div id="friendlist-names"></div>
+            </div>
+        </div>
+    </div>
+
+    {{>steamfooter}}
+
+    <script src="/scripts/steamscript.js"></script>
+</body>
+
+</html>
