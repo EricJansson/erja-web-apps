@@ -433,15 +433,15 @@ toolbar_go_to = (toolbar_option) => {
     mainScreen.style.display = "none"
 
     // change all btns color + border to default
-    document.getElementById("help_toolbar_btn").style.boxShadow = "none"
-    document.getElementById("user_toolbar_btn").style.boxShadow = "none"
-    document.getElementById("help_toolbar_btn").style.backgroundColor = "#838383"
-    document.getElementById("user_toolbar_btn").style.backgroundColor = "#838383"
+    document.getElementById("help_toolbar_btn").style.boxShadow = "inset 2px -2px 0 0 #000000a3, inset -2px 2px 0 0 #ffffff1f"
+    document.getElementById("user_toolbar_btn").style.boxShadow = "inset 2px -2px 0 0 #000000a3, inset -2px 2px 0 0 #ffffff1f"
+    document.getElementById("help_toolbar_btn").style.backgroundColor = "#424242"
+    document.getElementById("user_toolbar_btn").style.backgroundColor = "#424242"   
 
     if (toolbar_option === "user profile") {
         // change selected btn's color + border
-        document.getElementById("user_toolbar_btn").style.backgroundColor = "#424242"
-        document.getElementById("user_toolbar_btn").style.boxShadow = "inset 2px -2px 0 0 #000000a3, inset -2px 2px 0 0 #ffffff1f"
+        document.getElementById("user_toolbar_btn").style.backgroundColor = "#838383"
+        document.getElementById("user_toolbar_btn").style.boxShadow = "inset 0px 2px 4px 2px #000000"
         if (startscreen_visible === "page_loaded" && userfound === true) {
             loadingScreen.style.display = "block"
         } else if (userfound === true) {
@@ -452,8 +452,8 @@ toolbar_go_to = (toolbar_option) => {
         }
     } else if (toolbar_option === "help") {
         // change selected btn's color + border
-        document.getElementById("help_toolbar_btn").style.backgroundColor = "#424242"
-        document.getElementById("help_toolbar_btn").style.boxShadow = "inset 2px -2px 0 0 #000000a3, inset -2px 2px 0 0 #ffffff1f"
+        document.getElementById("help_toolbar_btn").style.backgroundColor = "#838383"
+        document.getElementById("help_toolbar_btn").style.boxShadow = "inset 0px 2px 4px 2px #000000"
         // show help
         document.getElementById("help-centerContent").style.display = "block"
     }
