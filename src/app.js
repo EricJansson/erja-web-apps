@@ -257,7 +257,7 @@ app.get('/steam/friendlist', (req, res) => {
 
 app.get('/steam', (req, res) => {
     res.render('steam', {
-        title: 'Steam User data',
+        title: 'Steam User Info',
         body: 'Powered by: ',
         link: 'Steamworks',
         name: 'Eric Jansson',

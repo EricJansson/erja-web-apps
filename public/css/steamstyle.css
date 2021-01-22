@@ -2,37 +2,88 @@ body {
     background-color: #6e6e6e;
     color: white;
     min-width: 1250px;
+    margin: 0px;
 }
 
 footer {
     position: fixed;
-    border-top: 1px solid rgb(196, 196, 196);
-    background: #6e6e6ebe; 
+    font-size: 0.8em;
     padding: 6px 0;
-    width: 99%;
+    width: 100%;
     bottom: 0;
-    max-height: 54px;
     text-align: center;
+    background-color: black;
+    box-shadow: 0px -15px 20px 0px #616161e3;
 }
 
+
 #title {
+    position: relative;
+    width: 100%;
+    font-size: 3em;
+    padding: 30px 0px;
+    overflow: hidden;
     text-align: center;
-    font-family: arial;
-    min-width: 650px;
-    font-size: 64px;
     font-weight: bold;
+    background-color: black;
+    font-family: arial;
+}
+
+#navbar {
+    grid-template-columns: auto 120px auto 80px auto 90px auto;
+    box-shadow: 0 3px 10px 1px rgb(0, 0, 0);
+    column-gap: 6px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #242424be;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-family: arial;
+}
+
+#leftContent, #centerContent, #friendlist-block, #mostplayed-block, #searchbar, #myDropdown, #second_centerContent, #help_centerContent, #about_centerContent {
+    box-shadow: 3px 3px 8px 1px rgb(0, 0, 0)
+}
+
+.navbar_separator {
+    margin-top: 8px;
+    height: 38px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.navbar_items {
+    height: 34px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.2s;
+}
+
+.navbar_items:hover {
+    padding: 18px 0px 2px 0px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.navbar_active {
+    box-shadow: inset 0 -4px 0px -1px white;
+    color: white;
+    padding: 18px 0px 2px 0px;
+    font-size: 1.2em;
 }
 
 form {
-    
     grid-column: span 5;
     grid-row: 2;
 }
 
-#toolbar {
-    display: grid;
+#searchbar {
     padding: 10px;
-    width: fit-content;
+    width: 400px;
     background-color: #2b2b2b;
     border: 1px solid black;
     margin: auto auto auto auto;
@@ -41,8 +92,8 @@ form {
 
 #main-content {
     margin: 20px;
+    margin-bottom: 200px;
     display: none;
-    grid-template-columns: 300px 500px 295px;
     justify-content: center;
     grid-gap: 50px;
     font-family: arial;
@@ -55,16 +106,17 @@ form {
 #leftContent {
     border: 1px solid black;
     grid-column: 1;    
-    padding: 30px 20px 40px 20px;
     background-color: #2b2b2b;
-    width: 260px;
-    min-height: 50px;
+    width: 300px;
+    min-height: 40px;
     height: fit-content;
 }
 
 #gameHistoryGrid {
     display: grid;
     grid-template-columns: auto auto;
+    padding: 20px;
+    min-height: 15px;
 }
 
 #leftContentHeader {
@@ -94,23 +146,35 @@ form {
     grid-column: 2;
     border: 1px solid black;
     background-color: #2b2b2b;
-    min-height: 300px;
-    margin-bottom: 150px;
+    width: 500px;
+    height: fit-content;
     overflow: hidden;
+    min-height: 350px;
 }
 
-#help-centerContent {
+#help_centerContent {
     border: 1px solid black;
     background-color: #2b2b2b;
     font-family: arial;
-    margin: 20px auto 200px auto;
-    padding: 40px 150px 100px 50px;
-    width: 870px;
+    margin: 40px auto 200px auto;
+    padding: 30px 50px 60px 50px;
+    width: 570px;
     min-width: 400px;
     display: none;
 }
 
-#second-centerContent {
+#about_centerContent {
+    border: 1px solid black;
+    background-color: #2b2b2b;
+    font-family: arial;
+    margin: 40px auto 200px auto;
+    padding: 30px 50px;
+    width: 570px;
+    min-width: 400px;
+    display: none;
+}
+
+#second_centerContent {
     border: 1px solid black;
     background-color: #2b2b2b;
     margin: 20px auto;
@@ -123,15 +187,17 @@ form {
     display: block;
 }
 
+
 #profileGrid {
     display: grid;
     padding: 50px;
+    padding-top: 25px;
     grid-gap: 10px;
     grid-template-columns: 60px auto auto;
     justify-content: left;
 }
 
-#profileHeader {
+#profileUser {
     display: grid;
     grid-template-columns: auto auto;
     grid-column: span 2;
@@ -152,7 +218,6 @@ form {
 }
 
 #userPublic {
-    display: grid; 
     justify-content: left; 
     grid-template-columns: 60px auto; 
     grid-gap: 10px;
@@ -163,6 +228,17 @@ form {
     font-size: 1.4em;
     grid-column: span 2;
     display: none;
+}
+
+
+#mostplayed-block {
+    border: 1px solid black;
+    grid-column: 2;    
+    background-color: #2b2b2b;
+    width: 500px;
+    min-height: 110px;
+    height: fit-content;
+    max-height: 380px;
 }
 
 .profileSubjects {
@@ -184,6 +260,7 @@ form {
     grid-column: 2;
     font-style: oblique;
     font-size: 0.9em;
+    width: 150px;
     margin-bottom: 20px;
 }
 
@@ -199,25 +276,31 @@ form {
     grid-template-columns: auto auto;
     justify-content: left;
     column-gap: 6px;
+}
 
+
+#mostplayedScroll {
+    padding-top: 20px;
+    padding-bottom: 25px;
+    overflow-x: hidden;
+    max-height: 280px;
 }
 
 #profileAllTimeGameGrid {
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+    padding-left: 30px;
     grid-column: span 2;
-    width: 400px;
-    font-size: 1.2em;
+    max-height: 325px;
 }
 
 #profileAllTimeGameHeader {
-    margin-bottom: 20px;
+    padding-top: 16px;
+    position: absolute;
 }
 
 #profileallTimeGameList {
+    font-size: 1.2em;
     display: grid;
-    grid-template-columns: 32px 282px auto;
+    grid-template-columns: 32px auto auto;
     column-gap: 6px;
     row-gap: 6px;
 }
@@ -227,34 +310,33 @@ form {
 }
 
 .profileGamesOwned {
+    min-width: 200px;
     font-size: 0.8em;
     grid-column: 2;
     padding: 6px;
 }
 
 .profileGamesAllTime{
+    width: 60px;
     grid-column: 3;
     padding: 6px;
 }
 
-.toggle-btns {
-    padding: 0px 10px 0px 10px;
-    height: 25px;
-    cursor: pointer;
-    border: 1px solid #888888;
-    background: #6e6e6e;
-    color: white;
-}
 
 #togglePresetIDs-btn {
     width: fit-content;
 }
 
 #hideFriendList-Btn {
-    margin: 5px;
-    margin-left: 10px;
+    width: 300px;
+    height: 25px;
 }
 
+#friendAmount {
+    grid-column: span 2;
+    margin-left: 6px;
+    margin-bottom: 8px;
+}
 
 #allIDcopies {
     display: none;
@@ -262,7 +344,7 @@ form {
     width: fit-content;
 }
 
-.idcopynames {
+.idcopynames, #uniqueIDfirst {
     border: 1px solid black;
     padding: 6px;
     width: 157px;
@@ -301,31 +383,55 @@ form {
 
 
 #userSearch {
-    cursor: pointer;
-    border: 1px solid #888888;
-    background: #6e6e6e;
-    color: white;
     font-size: 1.2em;
-    padding: 8px;
+    padding: 9px 9px 10px 9px;
 }
 
 
 #friendlist-block {
     border: 1px solid black;
-    padding: 30px 25px 20px 20px;
-    width: 250px;
+    width: 300px;
     height: fit-content;
-    max-height: 450px;
+    max-height: 350px;
     background-color: #2b2b2b;
     color: white;
-    overflow: auto;
-    overflow-x: hidden;
     grid-column: 3;
 }
 
-#friendlistResultUser {
-    grid-column: span 2;
+#friendlist-user {
+    height: 25px;
 }
+
+.loadingEffect {
+    display: none;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-image: url("/images/loading.png");
+    -webkit-animation: loading linear 0.5s infinite;
+    animation: loading linear 1s infinite;
+}
+
+
+@-webkit-keyframes loading {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes loading {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#friendlist_scroll_block {
+    padding: 15px;
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 240px;
+}
+
 
 #friendlist-output {
     display: grid;
@@ -343,7 +449,7 @@ form {
 
 .friendListResults {
     border: white;
-    background-color: #888888;
+    background-color: #616161;
     color: white;
     margin: 2px;
     padding: 8px;
@@ -358,25 +464,103 @@ form {
     padding: 4px;
 }
 
-#dropbtn:hover, .friendListResults:hover, .toggle-btns:hover, #userSearch:hover {
+.friendListResults:hover {
     background-color: #424242;
-} 
-
-#help_toolbar_btn:hover, #user_toolbar_btn:hover, #dropbtn:hover {
-    color: rgb(218, 218, 0);
 }
+
+.friendListResults:active {
+    background-color: #616161;
+}
+
+#dropbtn:hover, #hideFriendList-Btn:hover, #userSearch:hover {
+    background-color: #6e6e6e;
+} 
 
 .idcopynames:hover {
     font-weight: bold;
 }
 
-#help_find_steamid_img {
+
+
+
+
+
+
+
+
+
+
+
+#help_find_steamid_one, #help_find_steamid_two {
+    background-color: white;
+    margin-top: 20px;
+    color: black;
+    font-weight: bold;
+    font-size: 2em;
+    border: 1px solid black;
+    padding: 20px;
+    overflow: hidden;
     display: none;
 }
 
-#help_find_privacy_settings_img {
+
+#help_find_steamid_one div, #help_find_steamid_two div {
+    background-image: url("/images/help_steps_2.png");
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    width: 100%;
+    height: 205px;
+}
+
+#help_find_steamid_one div {
+    background-image: url("/images/help_steps_1.png");
+    background-position: top right;
+}
+
+
+#help_find_privacy_settings_one, #help_find_privacy_settings_two,
+#help_find_privacy_settings_three {
+    background-color: white;
+    margin-top: 20px;
+    color: black;
+    font-weight: bold;
+    font-size: 2em;
+    border: 1px solid black;
+    padding: 20px;
+    overflow: hidden;
     display: none;
 }
+
+#help_find_privacy_settings_one div {
+    background-image: url("/images/help_steps_privacy_settings_1.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    margin-left: 10px;
+    width: 100%;
+    height: 205px;
+}
+
+#help_find_privacy_settings_two div {
+    background-image: url("/images/help_steps_privacy_settings_2.png");
+    background-repeat: no-repeat;
+    background-position: top right;
+    margin-left: 10px;
+    width: 100%;
+    height: 300px;
+}
+
+#help_find_privacy_settings_three div {
+    background-image: url("/images/help_steps_privacy_settings_3.png");
+    background-repeat: no-repeat;
+    margin-left: 10px;
+    width: 100%;
+    height: 540px;
+}
+
+
+
+
+
 
 .link {
     text-decoration: underline;
@@ -389,22 +573,47 @@ form {
 }
 
 /* width */
-#friendlist-block::-webkit-scrollbar {
+#friendlist_scroll_block::-webkit-scrollbar {
     width: 10px;
 }
 
 /* Track */
-#friendlist-block::-webkit-scrollbar-track {
+#friendlist_scroll_block::-webkit-scrollbar-track {
     background: #555; 
 }
  
 /* Handle */
-#friendlist-block::-webkit-scrollbar-thumb {
+#friendlist_scroll_block::-webkit-scrollbar-thumb {
     background: #cccccc; 
 }
 
 /* Handle on hover */
-#friendlist-block::-webkit-scrollbar-thumb:hover {
+#friendlist_scroll_block::-webkit-scrollbar-thumb:hover {
+    background: #888; 
+}
+
+
+
+
+
+
+/* width */
+#mostplayedScroll::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+#mostplayedScroll::-webkit-scrollbar-track {
+    background: #555; 
+}
+ 
+/* Handle */
+#mostplayedScroll::-webkit-scrollbar-thumb {
+    background: #cccccc; 
+}
+
+/* Handle on hover */
+#mostplayedScroll::-webkit-scrollbar-thumb:hover {
     background: #888; 
 }
 
@@ -431,51 +640,40 @@ form {
 
 
 
+.content_header {
+    padding: 15px 0px 0px 20px;
+    background: black;
+    height: 40px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
 
+#profileHeader {
+    font-size: 2.6em;
+    padding: 20px 20px 20px 50px;
+}
 
-
-
-
-
-
-
-
-
-
-#dropbtn:active, #userSearch:active {
-    background-color: #838383;
-    box-shadow: inset 0px 2px 4px 2px #000000
+.push_btns {
+    border: none;
+    box-shadow: inset 2px -2px 0 0 #000000a3, inset -2px 2px 0 0 #ffffff1f;
+    cursor: pointer;
+    background: #424242;
+    color: white;
+    outline: none;
+    transition: .1s;
 }
 
 
-
+#dropbtn:active, #userSearch:active, #hideFriendList-Btn:active {
+    background-color: #424242;
+    box-shadow: inset 0px 2px 4px 2px #000000;
+}
 
   
-#dropbtn, #help_toolbar_btn, #user_toolbar_btn {
-    border: none;
-    position: relative;
-    padding: 4px 16px;
-    margin: 0px 14px 10px 0px;
-    cursor: pointer;
-    font-weight: bolder;
-
-    background-color: #838383;
-    color: white;
-}
-
 #dropbtn {
-    background-color: #424242;
-    box-shadow: inset 2px -2px 0 0 #000000a3, inset -2px 2px 0 0 #ffffff1f;
-}
-
-
-#help_toolbar_btn {
-    background-color: #424242;
-    box-shadow: inset 2px -2px 0 0 #000000a3, inset -2px 2px 0 0 #ffffff1f;
-}
-
-#user_toolbar_btn {
-    box-shadow: inset 0px 2px 4px 2px #000000
+    padding: 14px 8px 13px 8px;
+    font-weight: bolder;
+    position: relative;
 }
 
 
@@ -485,23 +683,109 @@ form {
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #888;
-  min-width: 160px;
-  overflow: auto;
-  left: -190px;
-  top: 0px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 5;
+    display: none;
+    position: absolute;
+    background-color: #616161;
+    min-width: 160px;
+    overflow: auto;
+    left: 0px;
+    top: 43px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  display: block;
-  font-family: arial;
+.dropdown-content a, #uniqueIDfirst {
+    color: white;
+    padding: 12px 16px;
+    display: block;
+    font-family: arial;
 }
 
 .dropdown a:hover {background-color: #424242;}
 
 .show {display: block;}
+
+
+#uniqueIDfirst {
+    background-color: black;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    cursor: default;
+}
+
+
+
+
+
+@media (max-width: 600px) {
+    footer { font-size: 2em; }    
+    body {min-width: 800px;}
+    
+
+    #centerContent { 
+        grid-column: 1;
+        grid-row: 1; 
+    }
+
+    #mostplayed-block {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #gameHistoryGrid {
+        padding: 20px 40px;
+        font-size: 1.4em;
+    }
+
+    #leftContent { 
+        grid-column: 1; 
+        grid-row: 3; 
+        width: 500px;
+    }
+
+    #friendlist-block { 
+        grid-column: 1; 
+        grid-row: 4; 
+        max-height: 300px;
+    }
+
+    #friendlist_scroll_block {
+        max-height: 190px;
+    }
+
+    #main-content {
+        grid-template-columns: auto;
+        justify-items: center;
+    } 
+
+
+
+
+    /*  Friendlist fix  */
+
+    #friendlist-block {
+        width: 500px;
+    }
+
+    #friendlist-user {
+        width: 500px;
+    }
+
+    #hideFriendList-Btn {
+        width: 500px;
+    }
+
+    #friendlist_scroll_block {
+        padding-left: 60px;
+    }
+
+    .friendListResults {
+        width: 280px;
+    }
+
+}
+
+
+
+

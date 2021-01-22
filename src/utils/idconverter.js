@@ -7,8 +7,8 @@ const idconverter = (playerId, callback) => {
     request({ url, json: true }, (error, { body } = {}) => {
         if (error) {
             callback('Unable to connect to player summaries!', undefined)
-        } else if (body.response.players.length === 0) {
-            callback('Can not find player. Try another ID.')
+        } else if (typeof body.response.players === "undefined") {
+            callback('Can\'t find player. Try another ID.')
         } else if (body.response.players.length > 0) {
             callback(undefined, {
                 playerName: body.response.players[0].personaname,
@@ -17,7 +17,8 @@ const idconverter = (playerId, callback) => {
                 playerCreated: body.response.players[0].timecreated,
                 playerVisibility: body.response.players[0].communityvisibilitystate,
                 playerIngame: body.response.players[0].gameextrainfo,
-                playerIngameid: body.response.players[0].gameid
+                playerIngameid: body.response.players[0].gameid,
+                playerLastlogoff: body.response.players[0].lastlogoff
             })
         }
     })

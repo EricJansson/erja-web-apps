@@ -4,82 +4,132 @@
 <head>
     <link rel="icon" href="/images/steam_logo.png">
     <link rel="stylesheet" href="./css/steamstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
 <body>
     <div id="title">{{title}}</div>
-    <div id="toolbar">
+    <div id="navbar">
+        <div class="navbar_separator"></div>
+        <div id="navbar_user_info" class="navbar_items navbar_active">User Info</div>
+        <div class="navbar_separator"></div>
+        <div id="navbar_help" class="navbar_items">Help</div>
+        <div class="navbar_separator"></div>
+        <div id="navbar_about" class="navbar_items">About</div>
+        <div class="navbar_separator"></div>
+    </div>
+    <div id="searchbar">
+        <div class="dropdown">
+            <button onclick="showSampleUsers()" class="push_btns" id="dropbtn">▼</button> {{!-- ◀ ▶ ᐊ ᐅ ▲ ▼ --}}
+            <div id="myDropdown" class="dropdown-content">
+                <div id="uniqueIDfirst" onclick="showSampleUsers()">Test Users</div>
+            </div>
+        </div>
         <div id="allIDcopies"></div>
         <form style="display: inline-block">
-            <input placeholder="SteamID / Steam32 ID" id="steamIDinputfield">
-            <button id="userSearch">Search</button>
+            <input placeholder="SteamID / Steam64 ID" id="steamIDinputfield">
+            <button class="push_btns" id="userSearch">Search</button>
         </form>
-
-        <div class="dropdown">
-            <button onclick="showSampleUsers()" id="dropbtn">◀ Sample Users</button> {{!--   ◀ ▶ ᐊ ᐅ ▲ ▼    --}}
-            <div id="myDropdown" class="dropdown-content"></div>
-        </div>
-        <button id="user_toolbar_btn" onclick="toolbar_go_to('user profile')" class="toolbar_active">User profile</button>
-        <button id="help_toolbar_btn" onclick="toolbar_go_to('help')">Help</button>
+        <div style="margin-left: 377px; margin-top: -38px;" class="loadingEffect" id="searchbar_loading"></div>
     </div>
-    <div id="help-centerContent">
-        <div>
-            <div style="text-align: center; font-size: 2.4em; font-weight: bold;">Help</div>
-            <h3>What is "Steam ID"?</h3>
-            <p>
-                Steam ID is a unique number that each and every user has. There are different types of Steam IDs.
-                <br>These IDs are:
-            <ul>
-                <li>Steam ID</li>
-                <li>Steam ID3</li>
-                <li>Steam32 ID</li>
-                <li>Steam64 ID</li>
-            </ul>
-            This website requires the user's Steam32 ID. This type of ID only consists of 17 numbers.
-            You can see some sample users above the search field as examples.
-            <br>
-            </p>
-            <br>
-            <h3>Where can I see my Steam32 ID?</h3>
-            <p>
-                <a class="link" onclick="showhelp_steps_steamid()">Click here</a> to show steps to find your own
-                SteamID32.
-            </p>
-            <img id="help_find_steamid_img" src="/images/help_steps.png">
-            <br><br>
-            <h3>Why can't I see the "Game history" or "All time games"?</h3>
-            <p>
-                There are a few possible reasons the "Game history" and "All time games" sections are not available.
-                <br><br>
-                One of the possibilities is that the user is not a friend (on steam) with the creator of this website.
-                This is because Steam only allows you to see your friends' data.
-                So unfortunately this website can only display the games from friends of <b>Rapidall</b>.
-                <br><br>
-                Another reason could be that the privacy settings for the searched user is set to private.
-            </p>
-            <br><br>
-            <h3>How do I change my privacy settings? (visibility status)</h3>
-            <p>
-                <a class="link" onclick="showhelp_steps_visibilityStatus()">Click here</a> to show steps to change your privacy settings. 
-                <br>
-                Note that "friends-only" also blocks the accessibility from this website. 
-            </p>
-            <img id="help_find_privacy_settings_img" src="/images/help_steps_privacy_settings.png">
+    <div id="help_centerContent">
+        <div style="text-align: center; font-size: 2.4em; font-weight: bold;">Help</div>
+        <h3>What is a "Steam ID"?</h3>
+        <p>
+            Steam ID is a unique number that each and every user has. There are different types of Steam IDs.
+            <br>These IDs are:
+        <ul>
+            <li>Steam ID</li>
+            <li>Steam ID3</li>
+            <li>Steam32 ID</li>
+            <li>Steam64 ID</li>
+        </ul>
+        This website requires the user's Steam64 ID. This type of ID consists of only 17 numbers.
+        You can see some sample users next to the search field to try it out.<br>
+        </p>
+        <br>
+        <h3>Where can I see my Steam64 ID?</h3>
+        <p>
+            <a class="link" onclick="showhelp_steps_steamid()">Click here</a> to show how to find your own
+            SteamID64.
+        </p>
+        <div id="help_find_steamid_one">
+            1.
+            <div></div>
         </div>
-    </div>
-    <div id="second-centerContent">
-        This website uses a Steam user's ID to find their information. <br>
-        Enter ID into searchbar.
+        <div id="help_find_steamid_two">
+            2.
+            <div></div>
+        </div>
         <br><br>
-        For help, press "Help" above the searchbar.
+        <h3>Why can't I see the "Recently Played" or "Most Played Games"?</h3>
+        <p>
+            There are a few possible reasons the "Recently Played" and "Most Played Games" sections are not available.
+            <br><br>
+            One of the possibilities is that the user is not a friend (on steam) with the creator of this website.
+            This is because Steam only allows you to see your friends' data.
+            So unfortunately this website can only display the games from friends of the creator.
+            <br><br>
+            Another reason could be that the privacy settings for the searched user is set to private.
+        </p>
+        <br><br>
+        <h3>How do I change my privacy settings? (visibility status)</h3>
+        <p>
+            <a class="link" onclick="showhelp_steps_visibilityStatus()">Click here</a> to show how to change your
+            privacy settings.
+            <br>
+            Note that "friends-only" also blocks the accessibility from this website.
+        </p>
+
+        <div id="help_find_privacy_settings_one">
+            1.
+            <div></div>
+        </div>
+        <div id="help_find_privacy_settings_two">
+            2.
+            <div></div>
+        </div>
+        <div id="help_find_privacy_settings_three">
+            3.
+            <div></div>
+        </div>
+
+        {{!-- <img id="help_find_privacy_settings_img" src="/images/help_steps_privacy_settings.png"> --}}
+    </div>
+    <div id="about_centerContent">
+        <div style="text-align: center; font-size: 2.4em; font-weight: bold;">About</div>
+        <h3>Purpose</h3>
+        <p>
+            This webapp was made because of my interest in games and also to improve my programming skills.
+            I decided to make this particular webapp because I want to learn more about web API and how to use it's
+            data.<br><br>
+            Playing games on Steam is a huge hobby of mine and this project was a perfect fit to explore the <a
+                style="color: aqua;" target="_blank" href="https://partner.steamgames.com/doc/home">Steamworks API</a>.
+            Because of this I'd say this is a tool that I might use myself from time to time.
+        </p>
+        <br>
+        <h3>About me</h3>
+        <p>
+            I'm a 25 year old, self taught programmer named Eric.<br><br>
+            I discovered programming fall 2019 and I've been making my own small projects since then.
+            I have been working mostly with only webdesign lately but this was my first real API based project.
+        </p>
+        <br>
+    </div>
+    <div id="second_centerContent">
+        Enter a user's Steam ID to get their information. <br><br>
+        If you have questions, go to the "Help" section above the searchbar.
     </div>
     <div id="main-content">
         <div id="leftContent">
+            <div class="content_header">Recently Played</div>
+            <div id="leftcontent_loading" class="loadingEffect" style="margin-left: 15px; margin-top: 10px"></div>
             <div id="gameHistoryGrid"></div>
         </div>
         <div id="centerContent">
+            <div class="content_header" id="profileHeader">User Profile</div>
             <div id="profileGrid">
-                <div id="profileHeader">
+                <div id="profileUser">
                     <img id="profileImage" src="/images/avatar_medium.jpg" alt="avatar">
                     <div id="profileName"></div>
                 </div><br>
@@ -92,21 +142,35 @@
                         <div class="profileSubjects">Ingame:</div>
                         <div id="profileIngame">Dota</div>
                     </div>
-                    <div id="profileAllTimeGameGrid">
-                        <div id="profileAllTimeGameHeader">All time most played games</div>
-                        <div id="profileallTimeGameList">
-                        </div>
+                    <div style="width: max-content;" class="profileSubjects">Visibility status:</div>
+                    <div style="margin-left: 50px;" id="profilePrivacy">Check behind you</div>
+                    <div style="width: max-content;" id="profileLastlogoffBlock">
+                        <div class="profileSubjects">Last logout:</div>
+                        <div style="margin-left: 10px;" id="profileLastonline">NEVER</div>
                     </div>
-
                 </div>
-                <div id="userHidden">The user status is set to private. Information is limited.</div>
+                <div style="margin-top: 100px; margin-left: 20px" id="profile_loading" class="loadingEffect"></div>
+                <div id="userHidden">The user status is set to hidden. Information is unavailable.</div>
             </div>
         </div>
         <div id="friendlist-block">
-            <div id="friendlist-user"><b>Friendlist</b></div>
-            <div id="friendlist-output">
-                <div id="friendlist-avatar"></div>
-                <div id="friendlist-names"></div>
+            <div class="content_header">Friendlist</div>
+            <div id="friendlist-user"></div>
+            <div id="friends_loading" style="margin-left: 20px; margin-top: -15px;" class="loadingEffect"></div>
+            <div id="friendlist_scroll_block">
+                <div id="friendlist-output">
+                    <div id="friendlist-avatar"></div>
+                    <div id="friendlist-names"></div>
+                </div>
+            </div>
+        </div>
+        <div id="mostplayed-block">
+            <div class="content_header" id="mostplayedHeader">Most Played Games</div>
+            <div id="profileAllTimeGameGrid">
+                <div id="profileAllTimeGameHeader">Most played games</div>
+                <div id="mostplayedScroll">
+                    <div id="profileallTimeGameList"></div>
+                </div>
             </div>
         </div>
     </div>

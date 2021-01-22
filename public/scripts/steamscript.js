@@ -7,14 +7,13 @@ const friendlistResults = document.querySelector("#friendlist-output");
 const allIDcopies = document.querySelector("#allIDcopies");
 const togglePresetIDs = document.querySelector("#togglePresetIDs-btn");
 const inputfield = document.getElementById("steamIDinputfield");
-const leftContent = document.getElementById("leftContent");
-const loadingScreen = document.getElementById("second-centerContent");
+const loadingScreen = document.getElementById("second_centerContent");
 const gameHistoryGrid = document.getElementById("gameHistoryGrid")
 const mostplayedgameslist = document.getElementById("profileallTimeGameList")
 const alltimegamesplayed_header = document.getElementById("profileAllTimeGameHeader")
 const mainScreen = document.getElementById("main-content")
 const setAvatarMedium = 'https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_medium.jpg'
-const steamkey = '4AB055F4351D22E1C36B75ECF5B347AF'
+
 
 const steamUserIDList = [
     { name: "Rapidall", id: "76561198035585856" },
@@ -117,6 +116,24 @@ addEventListener('submit', (e) => {
     } else if (getuserLoaded === false) {
         return console.log("Get user data needs to load first.")
     }
+
+    // show loader for recently played + profile + friendlist
+    loadingEffect = (on_or_off, content_loading) => {
+        if (on_or_off === "on") {
+            document.getElementById("friends_loading").style.display = "block"
+            document.getElementById("profile_loading").style.display = "block"
+            document.getElementById("leftcontent_loading").style.display = "block"
+            document.getElementById("searchbar_loading").style.display = "block"
+        } else if (on_or_off === "off") {
+            document.getElementById(content_loading + "_loading").style.display = "none"
+        }
+    }
+    loadingEffect("on");
+    // loadingEffect("off", "friends");
+
+    // this will fix the friendlist if it goes from hidden to search new user
+    document.querySelector("#friendlist-block").style.height = ""
+
     // remove startscreen forever
     startscreen_visible = "removed";
 
@@ -129,31 +146,28 @@ addEventListener('submit', (e) => {
     loadingScreen.style.display = "none"
 
 
-    document.getElementById("userHidden").innerHTML = "Loading..."
+    document.getElementById("userHidden").innerHTML = ""
     document.getElementById("userPublic").style.display = "none"
     document.getElementById("userHidden").style.display = "block"
-    friendlistUser.textContent = "Loading...";
+    friendlistUser.textContent = "";
     friendlistResults.innerHTML = "";
-    gameHistoryGrid.innerHTML = "Loading..."
+    gameHistoryGrid.innerHTML = ""
     document.getElementById("profileCreation").innerHTML = "..."
-    alltimegamesplayed_header.textContent = "Loading..."
+    alltimegamesplayed_header.textContent = ""
     document.getElementById("profileIngameBlock").style.display = "none"
-
 
 
     // bugged avatar_medium: 76561197981959702
 
 
-
-
-
     // Get User data stuffs
     fetch('/steam/getuser?steamid=' + steamID).then((response) => {
         response.json().then((data) => {
+            // throw "bug testing"
             if (data.error) {
                 // if user not found => show that page
                 userfound = false;
-                toolbar_go_to("user profile")
+                navbar_go_to("user profile")
                 console.log("Can't find user.")
                 mainScreen.style.display = "none"
                 loadingScreen.style.display = "block"
@@ -162,12 +176,15 @@ addEventListener('submit', (e) => {
                 friendlistLoaded = true;
                 recentlyPlayedLoaded = true;
                 ownedgamesLoaded = true;
+                loadingEffect("off", "leftcontent");
+                loadingEffect("off", "profile");
+                loadingEffect("off", "friends");
             } else {
-                // user found, display data and set variable to true (for toolbar functionality)
+                // user found, display data and set variable to true (for navbar functionality)
                 // also go to user profile page (NOT user not found)
                 userfound = true;
-                toolbar_go_to("user profile")
-                document.getElementById("profileHeader").innerHTML = ""
+                navbar_go_to("user profile")
+                document.getElementById("profileUser").innerHTML = ""
                 // All time game list refresh
                 mostplayedgameslist.innerHTML = ""
                 // setup user avatar in center section
@@ -175,13 +192,50 @@ addEventListener('submit', (e) => {
                 profileImg.id = "profileImage"
                 profileImg.setAttribute('src', data.userdata.playerAvatar)
                 profileImg.setAttribute('alt', "avatar")
-                document.getElementById("profileHeader").appendChild(profileImg)
+                document.getElementById("profileUser").appendChild(profileImg)
                 // setup username in center section
                 var profileName = document.createElement("DIV")
                 profileName.id = "profileName"
                 profileName.innerHTML = data.userdata.playerName
-                document.getElementById("profileHeader").appendChild(profileName)
+                document.getElementById("profileUser").appendChild(profileName)
 
+                console.log(data.userdata)
+
+                // set last online
+
+                if (typeof data.userdata.playerLastlogoff === "number") {
+                    var logoffTime = new Date(data.userdata.playerLastlogoff * 1000);
+
+                    // if minutes and hours < 10 add a 0
+                    var logoffHours = logoffTime.getHours()
+                    var logoffMinutes = logoffTime.getMinutes()
+                    if (logoffHours < 10) {
+                        logoffHours = "0" + logoffHours
+                    }
+                    if (logoffMinutes < 10) {
+                        logoffMinutes = "0" + logoffMinutes
+                    }
+
+
+                    document.getElementById("profileLastonline").textContent = logoffHours + ":" + logoffMinutes + " - " + monthNames[logoffTime.getMonth()] + ' ' + logoffTime.getDate() + ', ' + logoffTime.getFullYear()
+                    document.getElementById("profileLastlogoffBlock").style.display = "flex"
+                } else {
+                    // hide it
+                    document.getElementById("profileLastlogoffBlock").style.display = "none"
+                }
+
+                // set player visibility
+                if (data.userdata.playerVisibility === 1) {
+                    currentUserPrivacy = "Private"
+                    currentUserPrivacyColor = "orange"
+                } else if (data.userdata.playerVisibility === 3) {
+                    currentUserPrivacy = "Public"
+                    currentUserPrivacyColor = "white"
+                }
+                document.getElementById("profilePrivacy").textContent = currentUserPrivacy
+                document.getElementById("profilePrivacy").style.color = currentUserPrivacyColor
+
+                loadingEffect("off", "profile");
                 if (data.userdata.playerVisibility === 2) {
                     document.getElementById("userHidden").innerHTML = "The privacy settings for this user is set to private. <br>Information is limited."
                 } else {
@@ -190,8 +244,8 @@ addEventListener('submit', (e) => {
                     document.getElementById("userHidden").innerHTML = ""
                 }
 
-                var d = new Date(data.userdata.playerCreated * 1000);
-                document.getElementById("profileCreation").innerHTML = monthNames[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear()
+                var createdTime = new Date(data.userdata.playerCreated * 1000);
+                document.getElementById("profileCreation").innerHTML = monthNames[createdTime.getMonth()] + ' ' + createdTime.getDate() + ', ' + createdTime.getFullYear()
 
                 var currentStatus
                 var currentStatusColor
@@ -238,7 +292,7 @@ addEventListener('submit', (e) => {
                 fetch('/steam/ownedgames?steamid=' + steamID).then((response) => {
                     response.json().then((data) => {
                         if (data.error) {
-                            alltimegamesplayed_header.textContent = "All time games are unavailable."
+                            alltimegamesplayed_header.textContent = "Games are unavailable."
                             // profileInfo.innerHTML = data.error;
                         } else {
                             var numberofgamestoshow
@@ -247,7 +301,6 @@ addEventListener('submit', (e) => {
                             } else {
                                 numberofgamestoshow = data.owned_games.length
                             }
-                            alltimegamesplayed_header.textContent = "All time most played games."
                             mostplayedgameslist.innerHTML = ""
                             for (let i = 0; i < numberofgamestoshow; i++) {
                                 // add image
@@ -297,13 +350,15 @@ addEventListener('submit', (e) => {
                     response.json().then((data) => {
                         if (data.error) {
                             gameHistoryGrid.innerHTML = data.error
+                            loadingEffect("off", "leftcontent");
                         } else {
                             gameHistoryGrid.innerHTML = ""
                             var games = data.games
                             var leftContentHeader = document.createElement("DIV")
-                            leftContentHeader.innerHTML = "Games played last 2 weeks:"
+                            leftContentHeader.innerHTML = "Game time last 2 weeks:"
                             leftContentHeader.id = "leftContentHeader"
                             gameHistoryGrid.appendChild(leftContentHeader)
+                            loadingEffect("off", "leftcontent");
                             for (let i = 0; i < games.length; i++) {
                                 var addGameHistory = document.createElement("DIV")
                                 addGameHistory.className = "gameHistoryNames"
@@ -328,24 +383,32 @@ addEventListener('submit', (e) => {
                 }).catch(() => {
                     gameHistoryGrid.innerHTML = "Could not find Steam User. Try again."
                     recentlyPlayedLoaded = true;
+                    loadingEffect("off", "leftcontent");
                 })
                 // friendlist stuffs
                 fetch('/steam/friendlist?steamid=' + steamID).then((response) => {
                     response.json().then((data) => {
                         if (data.error) {
                             if (data.hidden == "true") {
-                                friendlistUser.innerHTML = "Friendlist is unavailable";
+                                friendlistUser.innerHTML = "<div style=\"padding: 20px;\">Friends unavailable</div>";
                                 // confirm friendlist script is finished
                                 friendlistLoaded = true;
+                                loadingEffect("off", "friends");
+                                loadingEffect("off", "searchbar");
                             } else {
                                 console.log("Error occured, user is not hidden. >check code line<")
                                 friendlistUser.textContent = data.error;
+                                loadingEffect("off", "friends");
+                                loadingEffect("off", "searchbar");
                             }
                         } else {
                             friendids = data.friendids
                             friendnames = data.friendnames
                             friendAvatars = data.friendAvatars
-                            friendlistUser.innerHTML = "<div id=\"friendlistResultUser\"><b>" + data.steamusername + "</b> friendlist: <br>(" + data.friendids.length + "x)<button class=\"toggle-btns\" id=\"hideFriendList-Btn\" onclick=\"hideFriendList()\">Hide</button></div>";
+                            loadingEffect("off", "friends");
+                            // friendlistUser.innerHTML = "<div id=\"friendlistResultUser\"><b>" + data.steamusername + "</b> friendlist: <br>(" + data.friendids.length + "x)<button class=\"push_btns\" id=\"hideFriendList-Btn\" onclick=\"hideFriendList()\">Hide</button></div>";
+                            friendlistUser.innerHTML = "<button class=\"push_btns\" id=\"hideFriendList-Btn\" onclick=\"hideFriendList()\">Hide</button>";
+                            friendlistResults.innerHTML = "<div id=\"friendAmount\">Friends: " + data.friendids.length + "</div>";
                             for (let i = 0; i < data.friendids.length; i++) {
                                 setTimeout(() => {
                                     friendlistResults.innerHTML += '<img class="friendListAvatar" src=' + data.friendAvatars[i] + ' alt="avatar" style="width:32px;height:32px;" onerror="this.onerror=null;this.src=' + setAvatarMedium + ';">'
@@ -353,6 +416,8 @@ addEventListener('submit', (e) => {
                                     if (data.friendids.length - 1 === i) {
                                         // make the last loop call confirm => friendlistLoaded = true. This avoids the friendlist being filled more than 1 time if search btn spammed.
                                         friendlistLoaded = true;
+                                        // stop loading when last friend is added
+                                        loadingEffect("off", "searchbar");
                                     }
                                 }, 0)
                             }
@@ -362,6 +427,8 @@ addEventListener('submit', (e) => {
                 }).catch(() => {
                     friendlistResults.innerHTML = "Could not find Steam User. Try again."
                     friendlistLoaded = true;
+                    loadingEffect("off", "friends");
+                    loadingEffect("off", "searchbar");
                 })
             }
             getuserLoaded = true;
@@ -372,6 +439,10 @@ addEventListener('submit', (e) => {
         friendlistLoaded = true;
         recentlyPlayedLoaded = true;
         ownedgamesLoaded = true;
+        loadingEffect("off", "leftcontent");
+        loadingEffect("off", "profile");
+        loadingEffect("off", "friends");
+        loadingEffect("off", "searchbar");
     })
 })
 
@@ -385,7 +456,7 @@ hideFriendList = (forceShow) => {
         document.getElementById("hideFriendList-Btn").innerHTML = "Hide"
     } else {
         document.querySelector("#friendlist-output").style.display = "none"
-        document.querySelector("#friendlist-block").style.height = "75px"
+        document.querySelector("#friendlist-block").style.height = "80px"
         friendlistVisible = true
         document.getElementById("hideFriendList-Btn").innerHTML = "Show"
     }
@@ -421,27 +492,42 @@ function addMyImg(gameid, imgUrl, gamename) {
 
 
 
+document.getElementById("navbar_user_info").addEventListener("click", () => {
+    navbar_go_to("user profile");
+})
 
+document.getElementById("navbar_help").addEventListener("click", () => {
+    navbar_go_to("help")
+})
+
+document.getElementById("navbar_about").addEventListener("click", () => {
+    navbar_go_to("about")
+})
 
 var help_is_visible = false;
 var userfound = true;
 
-toolbar_go_to = (toolbar_option) => {
+navbar_go_to = (navbar_option) => {
+    highlight_selected_navbar_item = (id_of_selected_navbar_item) => {
+        document.getElementById("navbar_user_info").classList.remove("navbar_active")
+        document.getElementById("navbar_help").classList.remove("navbar_active")
+        document.getElementById("navbar_about").classList.remove("navbar_active")
+        // add highlight class to selected navbar item (id in parameter)
+        document.getElementById(id_of_selected_navbar_item).classList.add("navbar_active")
+    }
     // hide all
-    document.getElementById("help-centerContent").style.display = "none"
+    document.getElementById("help_centerContent").style.display = "none"
+    document.getElementById("about_centerContent").style.display = "none"
     loadingScreen.style.display = "none"
     mainScreen.style.display = "none"
 
-    // change all btns color + border to default
-    document.getElementById("help_toolbar_btn").style.boxShadow = "inset 2px -2px 0 0 #000000a3, inset -2px 2px 0 0 #ffffff1f"
-    document.getElementById("user_toolbar_btn").style.boxShadow = "inset 2px -2px 0 0 #000000a3, inset -2px 2px 0 0 #ffffff1f"
-    document.getElementById("help_toolbar_btn").style.backgroundColor = "#424242"
-    document.getElementById("user_toolbar_btn").style.backgroundColor = "#424242"   
+    document.getElementById("searchbar").style.display = "none"
 
-    if (toolbar_option === "user profile") {
-        // change selected btn's color + border
-        document.getElementById("user_toolbar_btn").style.backgroundColor = "#838383"
-        document.getElementById("user_toolbar_btn").style.boxShadow = "inset 0px 2px 4px 2px #000000"
+    if (navbar_option === "user profile") {
+        highlight_selected_navbar_item("navbar_user_info");
+        // show searchbar
+        document.getElementById("searchbar").style.display = "block"
+
         if (startscreen_visible === "page_loaded" && userfound === true) {
             loadingScreen.style.display = "block"
         } else if (userfound === true) {
@@ -450,18 +536,23 @@ toolbar_go_to = (toolbar_option) => {
             // show user data
             loadingScreen.style.display = "block"
         }
-    } else if (toolbar_option === "help") {
-        // change selected btn's color + border
-        document.getElementById("help_toolbar_btn").style.backgroundColor = "#838383"
-        document.getElementById("help_toolbar_btn").style.boxShadow = "inset 0px 2px 4px 2px #000000"
+    } else if (navbar_option === "help") {
+        highlight_selected_navbar_item("navbar_help");
         // show help
-        document.getElementById("help-centerContent").style.display = "block"
+        document.getElementById("help_centerContent").style.display = "block"
+    } else if (navbar_option === "about") {
+        highlight_selected_navbar_item("navbar_about");
+        // show about
+        document.getElementById("about_centerContent").style.display = "block"
     }
 }
-/*
-toolbar_go_to("user profile")
 
-toolbar_go_to("help")
+/*
+navbar_go_to("user profile")
+
+navbar_go_to("help")
+
+navbar_go_to("about")
 */
 
 
@@ -496,10 +587,12 @@ var help_find_steamid_visible = false;
 function showhelp_steps_steamid() {
     if (help_find_steamid_visible) {
         help_find_steamid_visible = false;
-        document.querySelector("#help_find_steamid_img").style.display = "none"
+        document.querySelector("#help_find_steamid_one").style.display = "none"
+        document.querySelector("#help_find_steamid_two").style.display = "none"
     } else {
         help_find_steamid_visible = true;
-        document.querySelector("#help_find_steamid_img").style.display = "block"
+        document.querySelector("#help_find_steamid_one").style.display = "flex"
+        document.querySelector("#help_find_steamid_two").style.display = "flex"
     }
 }
 
@@ -509,10 +602,14 @@ var help_steps_visible = false;
 function showhelp_steps_visibilityStatus() {
     if (help_steps_visible) {
         help_steps_visible = false;
-        document.querySelector("#help_find_privacy_settings_img").style.display = "none"
+        document.querySelector("#help_find_privacy_settings_one").style.display = "none"
+        document.querySelector("#help_find_privacy_settings_two").style.display = "none"
+        document.querySelector("#help_find_privacy_settings_three").style.display = "none"
     } else {
         help_steps_visible = true;
-        document.querySelector("#help_find_privacy_settings_img").style.display = "block"
+        document.querySelector("#help_find_privacy_settings_one").style.display = "flex"
+        document.querySelector("#help_find_privacy_settings_two").style.display = "flex"
+        document.querySelector("#help_find_privacy_settings_three").style.display = "flex"
     }
 }
 
@@ -537,4 +634,34 @@ window.onclick = function (event) {
             }
         }
     }
+    // Need this so it wont close down. So sloppy...
+    if (event.target.matches('#uniqueIDfirst')) {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
 }
+
+
+
+
+
+// navbar_go_to("help")
+
+
+/*
+
+
+Features to add reminder
+
+✓ navbar highlight when selected.
+✓ all time games unavailable => remove instead of displaying message
+✓ add scrollbar to most played games. (if list is long enough ofcourse)
+-> explain the sample users button?             Do it in help aswell!!!!
+if player offline => display last logoff
+visibility state? is it worth it?
+friendlist, make names and avatars into the same block
+-> add about page, explain the projects purpose and why you are doing this
+
+
+
+*/
+
