@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/learn_for_fun/style.css">
+    <link rel="stylesheet" href="./css/learn_for_fun/menu.css">
+    <link rel="stylesheet" href="./css/learn_for_fun/edit_lesson.css">
+    <link rel="stylesheet" href="./css/learn_for_fun/main_content.css">
+    <title>Learn 4 fun</title>
+</head>
+
+<body>
+    <div id="main_Header">Hello world</div>
+    <div id="start_menu">
+        <button id="start_btn" onclick="startSession()">Start!</button>
+        <br>
+        <button class="start_menu_btns menu_mode_active" onclick="mode_select(1)">Mode 1</button>
+        <button class="start_menu_btns" onclick="mode_select(2)">Mode 2</button>
+        <br>
+        <button class="start_menu_btns" onclick="toggle_listReview_menu('edit')">Review list</button>
+    </div>
+
+    <div id="edit_lesson">
+        <div class="edit_lesson_exit">
+            <button onclick="toggle_listReview_menu('menu')">Go back</button>
+        </div>
+        <div id="display_session_data"></div>
+    </div>
+
+    <div id="main_content">
+        <div id="question_block">Seems like</div>
+        <div id="session_data">
+            <div id="session_timer">someone</div>
+            <div id="session_progress">disabled</div>
+            <div id="session_success_rate">Javascript.</div>
+        </div>
+        <div id="next_question_block">
+            <div id="next_question_hide_toggle">
+                <div id="next_question_correct">Correct!</div>
+                <div id="next_question_wrong">Wrong</div>
+                <button onclick="goToNextQuestion()">Next</button>
+            </div>
+            <div id="post_session_recap_btn">
+                <div>You are done!</div>
+                <button onclick="goToNextQuestion('end_session')">Go back</button>
+            </div>
+        </div>
+        <div class="options_grid">
+            <button onclick="selectOption(1)" id="optionBtn1" class="active_options selectable_options"></button>
+            <button onclick="selectOption(2)" id="optionBtn2" class="active_options selectable_options"></button>
+            <button onclick="selectOption(3)" id="optionBtn3" class="active_options selectable_options"></button>
+            <button onclick="selectOption(4)" id="optionBtn4" class="active_options selectable_options"></button>
+        </div>
+    </div>
+
+    <script src="./scripts/learn_for_fun/script.js"></script>
+    <script src="./scripts/learn_for_fun/menu_script.js"></script>
+    <script src="./scripts/learn_for_fun/session_script.js"></script>
+    <script src="./scripts/learn_for_fun/edit_lesson.js"></script>
+    <script src="./scripts/learn_for_fun/dev_mode.js"></script>
+</body>
+
+</html>

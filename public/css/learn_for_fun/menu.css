@@ -1,0 +1,23 @@
+
+#start_menu {
+  width: fit-content;
+  text-align: center;
+  min-width: 500px;
+  margin: 30px auto 0 auto;
+  border: 1px solid;
+}
+
+#start_btn {
+  padding: 50px;
+  margin: 10px;
+  font-size: 2em;
+}
+
+.start_menu_btns {
+  padding: 10px;
+  margin: 10px;
+}
+
+.menu_mode_active {
+    background-color: rgba(255, 174, 0, 0.5);
+}

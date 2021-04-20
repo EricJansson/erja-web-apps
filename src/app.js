@@ -255,6 +255,14 @@ app.get('/steam/friendlist', (req, res) => {
 })
 
 
+app.get('/learn_for_fun', (req, res) => {
+    res.render('learn_for_fun', {
+        title: 'Learning website',
+        body: '',
+        name: 'Eric Jansson'
+    })
+})
+
 app.get('/steam', (req, res) => {
     res.render('steam', {
         title: 'Steam User Info',
@@ -271,7 +279,6 @@ app.get('/products', (req, res) => {
             error: "You must prove a search term."
         })
     }
-    // console.log(req.query)
     res.send({
         products: [req.query.search]
     })

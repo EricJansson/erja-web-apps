@@ -1,0 +1,97 @@
+
+#edit_lesson {
+    margin: auto auto;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    display: none;
+}
+
+.edit_lesson_exit {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.edit_lesson_exit button {
+    font-size: 1.6em;
+    padding: 10px;
+}
+
+#display_session_data {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.edit_object_grid {
+    margin: auto auto 30px auto;
+    padding: 10px;
+    padding-bottom: 20px;
+    border: 1px solid;
+    display: grid;
+    width: 50%;
+    min-width: 400px;
+    max-width: 1000px;
+    grid-template-columns: 140px auto 40px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.edit_question_num {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: left;
+}
+
+.edit_object_type {
+    height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    grid-column: 1;
+    text-align: right;
+}
+
+.edit_object_data {
+    grid-column: 2;
+    text-align: left;
+}
+
+.edit_all_edit_btns {
+    grid-column: 3;
+}
+
+.edit_btns {
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit_btn_edit {
+    background-image: url("/images/learn_for_fun_img/edit_logo.jpg");
+}
+
+.edit_btn_edit:hover {
+    box-shadow: inset 0 0 10px #0095ff;
+}
+
+
+.edit_btn_accept_question, .edit_btn_accept_answer, .edit_btn_accept_alt_answer {
+    display: none;
+    background-image: url("/images/learn_for_fun_img/accept_logo.jpg");
+}
+
+.edit_btn_accept_question:hover, .edit_btn_accept_answer:hover, .edit_btn_accept_alt_answer:hover {
+    box-shadow: inset 0 0 10px #fbff008a;
+}
+
+.edit_btn_decline_question, .edit_btn_decline_answer, .edit_btn_decline_alt_answer {
+    display: none;
+    background-image: url("/images/learn_for_fun_img/decline_logo.jpg");
+}
+    
+.edit_btn_decline_question:hover, .edit_btn_decline_answer:hover, .edit_btn_decline_alt_answer:hover {
+    box-shadow: inset 0 0 10px #ff0000;
+}
+
