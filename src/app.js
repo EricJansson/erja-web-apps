@@ -263,6 +263,49 @@ app.get('/learn_for_fun', (req, res) => {
     })
 })
 
+app.get('/learn_for_fun/api', (req, res) => {
+    res.send({
+        all_questions: [
+            {
+                question: "I am very glad to meet you.",
+                answer: "Oaidekite ureshii desu",
+                alt_answer: "おあいできて　うれしいです。"
+            }, {
+                question: "Do you speak English?",
+                answer: "Eigo o hanasemasu ka",
+                alt_answer: "えいごをはなせますか。"
+            }, {
+                question: "How are you?",
+                answer: "O-genki desu ka",
+                alt_answer: "おげんきですか。"
+            }, {
+                question: "I don't understand.",
+                answer: "Wakarimasen",
+                alt_answer: "わかりません。"
+            }, {
+                question: "I only speak a little Japanese.",
+                answer: "Watashi wa nihongo ga sukoshi shika hanasemasen.",
+                alt_answer: "わたしは　にほんごがすこししか　はなせません。"
+            }, {
+                question: "My name is Kaorii.",
+                answer: "Watashi no namae wa Kaori desu.",
+                alt_answer: "わたしのなまえは　かおりです。"
+            }, {
+                question: "Long time, no see!",
+                answer: "Hisashiburi",
+                alt_answer: "久しぶり。"
+            }, {
+                question: "See you later/Goodbye",
+                answer: "Ja Mata",
+                alt_answer: "じゃまた。"
+            }
+        ],
+        title: 'Japanese vocabulary',
+        description: 'Beginner japanese vocabulary. With or without romaji.',
+        creator_name: 'Eric Jansson'
+    })
+})
+
 app.get('/steam', (req, res) => {
     res.render('steam', {
         title: 'Steam User Info',
