@@ -1,3 +1,9 @@
+const ALL_LISTS = [
+    {
+        title: "Beginner Japanese",
+        description: "Japanese vocabulary for beginners"
+    }
+]
 
 const ALL_QUESTIONS = [
     {
@@ -88,5 +94,9 @@ const ALL_QUESTIONS = [
 *quiz mode* AND *learn mode*: learn mode repeats wrong answers, quiz mode is counting correct + wrong answer stats
 *learn mode* repeat questions for longer sessions/better training
 x*2 options OR type OR long dropdown?
+end of game "scorescreen" / "overview"
+
+*Edit Mode*
+flikar premade/my own quizes
 
 */

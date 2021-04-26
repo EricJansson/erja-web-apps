@@ -209,9 +209,10 @@ goToNextQuestion = (end_Session) => {
         document.getElementById("start_menu").style.display = "block";
         document.getElementById("post_session_recap_btn").style.display = "none";
         document.getElementById("main_content").style.display = "none";
+        clearInterval(timer); // stop timer
     } else {
         generate_question(current_question_number);
     }
-
+    
     question_answered_already = false;
 }

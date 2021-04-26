@@ -14,7 +14,7 @@ mode_select = (mode_number) => {
 toggle_listReview_menu = (showId) => {
     if (showId == "edit") {
         if (ALL_QUESTIONS_loaded == false) {
-            make_full_edit_list();
+            generate_full_edit_list();
         }
         document.getElementById("start_menu").style.display = "none";
         document.getElementById("edit_lesson").style.display = "block";

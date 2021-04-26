@@ -3,10 +3,10 @@
 dev_mode = () => {
     setTimeout(() => {
         // Press start
-        // startSession();
+        startSession();
 
         // Press Review List
-        toggle_listReview_menu('edit');
+        // toggle_listReview_menu('edit');
     }, 0);
 }
 

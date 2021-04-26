@@ -1,0 +1,56 @@
+
+#overlay_fade_effect, #overlay {
+  display: none;
+}
+
+#overlay_fade_effect {
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #00000061;
+  position: fixed;
+}
+
+#overlay {
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  min-width: 660px;
+}
+
+#overlay_block {
+  background: white;
+  border: 1px solid black;
+  width: 350px;
+  height: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  position: initial;
+}
+
+#overlay_content {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#overlay_content_action {
+  margin: 20px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#overlay_content a {
+  display: block;
+}
+
+#overlay_btns {
+  width: 200px;
+  margin: auto;
+}
+
+#overlay_btns button {
+  margin-top: 10px;
+  font-size: 2em;
+}
