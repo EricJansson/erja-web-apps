@@ -1,5 +1,7 @@
 #main_content {
   margin: 20px auto;
+  margin-top: 50px;
+  padding-bottom: 20px;
   width: 70%;
   min-height: 500px;
   min-width: 600px;
@@ -20,7 +22,7 @@
 }
 
 #session_data {
-  
+  min-height: 110px;
 }
 
 #session_data div {
@@ -28,16 +30,20 @@
 }
 
 #session_timer {
-  border: 1px solid rgba(148, 148, 148, 0.4);
+  
 }
 
-#session_progress {
+/*
+#session_timer, #session_progress, #session_success_rate {
   border: 1px solid rgba(148, 148, 148, 0.4);
+}
+*/
+
+#session_progress {
   margin-top: 10px;
 }
 
 #session_success_rate {
-  border: 1px solid rgba(148, 148, 148, 0.4);
   margin-top: 10px;
 }
 
@@ -96,7 +102,7 @@
 
 .options_grid {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 45% 45%;
   justify-content: center;
 }
 
@@ -111,8 +117,8 @@
 .selectable_options {
   border: 1px solid;
   padding: 20px;
-  width: 240px;
   height: 200px;
+  max-width: 300px;
   text-align: center;
   justify-content: center;
   margin: 20px;
@@ -124,4 +130,57 @@
 .active_options:hover {
   cursor: pointer;
   background-color: rgba(228, 228, 70, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 640px) {
+  #main_content {
+    margin-top: 0;
+    width: unset;
+    min-width: unset;
+  }
+  #main_top_content_grid {
+    grid-template-columns: auto auto;
+    margin: 0px 10px;
+    margin-top: 10px;
+  }
+  #question_block {
+    grid-column: span 2;
+    min-height: 100px;
+  }
+  #quit_session {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .selectable_options {
+    padding: 10px;
+    margin: 0;
+    height: 160px;
+    font-size: 0.8em;
+  }
+
+  .options_grid {
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+  }
+  #session_data {
+    min-height: 80px;
+  }
+  #session_progress {
+    margin-top: 0px;
+  }
+
+  #session_success_rate {
+    margin-top: 0px;
+  }
 }

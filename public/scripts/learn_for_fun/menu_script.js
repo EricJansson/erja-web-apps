@@ -17,9 +17,11 @@ toggle_listReview_menu = (showId) => {
             generate_full_edit_list();
         }
         document.getElementById("start_menu").style.display = "none";
+        document.getElementById("main_Header").style.display = "none";
         document.getElementById("edit_lesson").style.display = "block";
     } else if (showId == "menu") {
         document.getElementById("start_menu").style.display = "block";
+        document.getElementById("main_Header").style.display = "block";
         document.getElementById("edit_lesson").style.display = "none";
     }
 }

@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
     <link rel="stylesheet" href="./css/learn_for_fun/style.css">
     <link rel="stylesheet" href="./css/learn_for_fun/menu.css">
-    <link rel="stylesheet" href="./css/learn_for_fun/main_content.css">
+    <link rel="stylesheet" href="./css/learn_for_fun/active_session.css">
     <link rel="stylesheet" href="./css/learn_for_fun/overlay.css">
     <link rel="stylesheet" href="./css/learn_for_fun/edit_lesson.css">
     <title>Learn 4 fun</title>
@@ -39,59 +39,61 @@
     </div>
 
     <div id="edit_lesson">
-        <div class="edit_lesson_exit">
-            <button class="edit_lesson_go_back" onclick="toggle_listReview_menu('menu')">Go back</button>
-            <br>
-            <button onclick="show_create_item()">Make a new item</button>
-            <br><br>
-            <button onclick="delete_item_mode()">Remove an item</button>
-        </div>
-        <div id="lesson_list_block">
-            <div class="lesson_lists" id="lesson_list_1">
-                <div class="lesson_list_title">Beginner Japanese</div>
-                <div class="lesson_list_description">Japanese vocabulary for beginners.</div>
+        <div id="edit_lesson_grid">
+            <div id="edit_lesson_lists">
+                <div id="lesson_list_block">
+                    <div class="lesson_lists" id="lesson_list_1">
+                        <div class="lesson_list_title">Beginner Japanese</div>
+                        <div class="lesson_list_description">Japanese vocabulary for beginners.</div>
+                    </div>
+                    <div class="lesson_lists" id="lesson_list_2">
+                        <div class="lesson_list_title">Math repetition</div>
+                        <div class="lesson_list_description">Preparation for university.</div>
+                    </div>
+                </div>
             </div>
-            <div class="lesson_lists" id="lesson_list_2">
-                <div class="lesson_list_title">Math repetition</div>
-                <div class="lesson_list_description">Preparation for university.</div>
-            </div>
-        </div>
-        <div id="create_new_list_block">
-
-
-
-
-
-
-            <div class="create_object_grid">
-                <div class="edit_question_num">New question</div>
-                <button id="create_new_question_cancel" onclick="new_question_cancel()">x</button>
-                <div class="create_object_type">Question:</div>
-                <div class="create_object_data">
-                    <input class="edit_list_input_fields" id="create_question">
-                </div>
-
-                <div class="create_object_type">Answer:</div>
-                <div class="create_object_data">
-                    <input class="edit_list_input_fields" id="create_answer">
-                </div>
-
-                <div class="create_object_type">Alternate answer:</div>
-                <div class="create_object_data">
-                    <input class="edit_list_input_fields" id="create_alt_answer">
-                </div>
-                <div id="create_object_options_block">
-                    <button onclick="create_item()">Add question</button>
+            <div id="edit_lesson_options">
+                <div class="edit_lesson_exit">
+                    <button class="edit_lesson_go_back" onclick="toggle_listReview_menu('menu')">Menu</button>
+                    <br>
+                    <button onclick="show_create_item()">Make a new item</button>
+                    <br><br>
+                    <button onclick="delete_item_mode()">Remove an item</button>
                 </div>
             </div>
 
 
+            <div id="edit_middle_grid_content">
+                <div id="create_new_list_block">
+                    <div class="create_object_grid">
+                        <div class="edit_question_num">New question</div>
+                        <button id="create_new_question_cancel" onclick="new_question_cancel()">x</button>
+                        <div class="create_object_type">Question:</div>
+                        <div class="create_object_data">
+                            <input class="edit_list_input_fields" id="create_question">
+                        </div>
 
+                        <div class="create_object_type">Answer:</div>
+                        <div class="create_object_data">
+                            <input class="edit_list_input_fields" id="create_answer">
+                        </div>
 
+                        <div class="create_object_type">Alternate answer:</div>
+                        <div class="create_object_data">
+                            <input class="edit_list_input_fields" id="create_alt_answer">
+                        </div>
+                        <div id="create_object_options_block">
+                            <button onclick="create_item()">Add question</button>
+                        </div>
+                    </div>
+                </div>
 
+                <div id="edit_lesson_items">
+                    <div id="display_session_data"></div>
+                </div>
+            </div>
 
         </div>
-        <div id="display_session_data"></div>
     </div>
 
     <div id="main_content">

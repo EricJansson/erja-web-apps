@@ -16,6 +16,7 @@ startSession = () => {
         ALL_QUESTIONS[i]["alt_option_repeat"] = 0;
     }
     document.getElementById("main_content").style.display = "block";
+    document.getElementById("main_Header").style.display = "none";
     document.getElementById("start_menu").style.display = "none";
     session_array = []; // reset
     current_question_number = 0; // reset
@@ -206,6 +207,7 @@ goToNextQuestion = (end_Session) => {
         document.getElementById("optionBtn" + i).classList.add("active_options");
     }
     if (end_Session == 'end_session') {
+        document.getElementById("main_Header").style.display = "block";
         document.getElementById("start_menu").style.display = "block";
         document.getElementById("post_session_recap_btn").style.display = "none";
         document.getElementById("main_content").style.display = "none";

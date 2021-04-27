@@ -1,9 +1,10 @@
 
 #start_menu {
-  width: fit-content;
+  width: auto;
   text-align: center;
   padding: 20px;
-  min-width: 500px;
+  min-width: 200px;
+  max-width: 400px;
   margin: 30px auto 0 auto;
   border: 1px solid;
   background-color: white;
