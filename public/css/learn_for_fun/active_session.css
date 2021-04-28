@@ -63,8 +63,10 @@
 }
 
 #quit_session button {
+  cursor: pointer;
   width: 50px;
   height: 40px;
+  box-shadow: 2px 2px 5px -1px black;
 }
 
 #next_question_block {
@@ -98,6 +100,7 @@
 
 #next_question_block button {
   font-size: 1em;
+  cursor: pointer;
 }
 
 .options_grid {
@@ -115,7 +118,10 @@
 }
 
 .selectable_options {
+  background: #bbe6f3;
+  box-shadow: 0px 3px 10px black;
   border: 1px solid;
+  border-radius: 25px;
   padding: 20px;
   height: 200px;
   max-width: 300px;
@@ -162,6 +168,7 @@
     grid-row: 1;
     grid-column: 2;
   }
+
   .selectable_options {
     padding: 10px;
     margin: 0;

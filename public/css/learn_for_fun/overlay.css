@@ -8,7 +8,7 @@
   min-height: 100%;
   top: 0;
   left: 0;
-  background-color: #00000061;
+  background-color: #00000085;
   position: fixed;
 }
 
@@ -28,6 +28,7 @@
   margin-right: auto;
   margin-top: 200px;
   position: initial;
+  box-shadow: 3px 3px 25px 0px #1b1b1b;
 }
 
 #overlay_content {
@@ -56,4 +57,5 @@
 #overlay_btns button {
   margin-top: 10px;
   font-size: 2em;
+  box-shadow: 2px 2px 4px 0px black;
 }

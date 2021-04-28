@@ -14,11 +14,15 @@
   padding: 50px;
   margin: 10px;
   font-size: 2em;
+  box-shadow: 2px 2px 5px 0px black;
+  cursor: pointer;
 }
 
 .start_menu_btns {
   padding: 10px;
   margin: 10px;
+  box-shadow: 2px 2px 4px -1px black;
+  cursor: pointer;
 }
 
 .menu_mode_active {

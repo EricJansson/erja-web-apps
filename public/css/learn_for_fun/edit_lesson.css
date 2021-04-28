@@ -61,6 +61,8 @@
     grid-column: 3;
     width: 50px;
     justify-self: end;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px -1px black;
 }
 
 .create_object_grid {
@@ -93,6 +95,11 @@
     text-align: center;
 }
 
+#create_object_options_block button {
+    cursor: pointer;
+    box-shadow: 2px 2px 4px -1px black;
+}
+
 .edit_lesson_exit {
     margin: 0 auto;
     text-align: center;
@@ -100,17 +107,13 @@
     width: fit-content;
 }
 
+.edit_lesson_exit button {
+    box-shadow: 2px 2px 4px -1px black;
+    cursor: pointer;
+}
+
+
 #lesson_list_block {
-    /*
-    border: 1px solid black;
-    width: 200px;
-    height: 100px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    padding: 20px;
-    padding-top: 10px;
-    */
-    
     height: 100px;
     margin-bottom: 20px;
 }
@@ -119,6 +122,7 @@
     border: 1px solid black;
     padding: 3px;
     margin-bottom: 6px;
+    box-shadow: 2px 2px 4px -1px black;
 }
 
 .lesson_list_title {
@@ -137,6 +141,7 @@
     padding: 10px;
     margin-bottom: 20px;
 }
+
 
 .create_new_item_hidden {
     display: none;
@@ -187,6 +192,7 @@
     width: 50px;
     justify-self: end;
     display: none;
+    box-shadow: 2px 2px 4px -1px black;
 }
 
 .edit_list_input_fields {
@@ -200,9 +206,14 @@
     grid-column: 2;
 }
 
+.edit_all_edit_btns button {
+    box-shadow: 2px 2px 4px -1px black;
+    cursor: pointer;
+}
+
 .edit_btns {
-    width: 20px;
-    height: 20px;
+    width: 19px;
+    height: 19px;
     background-size: 20px;
     border: none;
     cursor: pointer;
@@ -287,12 +298,11 @@
     }
     .lesson_lists {
         margin-top: 0;
-        margin-bottom: 0;
         width: fit-content;
     }
 
     #edit_lesson_grid { 
-        grid-template-columns: auto ; 
+        grid-template-columns: auto; 
     }
     #edit_lesson_options {
         grid-column: 1;
@@ -306,5 +316,12 @@
     }
     #edit_middle_grid_content {
         grid-column: 1;
+    }
+    .edit_object_grid {
+        grid-template-columns: 80px 40px auto;
+        padding-bottom: 20px;
+    }
+    .edit_object_type {
+        font-size: 0.8em;
     }
 }
