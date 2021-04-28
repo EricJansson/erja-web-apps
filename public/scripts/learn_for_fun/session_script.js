@@ -178,7 +178,8 @@ selectOption = (option_number) => {
         console.log("Wrong.")
         number_of_wrongs++;
         document.getElementById("next_question_correct").style.display = "none";
-        document.getElementById("optionBtn" + option_number).classList.add("wrong_answer");
+        // document.getElementById("optionBtn" + option_number).classList.add("wrong_answer");
+        document.getElementById("optionBtn" + option_number).style.background = "rgba(197, 13, 13, 0.6)";
     }
     for (let i = 1; i <= number_of_options; i++) {
         document.getElementById("optionBtn" + i).classList.remove("active_options");
@@ -189,7 +190,8 @@ selectOption = (option_number) => {
         clearInterval(timer); // stop timer
         document.getElementById("post_session_recap_btn").style.display = "block";
     }
-    document.getElementById("optionBtn" + correct_answer).classList.add("correct_answer");
+    // document.getElementById("optionBtn" + correct_answer).classList.add("correct_answer");
+    document.getElementById("optionBtn" + correct_answer).style.background = "rgba(13, 197, 13, 0.6)";
     // refresh data
     session_data();
     question_answered_already = true;
@@ -202,9 +204,14 @@ goToNextQuestion = (end_Session) => {
     document.getElementById("next_question_correct").style.display = "block";
     // remove correct/wrong answer colors
     for (let i = 1; i <= number_of_options; i++) {
+        
+        document.getElementById("optionBtn" + i).style.background = "";
+        /*
         document.getElementById("optionBtn" + i).classList.remove("correct_answer");
         document.getElementById("optionBtn" + i).classList.remove("wrong_answer");
+        */
         document.getElementById("optionBtn" + i).classList.add("active_options");
+        
     }
     if (end_Session == 'end_session') {
         document.getElementById("main_Header").style.display = "block";

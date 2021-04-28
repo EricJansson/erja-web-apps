@@ -89,6 +89,10 @@
   display: none;
 }
 
+#post_session_recap_btn button {
+  box-shadow: 2px 2px 5px -1px black;
+}
+
 #next_question_correct {
   font-weight: bold;
   color: green;
@@ -152,6 +156,7 @@
 @media only screen and (max-width: 640px) {
   #main_content {
     margin-top: 0;
+    padding-bottom: 40px;
     width: unset;
     min-width: unset;
   }
@@ -179,6 +184,7 @@
   .options_grid {
     grid-row-gap: 10px;
     grid-column-gap: 10px;
+    margin-top: 20px;
   }
   #session_data {
     min-height: 80px;
@@ -189,5 +195,9 @@
 
   #session_success_rate {
     margin-top: 0px;
+  }
+
+  #next_question_block {
+    margin: 10px auto;
   }
 }
