@@ -32,23 +32,28 @@
     <div id="start_menu">
         <button id="start_btn" onclick="startSession()">Start!</button>
         <br>
-        <button class="start_menu_btns menu_mode_active" onclick="mode_select(1)">Mode 1</button>
-        <button class="start_menu_btns" onclick="mode_select(2)">Mode 2</button>
+        <button class="start_menu_btns menu_mode_active" onclick="mode_select(1)">Normal Mode</button>
+        <button class="start_menu_btns" onclick="mode_select(2)">Alternate Mode</button>
         <br>
-        <button class="start_menu_btns" onclick="toggle_listReview_menu('edit')">Review list</button>
+        <button class="start_menu_btns" onclick="toggle_listReview_menu('edit')">Review lists</button>
     </div>
 
     <div id="edit_lesson">
         <div id="edit_lesson_grid">
             <div id="edit_lesson_lists">
+                <div class="lesson_list_tabs inactive_list_tab" id="list_tab_3">Other</div>
+                <div class="lesson_list_tabs inactive_list_tab" id="list_tab_2">Saved Lists</div>
+                <div class="lesson_list_tabs" id="list_tab_1">My lists</div>
                 <div id="lesson_list_block">
-                    <div class="lesson_lists" id="lesson_list_1">
-                        <div class="lesson_list_title">Beginner Japanese</div>
-                        <div class="lesson_list_description">Japanese vocabulary for beginners.</div>
-                    </div>
-                    <div class="lesson_lists" id="lesson_list_2">
-                        <div class="lesson_list_title">Math repetition</div>
-                        <div class="lesson_list_description">Preparation for university.</div>
+                    <div id="lesson_full_list">
+                        <div class="lesson_lists" id="lesson_list_1">
+                            <div class="lesson_list_title">Beginner Japanese</div>
+                            <div class="lesson_list_description">Japanese vocabulary for beginners.</div>
+                        </div>
+                        <div class="lesson_lists" id="lesson_list_2">
+                            <div class="lesson_list_title">Math repetition</div>
+                            <div class="lesson_list_description">Preparation for university.</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -64,6 +69,7 @@
 
 
             <div id="edit_middle_grid_content">
+
                 <div id="create_new_list_block">
                     <div class="create_object_grid">
                         <div class="edit_question_num">New question</div>
@@ -88,9 +94,17 @@
                     </div>
                 </div>
 
-                <div id="edit_lesson_items">
+
+                <div id="edit_lesson_table">
+                    <div id="display_lesson_options">
+                        <button id="display_list_mode_1" class="edit_list_mode_btns table_list_icon" onclick=""></button>
+                        <button id="display_list_mode_2" class="edit_list_mode_btns card_list_icon display_list_clickable" onclick=""></button>
+                    </div>
+                    <div id="display_table_header"></div>
+                    <div id="display_table_data"></div>
                     <div id="display_session_data"></div>
                 </div>
+
             </div>
 
         </div>
@@ -132,6 +146,8 @@
     <script src="./scripts/learn_for_fun/session_script.js"></script>
     <script src="./scripts/learn_for_fun/overlay.js"></script>
     <script src="./scripts/learn_for_fun/edit_lesson.js"></script>
+    <script src="./scripts/learn_for_fun/review_list_section.js"></script>
+    <script src="./scripts/learn_for_fun/edit_table_lists.js"></script>
     <script src="./scripts/learn_for_fun/dev_mode.js"></script>
 </body>
 

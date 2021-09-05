@@ -13,14 +13,60 @@
 }
 
 #edit_lesson_lists {
+    margin-top: 24px;
     grid-column: 1;
     grid-row: 1;
+    z-index: 1;
+}
+
+#lesson_list_block {
     height: fit-content;
     border: 1px solid black;
     background-color: white;
     padding: 20px;
-    width: 240px;
-    margin: 25px auto;
+    margin: 30px auto;
+    min-width: 205px;
+    z-index: 2;
+
+}
+
+.lesson_list_tabs {
+    border-radius: 10px 10px 0 0;
+    height: 17px;
+    min-width: 46px;
+    padding: 6px 8px;
+    background: white;
+    z-index: 1;
+    border: 2px solid black;
+    border-bottom: none;
+    font-weight: bold;
+    display: inline-block;
+    position: absolute;
+}
+
+.inactive_list_tab:hover {
+    background-color: yellow;
+}
+
+.inactive_list_tab {
+    background: #afafaf;
+    padding: 4px 8px;
+    margin-top: 5px;
+    cursor: pointer;
+    z-index: -1;
+}
+
+#list_tab_1 {
+    margin-left: 6px;
+}
+
+#list_tab_2 {
+    margin-left: 76px;
+    min-width: 89px;
+}
+
+#list_tab_3 {
+    margin-left: 178px;
 }
 
 #edit_lesson_options {
@@ -29,24 +75,91 @@
     grid-row: 1;
     border: 1px solid black;
     background-color: white;
-    padding: 20px;
+    padding: 20px 0;
     width: 150px;
     margin: 25px auto;
 }
 
-#edit_middle_grid_content {
-
-}
-
-#edit_lesson_items {
+#edit_lesson_table {
     grid-column: 2;
     padding: 20px 15px;
     border: 1px solid black;
     max-width: 700px;
     background-color: white;
     margin: 25px 10px;
+    min-height: 500px;
 }
 
+#display_table_header {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: serif;
+}
+
+#display_table_header div:nth-child(1) {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#display_table_data {
+    display: grid;
+    grid-template-columns: auto calc(50% - 30px) calc(50% - 30px);
+    justify-content: center;
+}
+
+#testing_div {
+    padding: 4px;
+    height: 16px;
+    width: fit-content;
+    margin-top: -22px;
+    margin-left: auto;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+}
+
+.table_item_first {
+    border: none;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.table_item_header, #table_question {
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid black;
+    border-left: none;
+    text-align: center;
+}
+
+.table_item_num {
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid black;
+    border-top: none;
+    text-align: center;
+}
+
+.table_items {
+    padding: 8px;
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+}
+
+#mode_select_id {
+    border: 2px solid black;
+    font-size: 1em;
+    font-weight: bold;
+    width: auto;
+}
+
+#mode_select_id option {
+    width: fit-content;
+    font-weight: bold;
+}
 
 /* Create item */
 
@@ -79,7 +192,6 @@
 
 .create_object_type {
     height: 25px;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     grid-column: 1;
     text-align: right;
@@ -113,15 +225,18 @@
 }
 
 
-#lesson_list_block {
+#lesson_full_lists {
     height: 100px;
     margin-bottom: 20px;
 }
 
 .lesson_lists {
+    font-family: serif;
     border: 1px solid black;
     padding: 3px;
     margin-bottom: 6px;
+    min-width: 180px;
+    max-width: 280px;
     box-shadow: 2px 2px 4px -1px black;
 }
 
@@ -136,6 +251,16 @@
     cursor: pointer;
 }
 
+.lesson_list_active {
+    background: #64c9e075;
+}
+
+
+
+
+
+
+
 .edit_lesson_go_back {
     font-size: 1.6em;
     padding: 10px;
@@ -147,11 +272,71 @@
     display: none;
 }
 
+#display_lesson_options {
+    position: absolute;
+}
+
+
+
+
+
+
+
+.edit_list_mode_btns {
+    width: 30px;
+    height: 30px;
+    background-size: 31px;
+    box-shadow: inset 0 0 9px 0px rgb(123 255 249);
+    border: none;
+    cursor: default;
+}
+
+.table_list_icon {
+    background-image: url("/images/learn_for_fun_img/select_list.jpg");
+}
+
+.card_list_icon {
+    background-image: url("/images/learn_for_fun_img/select_card_list.jpg");
+}
+
+.display_list_clickable {
+    box-shadow: 2px 2px 6px 0px black;
+}
+
+.display_list_clickable:hover {
+    box-shadow: inset 0 0 10px #0095ff;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
 
 
 
 #display_session_data {
+    display: none;
     text-align: center;
+}
+
+
+#display_session_header {
+    text-align: center;
+    font-family: serif;
+}
+
+#display_session_header div:nth-child(1) {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#display_session_header div:nth-child(2) {
+    margin-bottom: 15px;
 }
 
 .edit_object_grid {
@@ -167,7 +352,6 @@
 }
 
 .edit_question_num {
-    font-family: Arial, Helvetica, sans-serif;
     padding-left: 10px;
     font-size: 1.1em;
     font-weight: bold;
@@ -176,7 +360,6 @@
 
 .edit_object_type {
     height: 25px;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     grid-column: 1;
     text-align: right;
@@ -265,23 +448,32 @@
     #edit_lesson {
         margin-top: 0px;
     }
-    #edit_lesson_grid { 
-        grid-template-columns: auto auto; 
+    #edit_lesson_grid {
+        justify-content: space-between;
+        grid-template-columns: auto 200px;
+        max-width: 732px;
+        margin: auto;
     }
     #edit_lesson_options {
         grid-column: 2;
         grid-row: 1;
+        margin: 25px 10px 25px auto;
     }
     #edit_lesson_lists {
         grid-column: 1; 
-        grid-row: 1; 
-        
-        width: 300px;
-        margin-right: 50px;
+        grid-row: 1;
+        margin-top: 25px;
+        margin-left: 10px;
         height: auto;
+    }
+    .lesson_lists {
+        max-width: 400px;
     }
     #edit_middle_grid_content {
         grid-column: span 2;
+    }
+    #display_table_data {
+        grid-template-columns: auto calc(50% - 30px) calc(50% - 30px);
     }
 }
 
@@ -293,26 +485,23 @@
         width: unset;
         margin: 0 auto;
     }
-    #edit_lesson_items {
-        width: unset;
-    }
     .lesson_lists {
         margin-top: 0;
-        width: fit-content;
     }
 
     #edit_lesson_grid { 
-        grid-template-columns: auto; 
+        grid-template-columns: 100%;
+        min-width: 300px;
     }
     #edit_lesson_options {
         grid-column: 1;
         grid-row: 1;
-        width: calc(90% - 20px);
+        width: calc(100% - 20px);
     }
     #edit_lesson_lists {
         grid-column: 1; 
         grid-row: 2; 
-        width: calc(90% - 20px);
+        width: calc(100% - 20px);
     }
     #edit_middle_grid_content {
         grid-column: 1;
@@ -323,5 +512,21 @@
     }
     .edit_object_type {
         font-size: 0.8em;
+    }
+    
+    .grid_item_header {
+        text-align: left;
+    }
+    .grid_item_num {
+        padding: 8px 4px;
+    }
+    
+    #display_table_data {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto calc(50% - 10px) calc(50% - 10px);
+    }
+    #display_lesson_options {
+        display: inline-grid;
     }
 }

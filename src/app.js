@@ -8,6 +8,10 @@ const friendlist = require('./utils/friendlist')
 const idconverter = require('./utils/idconverter')
 const recentlyplayed = require('./utils/recentlyplayed')
 const ownedgames = require('./utils/ownedgames')
+// Learn for fun
+const fs = require('fs');
+const read_my_lesson = require('./utils/learn_for_fun/lesson_util')
+const add_to_lesson = require('./utils/learn_for_fun/lesson_write')
 
 
 const app = express();
@@ -108,6 +112,7 @@ app.get('/steam/ownedgames', (req, res) => {
         })
     })
 })
+
 
 
 app.get('/steam/getuser', (req, res) => {
@@ -254,6 +259,13 @@ app.get('/steam/friendlist', (req, res) => {
     })
 })
 
+// learn for fun
+// quiz me
+
+/*
+const fileName = './file.json';
+const file = require(fileName);
+*/
 
 app.get('/learn_for_fun', (req, res) => {
     res.render('learn_for_fun', {
@@ -262,6 +274,44 @@ app.get('/learn_for_fun', (req, res) => {
         name: 'Eric Jansson'
     })
 })
+
+/*
+var my_JSON_path = publicDirectoryPath + '/scripts/learn_for_fun/JSON_files/my_lesson.json';
+console.log(my_JSON_path)
+*/
+
+app.get('/learn_for_fun/get_my_lesson', (req, res) => {
+    read_my_lesson(publicDirectoryPath, (error, { jsondata } = {}) => {
+        if (error) {
+            return res.send({
+                error: error
+            })
+        }
+        res.send({
+            jsondata
+        })
+    })
+})
+
+
+app.get('/learn_for_fun/write_my_lesson', (req, res) => {
+    if (typeof req.query.added_object == "undefined") { 
+        return console.log("Must submit query.")
+    }
+    add_to_lesson(req.query.added_object, (error, { jsondata } = {}) => {
+        if (error) {
+            return res.send({
+                error: error
+            })
+        }
+        res.send({
+            jsondata
+        })
+    })
+
+})
+
+
 
 app.get('/learn_for_fun/api', (req, res) => {
     res.send({

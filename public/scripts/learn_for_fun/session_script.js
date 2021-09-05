@@ -11,9 +11,9 @@ var question_answered_already = false;
 
 
 startSession = () => {
-    for (let i = 0; i < ALL_QUESTIONS.length; i++) {
-        ALL_QUESTIONS[i]["option_id"] = i;
-        ALL_QUESTIONS[i]["alt_option_repeat"] = 0;
+    for (let i = 0; i < MY_LIST.ALL_QUESTIONS.length; i++) {
+        MY_LIST.ALL_QUESTIONS[i]["option_id"] = i;
+        MY_LIST.ALL_QUESTIONS[i]["alt_option_repeat"] = 0;
     }
     document.getElementById("main_content").style.display = "block";
     document.getElementById("main_Header").style.display = "none";
@@ -22,10 +22,10 @@ startSession = () => {
     current_question_number = 0; // reset
     number_of_corrects = 0; // reset
     number_of_wrongs = 0; // reset
-    for (let k = 0; k < ALL_QUESTIONS.length; k++) {
+    for (let k = 0; k < MY_LIST.ALL_QUESTIONS.length; k++) {
         session_array.push(k);
     }
-    session_data("setup");
+    session_stats("setup");
     array_shuffler(session_array);
     generate_question(current_question_number);
 }
@@ -40,7 +40,7 @@ var session_progress_amount;
 var session_success_rate;
 var start_time = "0:00";
 
-session_data = (setup_data) => {
+session_stats = (setup_data) => {
     if (setup_data == "setup") {
         session_progress_total = session_array.length;
         session_success_rate = 0;
@@ -90,8 +90,8 @@ var question_loop_number = 0;
 generate_question = (question_num) => {
     var current_question_num = session_array[question_num]; // number of the question at index[PARAM]
     var current_question_index = session_array.indexOf(current_question_num); // index of "number of the question"
-    ALL_QUESTIONS[current_question_num]["alt_option_repeat"]++;
-    document.getElementById("question_block").innerText = ALL_QUESTIONS[current_question_num].question;
+    MY_LIST.ALL_QUESTIONS[current_question_num]["alt_option_repeat"]++;
+    document.getElementById("question_block").innerText = MY_LIST.ALL_QUESTIONS[current_question_num].question;
 
     var current_task_options = [];
     current_task_options.push(current_question_num);
@@ -113,16 +113,16 @@ generate_question = (question_num) => {
         failsafe++;
         var random_index_num = Math.floor(Math.random() * temp_array_copy.length);
         var random_array_number = temp_array_copy[random_index_num];
-        if (ALL_QUESTIONS[random_array_number]["alt_option_repeat"] <= question_loop_number &&
+        if (MY_LIST.ALL_QUESTIONS[random_array_number]["alt_option_repeat"] <= question_loop_number &&
             !current_task_options.includes(random_array_number)) {
-            ALL_QUESTIONS[random_array_number]["alt_option_repeat"]++;
+            MY_LIST.ALL_QUESTIONS[random_array_number]["alt_option_repeat"]++;
             current_task_options.push(random_array_number);
         } else {
             var local_lowest;
-            for (let i = 0; i < ALL_QUESTIONS.length; i++) {
-                ALL_QUESTIONS[i].alt_option_repeat;
-                if (ALL_QUESTIONS[i].alt_option_repeat < local_lowest) {
-                    local_lowest = ALL_QUESTIONS[i].alt_option_repeat - 1;
+            for (let i = 0; i < MY_LIST.ALL_QUESTIONS.length; i++) {
+                MY_LIST.ALL_QUESTIONS[i].alt_option_repeat;
+                if (MY_LIST.ALL_QUESTIONS[i].alt_option_repeat < local_lowest) {
+                    local_lowest = MY_LIST.ALL_QUESTIONS[i].alt_option_repeat - 1;
                 }
             }
             if (local_lowest < question_loop_number) {
@@ -138,15 +138,15 @@ generate_question = (question_num) => {
     var task_options_length = current_task_options.length;
     for (let i = 0; i < task_options_length; i++) {
         if (session_mode == 1) {
-            current_task_options[i] = ALL_QUESTIONS[current_task_options[i]].answer;
+            current_task_options[i] = MY_LIST.ALL_QUESTIONS[current_task_options[i]].answer;
         } else if (session_mode == 2) {
-            current_task_options[i] = ALL_QUESTIONS[current_task_options[i]].alt_answer;
+            current_task_options[i] = MY_LIST.ALL_QUESTIONS[current_task_options[i]].alt_answer;
         }
     }
     console.log(current_task_options);
     array_shuffler(current_task_options);
     for (let i = 0; i < current_task_options.length; i++) {
-        if (ALL_QUESTIONS[session_array[current_question_number]].answer == current_task_options[i] || ALL_QUESTIONS[session_array[current_question_number]].alt_answer == current_task_options[i]) {
+        if (MY_LIST.ALL_QUESTIONS[session_array[current_question_number]].answer == current_task_options[i] || MY_LIST.ALL_QUESTIONS[session_array[current_question_number]].alt_answer == current_task_options[i]) {
             correct_answer = i + 1;
         }
         document.getElementById("optionBtn" + (i + 1)).innerText = current_task_options[i];
@@ -193,7 +193,7 @@ selectOption = (option_number) => {
     // document.getElementById("optionBtn" + correct_answer).classList.add("correct_answer");
     document.getElementById("optionBtn" + correct_answer).style.background = "rgba(13, 197, 13, 0.6)";
     // refresh data
-    session_data();
+    session_stats();
     question_answered_already = true;
 }
 

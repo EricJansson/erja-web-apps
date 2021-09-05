@@ -3,10 +3,15 @@
 
 var ALL_QUESTIONS_loaded = false;
 
+const session_data = document.getElementById("display_session_data");
+
+
+
 
 generate_full_edit_list = () => {
-    document.getElementById("display_session_data").innerHTML = "";
-    for (let i = 1; i <= ALL_QUESTIONS.length; i++) {
+    session_data.innerHTML = "";
+    
+    for (let i = 1; i <= MY_LIST.ALL_QUESTIONS.length; i++) {
         make_new_object(i);
         add_object_type(i, i);
         add_object_type("Question", i);
@@ -41,12 +46,13 @@ add_object_type = (data_type, index) => {
     }
 }
 
+
 make_new_object = (index) => {
     editmode_new_div = document.createElement("DIV");
     editmode_new_div.classList = "edit_object_grid";
     editmode_new_div.id = "edit_object_" + index;
     current_object_id = editmode_new_div.id;
-    document.getElementById("display_session_data").appendChild(editmode_new_div);
+    session_data.appendChild(editmode_new_div);
 }
 
 
@@ -86,16 +92,17 @@ add_object_data = (object_id, object_data, index, object_classlist) => {
     }
     if (typeof object_data == "string") {
         if (object_data == "question") {
-            editmode_new_div.innerText = ALL_QUESTIONS[index - 1].question;
+            editmode_new_div.innerText = MY_LIST.ALL_QUESTIONS[index - 1].question;
         } else if (object_data == "answer") {
-            editmode_new_div.innerText = ALL_QUESTIONS[index - 1].answer;
+            editmode_new_div.innerText = MY_LIST.ALL_QUESTIONS[index - 1].answer;
         } else if (object_data == "alt_answer") {
-            editmode_new_div.innerText = ALL_QUESTIONS[index - 1].alt_answer;
+            editmode_new_div.innerText = MY_LIST.ALL_QUESTIONS[index - 1].alt_answer;
         }
     }
     add_edit_btn(index, object_data);
     document.getElementById("edit_object_" + index).appendChild(editmode_new_div);
 }
+
 
 var current_edited_data_btn;
 var current_edited_data;
@@ -110,10 +117,10 @@ edit_btn_edit = (type, index) => {
     all_accept_btns[index - 1].style.display = 'inline-block';
     all_decline_btns[index - 1].style.display = 'inline-block';
 
-    current_edited_data = ALL_QUESTIONS[index - 1][type];
+    current_edited_data = MY_LIST.ALL_QUESTIONS[index - 1][type];
 
     current_edited_data_btn = document.getElementById(type + "_" + index);
-    current_edited_data_btn.innerHTML = `<input class="edit_list_input_fields" id="edit_data_input_field" value="` + ALL_QUESTIONS[index - 1][type] + `"></input>`
+    current_edited_data_btn.innerHTML = `<input class="edit_list_input_fields" id="edit_data_input_field" value="` + MY_LIST.ALL_QUESTIONS[index - 1][type] + `"></input>`
     function read_edit_input(param) {
         var my_input = param.target.value;
         current_edited_data = my_input;
@@ -132,9 +139,9 @@ edit_btn_accept = (type, index) => {
     all_accept_btns[index - 1].style.display = 'none';
     all_decline_btns[index - 1].style.display = 'none';
 
-    ALL_QUESTIONS[index - 1][type] = current_edited_data;
+    MY_LIST.ALL_QUESTIONS[index - 1][type] = current_edited_data;
 
-    current_edited_data_btn.innerHTML = ALL_QUESTIONS[index - 1][type];
+    current_edited_data_btn.innerHTML = MY_LIST.ALL_QUESTIONS[index - 1][type];
 }
 
 
@@ -148,9 +155,9 @@ edit_btn_decline = (type, index) => {
     all_accept_btns[index - 1].style.display = 'none';
     all_decline_btns[index - 1].style.display = 'none';
 
-    current_edited_data = ALL_QUESTIONS[index - 1][type];
+    current_edited_data = MY_LIST.ALL_QUESTIONS[index - 1][type];
 
-    current_edited_data_btn.innerHTML = ALL_QUESTIONS[index - 1][type];
+    current_edited_data_btn.innerHTML = MY_LIST.ALL_QUESTIONS[index - 1][type];
 }
 
 // create new question
@@ -195,13 +202,13 @@ create_item = () => {
     }
     // hide "create new item" block
     document.getElementById("create_new_list_block").style.display = "none";
-    // create new object and add it to ALL_QUESTIONS array
+    // create new object and add it to MY_LIST.ALL_QUESTIONS array
     add_new_object = {};
     add_new_object.question = question_input;
     add_new_object.answer = answer_input;
     add_new_object.alt_answer = alt_answer_input;
     console.log(add_new_object);
-    ALL_QUESTIONS.unshift(add_new_object);
+    MY_LIST.ALL_QUESTIONS.unshift(add_new_object);
     // renew the list
     generate_full_edit_list();
 }
@@ -232,11 +239,65 @@ delete_item = (question_number) => {
         total_items[i].style.display = "none"
     }
 
-    // ALL_QUESTIONS[question_number - 1].question == "Do you speak English?"
-    ALL_QUESTIONS.splice(question_number - 1, 1);
+    // MY_LIST.ALL_QUESTIONS[question_number - 1].question == "Do you speak English?"
+    MY_LIST.ALL_QUESTIONS.splice(question_number - 1, 1);
 
     // renew the list
     generate_full_edit_list();
 
 }
+
+
+
+
+
+// Change list
+
+list_tab = (what_list) => {
+    for (let i = 1; i < 4; i++) {
+        document.getElementById("list_tab_" + i).classList.add("inactive_list_tab");
+    }
+    if (what_list == "My lists") {
+        document.getElementById("list_tab_1").classList.remove("inactive_list_tab");
+    } else if (what_list == "Saved Lists") {
+        document.getElementById("list_tab_2").classList.remove("inactive_list_tab");
+    } else if (what_list == "Other") {
+        document.getElementById("list_tab_3").classList.remove("inactive_list_tab");
+    }
+}
+
+document.getElementById("list_tab_1").addEventListener('click', () => { list_tab("My lists"); });
+document.getElementById("list_tab_2").addEventListener('click', () => { list_tab("Saved Lists"); });
+document.getElementById("list_tab_3").addEventListener('click', () => { list_tab("Other"); });
+
+
+
+// toggle list displaying mode (Card / Table)
+
+var current_mode = 2;
+
+swap_list_mode = (select_list) => {
+    if (select_list == "Table list" && current_mode != 1) {
+        document.getElementById("display_session_data").style.display = "block";
+        document.getElementById("display_table_data").style.display = "none";
+
+        document.getElementById("display_list_mode_2").classList.remove("display_list_clickable");
+        document.getElementById("display_list_mode_1").classList.add("display_list_clickable");
+        current_mode = 1;
+    } else if (select_list == "Card list" && current_mode != 2) {
+        document.getElementById("display_session_data").style.display = "none";
+        document.getElementById("display_table_data").style.display = "grid";
+
+        document.getElementById("display_list_mode_1").classList.remove("display_list_clickable");
+        document.getElementById("display_list_mode_2").classList.add("display_list_clickable");
+        current_mode = 2;
+    } else {
+        console.log("Already selected.");
+    }
+}
+
+document.getElementById("display_list_mode_1").addEventListener('click', () => { swap_list_mode("Card list"); });
+document.getElementById("display_list_mode_2").addEventListener('click', () => { swap_list_mode("Table list"); });
+
+
 
