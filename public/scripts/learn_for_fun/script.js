@@ -7,27 +7,67 @@ setTimeout(() => {
 }, 100);
 
 
-
-
-var ALL_LISTS = [
-    {
-        title: "Beginner Japanese",
-        description: "Japanese vocabulary for beginners"
-    },
-    /*
-    {
-        title: "Math repetition",
-        description: "Preparation for university"
-    },
-    */
-    {
-        title: "Diskret matematik",
-        description: "Metoder och formler"
-    }
-]
+var number_of_lists = 2;
 
 
 var MY_LIST_1 = {
+    title: "Diskret matematik",
+    description: "Räkneregler för mängdlära.",
+    ALL_QUESTIONS: [
+        {
+            question: "(A ∪ B) ∪ C = A ∪ (B ∪ C)",
+            answer: "Associativa",
+            alt_answer: "A ∩ (B ∩ C) = (A ∩ B) ∩ C"
+        },
+        {
+            question: "A ∪ B = B ∪ A",
+            answer: "Kommutativa",
+            alt_answer: "A ∩ B = B ∩ A"
+        },
+        {
+            question: "A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)",
+            answer: "Distributiva",
+            alt_answer: "(A ∩ B) ∪ (A ∩ C) = A ∩ (B ∪ C)"
+        },
+        {
+            question: "(A ∪ B)^c = A^c ∩ B^c",
+            answer: "De Morgan",
+            alt_answer: "A^c ∪ B^c = (A ∩ B)^c"
+        },
+        {
+            question: "A ∪ A = A",
+            answer: "Idempotens",
+            alt_answer: "A = A ∩ A"
+        },
+        {
+            question: "A ∪ (A ∩ B) = A",
+            answer: "Absorption",
+            alt_answer: "A = A ∩ (A ∪ B)"
+        },
+        {
+            question: "(A^c)^c = A",
+            answer: "Dubbelt komplement",
+            alt_answer: "A = (A^c)^c"
+        },
+        {
+            question: "A ∪ A^c = U",
+            answer: "Invers",
+            alt_answer: "A ∩ A^c = ∅"
+        },
+        {
+            question: "A ∪ ∅ = A",
+            answer: "Identitet",
+            alt_answer: "A = A ∩ U"
+        },
+        {
+            question: "A ∩ ∅ = ∅",
+            answer: "Dominans",
+            alt_answer: "A ∪ U = U"
+        }
+    ]
+}
+
+var MY_LIST_2 = {
     title: "Beginner Japanese",
     description: "Japanese vocabulary for beginners",
     ALL_QUESTIONS: [
@@ -68,8 +108,11 @@ var MY_LIST_1 = {
 }
 
 
-/*
-var MY_LIST_2 = {
+
+
+
+
+var MY_LIST_3 = {
     title: "Math repetition",
     description: "Preparation for university.",
     ALL_QUESTIONS: [
@@ -121,66 +164,9 @@ var MY_LIST_2 = {
     ]
 }
 
-*/
 
 
 
-var MY_LIST_2 = {
-    title: "Diskret matematik",
-    description: "Räkneregler för mängdlära.",
-    ALL_QUESTIONS: [
-        {
-            question: "(A ∪ B) ∪ C = A ∪ (B ∪ C)",
-            answer: "Associativa",
-            alt_answer: "A ∩ (B ∩ C) = (A ∩ B) ∩ C"
-        },
-        {
-            question: "A ∪ B = B ∪ A",
-            answer: "Kommutativa",
-            alt_answer: "A ∩ B = B ∩ A"
-        },
-        {
-            question: "A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)",
-            answer: "Distributiva",
-            alt_answer: "(A ∩ B) ∪ (A ∩ C) = A ∩ (B ∪ C)"
-        },
-        {
-            question: "(A ∪ B)^c = A^c ∩ B^c",
-            answer: "De Morgan",
-            alt_answer: "A^c ∪ B^c = (A ∩ B)^c"
-        },
-        {
-            question: "A ∪ A = A",
-            answer: "Idempotens",
-            alt_answer: "A = A ∩ A"
-        },
-        {
-            question: "A ∪ (A ∩ B) = A",
-            answer: "Absorption",
-            alt_answer: "A = A ∩ (A ∪ B)"
-        },
-        {
-            question: "(Ac)c = A",
-            answer: "Dubbelt komplement",
-            alt_answer: "A = (Ac)c"
-        },
-        {
-            question: "A ∪ A^c = U",
-            answer: "Invers",
-            alt_answer: "A ∩ A^c = ∅"
-        },
-        {
-            question: "A ∪ ∅ = A",
-            answer: "Identitet",
-            alt_answer: "A = A ∩ U"
-        },
-        {
-            question: "A ∩ ∅ = ∅",
-            answer: "Dominans",
-            alt_answer: "A ∪ U = U"
-        }
-    ]
-}
 
 // ∪  ∩  ∅ 
 
@@ -188,7 +174,8 @@ var MY_LIST_2 = {
 
 // setup My lists variable
 
-ALL_LISTS = [];
+var ALL_LISTS = [];
+var MY_LIST;
 
 setup_lists = (list_name) => {
     ALL_LISTS.push({});
@@ -196,13 +183,35 @@ setup_lists = (list_name) => {
     ALL_LISTS[ALL_LISTS.length - 1].description = list_name.description;
 }
 
-setup_lists(MY_LIST_1);
-// setup_lists(MY_LIST_2);
-setup_lists(MY_LIST_2);
 
-var MY_LIST = MY_LIST_1;
+displayAvailableLists = () => {
+    for (let i = 0; i < number_of_lists; i++) {
+        console.log(["MY_LIST_" + (i+1)])
+        setup_lists(window["MY_LIST_" + (i+1)])
+    }
+    MY_LIST = MY_LIST_1;
+}
+
+displayAvailableLists()
 
 
+
+/*
+var ALL_LISTS = [
+    {
+        title: "Diskret matematik",
+        description: "Metoder och formler"
+    },
+    {
+        title: "Beginner Japanese",
+        description: "Japanese vocabulary for beginners"
+    },
+    {
+        title: "Math repetition",
+        description: "Preparation for university"
+    }
+]
+*/
 
 
 /*
