@@ -6,8 +6,9 @@ setTimeout(() => {
     dev_mode();
 }, 100);
 
+// ¬∀x P(x) ⇔ ∃x ¬P(x) 
 
-var number_of_lists = 2;
+var number_of_lists = 4;
 
 
 var MY_LIST_1 = {
@@ -67,7 +68,76 @@ var MY_LIST_1 = {
     ]
 }
 
+// ¬∀x P(x) ⇔ ∃x ¬P(x) 
+
 var MY_LIST_2 = {
+    title: "Logik och boolesk algebra",
+    description: "Räkneregler för logik.",
+    ALL_QUESTIONS: [
+        {
+            question: "P∧(Q∧R) ⇔ (P∧Q)∧R",
+            answer: "Associativa",
+            alt_answer: "P∨(Q∨R) ⇔ (P∨Q)∨R"
+        },
+        {
+            question: "P∧Q ⇔ Q∧P",
+            answer: "Kommutativa",
+            alt_answer: "P∨Q ⇔ Q∨P"
+        },
+        {
+            question: "P∧(Q∨R) ⇔ (P∧Q)∨(P∧R)",
+            answer: "Distributiva",
+            alt_answer: "P∨(Q∧R) ⇔ (P∨Q)∧(P∨R)"
+        },
+        {
+            question: "¬(P∧Q) ⇔ ¬P∨¬Q",
+            answer: "De Morgan",
+            alt_answer: "¬(P∨Q) ⇔ ¬P∧¬Q"
+        },
+        {
+            question: "P∧P ⇔ P",
+            answer: "Idempotens",
+            alt_answer: "P∨P ⇔ P"
+        },
+        {
+            question: "P∧(P∨Q) ⇔ P",
+            answer: "Absorption",
+            alt_answer: "P∨(P∧Q) ⇔ P"
+        },
+        {
+            question: "¬¬P ⇔ P",
+            answer: "Dubbelt komplement",
+            alt_answer: "¬¬P ⇔ P"
+        },
+        {
+            question: "P∧¬P ⇔ 0",
+            answer: "Invers",
+            alt_answer: "P∨¬P ⇔ 1"
+        },
+        {
+            question: "P∧1 ⇔ P",
+            answer: "Identitet",
+            alt_answer: "P∨0 ⇔ P"
+        },
+        {
+            question: "P∧0 ⇔ 0",
+            answer: "Dominans",
+            alt_answer: "P∨1 ⇔ 1"
+        },
+        {
+            question: "P↔Q ⇔ (P→Q) ∧ (Q→P)",
+            answer: "Omskrivningsregel för ↔",
+            alt_answer: "P↔Q ⇔ (P→Q) ∧ (Q→P)"
+        },
+        {
+            question: "P→Q ⇔ ¬P∨Q",
+            answer: "Omskrivningsregel för →",
+            alt_answer: "P→Q ⇔ ¬P∨Q"
+        }
+    ]
+}
+
+var MY_LIST_3 = {
     title: "Beginner Japanese",
     description: "Japanese vocabulary for beginners",
     ALL_QUESTIONS: [
@@ -112,7 +182,7 @@ var MY_LIST_2 = {
 
 
 
-var MY_LIST_3 = {
+var MY_LIST_4 = {
     title: "Math repetition",
     description: "Preparation for university.",
     ALL_QUESTIONS: [
@@ -258,6 +328,7 @@ write_data_function = () => {
 
 /*
 
+Some tutorial on how to use the site for newcomers (or as a "?" help option)
 *randomized* AND *strict* questions
 *quiz mode* AND *learn mode*: learn mode repeats wrong answers, quiz mode is counting correct + wrong answer stats
 *learn mode* repeat questions for longer sessions/better training

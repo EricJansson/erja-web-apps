@@ -257,12 +257,18 @@ list_tab = (what_list) => {
     for (let i = 1; i < 4; i++) {
         document.getElementById("list_tab_" + i).classList.add("inactive_list_tab");
     }
+    document.getElementById("lesson_full_list").style.display = "none";
+    document.getElementById("my_lessons_block").style.display = "none";
+    document.getElementById("other_lessons_block").style.display = "none";
     if (what_list == "My lists") {
         document.getElementById("list_tab_1").classList.remove("inactive_list_tab");
+        document.getElementById("lesson_full_list").style.display = "block";
     } else if (what_list == "Saved Lists") {
         document.getElementById("list_tab_2").classList.remove("inactive_list_tab");
+        document.getElementById("my_lessons_block").style.display = "block";
     } else if (what_list == "Other") {
         document.getElementById("list_tab_3").classList.remove("inactive_list_tab");
+        document.getElementById("other_lessons_block").style.display = "block";
     }
 }
 

@@ -1,10 +1,9 @@
 
 
-const lesson_full_list = document.getElementById("lesson_full_list");
-var number_of_lists = 2;
+const lesson_full_list = document.getElementById("other_lessons_block");
 
 generate_list = () => {
-    document.getElementById("lesson_full_list").innerHTML = "";
+    lesson_full_list.innerHTML = "";
 
 
     for (let i = 1; i <= ALL_LISTS.length; i++) {
@@ -33,6 +32,12 @@ generate_list = () => {
 var current_active_list = 1;
 
 swap_list = (select_list_index) => {
+    
+    for (let i = 0; i < number_of_lists; i++) {
+        document.getElementById("lesson_list_" + (i + 1)).classList.remove("highlight_lesson_list")
+    }
+    document.getElementById("lesson_list_" + select_list_index).classList.add("highlight_lesson_list")
+
     console.log(select_list_index)
     MY_LIST = window["MY_LIST_" + select_list_index];
 
@@ -40,7 +45,7 @@ swap_list = (select_list_index) => {
     generate_table();
     hide_alt_answers();
 
-    
+
     /*
     if (select_list_index == 1 && current_active_list != 1) {
         MY_LIST = ["MY_LIST_" + select_list_index]

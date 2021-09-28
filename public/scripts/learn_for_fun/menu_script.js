@@ -1,5 +1,6 @@
 
 
+
 var session_mode = 1;
 
 mode_select = (mode_number) => {
@@ -8,13 +9,14 @@ mode_select = (mode_number) => {
     for (let i = 0; i < mode_btns.length; i++) {
         mode_btns[i].classList.remove("menu_mode_active");
     }
-    mode_btns[session_mode - 1].classList.add("menu_mode_active");
+    mode_btns[session_mode].classList.add("menu_mode_active");
 }
 
 toggle_listReview_menu = (showId) => {
     if (showId == "edit") {
         if (ALL_QUESTIONS_loaded == false) {
             generate_full_edit_list();
+            swap_list(1);   // First list selected as default
         }
         document.getElementById("start_menu").style.display = "none";
         document.getElementById("main_Header").style.display = "none";
@@ -25,3 +27,5 @@ toggle_listReview_menu = (showId) => {
         document.getElementById("edit_lesson").style.display = "none";
     }
 }
+
+

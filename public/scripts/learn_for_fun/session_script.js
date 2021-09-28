@@ -10,6 +10,8 @@ var number_of_wrongs = 0;
 var question_answered_already = false;
 
 
+
+
 startSession = () => {
     for (let i = 0; i < MY_LIST.ALL_QUESTIONS.length; i++) {
         MY_LIST.ALL_QUESTIONS[i]["option_id"] = i;
@@ -17,7 +19,7 @@ startSession = () => {
     }
     document.getElementById("main_content").style.display = "block";
     document.getElementById("main_Header").style.display = "none";
-    document.getElementById("start_menu").style.display = "none";
+    document.getElementById("setup_session").style.display = "none";
     session_array = []; // reset
     current_question_number = 0; // reset
     number_of_corrects = 0; // reset

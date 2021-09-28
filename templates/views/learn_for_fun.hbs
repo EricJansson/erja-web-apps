@@ -7,6 +7,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
     <link rel="stylesheet" href="./css/learn_for_fun/style.css">
     <link rel="stylesheet" href="./css/learn_for_fun/menu.css">
+    <link rel="stylesheet" href="./css/learn_for_fun/setup_session.css">
     <link rel="stylesheet" href="./css/learn_for_fun/active_session.css">
     <link rel="stylesheet" href="./css/learn_for_fun/overlay.css">
     <link rel="stylesheet" href="./css/learn_for_fun/edit_lesson.css">
@@ -30,33 +31,57 @@
 
     <div id="main_Header">Quiz Maker</div>
     <div id="start_menu">
-        <button id="start_btn" onclick="startSession()">Start!</button>
+        <button id="start_btn" onclick="setupSession()">Start lesson</button>
+        <br>
+        <button class="start_menu_btns" onclick="toggle_listReview_menu('edit')">Review lists</button>
+    </div>
+
+    <div id="setup_session">
+        <button id="setup_session_backToMenu" onclick="setupSession('go back')">Back to menu</button>
+        <button id="quiz_me_btn" onclick="startSession()">QUIZ ME!</button>
         <br>
         <button class="start_menu_btns menu_mode_active" onclick="mode_select(1)">Normal Mode</button>
         <button class="start_menu_btns" onclick="mode_select(2)">Alternate Mode</button>
-        <br>
-        <button class="start_menu_btns" onclick="toggle_listReview_menu('edit')">Review lists</button>
+
+        <div id="setup_session_lists_block">
+            <div id="setup_list_headers_block">
+                <div class="setup_lists_headers" id="setup_my_list_header">My lists</div>
+                <div class="setup_lists_headers" id="setup_saved_list_header">Saved lists</div>
+                <div class="setup_lists_headers" id="setup_other_list_header">Other list</div>
+            </div>
+            
+            <div id="setup_my_list_content"></div>
+            <div id="setup_saved_list_content"></div>
+            <div id="setup_other_list_content"></div>
+{{!-- 
+            <div id="setup_my_lists_block">
+                <div id="setup_my_list_content"></div>
+            </div>
+            <div id="setup_saved_lists_block">
+                <div id="setup_saved_list_content"></div>
+            </div>
+            <div id="setup_other_lists_block">
+                <div id="setup_other_list_content"></div>
+            </div> --}}
+        </div>
     </div>
 
     <div id="edit_lesson">
         <div id="edit_lesson_grid">
             <div id="edit_lesson_lists">
-                <div class="lesson_list_tabs inactive_list_tab" id="list_tab_3">Other</div>
+                <div class="lesson_list_tabs" id="list_tab_3">Other</div>
                 <div class="lesson_list_tabs inactive_list_tab" id="list_tab_2">Saved Lists</div>
-                <div class="lesson_list_tabs" id="list_tab_1">My lists</div>
+                <div class="lesson_list_tabs inactive_list_tab" id="list_tab_1">My lists</div>
                 <div id="lesson_list_block">
-                    <div id="lesson_full_list">
-                        <div class="lesson_lists" id="lesson_list_1">
-                            <div class="lesson_list_title">Beginner Japanese</div>
-                            <div class="lesson_list_description">Japanese vocabulary for beginners.</div>
-                        </div>
-                        <div class="lesson_lists" id="lesson_list_2">
-                            <div class="lesson_list_title">Math repetition</div>
-                            <div class="lesson_list_description">Preparation for university.</div>
-                        </div>
-                    </div>
+                    <div id="lesson_full_list">This window displays your own created lessons.</div>
+                    <div id="my_lessons_block">Here you can find your saved lists.</div>
+                    <div id="other_lessons_block">This section is not in use yet.</div>
                 </div>
+
+
             </div>
+
+            
             <div id="edit_lesson_options">
                 <div class="edit_lesson_exit">
                     <button class="edit_lesson_go_back" onclick="toggle_listReview_menu('menu')">Menu</button>
@@ -97,8 +122,10 @@
 
                 <div id="edit_lesson_table">
                     <div id="display_lesson_options">
-                        <button id="display_list_mode_1" class="edit_list_mode_btns table_list_icon" onclick=""></button>
-                        <button id="display_list_mode_2" class="edit_list_mode_btns card_list_icon display_list_clickable" onclick=""></button>
+                        <button id="display_list_mode_1" class="edit_list_mode_btns table_list_icon"
+                            onclick=""></button>
+                        <button id="display_list_mode_2"
+                            class="edit_list_mode_btns card_list_icon display_list_clickable" onclick=""></button>
                     </div>
                     <div id="display_table_header"></div>
                     <div id="display_table_data"></div>
@@ -144,6 +171,7 @@
     <script src="./scripts/learn_for_fun/script.js"></script>
     <script src="./scripts/learn_for_fun/menu_script.js"></script>
     <script src="./scripts/learn_for_fun/session_script.js"></script>
+    <script src="./scripts/learn_for_fun/setup_session.js"></script>
     <script src="./scripts/learn_for_fun/overlay.js"></script>
     <script src="./scripts/learn_for_fun/edit_lesson.js"></script>
     <script src="./scripts/learn_for_fun/review_list_section.js"></script>
