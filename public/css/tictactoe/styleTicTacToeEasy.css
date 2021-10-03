@@ -1,0 +1,31 @@
+
+    /* Background */
+
+body {
+    background-image: linear-gradient(rgb(44, 236, 54),rgb(151, 255, 241));
+    background-size: 100% 1500px;
+}
+
+#diffUnbeatable {
+    z-index: 1;
+}
+
+#diffEasy {
+    z-index: 4;
+    background-image: url("../images/btnHighligth.png");
+    background-repeat: no-repeat;
+    background-size: 155px 30px;
+}
+
+button#diffHard:hover, button#diffUnbeatable:hover {
+    background-image: url("../images/btnHighligthHover.png");
+    background-repeat: no-repeat;
+    background-size: 150px 30px;
+    font-weight: bolder;
+}
+
+button#diffEasy:hover {
+    font-weight: bold;
+    background-size: 195px 30px;
+    background-position-x: -20px;
+}

@@ -4,10 +4,10 @@ const path = require('path')
 const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
-const friendlist = require('./utils/friendlist')
-const idconverter = require('./utils/idconverter')
-const recentlyplayed = require('./utils/recentlyplayed')
-const ownedgames = require('./utils/ownedgames')
+const friendlist = require('./utils/steam/friendlist')
+const idconverter = require('./utils/steam/idconverter')
+const recentlyplayed = require('./utils/steam/recentlyplayed')
+const ownedgames = require('./utils/steam/ownedgames')
 // Learn for fun
 const fs = require('fs');
 const read_my_lesson = require('./utils/learn_for_fun/lesson_util')
@@ -356,6 +356,39 @@ app.get('/learn_for_fun/api', (req, res) => {
     })
 })
 
+
+app.get('/snake', (req, res) => {
+    res.render('snake_game', {
+        title: 'Snake',
+        name: 'Eric Jansson',
+        errormessage: 'Article not found.'
+    })
+})
+
+app.get('/maze_solver', (req, res) => {
+    res.render('maze_solver', {
+        title: 'Maze solver',
+        name: 'Eric Jansson',
+        errormessage: 'Article not found.'
+    })
+})
+
+app.get('/mouse_maze', (req, res) => {
+    res.render('mouse_maze', {
+        title: 'Mouse maze',
+        name: 'Eric Jansson',
+        errormessage: 'Article not found.'
+    })
+})
+
+app.get('/yatzy', (req, res) => {
+    res.render('yatzy', {
+        title: 'Yatzy',
+        name: 'Eric Jansson',
+        errormessage: 'Article not found.'
+    })
+})
+
 app.get('/steam', (req, res) => {
     res.render('steam', {
         title: 'Steam User Info',
@@ -365,6 +398,106 @@ app.get('/steam', (req, res) => {
         errormessage: 'Article not found.'
     })
 })
+
+
+
+app.get('/tictactoe', (req, res) => {
+    res.render('tictactoe/index', {
+        title: 'Tic tac toe',
+        name: 'Eric Jansson',
+        errormessage: 'Article not found.'
+    })
+})
+
+app.get('/tictactoe/home', (req, res) => {
+    res.render('tictactoe/home', {
+        title: 'Tic tac toe'
+    })
+})
+
+app.get('/tictactoe/aboutSvenska', (req, res) => {
+    res.render('tictactoe/aboutSvenska', {
+        title: 'Tic tac toe'
+    })
+})
+
+app.get('/tictactoe/about', (req, res) => {
+    res.render('tictactoe/about', {
+        title: 'Tic tac toe'
+    })
+})
+
+app.get('/tictactoe/tictactoeMultiplayer', (req, res) => {
+    res.render('tictactoe/tictactoeMultiplayer', {
+        title: 'Tic tac toe'
+    })
+})
+
+app.get('/tictactoe/tictactoeSvenskaMultiplayer', (req, res) => {
+    res.render('tictactoe/tictactoeSvenskaMultiplayer', {
+        title: 'Tic tac toe'
+    })
+})
+
+app.get('/tictactoe/tictactoeVSaiEasy', (req, res) => {
+    res.render('tictactoe/tictactoeVSaiEasy', {
+        title: 'Tic tac toe'
+    })
+})
+
+app.get('/tictactoe/tictactoeVSaiHard', (req, res) => {
+    res.render('tictactoe/tictactoeVSaiHard', {
+        title: 'Tic tac toe'
+    })
+})
+
+app.get('/tictactoe/tictactoeVSaiUnbeatable', (req, res) => {
+    res.render('tictactoe/tictactoeVSaiUnbeatable', {
+        title: 'Tic tac toe'
+    })
+})
+
+app.get('/tictactoe/tictactoeSvenskaVSaiEasy', (req, res) => {
+    res.render('tictactoe/tictactoeSvenskaVSaiEasy', {
+        title: 'Tic tac toe'
+    })
+})
+
+app.get('/tictactoe/tictactoeSvenskaVSaiHard', (req, res) => {
+    res.render('tictactoe/tictactoeSvenskaVSaiHard', {
+        title: 'Tic tac toe'
+    })
+})
+
+app.get('/tictactoe/tictactoeSvenskaVSaiUnbeatable', (req, res) => {
+    res.render('tictactoe/tictactoeSvenskaVSaiUnbeatable', {
+        title: 'Tic tac toe'
+    })
+})
+
+app.get('/tictactoe/aboutSvenska', (req, res) => {
+    res.render('tictactoe/aboutSvenska', {
+        title: 'Tic tac toe'
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.get('/products', (req, res) => {
     if (!req.query.search) {

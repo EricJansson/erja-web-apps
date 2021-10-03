@@ -1,0 +1,37 @@
+
+    /* Background */
+
+body {
+    background-image: linear-gradient(rgba(207, 23, 23, 0.808),rgba(251, 234, 0, 0.774));
+    background-size: 100% 1500px;
+}
+
+#startSelectorCross, #startSelectorCircle {
+    position: absolute;
+    margin-top: -8px;
+    margin-left: -220px;
+    height: 50px;
+    width: 60px;
+    font-size: 0.5em;
+    font-weight: bold;
+    background-color: rgb(42, 152, 255);
+    outline: none;
+    border-radius: 50px;
+    box-shadow: 2px 2px 2px;
+}
+
+
+#startSelectorCross {
+    background-color: rgb(255, 45, 45);
+    margin-left: 20px;
+}
+
+#text {
+    height: 40px;
+    padding-top: 15px;
+}
+
+@keyframes crossAnimatePvP {
+    0%      {opacity: 0%;}
+    100%    {opacity: 100%;}
+}

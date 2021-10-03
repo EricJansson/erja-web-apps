@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/yatzy/style.css">
+    <link rel="icon" href="./images/yatzy/dice-5.png" type="image/gif" sizes="16x16">
+    <title>Yatzy</title>
+</head>
+
+<body>
+
+    <div id="playingField">
+        <div id="statTable">
+            <div id="statTableText">
+                <div id="statTurn1" class="statTableClass selectAble">Ettor: </div>
+                <div id="statTurn2" class="statTableClass selectAble">Tvåor: </div>
+                <div id="statTurn3" class="statTableClass selectAble">Treor: </div>
+                <div id="statTurn4" class="statTableClass selectAble">Fyror: </div>
+                <div id="statTurn5" class="statTableClass selectAble">Femmor: </div>
+                <div id="statTurn6" class="statTableClass selectAble">Sexor:</div>
+                <div class="statTableNotATurn">Summa: </div>
+                <div class="statTableNotATurn">Bonus: </div>
+                <br>
+                <div id="statTurn7" class="statTableClass selectAble">1 par: </div>
+                <div id="statTurn8" class="statTableClass selectAble">2 par: </div>
+                <div id="statTurn9" class="statTableClass selectAble">Triss: </div>
+                <div id="statTurn10" class="statTableClass selectAble">Fyrtal: </div>
+                <div id="statTurn11" class="statTableClass selectAble">Liten stege: </div>
+                <div id="statTurn12" class="statTableClass selectAble">Stor stege: </div>
+                <div id="statTurn13" class="statTableClass selectAble">Kåk: </div>
+                <div id="statTurn14" class="statTableClass selectAble">Chans: </div>
+                <div id="statTurn15" class="statTableClass selectAble">Yatzy: </div>
+                <div class="statTableNotATurn">Summa: </div>
+            </div>
+
+            <div id="statTableSum">
+                <div class="statTableResultClass" id="turn1">0</div>
+                <div class="statTableResultClass" id="turn2">0</div>
+                <div class="statTableResultClass" id="turn3">0</div>
+                <div class="statTableResultClass" id="turn4">0</div>
+                <div class="statTableResultClass" id="turn5">0</div>
+                <div class="statTableResultClass" id="turn6">0</div>
+                <div class="statTableResultClass" id="turnSumma1">0 (63 poäng för bonus)</div>
+                <div class="statTableResultClass" id="turnBonus">0</div>
+                <br>
+                <div class="statTableResultClass" id="turn7">0</div>
+                <div class="statTableResultClass" id="turn8">0</div>
+                <div class="statTableResultClass" id="turn9">0</div>
+                <div class="statTableResultClass" id="turn10">0</div>
+                <div class="statTableResultClass" id="turn11">0</div>
+                <div class="statTableResultClass" id="turn12">0</div>
+                <div class="statTableResultClass" id="turn13">0</div>
+                <div class="statTableResultClass" id="turn14">0</div>
+                <div class="statTableResultClass" id="turn15">0</div>
+                <div class="statTableResultClass" id="turnSumma2">0</div>
+            </div>
+        </div>
+
+        <div id="startGameBtn">Starta ett nytt spel!
+            <br><br>
+            <button onclick="startGame()">Start</button>
+        </div>
+
+        <div id="diceField">
+            <div style="height: 40px;">
+                <div id="numberOfRollsLeft">III</div>
+                <button id="diceRollOne" onclick="rollOne()">Första slaget</button>
+                <button id="diceRollTwo" onclick="rollTwo()">Andra slaget</button>
+                <button id="diceRollThree" onclick="rollThree()">Tredje slaget</button>
+            </div>
+            <br>
+            <div id="diceRollResults">
+                <div id="dice-0"></div>
+                <div id="dice-1"></div>
+                <div id="dice-2"></div>
+                <div id="dice-3"></div>
+                <div id="dice-4"></div>
+            </div>
+            <br>
+            <div id="diceRollSaved">
+                <div id="diceSaved-0" class="diceSelected"></div>
+                <div id="diceSaved-1" class="diceSelected"></div>
+                <div id="diceSaved-2" class="diceSelected"></div>
+                <div id="diceSaved-3" class="diceSelected"></div>
+                <div id="diceSaved-4" class="diceSelected"></div>
+            </div>
+        </div>
+        <div id="statTableComp">
+            <div id="statTableTextComp">
+                <div id="statTurnComp1" class="statTableClass">Ettor: </div>
+                <div id="statTurnComp2" class="statTableClass">Tvåor: </div>
+                <div id="statTurnComp3" class="statTableClass">Treor: </div>
+                <div id="statTurnComp4" class="statTableClass">Fyror: </div>
+                <div id="statTurnComp5" class="statTableClass">Femmor: </div>
+                <div id="statTurnComp6" class="statTableClass">Sexor:</div>
+                <div class="statTableNotATurn">Summa: </div>
+                <div class="statTableNotATurn">Bonus: </div>
+                <br>
+                <div id="statTurnComp7" class="statTableClass">1 par: </div>
+                <div id="statTurnComp8" class="statTableClass">2 par: </div>
+                <div id="statTurnComp9" class="statTableClass">Triss: </div>
+                <div id="statTurnComp10" class="statTableClass">Fyrtal: </div>
+                <div id="statTurnComp11" class="statTableClass">Liten stege: </div>
+                <div id="statTurnComp12" class="statTableClass">Stor stege: </div>
+                <div id="statTurnComp13" class="statTableClass">Kåk: </div>
+                <div id="statTurnComp14" class="statTableClass">Chans: </div>
+                <div id="statTurnComp15" class="statTableClass">Yatzy: </div>
+                <div class="statTableNotATurn">Summa: </div>
+            </div>
+
+            <div id="statTableSumComp">
+                <div class="statTableResultClass" id="turnComp1">0</div>
+                <div class="statTableResultClass" id="turnComp2">0</div>
+                <div class="statTableResultClass" id="turnComp3">0</div>
+                <div class="statTableResultClass" id="turnComp4">0</div>
+                <div class="statTableResultClass" id="turnComp5">0</div>
+                <div class="statTableResultClass" id="turnComp6">0</div>
+                <div class="statTableResultClass" id="turnSummaComp1">0 (63 poäng för bonus)</div>
+                <div class="statTableResultClass" id="turnBonusComp">0</div>
+                <br>
+                <div class="statTableResultClass" id="turnComp7">0</div>
+                <div class="statTableResultClass" id="turnComp8">0</div>
+                <div class="statTableResultClass" id="turnComp9">0</div>
+                <div class="statTableResultClass" id="turnComp10">0</div>
+                <div class="statTableResultClass" id="turnComp11">0</div>
+                <div class="statTableResultClass" id="turnComp12">0</div>
+                <div class="statTableResultClass" id="turnComp13">0</div>
+                <div class="statTableResultClass" id="turnComp14">0</div>
+                <div class="statTableResultClass" id="turnComp15">0</div>
+                <div class="statTableResultClass" id="turnSummaComp2">0</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./scripts/yatzy/script.js"></script>
+</body>
+
+</html>

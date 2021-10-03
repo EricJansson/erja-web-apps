@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<title>Maze solver</title>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.2, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="./css/maze_solver/style.css" type="text/css">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="field"></div>
+    <div id="all_btns">
+        <button onclick="newRandomField()" class="btns">Reset field</button>
+        <button onclick="selectField(field1)" class="btns">Select Field 1</button>
+        <button onclick="selectField(field2)" class="btns">Select Field 2</button>
+        <button onclick="selectField(field3)" class="btns">Select Field 3</button>
+        <button onclick="step()" class="btns">Take 1 step.</button>
+        <button onclick="walk()" class="btns">Walk.</button>
+        <button onclick="run()" class="btns">RUN!</button>
+        <button onclick="auto()" class="btns">Auto</button>
+    </div>
+    <div id="stop_btn_block">
+        <button id="stop_btn" onclick="stopAuto()">Stop</button>
+    </div>
+
+    <script src="./scripts/maze_solver/script.js"></script>
+</body>
+
+</html>

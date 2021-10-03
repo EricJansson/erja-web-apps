@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=0.2, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="./css/snake_game/style.css" type="text/css">
+<link rel="stylesheet" href="./css/snake_game/menu_style.css" type="text/css">
+<link rel="stylesheet" href="./css/snake_game/options_style.css" type="text/css">
+<link rel="stylesheet" href="./css/snake_game/freeplay.css" type="text/css">
+<link rel="icon" href="./images/snake_game/sHbetaEasy.png" type="image/gif" sizes="16x16">
+
+<head>
+    <title>Browser Snake</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div id="header">
+        <div id="headerLogo"></div>
+    </div>
+
+    <div id="startMenu">
+
+        <div id="menuSelecting">
+
+            <div id="menuMainBoxPlay">
+                <div id="menuHiddenBoxPlay">
+                    <div id="menuSubBoxPlay">
+                        <div class="menuText">Play</div>
+                        <div style="margin-top: -34px;">
+                            <a class="allTilesMenu" id="easy0"></a>
+                            <a class="allTilesMenu" id="easy1"></a>
+                            <a class="allTilesMenu" id="easy2"></a>
+                            <a class="allTilesMenu" id="easy3"></a>
+                            <a class="allTilesMenu" id="easy4"></a>
+                            <a class="allTilesMenu" id="easy5"></a>
+                            <a class="allTilesMenu" id="easy6"></a>
+                            <a class="allTilesMenu" id="easy7"></a>
+                            <a class="allTilesMenu" id="easy8"></a>
+                            <a class="allTilesMenu" id="easy9"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="levelSelectMain">
+                    <!--    <h2>Level select</h2><br>   -->
+                    <div style="position: absolute; margin-left: 425px; margin-top: 18px;"><button id="playBackBtn"
+                            onclick="startNewGame(false); missionplayAnim(false);"></button></div>
+                    <div id="levelSelectBox">
+                        <div id="innerlevelSelect">
+                            <div id="worldOne">
+                                <div onclick="selectLevel(5, true)" class="smallBall" id="number5">5<div id="levelStar5" class="levelStar"></div></div><br>
+                                <div id="arrowScrollLeft1" onclick="cheatingHiddenBtn()"></div>
+                                <div onclick="selectLevel(1, true)" class="smallBall" id="number1">1<div id="levelStar1" class="levelStar"></div></div>
+                                <div onclick="selectLevel(2, true)" class="smallBall" id="number2">2<div id="levelStar2" class="levelStar"></div></div>
+                                <div onclick="selectLevel(3, true)" class="smallBall" id="number3">3<div id="levelStar3" class="levelStar"></div></div>
+                                <div onclick="selectLevel(4, true)" class="smallBall" id="number4">4<div id="levelStar4" class="levelStar"></div></div>
+                                <div id="arrowScrollRight1" onclick="worldSelect(2)"></div>
+                            </div>
+                            <div id="worldTwo">
+                                <div onclick="selectLevel(10, true)" class="smallBall" id="number10">10<div id="levelStar10" class="levelStar"></div></div><br>
+                                <div class="arrowScrollLeft" onclick="worldSelect(1)"></div>
+                                <div onclick="selectLevel(6, true)" class="smallBall" id="number6">6<div id="levelStar6" class="levelStar"></div></div>
+                                <div onclick="selectLevel(7, true)" class="smallBall" id="number7">7<div id="levelStar7" class="levelStar"></div></div>
+                                <div onclick="selectLevel(8, true)" class="smallBall" id="number8">8<div id="levelStar8" class="levelStar"></div></div>
+                                <div onclick="selectLevel(9, true)" class="smallBall" id="number9">9<div id="levelStar9" class="levelStar"></div></div>
+                                <div id="arrowScrollRight2" onclick="worldSelect(3)"></div>
+                            </div>
+                            <div id="worldThree">
+                                <div onclick="selectLevel(15, true)" class="smallBall" id="number15">15<div id="levelStar15" class="levelStar"></div></div><br>
+                                <div class="arrowScrollLeft" onclick="worldSelect(2)"></div>
+                                <div onclick="selectLevel(11, true)" class="smallBall" id="number11">11<div id="levelStar11" class="levelStar"></div></div>
+                                <div onclick="selectLevel(12, true)" class="smallBall" id="number12">12<div id="levelStar12" class="levelStar"></div></div>
+                                <div onclick="selectLevel(13, true)" class="smallBall" id="number13">13<div id="levelStar13" class="levelStar"></div></div>
+                                <div onclick="selectLevel(14, true)" class="smallBall" id="number14">14<div id="levelStar14" class="levelStar"></div></div>
+                                <div id="arrowScrollRight3" onclick="worldSelect(4)"></div>
+                            </div>
+                            <div id="worldFour">
+                                <div onclick="selectLevel(20, true)" class="smallBall" id="number20">20<div id="levelStar20" class="levelStar"></div></div><br>
+                                <div class="arrowScrollLeft" onclick="worldSelect(3)"></div>
+                                <div onclick="selectLevel(16, true)" class="smallBall" id="number16">16<div id="levelStar16" class="levelStar"></div></div>
+                                <div onclick="selectLevel(17, true)" class="smallBall" id="number17">17<div id="levelStar17" class="levelStar"></div></div>
+                                <div onclick="selectLevel(18, true)" class="smallBall" id="number18">18<div id="levelStar18" class="levelStar"></div></div>
+                                <div onclick="selectLevel(19, true)" class="smallBall" id="number19">19<div id="levelStar19" class="levelStar"></div></div>
+                                <div id="arrowScrollRight4" onclick="worldSelect(5)"></div>
+                            </div>
+                            <div id="worldFive">
+                                <div onclick="selectLevel(25, true)" class="smallBall" id="number25">25<div id="levelStar25" class="levelStar"></div></div><br>
+                                <div class="arrowScrollLeft" onclick="worldSelect(4)"></div>
+                                <div onclick="selectLevel(21, true)" class="smallBall" id="number21">21<div id="levelStar21" class="levelStar"></div></div>
+                                <div onclick="selectLevel(22, true)" class="smallBall" id="number22">22<div id="levelStar22" class="levelStar"></div></div>
+                                <div onclick="selectLevel(23, true)" class="smallBall" id="number23">23<div id="levelStar23" class="levelStar"></div></div>
+                                <div onclick="selectLevel(24, true)" class="smallBall" id="number24">24<div id="levelStar24" class="levelStar"></div></div>
+                                <div id="arrowScrollRight5" onclick="worldSelect(6)"></div>
+                            </div>
+                            <div id="worldSix">
+                                <div onclick="selectLevel(30, true)" class="smallBall" id="number30">30<div id="levelStar30" class="levelStar"></div></div><br>
+                                <div class="arrowScrollLeft" onclick="worldSelect(5)"></div>
+                                <div onclick="selectLevel(26, true)" class="smallBall" id="number26">26<div id="levelStar26" class="levelStar"></div></div>
+                                <div onclick="selectLevel(27, true)" class="smallBall" id="number27">27<div id="levelStar27" class="levelStar"></div></div>
+                                <div onclick="selectLevel(28, true)" class="smallBall" id="number28">28<div id="levelStar28" class="levelStar"></div></div>
+                                <div onclick="selectLevel(29, true)" class="smallBall" id="number29">29<div id="levelStar29" class="levelStar"></div></div>
+                                <div id="arrowScrollRight6" onclick="worldSelect(1)"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="levelAccept">
+                        <button id="levelAcceptStart" onclick="playGame();">Start</button><br>
+                        <div id="winOrLoseCheating">
+                            <button onclick="cheatinggameWon()">Win</button>
+                            <button onclick="playGame();">Play</button>
+                            <button onclick="cheatinggameLost()">Lose</button>
+                        </div>
+                        <div id="levelAcceptGrid">
+                            <div id="levelAcceptHS">Score:</div>
+                            <div id="levelAcceptHScurrent">Something went wrong.</div>
+                            <div id="levelAcceptReqScore">Next Level:</div>
+                            <div id="levelAcceptReqScorecurrent">Something went wrong.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="menuMainBoxQuickplay">
+                <div id="menuHiddenBoxQuickPlay" style="animation-name: e;">
+                    <div id="menuSubBoxQuickPlay">
+                        <div class="menuText">Quickplay</div>
+                        <div style="margin-top: -34px;">
+                            <a class="allTilesMenu" id="hard0"></a>
+                            <a class="allTilesMenu" id="hard1"></a>
+                            <a class="allTilesMenu" id="hard2"></a>
+                            <a class="allTilesMenu" id="hard3"></a>
+                            <a class="allTilesMenu" id="hard4"></a>
+                            <a class="allTilesMenu" id="hard5"></a>
+                            <a class="allTilesMenu" id="hard6"></a>
+                            <a class="allTilesMenu" id="hard7"></a>
+                            <a class="allTilesMenu" id="hard8"></a>
+                            <a class="allTilesMenu" id="hard9"></a>
+                        </div>
+                    </div>
+                    <div id="menuSubBoxE">Easy</div>
+                    <div id="menuSubBoxH">Hard</div>
+                    <div id="menuSubBoxBack"></div>
+                </div>
+            </div>
+
+            <div id="freePlay">
+                <div class="menuText">Free Play</div>
+                <a class="allTilesMenu" id="freeP0"></a>
+                <a class="allTilesMenu" id="freeP1"></a>
+            </div>
+
+            <div id="options">
+                <div class="menuText">Options</div>
+                <a class="allTilesMenu" id="ops0"></a>
+                <a class="allTilesMenu" id="ops1"></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="freeplayField">
+        <div id="freeplayFieldBox">
+            <div id="freeplayFieldText">
+                <div id="freeplayHeader">Free Play</div>
+                <button onclick="freeplayStartGame()" id="freeplayStartGameBtn">START GAME!</button>
+
+                <div id="freepDifficultySelectionBox">
+                    <div id="freepDifficultyGridBox">
+                        <div class="freepDropdownTitle">
+                            Highscore list
+                        </div>
+                        <select id="freepDifficultySelectionDropdown">
+                            <option id="freepDiffSelectEasy" value="easy">Easy</option>
+                            <option id="freepDiffSelectHard" value="hard">Hard</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="freeplayGamemodeAddedText">
+                    <b>Note:</b> Changes to <b>Gameplay Options</b> disables highscores.<br>
+                    Selecting another highscore list will remove your changes to <b>Gameplay Options</b>.
+                </div>
+                <div id="freepSkinSelections">
+                    <div id="freepSkinBodyBox">
+                        <div class="freepDropdownTitle">Body</div>
+                        <select id="freepSkinBodyDropdown">
+                            <option value="betaEasy">Beta Easy</option>
+                            <option value="betaHard">Beta Hard</option>
+                            <!-- <option value="wobble">Wobble</option>
+                            <option value="wobbleblue">Wobble Blue</option>
+                            <option value="straight">Straight</option>
+                            <option value="centipede">Centipede</option>
+                            <option value="spacesuit">Space suit</option> -->
+                        </select>
+                        <div id="newSkinAvailableBody">!</div>
+                    </div>
+                    <div id="freepSkinFoodBox">
+                        <div class="freepDropdownTitle">Food</div>
+                        <select id="freepSkinFoodDropdown">
+                            <option value="Apple">Apple</option>
+                            <option value="Fish">Fish</option>
+                            <!-- <option value="Cheese">Cheese</option>
+                            <option value="Cookie">Cookie</option>
+                            <option value="Mellon">Mellon</option>
+                            <option value="Oxygentank">Oxygen Tank</option> -->
+                        </select>
+                        <div id="newSkinAvailableFood">!</div>
+                    </div>
+                    <div id="freepSkinBackgroundBox">
+                        <div class="freepDropdownTitle">Background</div>
+                        <select id="freepSkinBackgroundDropdown">
+                            <option value="Grass">Grass</option>
+                            <option value="Water">Water</option>
+                            <!-- <option value="Rock">Rock</option>
+                            <option value="Snow">Snow</option>
+                            <option value="Desert">Desert</option>
+                            <option value="Space">Space</option> -->
+                        </select>
+                        <div id="newSkinAvailableBackground">!</div>
+                    </div>
+                </div>
+
+                <div id="freepSkinPreview">
+                    <div id="freepSkinBackground"></div>
+                    <div id="freepSkinFullBody">
+                        <div id="freepSkinBody1" class="freepSkinBodyPiece"></div>
+                        <div id="freepSkinBody2" class="freepSkinBodyPiece"></div>
+                        <div id="freepSkinBody3" class="freepSkinBodyPiece"></div>
+                        <div id="freepSkinBody4" class="freepSkinBodyPiece"></div>
+                        <div id="freepSkinBody5" class="freepSkinBodyPiece"></div>
+                    </div>
+                    <div id="freepSkinFood"></div>
+                </div>
+            </div>
+            <div id="freepGameplayOptions">
+                <h3 style="font-family: Times; font-weight: bold;">Gameplay Options/Settings</h3>
+                <div style="font-size: .6em;">Changes here may prevent you from saving your highscores.</div>
+            </div>
+            <div id="freepAdvancedOptions">
+                <div id="freeplayHardwallOptionBlock">
+                    <a>Wall Collision</a><br>
+
+                    <a class="onOffHardwallText">Off</a>
+                    <label class="freeplayWallSwitch">
+                        <input onclick="freeplayHardwallOptionClicked()" id="freeplayWallCheckbox" type="checkbox" value="on">
+                        <span class="wallOnOffSlider freeplayWallOptionRound"></span>
+                    </label>
+                    <a class="onOffHardwallText">On</a>
+                    
+
+                </div>
+                <div class="freeplayRange">
+                    <div>Starting Speed</div>
+                    <div class="range">
+                        <input type="range" min="1" max="5" value="2" id="startingSpeedSlider">
+                        <div class="freeplaySliderTicks">
+                            <p>1</p>
+                            <p><a class="freepSliderSmallText">Easy</a></p>
+                            <p><a class="freepSliderSmallText">Hard</a></p>
+                            <p>4</p>
+                            <p>5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="freeplayRange">
+                    <div>Acceleration</div>
+                    <div class="range">
+                        <input type="range" min="0" max="4" value="1" id="accelerationSlider">
+                        <div class="freeplaySliderTicks">
+                            <p>0</p>
+                            <p><a class="freepSliderSmallText">Easy</a></p>
+                            <p>2</p>
+                            <p><a class="freepSliderSmallText">Hard</a></p>
+                            <p>4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="freepBack">Back<div id="freepBackArrow"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="optionField">
+        <div id="optionFieldBox">
+            <div id="optionFieldText">
+                <h2 id="optionHeader">Options</h2>
+                <span class="subHeadersOptions">Your Quickplay Highscores</span>
+
+                <div id="optsMainHighscore">
+                    <div id="optsOuterEasy">
+                        <div id="optsEasyHS">
+                            <div id="highscoresEasy">Highscores Easy</div>
+                            <div id="hsrow1easyopts"> <a id="hsEasy1opts">0 Points</a>
+                                <div id="appleHs1opts">0x</div>
+                            </div>
+                            <div id="hsrow2easyopts"> <a id="hsEasy2opts">0 Points</a>
+                                <div id="appleHs2opts">0x</div>
+                            </div>
+                            <div id="hsrow3easyopts"> <a id="hsEasy3opts">0 Points</a>
+                                <div id="appleHs3opts">0x</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="optsOuterHard">
+                        <div id="optsHardHS">
+                            <div id="highscoresHard">Highscores Hard</div>
+                            <div id="hsrow1hardopts"> <a id="hsHard1opts">0 Points</a>
+                                <div id="fishHs1opts">0x</div>
+                            </div>
+                            <div id="hsrow2hardopts"> <a id="hsHard2opts">0 Points</a>
+                                <div id="fishHs2opts">0x</div>
+                            </div>
+                            <div id="hsrow3hardopts"> <a id="hsHard3opts">0 Points</a>
+                                <div id="fishHs3opts">0x</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="optsHighscoreResetBox">
+                        <a id="optsHSresetText">Are you sure?</a>
+                        <button id="optsHSresetAll" onclick="highscoreFullReset()">Reset Highscores</button>
+                        <button id="optsHSresetYes" onclick="highscoreFullReset(true)">Yes</button>
+                        <button id="optsHSresetNo" onclick="highscoreFullReset(false)">No</button>
+                    </div>
+                </div>
+
+                <span class="subHeadersOptions">Backgrounds</span>
+                <div id="backgroundOptionsAndUpgrade">
+                    <div id="newBackgroundAvailable" class="newFeatureAvailable">!</div>
+                    <select id="myOptions" onchange="htmlBackgroundSelect()" onclick="newBackground()">
+                        <option selected id="original">Original</option>
+                        <option id="dark">Dark</option>
+                    </select>
+                    <div id="addBackground" style="position: relative;">
+                        <div id="myOptionsUpgrade">Add background!</div>
+                        <div id="fullLock">
+                            <div id="lockHammer"></div>
+                            <div id="lockBody"></div>
+                        </div>
+                        <div id="hsreq">Highscore required: 10</div>
+                        <div id="curhsreq">Quickplay Highscore: 0</div>
+                    </div>
+                </div>
+
+                <div id="keyboardControlsBlock">
+                    <span class="subHeadersOptions">Keyboard Controls</span>
+                    <br><br>
+                    <div style="display: flex;">
+                        <div class="keyboardControls controlsW"></div><a>/</a>
+                        <div class="keyboardControls controlsUp"></div><a>Turn Up</a>
+                    </div>
+                    <div style="display: flex;">
+                        <div class="keyboardControls controlsA"></div><a>/</a>
+                        <div class="keyboardControls controlsLeft"></div><a>Turn Down</a>
+                    </div>
+                    <div style="display: flex;">
+                        <div class="keyboardControls controlsS"></div><a>/</a>
+                        <div class="keyboardControls controlsDown"></div><a>Turn Left</a>
+                    </div>
+                    <div style="display: flex;">
+                        <div class="keyboardControls controlsD"></div><a>/</a>
+                        <div class="keyboardControls controlsRight"></div><a>Turn Right</a>
+                    </div>
+                    <div style="display: flex;">
+                        <div class="keyboardControls controlsEsc"></div><a>/</a>
+                        <div class="keyboardControls controlsSpace"></div>
+                        <div>Pause/Unpause</div>
+                    </div>
+                </div>
+
+                <span class="subHeadersOptions">Import/Export save file</span>
+                <div id="impExportBlock">
+                    <button id="optsExportSave" onclick="exportStorage(), importStorage('hide')">Export</button>
+                    <button id="optsImportSave" onclick="exportStorage('hide'), importStorage()">Import</button>
+                    <div id="optionsImportBlock">
+                        <div style="font-family: Arial, Helvetica, sans-serif; margin: 10px 0;">Import</div>
+                        <div
+                            style="font-family: Arial, Helvetica, sans-serif; font-size: 0.5em; margin: auto; margin-bottom: 10px; width: 80%;">
+                            Here you can import your save file from another device. <br>
+                            To import you must paste the text you got from the "Export" field on your former device.
+                        </div>
+                        <div id="invalidCode"><br></div>
+                        <input id="optsImport" type="text">
+                        <br>
+                        <button id="importLoadBtn" onclick="importData()"><b>Load file</b></button>
+                    </div>
+                    <div id="optionsExportBlock">
+                        <div style="font-family: Arial, Helvetica, sans-serif; margin: 10px 0;">Export</div>
+                        <div
+                            style="font-family: Arial, Helvetica, sans-serif; font-size: 0.5em; margin: auto; margin-bottom: 25px; width: 80%;">
+                            Here you can export your save file to another device. <br>
+                            To export you must copy the text below and paste it in the "Import" field on your other
+                            device.<br>
+                            <b>Note:</b> Be careful not to change any values in the text below or you might lose your
+                            save file.
+                        </div>
+                        <textarea id="optsExport" readonly rows="8" cols="32" style="resize: none;"></textarea>
+                        <br>
+                        <button id="exportCopyBtn" onclick="copyExportText()"><b>Copy</b></button>
+                    </div>
+                </div>
+                <span class="subHeadersOptions">Reset your game</span>
+                <div
+                    style="margin-top: 30px;margin-left: 26px;font-size: 0.8em; font-family: Arial, Helvetica, sans-serif;">
+                    This will delete your entire save file.
+                </div>
+                <div id="optsAllDataResetBox">
+                    <a id="optsADresetText">Are you sure?</a>
+                    <button id="optsADresetAll" onclick="decisionChoice('open', 'full reset')">Reset game</button>
+                    <!-- <button id="optsADresetYes" onclick="allDataFullReset(true)">Yes</button>
+                    <button id="optsADresetNo" onclick="allDataFullReset(false)">No</button> -->
+                </div>
+
+                <!-- for Testing purpouses -->
+                <div style="display: none;">
+                    <button onclick="unlock()">Remove the lock.</button>
+                    <button onclick="lock()">Put lock back.</button>
+                    <button onclick="testingPurpouse()">The test btn</button>
+                </div>
+
+                <div id="optionsBack">Back<div id="optionsBackArrow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="playingField">
+
+        <div id="clickPlayField">
+            <div id="clickMoveUp"></div>
+            <div id="clickMoveLeft"></div>
+            <div id="clickMoveDown"></div>
+            <div id="clickMoveRight"></div>
+        </div>
+        <div id="scoreboardBox">
+            <!-- Scoreboard -->
+            <div id="newhighscoreText">NEW HIGHSCORE!</div>
+            <div>
+                <a id="pointsText">Points: </a>
+                <a id="pointsValue">0</a></div>
+            <div id="scoreboard">Food eaten: <a id="foodEaten">0</a></div>
+
+            <div id="customModeSettingsBlock">
+                    <div class="customModeSettingsText">Starting speed: </div>
+                    <div class="customModeSettingsValue" id="customModeValueSpeed">2 (Easy)</div>
+                    <div class="customModeSettingsText">Acceleration: </div>
+                    <div class="customModeSettingsValue" id="customModeValueAccel">2 (Easy)</div>
+                    <button id="customModeChangeSettings" onclick="changeSettings()">Change settings</button>
+            </div>
+
+            <div id="curLvlBlock">Level <a id="curLvlNum">1</a><br>
+                <div id="curLvlStarImage">
+                    <div id="fiveStarImage"></div>
+                </div>
+                <div id="scoreLvlUpReq">Next Level: <a id="scoreLvlUpReqNum">0</a></div>
+            </div>
+            <div id="scoreboardEasyHighscoreBox">
+                <div id="highscoresEasy" style="text-decoration: underline">Highscores Easy</div>
+                <div id="hsrow1easy"> <a id="hsEasy1box">0 Points</a>
+                    <div id="appleHsBox1">0x</div>
+                </div>
+                <div id="hsrow2easy"> <a id="hsEasy2box">0 Points</a>
+                    <div id="appleHsBox2">0x</div>
+                </div>
+                <div id="hsrow3easy"> <a id="hsEasy3box">0 Points</a>
+                    <div id="appleHsBox3">0x</div>
+                </div>
+            </div>
+            <div id="scoreboardHardHighscoreBox">
+                <div id="highscoresHard">Highscores Hard</div>
+                <div id="hsrow1hard"> <a id="hsHard1box">0 Points</a>
+                    <div id="fishHsBox1">0x</div>
+                </div>
+                <div id="hsrow2hard"> <a id="hsHard2box">0 Points</a>
+                    <div id="fishHsBox2">0x</div>
+                </div>
+                <div id="hsrow3hard"> <a id="hsHard3box">0 Points</a>
+                    <div id="fishHsBox3">0x</div>
+                </div>
+            </div>
+
+
+
+
+            <button id="endscreenContinue" class="nextLevelAvailable" onclick="quitGame('nextLvl')">Next Level</button>
+            <button id="endscreenRestart" onclick="restartGame()">Restart</button>
+            <button id="endscreenQuit" onclick="quitGame()">Quit</button>
+        </div>
+
+        <div id="countdownBlock">
+            Ready?
+        </div>
+        <div id="blackWhite"></div>
+
+        <div id="foggyOverlay"></div>
+        <div id="pauseBlock">
+            <u>Paused</u>
+            <div id="pauseDecision">
+                <button id="pauseResumeBtn" onclick="unpauseGame()">Resume</button>
+                <button id="pauseExitBtn" onclick="quickOptionsExit()">Quit</button>
+            </div>
+            <div id="pauseTextBlock">
+                <input id="clickcheckbox" type="checkbox" onchange="toggleClickField()">
+                <a id="pauseText">Enable arrow keys</a><br>
+                <div id="clickFieldRangeRegulator">
+                    <a id="clickFieldSize">Size: 2</a><br>
+                    <input type="range" id="clickFieldRange" min="75" max="200" step="25" value="100">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="field">
+            <div id="quickOptionsField"></div>
+            <div id="bigBlockBorder"></div>
+            <div id="bigBlock">
+                <div id="bigBlockInner">
+                    <div class="rowTiles">
+                        <div class="allTiles"><a class="allTilesSecond" id="f00"></a><a class="allTilesSecond"
+                                id="d00"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f01"></a><a class="allTilesSecond"
+                                id="d01"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f02"></a><a class="allTilesSecond"
+                                id="d02"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f03"></a><a class="allTilesSecond"
+                                id="d03"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f04"></a><a class="allTilesSecond"
+                                id="d04"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f05"></a><a class="allTilesSecond"
+                                id="d05"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f06"></a><a class="allTilesSecond"
+                                id="d06"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f07"></a><a class="allTilesSecond"
+                                id="d07"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f08"></a><a class="allTilesSecond"
+                                id="d08"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f09"></a><a class="allTilesSecond"
+                                id="d09"></a></div>
+                    </div>
+                    <div class="rowTiles">
+                        <div class="allTiles"><a class="allTilesSecond" id="f10"></a><a class="allTilesSecond"
+                                id="d10"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f11"></a><a class="allTilesSecond"
+                                id="d11"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f12"></a><a class="allTilesSecond"
+                                id="d12"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f13"></a><a class="allTilesSecond"
+                                id="d13"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f14"></a><a class="allTilesSecond"
+                                id="d14"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f15"></a><a class="allTilesSecond"
+                                id="d15"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f16"></a><a class="allTilesSecond"
+                                id="d16"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f17"></a><a class="allTilesSecond"
+                                id="d17"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f18"></a><a class="allTilesSecond"
+                                id="d18"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f19"></a><a class="allTilesSecond"
+                                id="d19"></a></div>
+                    </div>
+                    <div class="rowTiles">
+                        <div class="allTiles"><a class="allTilesSecond" id="f20"></a><a class="allTilesSecond"
+                                id="d20"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f21"></a><a class="allTilesSecond"
+                                id="d21"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f22"></a><a class="allTilesSecond"
+                                id="d22"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f23"></a><a class="allTilesSecond"
+                                id="d23"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f24"></a><a class="allTilesSecond"
+                                id="d24"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f25"></a><a class="allTilesSecond"
+                                id="d25"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f26"></a><a class="allTilesSecond"
+                                id="d26"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f27"></a><a class="allTilesSecond"
+                                id="d27"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f28"></a><a class="allTilesSecond"
+                                id="d28"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f29"></a><a class="allTilesSecond"
+                                id="d29"></a></div>
+                    </div>
+                    <div class="rowTiles">
+                        <div class="allTiles"><a class="allTilesSecond" id="f30"></a><a class="allTilesSecond"
+                                id="d30"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f31"></a><a class="allTilesSecond"
+                                id="d31"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f32"></a><a class="allTilesSecond"
+                                id="d32"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f33"></a><a class="allTilesSecond"
+                                id="d33"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f34"></a><a class="allTilesSecond"
+                                id="d34"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f35"></a><a class="allTilesSecond"
+                                id="d35"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f36"></a><a class="allTilesSecond"
+                                id="d36"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f37"></a><a class="allTilesSecond"
+                                id="d37"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f38"></a><a class="allTilesSecond"
+                                id="d38"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f39"></a><a class="allTilesSecond"
+                                id="d39"></a></div>
+                    </div>
+                    <div class="rowTiles">
+                        <div class="allTiles"><a class="allTilesSecond" id="f40"></a><a class="allTilesSecond"
+                                id="d40"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f41"></a><a class="allTilesSecond"
+                                id="d41"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f42"></a><a class="allTilesSecond"
+                                id="d42"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f43"></a><a class="allTilesSecond"
+                                id="d43"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f44"></a><a class="allTilesSecond"
+                                id="d44"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f45"></a><a class="allTilesSecond"
+                                id="d45"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f46"></a><a class="allTilesSecond"
+                                id="d46"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f47"></a><a class="allTilesSecond"
+                                id="d47"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f48"></a><a class="allTilesSecond"
+                                id="d48"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f49"></a><a class="allTilesSecond"
+                                id="d49"></a></div>
+                    </div>
+                    <div class="rowTiles">
+                        <div class="allTiles"><a class="allTilesSecond" id="f50"></a><a class="allTilesSecond"
+                                id="d50"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f51"></a><a class="allTilesSecond"
+                                id="d51"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f52"></a><a class="allTilesSecond"
+                                id="d52"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f53"></a><a class="allTilesSecond"
+                                id="d53"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f54"></a><a class="allTilesSecond"
+                                id="d54"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f55"></a><a class="allTilesSecond"
+                                id="d55"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f56"></a><a class="allTilesSecond"
+                                id="d56"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f57"></a><a class="allTilesSecond"
+                                id="d57"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f58"></a><a class="allTilesSecond"
+                                id="d58"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f59"></a><a class="allTilesSecond"
+                                id="d59"></a></div>
+                    </div>
+                    <div class="rowTiles">
+                        <div class="allTiles"><a class="allTilesSecond" id="f60"></a><a class="allTilesSecond"
+                                id="d60"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f61"></a><a class="allTilesSecond"
+                                id="d61"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f62"></a><a class="allTilesSecond"
+                                id="d62"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f63"></a><a class="allTilesSecond"
+                                id="d63"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f64"></a><a class="allTilesSecond"
+                                id="d64"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f65"></a><a class="allTilesSecond"
+                                id="d65"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f66"></a><a class="allTilesSecond"
+                                id="d66"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f67"></a><a class="allTilesSecond"
+                                id="d67"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f68"></a><a class="allTilesSecond"
+                                id="d68"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f69"></a><a class="allTilesSecond"
+                                id="d69"></a></div>
+                    </div>
+                    <div class="rowTiles">
+                        <div class="allTiles"><a class="allTilesSecond" id="f70"></a><a class="allTilesSecond"
+                                id="d70"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f71"></a><a class="allTilesSecond"
+                                id="d71"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f72"></a><a class="allTilesSecond"
+                                id="d72"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f73"></a><a class="allTilesSecond"
+                                id="d73"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f74"></a><a class="allTilesSecond"
+                                id="d74"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f75"></a><a class="allTilesSecond"
+                                id="d75"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f76"></a><a class="allTilesSecond"
+                                id="d76"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f77"></a><a class="allTilesSecond"
+                                id="d77"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f78"></a><a class="allTilesSecond"
+                                id="d78"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f79"></a><a class="allTilesSecond"
+                                id="d79"></a></div>
+                    </div>
+                    <div class="rowTiles">
+                        <div class="allTiles"><a class="allTilesSecond" id="f80"></a><a class="allTilesSecond"
+                                id="d80"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f81"></a><a class="allTilesSecond"
+                                id="d81"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f82"></a><a class="allTilesSecond"
+                                id="d82"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f83"></a><a class="allTilesSecond"
+                                id="d83"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f84"></a><a class="allTilesSecond"
+                                id="d84"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f85"></a><a class="allTilesSecond"
+                                id="d85"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f86"></a><a class="allTilesSecond"
+                                id="d86"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f87"></a><a class="allTilesSecond"
+                                id="d87"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f88"></a><a class="allTilesSecond"
+                                id="d88"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f89"></a><a class="allTilesSecond"
+                                id="d89"></a></div>
+                    </div>
+                    <div class="rowTiles">
+                        <div class="allTiles"><a class="allTilesSecond" id="f90"></a><a class="allTilesSecond"
+                                id="d90"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f91"></a><a class="allTilesSecond"
+                                id="d91"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f92"></a><a class="allTilesSecond"
+                                id="d92"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f93"></a><a class="allTilesSecond"
+                                id="d93"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f94"></a><a class="allTilesSecond"
+                                id="d94"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f95"></a><a class="allTilesSecond"
+                                id="d95"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f96"></a><a class="allTilesSecond"
+                                id="d96"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f97"></a><a class="allTilesSecond"
+                                id="d97"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f98"></a><a class="allTilesSecond"
+                                id="d98"></a></div>
+                        <div class="allTiles"><a class="allTilesSecond" id="f99"></a><a class="allTilesSecond"
+                                id="d99"></a></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="scoreboardHighscoreOuterBorder">
+            <div id="scoreboardEasyHighscore">
+                <div id="highscoresEasy">Highscores Easy</div>
+                <div id="hsrow1easy"> <a id="hsEasy1">0 Points</a>
+                    <div id="appleHs1">0x</div>
+                </div>
+                <div id="hsrow2easy"> <a id="hsEasy2">0 Points</a>
+                    <div id="appleHs2">0x</div>
+                </div>
+                <div id="hsrow3easy"> <a id="hsEasy3">0 Points</a>
+                    <div id="appleHs3">0x</div>
+                </div>
+            </div>
+            <div id="scoreboardHardHighscore">
+                <div id="highscoresHard">Highscores Hard</div>
+                <div id="hsrow1hard"> <a id="hsHard1">0 Points</a>
+                    <div id="fishHs1">0x</div>
+                </div>
+                <div id="hsrow2hard"> <a id="hsHard2">0 Points</a>
+                    <div id="fishHs2">0x</div>
+                </div>
+                <div id="hsrow3hard"> <a id="hsHard3">0 Points</a>
+                    <div id="fishHs3">0x</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="imHereToFixTheScreen"></div>
+
+    </div>
+
+    <div id="gameFade">
+        <div id="gameCompletedBlock">
+            <div id="gameCompletedText">
+                <b>Congratulations!</b> <br><br>You have completed all levels available! More levels and game modes will
+                be implemeted in the future.<br><br>I hope to see you again!<br>
+                <button id="gameCompletedBtn" onclick="gameCompletedWindow('hide')">Continue</button>
+            </div>
+        </div>
+        <div id="confirmDecisionBlock">
+            <div id="confirmFullReset">
+                <div class="confirmQuestion">Reset your game</div>
+                <div>
+                    <b>Note:</b> The game will be fully reset.
+                    <br>
+                    ALL your progress will be lost!
+                    <br><br>
+                    <b>Are you sure you want to continue?</b>
+                </div>
+                <button id="confirmFullResetY" class="confirmQuestionYes"
+                    onclick="allDataFullReset(), decisionChoice()">Yes</button>
+                <button id="confirmFullResetN" class="confirmQuestionNo" onclick="decisionChoice()">No</button>
+            </div>
+            <div id="confirmImport">
+                <div class="confirmQuestion">Import save file</div>
+                <div>
+                    <b>Note:</b> Your current game progress will be lost.
+                    <br><br>
+                    <b>Are you sure you want to continue?</b>
+                </div>
+                <button id="confirmImportY" class="confirmQuestionYes"
+                    onclick="importData(true), decisionChoice()">Yes</button>
+                <button id="confirmImportN" class="confirmQuestionNo" onclick="decisionChoice()">No</button>
+            </div>
+        </div>
+    </div>
+
+
+    <footer id="bottom">Made by Eric Jansson</footer>
+    <script src="./scripts/snake_game/script.js"></script>
+    <script src="./scripts/snake_game/ex-import.js"></script>
+    <script src="./scripts/snake_game/menu.js"></script>
+    <script src="./scripts/snake_game/freePlay.js"></script>
+
+</body>
+
+</html>

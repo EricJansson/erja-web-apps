@@ -1,0 +1,66 @@
+body {
+  background-color: black;
+}
+
+#field {
+  white-space: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+  height: fit-content;
+  width: fit-content;
+  text-align: center;
+  background-color: gray;
+}
+
+.blockedtiles, .tiles {
+  height: 18px;
+  width: 18px;
+  display: inline-flex;
+  margin-bottom: -5px;
+  border: 1px solid black;
+}
+
+.tiles {
+  background-color: gray;
+}
+
+.blockedtiles {
+  background-color: black;
+}
+
+.solvertiles {
+  background-color: aqua;
+  border-radius: 5px;
+}
+
+.solverheadtiles {
+  background-color: rgb(18, 223, 18);
+  background-color: red;
+}
+
+#all_btns, #stop_btn_block {
+  margin-top: 20px;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#stop_btn_block {
+  display: none;
+  margin-top: 10px;
+  font-weight: bolder;
+}
+
+#stop_btn {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.btns {
+  margin-top: 5px;
+}
+
+.wintile {
+  background-color: red;
+}

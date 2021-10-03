@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="/images/tictactoe/tictactoeStart3.png">
+    <link rel="stylesheet" type="text/css" href="/css/tictactoe/homeStyle.css">
+        <title>Tre i rad - Hem</title>
+
+<!--                        Header                      -->
+
+        <header>
+            <div class="header">
+                <a id="headerLink" href="./home">Tre i rad</a>
+            </div>
+        </header>    
+</head>
+
+<body>
+    <div id="allLanguages">
+        <img id="langSelected" src="/images/tictactoe/swedishFlagSelected.png">
+        <img id="lang" src="/images/tictactoe/brittishFlag.png" onclick="window.location.href = '/tictactoe';">
+    </div>
+
+<!--                Text above playing field            -->
+
+    <div id="centerImages">
+        <img id="image3red" src="/images/tictactoe/tictactoeStart3.png">
+        <img id="image2blue" src="/images/tictactoe/tictactoeStart2.png">
+        <img id="image1green" src="/images/tictactoe/tictactoeStart1.png">
+    </div>
+
+<div id="centerpiece">
+    <div id="bigBtn1" class="fullBtnMenu">
+        <button id="btnMenu1" class="allBigBtns" onclick="pveBtn()">Spelare mot Datorn</button><br>
+        <button id="testbtn1" class="pVScSubBtns" onclick="window.location.href = '/tictactoe/tictactoeSvenskaVSaiEasy';">Lätt nivå</button><br>
+        <button id="testbtn2" class="pVScSubBtns" onclick="window.location.href = '/tictactoe/tictactoeSvenskaVSaiHard';">Svår nivå</button><br>
+        <button id="testbtn3" class="pVScSubBtns" onclick="window.location.href = '/tictactoe/tictactoeSvenskaVSaiUnbeatable';">Omöjlig nivå</button>
+    </div>
+
+
+    <div id="bigBtn2" class="fullBtnMenu">
+        <button id="btnMenu2" class="allBigBtns" onclick="window.location.href = './tictactoeSvenskaMultiplayer';">Spelare mot Spelare</button>
+    </div>
+
+    <div id="bigBtn3" class="fullBtnMenu">
+        <button id="btnMenu3" class="allBigBtns" onclick="window.location.href = './aboutSvenska';">Om</button>
+    </div>
+</div>
+
+<script src="/scripts/tictactoe/homeJavascript.js"></script>
+</body>
+</html>
+
+

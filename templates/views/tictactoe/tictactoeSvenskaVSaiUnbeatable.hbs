@@ -1,0 +1,151 @@
+
+
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <link rel="icon" href="/images/tictactoe/tictactoeStart3.png">
+    <link rel="stylesheet" href="/css/tictactoe/styleTicTacToe.css">
+    <link rel="stylesheet" href="/css/tictactoe/styleTicTacToeUnbeatable.css">
+        <title>Tre i rad - Omöjlig nivå</title>
+
+
+        <!--    Header    -->
+        <header>
+            <div class="header">
+                <a id="headerLink" href="/tictactoe/home">Tre i rad</a>
+            </div>
+        </header>    
+</head>
+
+<body id="background">
+        <div id="allLanguages">
+            <img id="langSelected" src="/images/tictactoe/swedishFlagSelected.png">
+            <img id="lang" src="/images/tictactoe/brittishFlag.png" onclick="window.location.href = '/tictactoe/tictactoeVSaiUnbeatable';">
+        </div>
+
+    <div id="allDifficultyBtns">
+        <button class="diffBtns" id="diffEasy" onclick="window.location.href = '/tictactoe/tictactoeSvenskaVSaiEasy';">Lätt</button>
+        <button class="diffBtns" id="diffHard" onclick="window.location.href = '/tictactoe/tictactoeSvenskaVSaiHard';">Svår</button>
+        <button class="diffBtns" id="diffUnbeatable" onclick="diffCorrect()">Omöjlig</button>
+        <button class="diffBtns" id="diffArrow" onclick="openDiffTab()">></button>
+    </div>
+
+                <!-- Text above playing field -->
+
+    <div id="text">
+        <a id="status">Välj din ruta för att starta.</a>
+    </div>
+
+                <!-- Playing field -->
+
+     <div class="playingField">
+        <!-- Top Row -->
+        <div>
+            <div class="buttons">
+                <div id="scoreboard">
+                    <div>
+                        <div class="scoreText">Poängtavla</div>
+                        <div class="scoreText" id="crossImg">Kryss: <a id="crossScore">0</a></div><br>
+                        <div class="scoreText" id="circleImg">Cirkel: <a id="circleScore">0</a></div>
+                    </div>
+                </div>
+                <button id="btn1" onclick="boxClick1()" class="btns hoverOEffect">
+                    <img class="xmark" id="box1X" src="/images/tictactoe/xmark.png">
+                    <img class="circle" id="box1O" src="/images/tictactoe/circle.png">
+                    <img class="xmarkwin" id="box1Xwin" src="/images/tictactoe/xmarkWin.png">
+                    <img class="circlewin" id="box1Owin" src="/images/tictactoe/circleWin.png">
+                </button>
+            </div>
+
+            <div class="buttons">
+                <button id="btn2" onclick="boxClick2()" class="btns hoverOEffect">
+                    <img class="xmark" id="box2X" src="/images/tictactoe/xmark.png">
+                    <img class="circle" id="box2O" src="/images/tictactoe/circle.png">
+                    <img class="xmarkwin" id="box2Xwin" src="/images/tictactoe/xmarkWin.png">
+                    <img class="circlewin" id="box2Owin" src="/images/tictactoe/circleWin.png">
+                </button>
+            </div>
+
+            <div class="buttons">
+                <button id="btn3" onclick="boxClick3()" class="btns hoverOEffect">
+                    <img class="xmark" id="box3X" src="/images/tictactoe/xmark.png">
+                    <img class="circle" id="box3O" src="/images/tictactoe/circle.png">
+                    <img class="xmarkwin" id="box3Xwin" src="/images/tictactoe/xmarkWin.png">
+                    <img class="circlewin" id="box3Owin" src="/images/tictactoe/circleWin.png">
+                </button>
+            </div>
+        </div>
+        <!-- Middle Row -->
+        <div>
+            <div class="buttons">
+                <button id="btn4" onclick="boxClick4()" class="btns hoverOEffect">
+                    <img class="xmark" id="box4X" src="/images/tictactoe/xmark.png">
+                    <img class="circle" id="box4O" src="/images/tictactoe/circle.png">
+                    <img class="xmarkwin" id="box4Xwin" src="/images/tictactoe/xmarkWin.png">
+                    <img class="circlewin" id="box4Owin" src="/images/tictactoe/circleWin.png">
+                </button>
+            </div>
+
+            <div class="buttons">
+                <button id="btn5" onclick="boxClick5()" class="btns hoverOEffect">
+                    <img class="xmark" id="box5X" src="/images/tictactoe/xmark.png">
+                    <img class="circle" id="box5O" src="/images/tictactoe/circle.png">
+                    <img class="xmarkwin" id="box5Xwin" src="/images/tictactoe/xmarkWin.png">
+                    <img class="circlewin" id="box5Owin" src="/images/tictactoe/circleWin.png">
+                </button>
+            </div>
+
+            <div class="buttons">
+                <button id="btn6" onclick="boxClick6()" class="btns hoverOEffect">
+                    <img class="xmark" id="box6X" src="/images/tictactoe/xmark.png">
+                    <img class="circle" id="box6O" src="/images/tictactoe/circle.png">
+                    <img class="xmarkwin" id="box6Xwin" src="/images/tictactoe/xmarkWin.png">
+                    <img class="circlewin" id="box6Owin" src="/images/tictactoe/circleWin.png">
+                </button>
+            </div>
+        </div>
+        <!-- Bottom Row -->
+        <div>
+            <div class="buttons">
+                <button id="btn7" onclick="boxClick7()" class="btns hoverOEffect">
+                    <img class="xmark" id="box7X" src="/images/tictactoe/xmark.png">
+                    <img class="circle" id="box7O" src="/images/tictactoe/circle.png">
+                    <img class="xmarkwin" id="box7Xwin" src="/images/tictactoe/xmarkWin.png">
+                    <img class="circlewin" id="box7Owin" src="/images/tictactoe/circleWin.png">
+                </button>
+            </div>
+
+            <div class="buttons">
+                <button id="btn8" onclick="boxClick8()" class="btns hoverOEffect">
+                    <img class="xmark" id="box8X" src="/images/tictactoe/xmark.png">
+                    <img class="circle" id="box8O" src="/images/tictactoe/circle.png">
+                    <img class="xmarkwin" id="box8Xwin" src="/images/tictactoe/xmarkWin.png">
+                    <img class="circlewin" id="box8Owin" src="/images/tictactoe/circleWin.png">
+                </button>
+            </div>
+            
+            <div class="buttons">
+                <button id="btn9" onclick="boxClick9()" class="btns hoverOEffect">
+                    <img class="xmark" id="box9X" src="/images/tictactoe/xmark.png">
+                    <img class="circle" id="box9O" src="/images/tictactoe/circle.png">
+                    <img class="xmarkwin" id="box9Xwin" src="/images/tictactoe/xmarkWin.png">
+                    <img class="circlewin" id="box9Owin" src="/images/tictactoe/circleWin.png">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottomMenu">
+        <button id="btnRestart" onclick="rematch()">Starta om</button>
+    </div>
+    <div class="bottomMenu">
+        <button id="btnQuit" onclick="window.location.href = './home';">Lämna</button>
+    </div>
+<script src="/scripts/tictactoe/jsTicTacToeSvenskaAI.js"></script>
+<script src="/scripts/tictactoe/jsTicTacToeSvenskaAIUnbeatable.js"></script>
+</body>
+</html>
+
+
+

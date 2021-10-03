@@ -1,0 +1,279 @@
+
+body {
+    background-image: linear-gradient(rgb(255, 123, 0),rgb(255, 179, 0));
+    background-size: 100% 1500px;
+}
+
+.header {
+    font-family: Tahoma, sans-serif;
+    margin: 50px auto;
+    background-image: linear-gradient(white, rgb(1, 171, 194)); 
+    width: 70%; 
+    min-width: 500px;
+    max-width: 700px;  
+    text-align: center;
+    font-size: 60px;
+    color: black;
+    border: 4px solid black;
+}
+
+#headerLink:link, #headerLink:visited {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+#picture {
+    text-align: center;
+}
+
+
+
+
+
+
+
+#allLanguages {
+    position: absolute;
+    top: 0px;
+    margin-left: 1%;
+}
+
+#lang {
+    display: inline-block;
+    width: 50px;
+}
+
+#langSelected {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#btnMenu1 {
+    z-index: 4;
+}
+
+#btnMenu2 {
+    margin-top: 0px;
+}
+
+#btnMenu3 {
+    margin-top: 30px;
+}
+
+#centerpiece {
+    text-align: center;    
+}
+
+.allBigBtns {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: white;
+    width: 400px;
+    padding: 18px;
+    font-size: 25px;
+    border: 2px solid black;
+    position: relative;
+    z-index: 5;
+}
+
+#btnMenu3 {
+    width: 90px;
+    padding: 8px;
+    font-size: 1em;
+    background-color: rgb(153, 153, 153);
+}
+
+
+
+
+
+
+
+
+
+.allBigBtns, .pVScSubBtns {
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+}
+
+.allBigBtns:hover {
+    transform:translate(-3px,-3px);
+    box-shadow: 8px 8px 10px black;
+
+}
+
+.allBigBtns:active {
+    box-shadow: 3px 3px 20px rgb(0, 0, 0) inset;
+    transform:translate(0px,0px);
+}
+
+.pVScSubBtns:active {
+    transform:translate(0px,5px);
+/*    box-shadow: 0px 5px 5px black; */
+
+}
+
+.pVScSubBtns {
+    background-color: rgb(238, 241, 56);
+    width: 300px;
+    padding: 8px;
+    font-size: 25px;
+    border: 2px solid black;
+}
+
+/*
+.boxText {
+    font-size: 1.5em;
+    font-family: 'Times New Roman', Times, serif;
+}*/
+
+#centerImages {
+    margin-right: auto;
+    margin-left: auto;
+    width: 310px;
+    height: 310px;
+    display: block;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+    overflow: hidden;
+
+    animation: mymove 10s infinite;
+}
+
+#image2blue, #image3red {
+    width: 310px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*      Animate middle picture      */
+
+#image1green, #image2blue, #image3red {
+    position: absolute;
+}
+
+#image2blue {
+    animation: blueBild 15s infinite;  
+}
+
+#image1green {
+    width: 310px;
+    margin-left: auto;
+    margin-right: auto;
+
+    animation: greenBild 15s infinite;    
+
+}
+
+
+#testbtn1:hover, #testbtn1:active {
+    background-color: rgb(44, 236, 54);
+}
+
+#testbtn2:hover, #testbtn2:active {
+    background-color: rgb(3, 109, 247);
+}
+
+#testbtn3:hover, #testbtn3:active {
+    background-color: rgb(255, 43, 43);
+}
+
+#testbtn1, #testbtn2, #testbtn3 {
+    opacity: 100%;
+    animation-timing-function: linear;
+    position: absolute;
+    padding-top: 8px;
+    margin-top: -50px;
+    margin-left: -150px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding-top: 8px;
+    z-index: 3;
+}
+
+#testbtn2 {
+    margin-top: -70px;
+    z-index: 2;
+}
+
+#testbtn3 {
+    margin-top: -90px;
+    z-index: 1;
+}
+
+
+/*      Dropdown animation      */
+
+@keyframes hidePVEbtns1 {
+    0%      {padding-top: 50px;}
+    100%    {padding-top: 8px;}
+}
+@keyframes hidePVEbtns2 {
+    0%      {padding-top: 95px;}
+    100%    {padding-top: 8px;}
+}
+@keyframes hidePVEbtns3 {
+    0%      {padding-top: 140px;}
+    100%    {padding-top: 8px;}
+}
+
+@keyframes showPVEbtns1 {
+    0%      {padding-top: 8px;} 
+    100%    {padding-top: 50px;}
+}
+@keyframes showPVEbtns2 {
+    0%      {padding-top: 8px;} 
+    100%    {padding-top: 95px;}
+}
+@keyframes showPVEbtns3 {
+    0%      {padding-top: 8px;} 
+    100%    {padding-top: 140px;}
+}
+@keyframes pushBigbtnMenu {
+    0%      {margin-top: 0px;}
+    100%    {margin-top: 120px;}
+}
+@keyframes pullBigbtnMenu {
+    0%      {margin-top: 120px;}
+    100%    {margin-top: 0px;}    
+}
+
+
+
+
+
+
+@keyframes greenBild {
+    0%      {opacity: 1;}
+    15%     {opacity: 1;}
+    30%    {opacity: 0;}
+    80%     {opacity: 0;}
+    95%    {opacity: 1;}
+    100%    {opacity: 1;}
+}
+
+@keyframes blueBild {
+    0%      {opacity: 1;}
+    51%     {opacity: 1;}
+    66%     {opacity: 0;}
+    95%     {opacity: 0;}
+    100%    {opacity: 1;}
+}
+

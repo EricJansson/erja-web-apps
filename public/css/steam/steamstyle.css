@@ -409,7 +409,7 @@ form {
     width: 32px;
     background-repeat: no-repeat;
     background-size: 32px;
-    background-image: url("/images/loading.png");
+    background-image: url("/images/steam/loading.png");
     -webkit-animation: loading linear 0.5s infinite;
     animation: loading linear 1s infinite;
 }
@@ -505,7 +505,7 @@ form {
 
 
 #help_find_steamid_one div, #help_find_steamid_two div {
-    background-image: url("/images/help_steps_2.png");
+    background-image: url("/images/steam/help_steps_2.png");
     background-repeat: no-repeat;
     margin-left: 10px;
     width: 100%;
@@ -513,7 +513,7 @@ form {
 }
 
 #help_find_steamid_one div {
-    background-image: url("/images/help_steps_1.png");
+    background-image: url("/images/steam/help_steps_1.png");
     background-position: top right;
 }
 
@@ -532,7 +532,7 @@ form {
 }
 
 #help_find_privacy_settings_one div {
-    background-image: url("/images/help_steps_privacy_settings_1.png");
+    background-image: url("/images/steam/help_steps_privacy_settings_1.png");
     background-repeat: no-repeat;
     background-position: top right;
     margin-left: 10px;
@@ -541,7 +541,7 @@ form {
 }
 
 #help_find_privacy_settings_two div {
-    background-image: url("/images/help_steps_privacy_settings_2.png");
+    background-image: url("/images/steam/help_steps_privacy_settings_2.png");
     background-repeat: no-repeat;
     background-position: top right;
     margin-left: 10px;
@@ -550,7 +550,7 @@ form {
 }
 
 #help_find_privacy_settings_three div {
-    background-image: url("/images/help_steps_privacy_settings_3.png");
+    background-image: url("/images/steam/help_steps_privacy_settings_3.png");
     background-repeat: no-repeat;
     margin-left: 10px;
     width: 100%;

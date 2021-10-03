@@ -1,0 +1,151 @@
+#playingField {
+  padding: 50px;
+  text-align: center;
+  border: 1px solid black;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  display: flex;
+}
+
+#startGameBtn {
+  width: 310px;
+}
+
+#diceRollResults {
+  height: 140px;
+  width: 250px;
+  padding: 20px;
+  margin: 10px;
+  border-bottom: 1px solid black;
+}
+
+#diceRollSaved {
+  padding: 20px;
+  margin: 10px;
+}
+
+#statTable, #statTableComp {
+  padding: 20px 0px 20px 0px;
+  width: 300px;
+  display: grid;
+  grid-template-columns: auto auto;
+  border: 1px solid black;
+}
+
+#statTableText, #statTableTextComp {
+  text-align: right;
+}
+
+#statTableSum, #statTableSumComp {
+  text-align: left;
+}
+
+.statTableClass, .statTableNotATurn {
+  grid-column: 1;
+  padding: 5px;
+}
+
+.statTableResultClass {
+  grid-column: 2;
+  padding: 5px;
+}
+
+#diceField {
+  display: none;
+  width: 310px;
+}
+
+#diceRollOne,
+#diceRollTwo,
+#diceRollThree,
+#diceNextTurn {
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}
+
+#dice0,
+#dice1,
+#dice2,
+#dice3,
+#dice4 {
+  font-weight: bolder;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 5px 10px 5px 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#diceSaved-0,
+#diceSaved-1,
+#diceSaved-2,
+#diceSaved-3,
+#diceSaved-4,
+#dice-0,
+#dice-1,
+#dice-2,
+#dice-3,
+#dice-4 {
+  margin-right: 10px;
+  display: inline-block;
+  height: 64px;
+  width: 64px;
+  cursor: pointer;
+}
+
+#diceSaved-0,
+#diceSaved-1,
+#diceSaved-2,
+#diceSaved-3,
+#diceSaved-4 {
+  display: none;
+}
+
+.diceSelected,
+.currentTurn {
+  background-color: rgb(255, 115, 0);
+}
+
+.selectAble:hover {
+  animation: statsHoverFlimmer 1s infinite;
+  cursor: pointer;
+}
+
+@keyframes statsHoverFlimmer {
+  0%    { background-color: rgb(247, 232, 97); }
+  50%   { background-color: rgb(248, 35, 35);  }
+  100%  { background-color: rgb(247, 232, 97); }
+}
+
+.dice_pic1, .dice_pic2, .dice_pic3, .dice_pic4, .dice_pic5, .dice_pic6 {
+  background-size: 64px;
+  background-repeat: no-repeat;
+}
+
+.dice_pic1 {
+  background-image: url("/images/yatzy/dice-1.png");
+}
+
+.dice_pic2 {
+  background-image: url("/images/yatzy/dice-2.png");
+}
+
+.dice_pic3 {
+  background-image: url("/images/yatzy/dice-3.png");
+}
+
+.dice_pic4 {
+  background-image: url("/images/yatzy/dice-4.png");
+}
+
+.dice_pic5 {
+  background-image: url("/images/yatzy/dice-5.png");
+}
+
+.dice_pic6 {
+  background-image: url("/images/yatzy/dice-6.png");
+}

@@ -1,0 +1,85 @@
+
+body {
+    background-color: gray;
+}
+
+#game_status {
+    background-color: white;
+    margin: auto;
+    margin-top: 30px;
+    width: fit-content;
+    text-align: center;
+    padding: 4px;
+    border: 1px solid black;
+}
+
+#playingArea {
+    margin: auto;
+    margin-top: 30px;
+    width: 800px;
+    height: 600px;
+    border: 1px solid black;
+}
+
+#playingArea svg {
+    background-color: black;
+}
+
+.gamePaths {
+    stroke: red;
+    stroke-width: 8;
+    fill: gray;
+}
+
+.allStartSquares, .allFinishSquares {
+    fill: green;
+    fill-opacity: 0.6;
+}
+
+.allObstacles {
+    fill: black;
+    stroke: red;
+    stroke-width: 8;
+    opacity: 0.8;
+}
+
+
+
+/* Levels Hidden at start */
+#finishSquare1, #path1,
+#startSquare2, #finishSquare2, #path2,
+#startSquare3, #finishSquare3, #path3,
+#startSquare4, #finishSquare4, #path4 {
+    display: none;
+}
+
+/* Hide obstacles */
+#path3obs1, #path3obs2, #path3obs3 {
+    display: none;
+}
+
+/* 
+#path3, #finishSquare3 {
+    display: block;
+} 
+*/ 
+
+.glowingStartLevel {
+    animation: myGlow 2s infinite;
+    stroke: yellow;
+}
+
+@keyframes myGlow {
+    0%   {
+        stroke-width: 4;
+        stroke-opacity: 0;
+    }
+    50%  {
+        stroke-width: 5;
+        stroke-opacity: 0.3;
+    }
+    100% {
+        stroke-width: 4;
+        stroke-opacity: 0;
+    }
+}

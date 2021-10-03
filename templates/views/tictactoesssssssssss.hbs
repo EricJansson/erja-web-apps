@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="indexStyle.css">
+        <title>Tic Tac Toe - Home</title>
+
+<!--                        Header                      -->
+
+        <header>
+            <div class="header">
+                <a id="headerLink" href="./index.html">Tic Tac Toe</a>
+            </div>
+        </header>    
+</head>
+
+<body>
+    <div id="allLanguages">
+        <img id="lang" src="./images/swedishFlag.png" onclick="window.location.href = './files/svenska/home.html';">
+        <img id="langSelected" src="./images/brittishFlagSelected.png">
+    </div>
+
+<!--                Text above playing field            -->
+    <div id="centerImages">
+        <img id="image3red" src="./images/tictactoeStart3.png">
+        <img id="image2blue" src="./images/tictactoeStart2.png">
+        <img id="image1green" src="./images/tictactoeStart1.png">
+    </div>
+
+<div id="centerpiece">
+    <div id="bigBtn1" class="fullBtnMenu">
+        <button id="btnMenu1" class="allBigBtns" onclick="pveBtn()">Player VS Computer</button><br>
+        <button id="testbtn1" class="pVScSubBtns" onclick="window.location.href = './files/tictactoeVSaiEasy.html';">Easy mode</button><br>
+        <button id="testbtn2" class="pVScSubBtns" onclick="window.location.href = './files/tictactoeVSaiHard.html';">Hard mode</button><br>
+        <button id="testbtn3" class="pVScSubBtns" onclick="window.location.href = './files/tictactoeVSaiUnbeatable.html';">Unbeatable</button>
+    </div>
+
+    <div id="bigBtn2" class="fullBtnMenu">
+        <button id="btnMenu2" class="allBigBtns" onclick="window.location.href = './files/tictactoeMultiplayer.html';">Player VS Player</button>
+    </div>
+
+    <div id="bigBtn3" class="fullBtnMenu">
+        <button id="btnMenu3" class="allBigBtns" onclick="window.location.href = './files/about.html';">About</button>
+    </div>
+</div>
+
+<script src="indexJavascript.js"></script>
+</body>
+</html>
+

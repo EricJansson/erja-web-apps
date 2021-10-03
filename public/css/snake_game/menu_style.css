@@ -1,0 +1,717 @@
+
+/*    Testing overflow and animation   */
+
+/*    Play + Quickplay Menu and hover effect  */
+
+
+
+#menuMainBoxQuickplay:hover {
+    border: 3px solid black;  
+    margin-left: -245px;
+    width: 490px;
+    height: 80px;
+    border-radius: 0px;
+}
+
+#menuMainBoxPlay:hover {
+    border: 3px solid black;  
+    margin-left: -245px;
+    width: 490px;
+    height: 80px;
+    border-radius: 0px;
+}
+
+#menuMainBoxPlay:hover #menuSubBoxPlay, #menuMainBoxQuickplay:hover #menuSubBoxQuickPlay {
+    width: 490px;
+    height: 60px;
+    margin-top: 0px;
+    text-shadow: 2px 2px 1px white;
+    font-weight: bold;
+}
+
+
+#menuSubBoxPlay, #menuSubBoxQuickPlay {
+    background-image: url("/images/snake_game/levelSelect.png");
+    background-size: 3000px 250px;
+    background-position: -500px 0px;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    height: 60px;
+    padding-top: 20px;
+    margin-top: -10px;
+    margin-left: -4px;
+    font-weight: normal;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+
+
+#menuMainBoxPlay, #menuMainBoxQuickplay {
+    position: relative;
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: 4px 4px 6px black;
+    height: 60px;
+    border-radius: 50px 50px 50px 50px;
+    background-size: 1500px 250px;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+}
+
+#menuMainBoxQuickplay, #menuSubBoxQuickPlay {
+    width: 300px;
+    transition: all 0.5s;
+}
+
+#menuMainBoxQuickplay {
+    margin-top: 50px;
+    margin-left: -150px;
+}
+
+
+#menuMainBoxPlay, #menuSubBoxPlay {
+    width: 200px;
+    transition: all 0.7s;
+}
+
+#menuMainBoxPlay {
+    margin-left: -100px;
+}
+
+
+
+#menuSubBoxPlay {
+    background-size: 6000px 500px;
+    background-position: -200px -160px;
+}
+
+
+#menuHiddenBoxQuickPlay, #menuHiddenBoxPlay {
+    width: 490px;
+    animation-name: e;
+    margin-left: 3px;
+    animation-duration: 0.6s;
+}
+
+
+@keyframes hideMissionplay {
+    0%    { margin-top: 0px;}
+    100%  { margin-top: -84px;}
+}
+
+@keyframes showMissionplay {
+    0%    { margin-top: -84px;}
+    100%  { margin-top: 0px;}
+} 
+  
+
+
+@keyframes hideQuickplay {
+    0%    { margin-top: 0px;}
+    100%  { margin-top: -84px;}
+}
+  
+@keyframes showMissions {
+    0%    { margin-top: -84px;}
+    100%  { margin-top: 0px;}
+} 
+  
+  
+#menuSubBoxE, #menuSubBoxH {
+    background-image: url("/images/snake_game/levelSelect.png");
+    background-size: 2000px 250px;
+    background-repeat: no-repeat;
+    font-weight: normal;
+    border: 1px solid black;
+    height: 80px;
+    padding-top: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#menuSubBoxE:hover, #menuSubBoxH:hover {
+    text-shadow: 2px 2px 1px white;
+    font-weight: bold;
+}
+  
+#menuSubBoxE {
+    background-position: -15px 0px;
+}
+  
+#menuSubBoxH {
+    background-position: -350px -0px;
+}
+  
+#menuSubBoxE, #menuSubBoxH {
+    width: 245px;
+    margin-left: -6px;
+    display: inline-block;
+}
+
+#menuSubBoxBack, #playBackBtn {
+    position: relative;
+    background-image: url("/images/snake_game/arrowBack.png");
+    background-size: 50px;
+    background-position: 5px -2px;
+    background-repeat: no-repeat;
+    transform: rotate(90deg);
+    width: 80px;
+    height: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#playBackBtn {
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#menuSubBoxBack {
+    margin-left: 200px;
+    margin-top: -105px;
+}
+
+#menuSubBoxBack:hover, #playBackBtn:hover {
+    background-size: 70px;
+    background-position: 4px -12px;
+}
+
+  
+  /*    Testing overflow and animation   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.allTilesMenu {
+    /*
+    box-shadow: inset 0px 0px 0px 2px rgb(8, 8, 8);
+    */
+    width: 51px;
+    height: 51px;
+    margin-right: 6px;
+    margin-top: -1px;
+    position: relative;
+    left: 8px;
+    margin-left: -3px;
+}
+
+#startMenu {
+    display: block;
+    height: 205px;
+    width: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#menuSelecting {
+    padding-bottom: 100px;
+}
+
+#levelSelectMain {
+    width: 490px;
+}
+
+
+#levelAccept {
+    background-color: var(--subBackground);
+    text-align: center;
+    width: 490px;
+    height: 50px;
+    margin-left: -2px;
+    padding: 35px 0px 30px 0px;
+    border: 2px solid black;
+    color: var(--changingTextColor);
+}
+
+
+#levelAcceptStart {
+    position: relative;
+    background-color: var(--background);
+    border: 3px solid black;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-left: 250px;
+    top: 0px;
+    height: 50px;
+    width: 100px;
+    color: var(--changingTextColor);
+    outline: none;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+#winOrLoseCheating {
+    display: none;
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 300px;
+}
+
+#levelAcceptStart:hover {
+    font-size: 1.6em;
+    box-shadow: 2px 2px 3px black;
+}
+
+
+
+
+
+
+#levelAcceptGrid {
+    position: relative;
+    top: -50px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
+#levelAcceptReqScore, #levelAcceptHS, #levelAcceptReqScorecurrent, #levelAcceptHScurrent {
+    width: 150px;
+    padding: 2px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+
+#levelAcceptReqScore, #levelAcceptHS {
+    text-align: right;
+}
+
+
+#levelAcceptReqScorecurrent, #levelAcceptHScurrent {
+    text-align: left;
+}
+
+
+#levelAcceptHS {
+    text-shadow: green 1px 1px 4px;
+}
+
+#levelAcceptReqScore {
+    text-shadow: red 1px 1px 4px;
+}
+
+
+#levelSelectBox {
+    border-top: 3px solid black;
+    width: 490px;
+    height: 200px;
+    background-image: url("/images/snake_game/levelSelect.png");
+    background-size: 3000px 250px;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    transition: all 0.5s ease;
+
+    overflow: hidden;
+
+}
+
+
+
+#innerlevelSelect {
+    text-align: left;
+    height: 200px;
+    width: 2000px;
+    margin-left: 0px;
+
+}
+
+
+
+
+#worldOne, #worldTwo, #worldThree, #worldFour, #worldFive, #worldSix {
+    display: inline-block;
+    width: 470px;
+    padding-left: 30px;
+    margin-left: -5px;
+}
+
+.levelStar {
+    background-image: url("/images/snake_game/singleStar.png");
+    width: 32px;
+    height: 32px;
+    background-position: 0px;
+    position: absolute;
+    display: none;
+    margin-top: -45px;
+    margin-left: 45px;
+    background-size: 32px;
+    background-repeat: no-repeat;
+}
+
+.smallBall {
+    box-shadow: 3px 3px 6px black;
+    background-color: red;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 100px;
+    margin-top: 10px;
+    margin-left: 30px;
+    outline: none;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+
+    display: inline-flex;
+    color: black;
+    padding: 32px;
+    width: 0px;
+    height: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+#number1, #number6, #number11, #number16, #number21, #number26 {
+    margin-left: 0px;
+}
+
+#number5, #number10, #number15, #number20, #number25, #number30 {
+    margin-left: 172px;
+    height: 15px;
+    width: 15px;
+}
+
+.arrowScrollLeft, .arrowScrollRight, #arrowScrollLeft1, 
+#arrowScrollRight1, #arrowScrollRight2, #arrowScrollRight3, #arrowScrollRight4, #arrowScrollRight5, #arrowScrollRight6  {
+    background-image: url("/images/snake_game/arrowScroll.png");
+    background-color: rgba(255, 255, 255, 0);
+    background-size: 100px 50px;
+    background-position: -50px 0px;
+    border: none;
+    display: inline-flex;
+    background-repeat: no-repeat;
+    outline: none;
+    margin-left: 0px;
+    height: 42px;
+    width: 50px;
+    cursor: pointer;
+}
+
+
+.arrowScrollLeft, #arrowScrollLeft1 {
+    background-position: 0px 0px;
+    margin-left: -27px;
+}
+
+#arrowScrollLeft1 {
+    opacity: 0;
+    cursor: initial;
+}
+
+
+
+#winOrLose, #levelAccept {
+    display: none;
+}
+
+
+#worldTwo, #worldThree, #worldFour, #worldFive, #worldSix,
+#arrowScrollRight1, #arrowScrollRight2, #arrowScrollRight3, #arrowScrollRight4, #arrowScrollRight5, #arrowScrollRight6,
+#number2, #number3, #number4, #number5,
+#number7, #number8, #number9, #number10,
+#number12, #number13, #number14, #number15,
+#number17, #number18, #number19, #number20,
+#number22, #number23, #number24, #number25,
+#number27, #number28, #number29, #number30 {
+    display: none;
+}
+
+
+/* ugly */
+#hard0, #easy0, #freeP0, #ops0,
+#hard1, #easy1, #freeP1, #ops1,
+#hard2, #easy2, 
+#hard3, #easy3, 
+#hard4, #easy4, 
+#hard5, #easy5, 
+#hard6, #easy6, 
+#hard7, #easy7, 
+#hard8, #easy8, 
+#hard9, #easy9 {
+    height: 50px;
+    width: 50px;
+    background-size: 50px;
+    margin-left: -11px;
+    display: none;
+}
+
+#freeP0 {
+    float: left;
+    margin-left: -8px;
+    margin-top: -40px;
+}
+
+#freeP1 {
+    float: right;
+    margin-right: 8px;
+    margin-top: -40px;
+}
+
+#ops0 {
+    float: left;
+    margin-left: 22px;
+    margin-top: -40px;
+}
+
+#ops1 {
+    float: right;
+    margin-right: 38px;
+    margin-top: -40px;
+}
+
+#easy {
+    padding-top: 12px;
+    padding-bottom: 10px;
+    height: 40px;
+    left: 50%;
+    z-index: 1;
+    border-radius: 50px;
+    box-shadow: 4px 4px 6px black;
+    border: 1px solid black;
+    cursor: pointer;
+    position: absolute;
+}
+
+#freePlay:hover, #options:hover {
+    text-shadow: 2px 2px 1px white;
+    font-weight: bold;
+    border: 3px solid black;
+    height: 56px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    border-radius: 0px;
+}
+
+#easy:hover {
+    width: 490px;
+    margin-left: -248px;
+}
+
+#freePlay:hover {
+    width: 260px;
+    margin-left: -150px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#options:hover {
+    width: 320px;
+    margin-left: -160px;
+}
+
+
+@keyframes optionBtnAnimTransition {
+    from {
+        text-shadow: none;
+        padding-top: 12px;
+        margin-bottom: 30px;
+        border: 1px solid black;
+        border-radius: 50px;
+        }
+    to {
+        text-shadow: 2px 2px 1px white;
+        padding-top: 20px;
+        margin-bottom: 8px;
+        border: 3px solid black;
+        border-radius: 0px; 
+        }
+    }
+
+
+#options, #freePlay {
+    height: 48px;
+    padding-top: 12px;
+    z-index: 1;
+    border-radius: 50px;
+    box-shadow: 4px 4px 6px black;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+}
+
+#easy {
+    width: 120px;
+    background-position: 180px -15px;
+    margin-left: -66px;
+    background-image: url("/images/snake_game/backgroundGrass.png");
+    transition: all 0.5s;
+}   
+
+#hard {
+    margin-top: 120px;
+    background-position: 180px -5px;
+    background-image: url("/images/snake_game/backgroundWater.png");
+}
+
+
+.quickplayNeutral {
+    width: 200px;
+    margin-left: -110px;
+    transition: all 0.5s;
+}
+
+
+.quickplayNeutral:hover {
+    text-shadow: 2px 2px 1px white;
+    border: 3px solid black;
+    font-weight: bold;
+    height: 56px;
+    padding-top: 20px;
+    border-radius: 0px;
+    width: 464px;
+    padding-left: 12px;
+    margin-left: -248px;
+}
+
+
+.quickplayClicked {
+    width: 464px;
+    height: 56px;
+    padding-top: 20px;
+    padding-left: 12px;
+    border: 3px solid black;
+    font-weight: bold;
+    border-radius: 0px;
+    margin-bottom: 8px;
+    margin-left: -248px;
+    padding-bottom: 10px;
+    font-size: 1.8em;
+    left: 50%;
+    z-index: 1;
+    text-shadow: 2px 2px 1px white;
+    box-shadow: 4px 4px 6px black;
+    cursor: pointer;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menuText {
+    color: black;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    font-size: 1.8em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#menuSubBoxE, #menuSubBoxH {
+    font-size: 1.8em;
+    font-weight: normal;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@keyframes enableFreePlay {
+    0%    { opacity: 0; }
+    60%   { opacity: 0; }
+    100%  { opacity: 1; }
+}
+
+
+@keyframes enableFreePlayOptions {
+    0%    { margin-top: 0px;  }
+    100%  { margin-top: 50px;  }
+}
+
+@keyframes quickEnableFreePlay {
+    0%    { opacity: 0; }
+    30%   { opacity: 0; }
+    50%  { opacity: 1; }
+    100%  { opacity: 1; }
+}
+
+
+@keyframes quickEnableFreePlayOptions {
+    0%    { margin-top: 0px;  }
+    50%  { margin-top: 50px;  }
+    100%  { margin-top: 50px;  }
+}
+
+
+#freePlay {
+    display: none;
+    width: 200px;
+    background-color: rgb(199, 174, 34);
+    margin-top: 50px;
+    margin-left: -100px;
+    animation: linear 1s forwards;
+    transition: all 0.5s;
+}
+
+#options {
+    width: 280px;
+    background-color: rgb(223, 76, 76);
+    margin-top: 50px;
+    margin-left: -140px;
+    animation: linear 0.5s forwards;
+    transition: all 0.5s;
+}
+
+
+
+
+.lvlActivated {
+    background-color: yellow;
+}
+
+
+
+.trophy1 {
+    background-image: url("/images/snake_game/trophy1st.png");
+}
+
+.trophy2 {
+    background-image: url("/images/snake_game/trophy2nd.png");
+}
+
+.trophy3 {
+    background-image: url("/images/snake_game/trophy3rd.png");
+}
+
+#clickFieldRange {
+    position: absolute;
+}
+
+
+@media only screen and (min-width: 1000px) {    
+    #header {
+        margin-bottom: 36px;
+    }
+}
+
+
+@media only screen and (max-width: 550px) {
+    #header {
+        margin-bottom: -54px;
+    }
+/*
+    #levelSelectBox {  }
+    #startMenu { transform: scale(0.6); }
+*/
+}
+
+

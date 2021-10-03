@@ -1,0 +1,30 @@
+
+    /* Background */
+
+body {
+    background-image: linear-gradient(rgb(255, 43, 43),rgb(255, 179, 129));
+    background-size: 100% 1500px;
+}
+
+
+
+
+#diffUnbeatable {
+    z-index: 4;
+    background-image: url("../images/btnHighligth.png");
+    background-repeat: no-repeat;
+    background-size: 155px 30px;
+}
+
+button#diffEasy:hover, button#diffHard:hover {
+    background-image: url("../images/btnHighligthHover.png");
+    background-repeat: no-repeat;
+    background-size: 150px 30px;
+    font-weight: bolder;
+}
+
+button#diffUnbeatable:hover {
+    font-weight: bold;
+    background-size: 195px 30px;
+    background-position-x: -20px;
+}
