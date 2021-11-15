@@ -10,7 +10,10 @@
 </head>
 
 <body>
-
+    <div id="cheatBox">
+        <button onclick="cheatGame()">Fast play 14 rounds</button>
+        <button onclick="resetGame()">Reset game after Game over</button>
+    </div>
     <div id="playingField">
         <div id="statTable">
             <div id="statTableText">
@@ -66,9 +69,9 @@
         <div id="diceField">
             <div style="height: 40px;">
                 <div id="numberOfRollsLeft">III</div>
-                <button id="diceRollOne" onclick="rollOne()">Första slaget</button>
-                <button id="diceRollTwo" onclick="rollTwo()">Andra slaget</button>
-                <button id="diceRollThree" onclick="rollThree()">Tredje slaget</button>
+                <button id="diceRollOne" onclick="rollDiceTurns(1)">Första slaget</button>
+                <button id="diceRollTwo" onclick="rollDiceTurns(2)">Andra slaget</button>
+                <button id="diceRollThree" onclick="rollDiceTurns(3)">Tredje slaget</button>
             </div>
             <br>
             <div id="diceRollResults">

@@ -41,6 +41,15 @@ app.get('', (req, res) => {
 })
 
 
+app.get('/homepage', (req, res) => {
+    res.render('homepage', {
+        title: 'Homepage',
+        name: 'Eric Jansson',
+        errormessage: 'Article not found.'
+    })
+})
+
+
 app.get('/weatherapp', (req, res) => {
     res.render('weatherapp', {
         title: 'Weather App',

@@ -64,8 +64,44 @@
 #setup_my_list_content, #setup_saved_list_content, #setup_other_list_content {
     border: 1px solid black;
     margin-top: 0px;
-    height: 0px;
-    background: gray;
+    background: rgb(236, 236, 236);
     transition: 1s;
 }
 
+.setup_list_subjects {
+    display: grid;
+    grid-template-columns: 200px auto;
+    height: 60px;
+    border-bottom: 1px solid black;
+    align-content: center;
+    text-align: left;
+}
+
+.setup_list_subjects:hover {
+    cursor: pointer;
+}
+
+.setup_other_list_headers {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.setup_other_list_content {
+    min-height: 60px;
+    border-left: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    background: #0000001f;
+}
+
+.setup_lists_text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}

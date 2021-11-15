@@ -1,12 +1,11 @@
 
-// var summa = 0;
-// testArr.forEach(function (value) { summa += value })
-// console.log(summa)
+const cheatActive = false;
 
 var totalSum = 0;
 var lastSum = 0;
-var turn = 0;
+var turn = -1;
 var bonus = 0;
+var gameFinished = true;
 
 var dice = [
     0,
@@ -17,17 +16,25 @@ var dice = [
 ]
 
 
-var testArr = [
-    34,
-    12,
-    2,
-    100,
-    9
+var turnChoosen = [
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1,
+    -1
 ]
 
-
-
-var turnChoosen = [
+var currentTurnValues = [
     -1,
     -1,
     -1,
@@ -62,6 +69,7 @@ const DIE_ROLL_SPEED = 50;
 
 
 function startGame() {
+    gameFinished = false;
     turn = 0;
     document.getElementById("startGameBtn").style.display = "none";
     document.getElementById("diceField").style.display = "block";
@@ -69,14 +77,64 @@ function startGame() {
     // Hide start, show slå tärning
 }
 
-function rollOne() {
+
+function runDevCheats() {
+    if (cheatActive) {
+        document.getElementById("cheatBox").style.display = "block"
+    }
+}
+
+runDevCheats()
+
+function cheatGame() {
+    if (cheatActive & !gameFinished) {
+        if (turn == -1) {
+            startGame()
+        }
+        for (let cheatii = 1; cheatii < 15; cheatii++) {
+            rollDiceTurns(1)
+            document.getElementById("statTurn" + cheatii).classList.remove("selectAble");
+            nextTurn(cheatii - 1);
+            if (gameFinished) {
+                break;
+            }
+        }
+
+    }
+}
+
+
+function rollDiceTurns(turn) {
     if (diceAreRolling) {
         return
     }
+
     document.getElementById("diceRollOne").style.display = "none";
-    document.getElementById("diceRollTwo").style.display = "block";
-    // number of rolls left
-    document.getElementById("numberOfRollsLeft").innerHTML = "II"
+    document.getElementById("diceRollTwo").style.display = "none";
+    document.getElementById("diceRollThree").style.display = "none";
+
+    switch (turn) {
+        case 1:
+            document.getElementById("diceRollTwo").style.display = "block";
+            document.getElementById("numberOfRollsLeft").innerText = "II"
+            break;
+        case 2:
+            document.getElementById("diceRollThree").style.display = "block";
+            document.getElementById("numberOfRollsLeft").innerText = "I"
+            break;
+        case 3:
+            document.getElementById("numberOfRollsLeft").innerText = ""
+            break;
+        default:
+            throw "Error time!"
+    }
+
+    if (cheatActive) {
+        diceRoll()
+        diceAreRolling = false;
+        return;
+    }
+
     // random dices unselected
     rollDice = setInterval(diceRoll, DIE_ROLL_SPEED)
     setTimeout(function () {
@@ -85,48 +143,62 @@ function rollOne() {
     }, DIE_ROLL_TIME)
 }
 
-function rollTwo() {
-    if (diceAreRolling) {
+
+
+
+resetGame = () => {
+    if (!gameFinished) {
+        console.log("Can't reset game when it's not over.")
         return
     }
+    // reset text from scoreboard
+    document.getElementById("turnBonus").innerText = 0;
+    document.getElementById("turnSumma1").innerText =  "0 (63 poäng för bonus)";
+    document.getElementById("turnSumma2").innerText = 0;
+    for (let ii = 1; ii < 16; ii++) {
+        document.getElementById("turn" + ii).innerText = 0;
+        // reset all game score values
+        turnChoosen[ii] = -1;
+        currentTurnValues[ii] = -1;
+    }
+    totalSum = 0;
+    lastSum = 0;
+    turn = -1;
+    bonus = 0;
+    // Reset dice images to default
+    resetDiceImages();
+
+    
+    document.getElementById("diceRollOne").style.display = "none";
     document.getElementById("diceRollTwo").style.display = "none";
-    document.getElementById("diceRollThree").style.display = "block";
-    // number of rolls left
-    document.getElementById("numberOfRollsLeft").innerHTML = "I"
-    rollDice = setInterval(diceRoll, DIE_ROLL_SPEED)
-    setTimeout(function () {
-        clearTimeout(rollDice)
-        diceAreRolling = false;
-    }, DIE_ROLL_TIME)
-}
-
-function rollThree() {
-    if (diceAreRolling) {
-        return
-    }
     document.getElementById("diceRollThree").style.display = "none";
-    // number of rolls left
-    document.getElementById("numberOfRollsLeft").innerHTML = ""
-    rollDice = setInterval(diceRoll, DIE_ROLL_SPEED)
-    setTimeout(function () {
-        clearTimeout(rollDice)
-        // 
-        diceAreRolling = false;
-        turnOver = true;
-    }, DIE_ROLL_TIME)
+    
+    // if game over, don't show next round button + text
+    document.getElementById("numberOfRollsLeft").innerHTML = "Starta ett nytt spel!";
+    document.getElementById("startGameBtn").style.display = "block";
+    document.getElementById("diceField").style.display = "none";
+    console.log("Game reset");
+
 }
 
+
+
+hoverActive = true;
 
 function nextTurn(indexNumber) {
-    if (hoverActive === false) {
+    if (hoverActive == false) {
+        return;
+    } else if (gameFinished) {
         return;
     }
-    turnChoosen[indexNumber] = lastSum;
-
-    document.getElementById("diceRollTwo").style.display = "none";
-    document.getElementById("diceRollThree").style.display = "none";
-    document.getElementById("diceRollOne").style.display = "block";
-    document.getElementById("numberOfRollsLeft").innerHTML = "III"
+    checkAllStats()
+    turnChoosen[indexNumber] = currentTurnValues[indexNumber];
+    // if selected index has a value over 0, print it
+    if (currentTurnValues[indexNumber] > 0) {
+        document.getElementById("turn" + (indexNumber + 1)).innerText = currentTurnValues[indexNumber];
+    } else {
+        document.getElementById("turn" + (indexNumber + 1)).innerText = "-";
+    }
     turn++;
 
     // add top section to firstSum
@@ -136,10 +208,10 @@ function nextTurn(indexNumber) {
             firstSum += turnChoosen[i];
         }
     }
-    document.getElementById("turnSumma1").innerHTML = firstSum + " (63 poäng för bonus)";
+    document.getElementById("turnSumma1").innerText = firstSum + " (63 poäng för bonus)";
     if (firstSum >= 63) {
         bonus = 50
-        document.getElementById("turnBonus").innerHTML = bonus;
+        document.getElementById("turnBonus").innerText = bonus;
     }
 
     // add all turnChoosen[i] to totalSum
@@ -151,9 +223,32 @@ function nextTurn(indexNumber) {
     }
     totalSum += bonus;
 
-    document.getElementById("turnSumma2").innerHTML = totalSum;
+    document.getElementById("turnSumma2").innerText = totalSum;
+    // Remove images from dice
+    resetDiceImages();
+    document.getElementById("diceRollTwo").style.display = "none";
+    document.getElementById("diceRollThree").style.display = "none";
+    if (turn == turnChoosen.length) {
+        gameFinished = true;
+    }
+    if (turn == turnChoosen.length) {
+        // if game over, don't show next round button + text
+        document.getElementById("diceRollOne").style.display = "none";
+        document.getElementById("numberOfRollsLeft").innerHTML = "Game finished! <br>Your total score is: " + totalSum;
+        console.log("Game over");
+    } else {
+        // Reset round, put back "Turn x" buttons + text
+        document.getElementById("diceRollOne").style.display = "block";
+        document.getElementById("numberOfRollsLeft").innerText = "III"
+    }
+}
 
+resetDiceImages = () => {
     for (let i = 0; i < dice.length; i++) {
+        for (let ii = 0; ii < 6; ii++) {
+            // remove ALL dice numbers from EACH saved dice
+            document.getElementById("diceSaved-" + i).classList.remove("dice_pic" + (ii + 1))
+        }
         document.getElementById("dice-" + i).classList.remove("diceSelected")
         // unlock all dices
         diceSelected[i] = false;
@@ -164,23 +259,18 @@ function nextTurn(indexNumber) {
         document.getElementById("dice-" + i).style.display = "inline-block"
         // reset all dices
         dice[i] = 0;
-        // document.getElementById("dice" + i).innerHTML = "x"
-    }
-    if (turn === turnChoosen.length) {
-        console.log("Game over");
     }
 }
-
 
 function diceRoll() {
     diceAreRolling = true;
     // remove all classes(remove all pictures) 
 
     for (let i = 0; i < dice.length; i++) {
-        if (diceSelected[i] === true) {
+        if (diceSelected[i] == true) {
             continue;
         }
-        
+
         document.getElementById("diceSaved-" + i).classList.remove("dice_pic" + dice[i])
         document.getElementById("dice-" + i).classList.remove("dice_pic" + dice[i])
         // random number 1-6
@@ -192,14 +282,14 @@ function diceRoll() {
 }
 
 function diceSelect(diceIndexNumber) {
-    if (dice[diceIndexNumber] === 0) {
+    if (dice[diceIndexNumber] == 0) {
         console.log("Game hasn't started yet.")
         return
     } else if (diceAreRolling) {
         console.log("Dice are rolling.")
         return
     }
-    if (diceSelected[diceIndexNumber] === false) {
+    if (diceSelected[diceIndexNumber] == false) {
         diceSelected[diceIndexNumber] = true;
         document.getElementById("dice-" + diceIndexNumber).style.display = "none"
         document.getElementById("diceSaved-" + diceIndexNumber).style.display = "inline-block"
@@ -215,14 +305,14 @@ function diceSelect(diceIndexNumber) {
 }
 
 function diceDeSelect(diceIndexNumber) {
-    if (dice[diceIndexNumber] === 0) {
+    if (dice[diceIndexNumber] == 0) {
         console.log("Game hasn't started yet.")
         return
     } else if (diceAreRolling) {
         console.log("Dice are rolling.")
         return
     }
-    if (diceSelected[diceIndexNumber] === false) {
+    if (diceSelected[diceIndexNumber] == false) {
         diceSelected[diceIndexNumber] = true;
         document.getElementById("dice-" + diceIndexNumber).classList.add("diceSelected")
     } else {
@@ -257,9 +347,8 @@ for (let k = 1; k <= 15; k++) {
     document.getElementById("statTurn" + k).addEventListener("mouseover", function () { mouseOver(k) });
     document.getElementById("statTurn" + k).addEventListener("mouseout", function () { mouseOut(k) });
     document.getElementById("statTurn" + k).addEventListener("click", function () {
-        if (turnChoosen[k - 1] === -1 && dice[0] != 0 && diceAreRolling == false) {
+        if (turnChoosen[k - 1] == -1 && dice[0] != 0 && diceAreRolling == false) {
             document.getElementById("statTurn" + k).classList.remove("selectAble");
-            turnChoosen[k - 1] = lastSum;
             nextTurn(k - 1);
         }
     });
@@ -282,12 +371,12 @@ function checkForPairs(numberOfPairsToSubmit) {
         // check all dices for duplicates
         for (let i = 0; i < dice.length; i++) {
             // if dice contains m, tell me how many m's there are
-            if (dice[i] === m) {
+            if (dice[i] == m) {
                 numberOfNums++;
             }
         }
         // if no pairs already found...
-        if (numberOfPairs === 0) {
+        if (numberOfPairs == 0) {
             // if 2 pairs (4x the same number)
             if (numberOfNums >= 4) {
                 numberOfPairs = 2;
@@ -298,7 +387,7 @@ function checkForPairs(numberOfPairsToSubmit) {
                 numberOfPairs++;
                 numberOfHighestPair = m;
             }
-        } else if (numberOfPairs === 1) {
+        } else if (numberOfPairs == 1) {
             if (numberOfNums >= 2) {
                 numberOfPairs++;
                 numberOfSecondGivenPair = m;
@@ -310,9 +399,9 @@ function checkForPairs(numberOfPairsToSubmit) {
         }
     }
     // number of pairs to return (return sum)
-    if (numberOfPairs >= numberOfPairsToSubmit && numberOfPairsToSubmit === 1) {
+    if (numberOfPairs >= numberOfPairsToSubmit && numberOfPairsToSubmit == 1) {
         return numberOfHighestPair * 2;
-    } else if (numberOfPairs >= numberOfPairsToSubmit && numberOfPairsToSubmit === 2) {
+    } else if (numberOfPairs >= numberOfPairsToSubmit && numberOfPairsToSubmit == 2) {
         return (numberOfHighestPair * 2 + numberOfSecondGivenPair * 2)
     } else {
         return 0
@@ -326,7 +415,7 @@ function checkForDuplicates(numberOfWantedDuplicates) {
         var numberOfNums = 0;
         // if dice contains m, tell me how many m's there are
         for (let i = 0; i < dice.length; i++) {
-            if (dice[i] === m) {
+            if (dice[i] == m) {
                 numberOfNums++;
             }
         }
@@ -344,11 +433,11 @@ function checkForDuplicates(numberOfWantedDuplicates) {
     }
 }
 
-function checkForStege(oneMeansLowTwoMeansHigh) {
+function checkForStege(highOrLow) {
     if (dice.includes(2) && dice.includes(3) && dice.includes(4) && dice.includes(5)) {
-        if (dice.includes(1) && oneMeansLowTwoMeansHigh === 1) {
+        if (dice.includes(1) && highOrLow == "low") {
             return 15;
-        } else if (dice.includes(6) && oneMeansLowTwoMeansHigh === 2) {
+        } else if (dice.includes(6) && highOrLow == "high") {
             return 20;
         }
     }
@@ -364,15 +453,15 @@ function checkFullHouse() {
         // check all dices for duplicates
         for (let i = 0; i < dice.length; i++) {
             // if dice contains m, tell me how many m's there are
-            if (dice[i] === m) {
+            if (dice[i] == m) {
                 numberOfNums++;
             }
         }
         // if 2 pairs (4x the same number)
-        if (numberOfNums === 3) {
+        if (numberOfNums == 3) {
             numbersOfTriplets = m;
             // if a pair is found, save its number
-        } else if (numberOfNums === 2 && numbersOfPair === 0) {
+        } else if (numberOfNums == 2 && numbersOfPair == 0) {
             numbersOfPair = m;
         }
     }
@@ -384,59 +473,80 @@ function checkFullHouse() {
     }
 }
 
+function checkChance() {
+    chance = 0;
+    dice.forEach((value) => {
+        chance += value;
+    });
+    return chance;
+}
 
-
-function checkYatzy(value) {
-    if (value === dice[0]) {    // if all values are the same as the first dice, YATZY
+function checkYatzy() {
+    yatzy = dice.every((compareDice) => {
+        // check if all dice are same as the first one (more than 0 denies yatzy from before dice throw)
+        return compareDice == dice[0] && dice[0] > 0;
+    })
+    if (yatzy) {
         return 50;
+    } else {
+        return 0;
     }
-    return 0;
 }
 
 
 
-// first section === (ettor <-> sexor)
+function checkAllStats() {
+    // reset array values
+    for (let ii = 0; ii < currentTurnValues.length; ii++) {
+        currentTurnValues[ii] = 0;
+    }
+    // compute sum of numbers 1-6, in corresponding index
+    for (let ii = 0; ii < 6; ii++) {
+        currentTurnValues[dice[ii] - 1] += dice[ii];
+    }
+    // ett par
+    currentTurnValues[6] = checkForPairs(1);
+    // två par
+    currentTurnValues[7] = checkForPairs(2);
+    // triss
+    currentTurnValues[8] = checkForDuplicates(3);
+    // triss
+    currentTurnValues[9] = checkForDuplicates(4);
+    // liten stege
+    currentTurnValues[10] = checkForStege("low");
+    // stor stege
+    currentTurnValues[11] = checkForStege("high");
+    // kåk
+    currentTurnValues[12] = checkFullHouse();
+    // chans
+    currentTurnValues[13] = checkChance();
+    // yatzy
+    currentTurnValues[14] = checkYatzy();
+}
+
+
+
+
+
+
+
+
+// first section == (ettor <-> sexor)
 function mouseOver(indexNumberActiveTurn) {
     // don't show results if diveAreRolling
     if (diceAreRolling) {
         return;
-    }  
+    }
     // if "ettor" already taken dont do shiet
-    if (turnChoosen[indexNumberActiveTurn - 1] != -1 || dice[0] === 0) {
+    if (turnChoosen[indexNumberActiveTurn - 1] != -1 || dice[0] == 0) {
         return
     }
-    lastSum = 0;
-    // if PARAMETER 1-6
-    if (indexNumberActiveTurn >= 1 && indexNumberActiveTurn <= 6) {
-        // add all dice numbers containing PARAMETER
-        for (let i = 0; i < dice.length; i++) {
-            if (dice[i] === indexNumberActiveTurn) {
-                lastSum += dice[i]
-            }
-        }
-        // if PARAMETER wants to check for pair/2 pairs
-    } else if (indexNumberActiveTurn >= 7 && indexNumberActiveTurn <= 8) {
-        lastSum = checkForPairs(indexNumberActiveTurn - 6)
-        // if PARAMETER wants to check for triss or fyrtal
-    } else if (indexNumberActiveTurn >= 9 && indexNumberActiveTurn <= 10) {
-        lastSum = checkForDuplicates(indexNumberActiveTurn - 6);
-        // if PARAMETER wants to check for triss or fyrtal
-    } else if (indexNumberActiveTurn >= 11 && indexNumberActiveTurn <= 12) {
-        lastSum = checkForStege(indexNumberActiveTurn - 10);
-    } else if (indexNumberActiveTurn === 13) {
-        lastSum = checkFullHouse();
-    } else if (indexNumberActiveTurn === 14) {
-        for (let i = 0; i < dice.length; i++) {
-            lastSum += dice[i]  // chans
-        }
-    } else if (indexNumberActiveTurn === 15) {  // YATZY  // if all values are the same as the first dice
-        if (dice.every(checkYatzy)) { lastSum = 50 } else { lastSum = 0 }
-    }
-    // if sum of all dice are more than 0 print sum, otherwise print "-"
-    if (lastSum > 0) {
-        document.getElementById("turn" + indexNumberActiveTurn).innerHTML = lastSum;
-    } else if (lastSum === 0) {
-        document.getElementById("turn" + indexNumberActiveTurn).innerHTML = "-";
+    checkAllStats();
+    // if value is more than 0 print it, otherwise print "-"
+    if (currentTurnValues[(indexNumberActiveTurn - 1)] > 0) {
+        document.getElementById("turn" + indexNumberActiveTurn).innerText = currentTurnValues[(indexNumberActiveTurn - 1)];
+    } else if (currentTurnValues[(indexNumberActiveTurn - 1)] < 1) {
+        document.getElementById("turn" + indexNumberActiveTurn).innerText = "-";
     } else {
         throw "sum is weird. (sum != 0 or above)"
     }
@@ -451,7 +561,7 @@ function mouseOut(indexNumberActiveTurn) {
     if (turnChoosen[indexNumberActiveTurn - 1] != -1) {
         return
     }
-    document.getElementById("turn" + indexNumberActiveTurn).innerHTML = 0;
+    document.getElementById("turn" + indexNumberActiveTurn).innerText = 0;
 }
 
 

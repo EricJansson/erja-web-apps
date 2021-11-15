@@ -20,7 +20,8 @@
 
 .start_menu_btns {
   padding: 10px;
-  margin: 10px;
+  margin: 4px -4px;
+  width: 125px;
   box-shadow: 2px 2px 4px -1px black;
   cursor: pointer;
 }

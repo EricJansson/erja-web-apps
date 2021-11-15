@@ -45,15 +45,48 @@
 
         <div id="setup_session_lists_block">
             <div id="setup_list_headers_block">
-                <div class="setup_lists_headers" id="setup_my_list_header">My lists</div>
-                <div class="setup_lists_headers" id="setup_saved_list_header">Saved lists</div>
-                <div class="setup_lists_headers" id="setup_other_list_header">Other list</div>
+                <div class="setup_lists_headers" id="setup_my_list_header_section">My lists</div>
+                <div style="border-left: 1px solid; border-right: 1px solid;" class="setup_lists_headers" id="setup_saved_list_header_section">Saved lists</div>
+                <div style="width: 250%;" class="setup_lists_headers" id="setup_other_list_header_section">Other list</div>
             </div>
             
             <div id="setup_my_list_content"></div>
             <div id="setup_saved_list_content"></div>
-            <div id="setup_other_list_content"></div>
+            <div id="setup_other_list_content">
+
+                <div id="setup_other_list_header_1" class="highlight_lesson_list setup_list_subjects">
+                    <div class="setup_other_list_headers">
+                        <div class="setup_lists_text">Diskret matematik</div>
+                    </div>
+                    <div class="setup_other_list_content">
+                        <div class="setup_lists_text">Räkneregler för mängdlära.</div>
+                    </div>
+                </div>
+
+                <div id="setup_other_list_header_2" class="setup_list_subjects">
+                    <div class="setup_other_list_headers">
+                        <div class="setup_lists_text">Logik och boolesk algebra</div>
+                    </div>
+                    <div class="setup_other_list_content">
+                        <div class="setup_lists_text">Räkneregler för logik.</div>
+                    </div>
+                </div>
+
+                <div id="setup_other_list_header_3" class="setup_list_subjects">
+                    <div class="setup_other_list_headers">
+                        <div class="setup_lists_text">Beginner Japanese</div>
+                    </div>
+                    <div class="setup_other_list_content">
+                        <div class="setup_lists_text">Japanese vocabulary for beginners</div>
+                    </div>
+                </div>
+
+            </div>
 {{!-- 
+
+
+
+
             <div id="setup_my_lists_block">
                 <div id="setup_my_list_content"></div>
             </div>
@@ -97,6 +130,7 @@
 
                 <div id="create_new_list_block">
                     <div class="create_object_grid">
+                        <div style="position: absolute; margin-top: -30px;">NOTE: All list changes are removed when you refresh the page (Add/Remove/Edit)</div><br>
                         <div class="edit_question_num">New question</div>
                         <button id="create_new_question_cancel" onclick="new_question_cancel()">x</button>
                         <div class="create_object_type">Question:</div>

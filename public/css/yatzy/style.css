@@ -1,3 +1,12 @@
+#cheatBox {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  width: fit-content;
+}
+
 #playingField {
   padding: 50px;
   text-align: center;
@@ -94,7 +103,6 @@
   display: inline-block;
   height: 64px;
   width: 64px;
-  cursor: pointer;
 }
 
 #diceSaved-0,
@@ -124,6 +132,7 @@
 .dice_pic1, .dice_pic2, .dice_pic3, .dice_pic4, .dice_pic5, .dice_pic6 {
   background-size: 64px;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .dice_pic1 {

@@ -1,0 +1,114 @@
+
+:root {
+    --blueGray: #334449;
+    --black: rgb(39, 39, 39);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: gray;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+#mainHeader {
+    background: var(--black);
+    height: 100px;
+}
+
+#mainHeader_navbar {
+    background: var(--blueGray);
+    width: 100%;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    top: 0;
+    position: sticky;
+}
+
+#mainHeader_navbar_optionsBlock {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+}
+
+.mainHeader_navbar_options:first-child {
+    border-left: 2px solid black;
+}
+
+.mainHeader_navbar_options {
+    margin: 10px 0;
+    padding: 4px 24px;
+    font-size: 1.5em;
+    font-weight: bold;
+    border-right: 2px solid black;
+    cursor: pointer;
+}
+
+#mainContent {
+    background: var(--blueGray);
+    width: 95%;
+    max-width: 1700px;
+    height: 700px;
+    margin: 0px auto;
+    margin-bottom: 300px;
+    padding: 50px 20px;
+    border: 5px solid black;
+    border-top: none;
+}
+
+#mainCont_imgField {
+    overflow: hidden;
+    height: 400px;
+    display: flex;
+    width: 100%;
+    margin-top: 300px;
+    border: 3px solid black;
+}
+
+.mainCont_slidingImages, 
+.mainCont_slidingImages_gray {
+    width: 100%;
+    background-size: 1000px;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+
+.mainCont_slidingImages_gray {
+    height: 400px;
+}
+
+.mainCont_slidingImage_blocks {
+    width: 100%;
+    border-right: 3px solid black;
+    display: inherit;
+}
+
+#mainCont_slidingImg1 {
+    background-image: url("/images/homepage/project1.jpg");
+}
+
+#mainCont_slidingImg1_gray {
+    position: absolute;
+    background-image: url("/images/homepage/gray_project1.jpg");
+}
+
+#mainCont_slidingImg2 {
+    background-image: url("/images/homepage/construction1.jpg");
+}
+
+#mainCont_slidingImg2_gray {
+    position: absolute;
+    background-image: url("/images/homepage/gray_construction1.jpg");
+}
+
+#mainCont_slidingImg3 {
+    background-image: url("/images/homepage/experiment1.jpg");
+}
+
+#mainCont_slidingImg3_gray {
+    position: absolute;
+    background-image: url("/images/homepage/gray_experiment1.jpg");
+}
+

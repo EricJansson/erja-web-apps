@@ -256,13 +256,111 @@ setup_lists = (list_name) => {
 
 displayAvailableLists = () => {
     for (let i = 0; i < number_of_lists; i++) {
-        console.log(["MY_LIST_" + (i+1)])
-        setup_lists(window["MY_LIST_" + (i+1)])
+        console.log(["MY_LIST_" + (i + 1)])
+        setup_lists(window["MY_LIST_" + (i + 1)])
     }
     MY_LIST = MY_LIST_1;
 }
 
 displayAvailableLists()
+
+
+
+
+
+
+const preQuizSetupSection = document.getElementById("setup_other_list_content");
+
+displayPreQuizSetup = () => {
+    preQuizSetupSection.innerHTML = "";
+
+    for (let ii = 0; ii < ALL_LISTS.length; ii++) {
+        console.log("Title: " + ALL_LISTS[ii].title + ", Description: " + ALL_LISTS[ii].description)
+
+        var my_div = document.createElement("DIV");
+        if (ii != 0) { // Highlight first List in the loop
+            my_div.className = "setup_list_subjects";
+        } else {
+            my_div.className = "highlight_lesson_list setup_list_subjects";
+        }
+        my_div.id = "setup_other_list_header_" + (ii + 1);
+        preQuizSetupSection.appendChild(my_div)
+
+        var my_div = document.createElement("DIV");
+        my_div.className = "setup_other_list_headers";
+        my_div.id = "setup_other_list_header_box_" + (ii + 1);
+        document.getElementById("setup_other_list_header_" + (ii + 1)).appendChild(my_div)
+
+        var my_div = document.createElement("DIV");
+        my_div.className = "setup_other_list_content";
+        my_div.id = "setup_other_list_content_box_" + (ii + 1);
+        document.getElementById("setup_other_list_header_" + (ii + 1)).appendChild(my_div)
+
+
+
+        var my_div = document.createElement("DIV");
+        my_div.className = "setup_lists_text";
+        my_div.innerText = ALL_LISTS[ii].title; // MYLIST[x] title
+        document.getElementById("setup_other_list_header_box_" + (ii + 1)).appendChild(my_div)
+
+        var my_div = document.createElement("DIV");
+        my_div.className = "setup_lists_text";
+        my_div.innerText = ALL_LISTS[ii].description; // MYLIST[x] description
+        document.getElementById("setup_other_list_content_box_" + (ii + 1)).appendChild(my_div)
+        /*
+        ALL_LISTS[ii].title
+        ALL_LISTS[ii].description
+        */
+
+    }
+
+    /*
+        var my_div = document.createElement("DIV");
+        my_div.className = "highlight_lesson_list setup_list_subjects";
+        my_div.id = "setup_other_list_header_1";
+        preQuizSetupSection.appendChild(my_div)
+    
+        var my_div = document.createElement("DIV");
+        my_div.className = "setup_other_list_headers";
+        my_div.id = "setup_other_list_header_box_1";
+        document.getElementById("setup_other_list_header_1").appendChild(my_div)
+        
+        var my_div = document.createElement("DIV");
+        my_div.className = "setup_other_list_content";
+        my_div.id = "setup_other_list_content_box_1";
+        document.getElementById("setup_other_list_header_1").appendChild(my_div)
+    
+    
+    
+        var my_div = document.createElement("DIV");
+        my_div.className = "setup_lists_text";
+        my_div.innerText = "Diskret matematik"; // MYLIST[x] title
+        document.getElementById("setup_other_list_header_box_1").appendChild(my_div)
+        
+        var my_div = document.createElement("DIV");
+        my_div.className = "setup_lists_text";
+        my_div.innerText = "Räkneregler för mängdlära."; // MYLIST[x] description
+        document.getElementById("setup_other_list_content_box_1").appendChild(my_div)
+    */
+}
+
+displayPreQuizSetup();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

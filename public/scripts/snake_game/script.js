@@ -1,5 +1,5 @@
 
-var cheatActive;
+const cheatActive = false;
 
 // cheatActive = true;
 
@@ -78,6 +78,7 @@ var pointsValue = document.getElementById("pointsValue");
 var showStartMenu = document.getElementById("startMenu");
 var freePlayMenu = document.getElementById("freePlay");
 var optionsBack = document.getElementById("optionsBack");
+var gameFade = document.getElementById("gameFade");
 var currentHighscore = 0;
 var pointHighscoreEasy = [0, 0, 0];
 var pointHighscoreHard = [0, 0, 0];
@@ -377,7 +378,6 @@ function crash(forceCrash) {
                 // after 3 seconds go to scorescreen
                 setTimeout(foodEndScreen, 3000);
             }
-
             throw "BOOM BANG!";
         }
     }
@@ -503,7 +503,7 @@ function keyDownTextField(e) {
         }
     }
     // if (cheatActive) {
-    if (false) {
+    if (cheatActive) {
         // Press K to KILL "K"
         if (keyCode == 75) {
             if (gameactive) {
@@ -636,53 +636,6 @@ function selectGameMode(quickplayHARDorEASY) {
     countdownAndAutomove("newGame");
 }
 
-/*
-function selectEasymode(freeplaySettings) {
-    mode = "easy";
-    hardwall = false;
-    startVariables();
-    // Reset the menu animations
-    startNewGame("reset");
-    // stop menu snakes after clicking on "EasyMenu"
-    stopEasy();
-    stopHard();
-    stopopts();
-    // set proper gameover screen (Mission or Hard/Easy-quickplay?)
-    toggleScorescreenHighscore();
-    // Select background, snake"Head+Body+Tail", food
-    changeImages("easymode");
-    // Set starting location and snaketype
-    startScreen();
-    // Remove menu and go to playing field
-    toggleScreens("gotoPlayingField");
-    // Countdown and start
-    countdownAndAutomove("newGame");
-}
-
-
-function selectHardmode(freeplaySettings) {
-    mode = "hard";
-    hardwall = true;
-    startVariables();
-    // Reset the menu animations
-    startNewGame("reset");
-    // Stop NenuWalk after clicking on "HardMenu"
-    stopEasy();
-    stopHard();
-    stopopts();
-    // set proper gameover screen (Mission or Hard/Easy-quickplay?)
-    toggleScorescreenHighscore();
-    // Select background, snake"Head+Body+Tail", food
-    changeImages("hardmode");
-    // Set starting location and snaketype
-    startScreen();
-    // Remove menu and go to playing field
-    toggleScreens("gotoPlayingField");
-    // Countdown and start
-    countdownAndAutomove("newGame");
-}
-*/
-
 
 var isCountdownFinished = false;
 var countdownNumber = 4;
@@ -798,6 +751,7 @@ function toggleScreens(goToMenu) {
         // jump to top incase screen is scrolled
         scroll(0, 0);
         freeplayField.style.display = "block";
+        freePlayIntroduction(freeplayIntro_SlideNumber)
 
         header.style.display = "none";
         field[0].style.display = "none";
@@ -2035,7 +1989,7 @@ function restartGame(param) {
 
 
 
-
+var freePlayIntro = false;
 
 const showFreePlay = (gameloaded) => {
     if (firstQuit == true) {
@@ -2051,20 +2005,54 @@ const showFreePlay = (gameloaded) => {
             freePlayMenu.style.animationName = "e";
         }, 1000);
         console.log("free play first time")
+        freePlayIntro = true;
     } else if (gameloaded) {
         optionId.style.marginTop = "50px";
-        optionId.style.animationName = "quickEnableFreePlayOptions";
-        freePlayMenu.style.animationName = "quickEnableFreePlay";
         freePlayMenu.style.display = "block";
-        setTimeout(() => {
-            optionId.style.animationName = "e";
-            freePlayMenu.style.animationName = "e";
-        }, 500);
+
+        freePlayIntro = true;
+        // disable from here later
+
         console.log("free play on load")
     } else {
         throw "Something is weird with showFreePlay."
     }
     firstQuit = true;
+}
+
+var freeplayIntroBox = document.getElementById("freeplayIntroBox");
+var freeplayIntro_SlideNumber = 1;
+
+const freePlayIntroduction = (state) => {
+    if (freePlayIntro) {
+        if (state == 1) {
+            freeplayIntroBox.innerHTML = `
+                <b>Free Play</b> mode lets you play with different
+                skins and still compete on the highscore list.
+                <br>
+                <button>Next</button>`;
+            gameFade.style.display = "block";
+            freeplayIntroBox.style.display = "block";
+            document.getElementById("confirmDecisionBlock").style.display = "none";
+            state++;
+        } else if (state == 2) {   
+            gameFade.style.top = "200px";
+            
+
+            state++;
+        } else if (state == 3) {
+
+            state++;
+        } else if (state == 4) {
+
+            state = 1;
+        }
+        console.log("state: "+ state)
+    } else {
+        gameFade.style.display = "none";
+        document.getElementById("confirmDecisionBlock").style.display = "block"
+        state = 1;
+    }
 }
 
 
@@ -2275,7 +2263,6 @@ clickFieldRange.oninput = function () {
 }
 
 
-var gameFade = document.getElementById("gameFade");
 
 function gameCompletedWindow(hideOrShow) {
     var gameCompletedBlock = document.getElementById("gameCompletedBlock");
