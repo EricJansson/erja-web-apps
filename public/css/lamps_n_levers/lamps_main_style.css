@@ -1,0 +1,53 @@
+
+body {
+    width: 1000px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+}
+
+
+
+.filled {
+    background-color: black;
+}
+
+.number {
+    margin-right: 10px;
+    font-size: 2.2em;
+    width: 40px;
+    display: inline-block;
+}
+
+.active {
+    background: rgb(197, 197, 25);
+}
+
+.row {
+    margin-bottom: -10px;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+}
+
+#startlampNumber_1:hover, 
+#startlampNumber_2:hover, 
+#startlampNumber_3:hover, 
+#startlampNumber_4:hover, 
+#startlampNumber_5:hover, 
+#startlampNumber_6:hover, 
+#startlampNumber_7:hover {
+    background-color: grey;
+    cursor: pointer;
+}
+
+#buttonNumber_1:hover, 
+#buttonNumber_2:hover, 
+#buttonNumber_3:hover, 
+#buttonNumber_4:hover, 
+#buttonNumber_5:hover, 
+#buttonNumber_6:hover, 
+#buttonNumber_7:hover {
+    cursor: pointer;
+}

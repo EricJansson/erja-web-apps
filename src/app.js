@@ -102,7 +102,6 @@ app.get('/weather', (req, res) => {
 })
 
 
-
 app.get('/steam/ownedgames', (req, res) => {
     if (!req.query.steamid) {
         return res.send({
@@ -121,7 +120,6 @@ app.get('/steam/ownedgames', (req, res) => {
         })
     })
 })
-
 
 
 app.get('/steam/getuser', (req, res) => {
@@ -163,8 +161,6 @@ app.get('/steam/recentlyplayed', (req, res) => {
         })
     })
 })
-
-
 
 
 app.get('/steam/friendlist', (req, res) => {
@@ -328,7 +324,7 @@ app.get('/learn_for_fun/api', (req, res) => {
             {
                 question: "I am very glad to meet you.",
                 answer: "Oaidekite ureshii desu",
-                alt_answer: "おあいできて　うれしいです。"
+                alt_answer: "おあいできて うれしいです。"
             }, {
                 question: "Do you speak English?",
                 answer: "Eigo o hanasemasu ka",
@@ -344,11 +340,11 @@ app.get('/learn_for_fun/api', (req, res) => {
             }, {
                 question: "I only speak a little Japanese.",
                 answer: "Watashi wa nihongo ga sukoshi shika hanasemasen.",
-                alt_answer: "わたしは　にほんごがすこししか　はなせません。"
+                alt_answer: "わたしは にほんごがすこししか はなせません。"
             }, {
                 question: "My name is Kaorii.",
                 answer: "Watashi no namae wa Kaori desu.",
-                alt_answer: "わたしのなまえは　かおりです。"
+                alt_answer: "わたしのなまえは かおりです。"
             }, {
                 question: "Long time, no see!",
                 answer: "Hisashiburi",
@@ -398,6 +394,15 @@ app.get('/yatzy', (req, res) => {
     })
 })
 
+app.get('/lamps_n_levers', (req, res) => {
+    res.render('lamps_n_levers', {
+        title: 'Lamps \'n levers',
+        name: 'Eric Jansson',
+        errormessage: 'Article not found.'
+    })
+})
+
+
 app.get('/steam', (req, res) => {
     res.render('steam', {
         title: 'Steam User Info',
@@ -407,7 +412,6 @@ app.get('/steam', (req, res) => {
         errormessage: 'Article not found.'
     })
 })
-
 
 
 app.get('/tictactoe', (req, res) => {
@@ -489,22 +493,6 @@ app.get('/tictactoe/aboutSvenska', (req, res) => {
         title: 'Tic tac toe'
     })
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
