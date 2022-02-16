@@ -10,12 +10,45 @@
 </head>
 <body>
     <div>
-        <button onclick="displayStats()">Log statistics</button>
-        <button onclick="resetField()">Reset field</button>
-        <br><br>
-        <button onclick="presetCombination([0, 0, 0, 1, 1, 0, 1], [2, 3, 4])">Preferred solution</button>
-        <button onclick="resetLevers()">Reset all levers</button>
-        <br><br>
+        <div style="display: inline-block;">Lamps</div>
+        <select name="lampCount" id="slctLampCount" onchange="changeLampCount()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option selected="selected" value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <select name="leverCount" id="slctLeverCount" onchange="changeLeverCount()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option selected="selected" value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <div style="display: inline-block;">Levers</div>
+        <br>
+        <div id="devmode">
+            <br>
+            <button onclick="displayStats()">Log statistics</button>
+            <button onclick="resetField()">Reset field</button>
+            <br><br>
+            <button onclick="presetCombination([0, 0, 0, 0, 0, 0], [2, 4, 5])">Default solution (6 levers)</button>
+            <button onclick="resetLevers()">Reset all levers</button>
+            <br><br>
+            <button onclick="logCommands()">Log functions</button>
+            <br>
+        </div>
+        <br>
     </div>
     <div id="startLamps"></div>
     <br>

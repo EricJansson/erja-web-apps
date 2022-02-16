@@ -1,4 +1,3 @@
-
 function Combo(result, combination, copies) {
     this.copies = copies;
     this.combinations = combination;
@@ -6,17 +5,11 @@ function Combo(result, combination, copies) {
 }
 
 var statisticsArray = [];
-
 // place one empty board in too...
-var listOfArrays = [startboard];
-
+var listOfArrays = [];
 // ... which has no combinations
-var listOfCombinations = [
-    []
-];
-
+var listOfCombinations = [];
 var delayTime = 500;
-
 
 
 updateResultsForStats = () => {
@@ -41,180 +34,17 @@ saveArrayStats = () => {
     listOfArrays.push(resultArr);
 }
 
-
-scanOnes = (xx) => {
-    if (xx > BUTTON_COUNT) {
+recurScan = (n) => {
+    if (n < 1) {
+        updateResultsForStats(); // update result array
+        saveArrayStats(); // save output
         return;
     }
-    // activate and save results
-    pressButton(xx); // turn on btn
-    updateResultsForStats(); // update result array
-    saveArrayStats(); // save output
-    pressButton(xx); // turn off btn
-    // recursive call
-    scanOnes(xx + 1);
+    pressButton(n); 
+    recurScan(n - 1); // recur with btn ON
+    pressButton(n); 
+    recurScan(n - 1); // recur with btn OFF
 }
-
-scanTwos = (xx, zz) => {
-    if (zz > BUTTON_COUNT) {
-        return;
-    } else if (xx > BUTTON_COUNT) {
-        scanTwos(zz + 2, zz + 1);
-        return;
-    }
-    pressButton(xx); // turn on 1st btn
-    pressButton(zz); // turn on 2nd btn
-    updateResultsForStats();
-    saveArrayStats();
-    pressButton(xx); // turn off 1st btn
-    pressButton(zz); // turn off 2nd btn
-    // recursive call
-    scanTwos(xx + 1, zz);
-}
-
-scanThrees = (xx, zz, yy) => {
-    if (yy > BUTTON_COUNT) {
-        return;
-    } else if (zz > BUTTON_COUNT) {
-        scanThrees(yy + 3, yy + 2, yy + 1);
-        return;
-    } else if (xx > BUTTON_COUNT) {
-        scanThrees(zz + 2, zz + 1, yy);
-        return;
-    }
-    pressButton(xx); // turn on 1st btn
-    pressButton(zz); // turn on 2nd btn
-    pressButton(yy); // turn on 3rd btn
-    updateResultsForStats();
-    saveArrayStats();
-    pressButton(xx); // turn off 1st btn
-    pressButton(zz); // turn off 2nd btn
-    pressButton(yy); // turn off 3rd btn
-    // recursive call
-    scanThrees(xx + 1, zz, yy);
-}
-
-scanFours = (xx, zz, yy, qq) => {
-    if (qq > BUTTON_COUNT) {
-        return;
-    } else if (yy > BUTTON_COUNT) {
-        scanFours(qq + 4, qq + 3, qq + 2, qq + 1);
-        return;
-    } else if (zz > BUTTON_COUNT) {
-        scanFours(yy + 3, yy + 2, yy + 1, qq);
-        return;
-    } else if (xx > BUTTON_COUNT) {
-        scanFours(zz + 2, zz + 1, yy, qq);
-        return;
-    }
-    pressButton(xx); // turn on 1st btn
-    pressButton(zz); // turn on 2nd btn
-    pressButton(yy); // turn on 3rd btn
-    pressButton(qq); // turn off 4th btn
-    updateResultsForStats();
-    saveArrayStats();
-    pressButton(xx); // turn off 1st btn
-    pressButton(zz); // turn off 2nd btn
-    pressButton(yy); // turn off 3rd btn
-    pressButton(qq); // turn off 4th btn
-    // recursive call
-    scanFours(xx + 1, zz, yy, qq);
-}
-
-scanFives = (xx, zz, yy, qq, ww) => {
-    // console.log("xx = " + xx + ", zz = " + zz + ", yy = " + yy + ", qq = " + qq + ", ww = " + ww);
-    if (ww > BUTTON_COUNT) {
-        return;
-    } else if (qq > BUTTON_COUNT) {
-        scanFives(ww + 5, ww + 4, ww + 3, ww + 2, ww + 1);
-        return;
-    } else if (yy > BUTTON_COUNT) {
-        scanFives(qq + 4, qq + 3, qq + 2, qq + 1, ww);
-        return;
-    } else if (zz > BUTTON_COUNT) {
-        scanFives(yy + 3, yy + 2, yy + 1, qq, ww);
-        return;
-    } else if (xx > BUTTON_COUNT) {
-        scanFives(zz + 2, zz + 1, yy, qq, ww);
-        return;
-    }
-    pressButton(xx); // turn on 1st btn
-    pressButton(zz); // turn on 2nd btn
-    pressButton(yy); // turn on 3nd btn
-    pressButton(qq); // turn on 4th btn
-    pressButton(ww); // turn on 5th btn
-    updateResultsForStats();
-    saveArrayStats();
-    pressButton(xx); // turn off 1st btn
-    pressButton(zz); // turn off 2nd btn
-    pressButton(yy); // turn off 3nd btn
-    pressButton(qq); // turn off 4th btn
-    pressButton(ww); // turn off 5th btn
-    // recursive call
-    scanFives(xx + 1, zz, yy, qq, ww);
-}
-
-scanSixes = (xx, zz, yy, qq, ww, uu) => {
-    if (uu > BUTTON_COUNT) {
-        return;
-    } else if (ww > BUTTON_COUNT) {
-        scanSixes(uu + 6, uu + 5, uu + 4, uu + 3, uu + 2, uu + 1);
-        return;
-    } else if (qq > BUTTON_COUNT) {
-        scanSixes(ww + 5, ww + 4, ww + 3, ww + 2, ww + 1, uu);
-        return;
-    } else if (yy > BUTTON_COUNT) {
-        scanSixes(qq + 4, qq + 3, qq + 2, qq + 1, ww, uu);
-        return;
-    } else if (zz > BUTTON_COUNT) {
-        scanSixes(yy + 3, yy + 2, yy + 1, qq, ww, uu);
-        return;
-    } else if (xx > BUTTON_COUNT) {
-        scanSixes(zz + 2, zz + 1, yy, qq, ww, uu);
-        return;
-    }
-    pressButton(xx); // turn on 1st btn
-    pressButton(zz); // turn on 2nd btn
-    pressButton(yy); // turn on 3nd btn
-    pressButton(qq); // turn on 4th btn
-    pressButton(ww); // turn on 5th btn
-    pressButton(uu); // turn on 6th btn
-    updateResultsForStats();
-    saveArrayStats();
-    pressButton(xx); // turn off 1st btn
-    pressButton(zz); // turn off 2nd btn
-    pressButton(yy); // turn off 3nd btn
-    pressButton(qq); // turn off 4th btn
-    pressButton(ww); // turn off 5th btn
-    pressButton(uu); // turn off 6th btn
-    // recursive call
-    scanSixes(xx + 1, zz, yy, qq, ww, uu);
-}
-
-
-scanResults = () => {
-    scanOnes(1);
-    if (BUTTON_COUNT > 1) {
-        scanTwos(2, 1);
-    }
-    if (BUTTON_COUNT > 2) {
-        scanThrees(3, 2, 1);
-    }
-    if (BUTTON_COUNT > 3) {
-        scanFours(4, 3, 2, 1);
-    }
-    if (BUTTON_COUNT > 4) {
-        scanFives(5, 4, 3, 2, 1);
-    }
-    if (BUTTON_COUNT > 5) {
-        scanSixes(6, 5, 4, 3, 2, 1);
-    }
-    console.log("listOfArrays: ");
-    console.log(listOfArrays);
-}
-
-
-
 
 console.log(statisticsArray);
 
@@ -266,7 +96,6 @@ findZeroCopies = () => {
     console.log("Combinations: " + statisticsArray.length)
 }
 
-
 findMatch = (combinationArr, index) => {
     let matchFound = 0;
     for (let jj = 0; jj < combinationArr.length; jj++) {
@@ -295,8 +124,7 @@ findCombination = (combinationArr) => {
 
 // findCombination([0,0,1,0,1,0])
 
-
-findSingleInverseCombination = (arrayCombination, display = true) => {
+findInverseCombination = (arrayCombination, display = true) => {
     // statisticsArray
     var tempInverseArr = [];
 //    for (let ii = 0; ii < statisticsArray.length; ii++) { // gå igenom hela statArr
@@ -332,7 +160,7 @@ findSingleInverseCombination = (arrayCombination, display = true) => {
 
 search_non_reverseable = () => {
     for (let ii = 0; ii < statisticsArray.length; ii++) {
-        foundInverse = findSingleInverseCombination(statisticsArray[ii].result, false);
+        foundInverse = findInverseCombination(statisticsArray[ii].result, false);
         if (foundInverse) {
             continue;
         } else {
@@ -342,8 +170,20 @@ search_non_reverseable = () => {
     }
 }
 
+displayStatArray = () => {
+    console.log(statisticsArray);
+}
 
-scanResults();
+logCommands = () => {
+    console.log("findInverseCombination([0,0,0,0,0,0])");
+    console.log("findCombination([0,0,0,0,0,0])");
+    console.log("displayStatArray()");
+    console.log("Interesting variables:");
+    console.log("fullBoard, resultArr, statisticsArray 'recurScan(LEVER_COUNT)'")
+}
+
+
+recurScan(LEVER_COUNT);
 calculateStats();
 findZeroCopies();
 updateResultsForStats();
@@ -352,9 +192,179 @@ updateResultsForStats();
 
 /* unused OLD code 
 
+scanOnes = (xx) => {
+    if (xx > LEVER_COUNT) {
+        return;
+    }
+    // activate and save results
+    pressButton(xx); // turn on btn
+    updateResultsForStats(); // update result array
+    saveArrayStats(); // save output
+    pressButton(xx); // turn off btn
+    // recursive call
+    scanOnes(xx + 1);
+}
+
+scanTwos = (xx, zz) => {
+    if (zz > LEVER_COUNT) {
+        return;
+    } else if (xx > LEVER_COUNT) {
+        scanTwos(zz + 2, zz + 1);
+        return;
+    }
+    pressButton(xx); // turn on 1st btn
+    pressButton(zz); // turn on 2nd btn
+    updateResultsForStats();
+    saveArrayStats();
+    pressButton(xx); // turn off 1st btn
+    pressButton(zz); // turn off 2nd btn
+    // recursive call
+    scanTwos(xx + 1, zz);
+}
+
+scanThrees = (xx, zz, yy) => {
+    if (yy > LEVER_COUNT) {
+        return;
+    } else if (zz > LEVER_COUNT) {
+        scanThrees(yy + 3, yy + 2, yy + 1);
+        return;
+    } else if (xx > LEVER_COUNT) {
+        scanThrees(zz + 2, zz + 1, yy);
+        return;
+    }
+    pressButton(xx); // turn on 1st btn
+    pressButton(zz); // turn on 2nd btn
+    pressButton(yy); // turn on 3rd btn
+    updateResultsForStats();
+    saveArrayStats();
+    pressButton(xx); // turn off 1st btn
+    pressButton(zz); // turn off 2nd btn
+    pressButton(yy); // turn off 3rd btn
+    // recursive call
+    scanThrees(xx + 1, zz, yy);
+}
+
+scanFours = (xx, zz, yy, qq) => {
+    if (qq > LEVER_COUNT) {
+        return;
+    } else if (yy > LEVER_COUNT) {
+        scanFours(qq + 4, qq + 3, qq + 2, qq + 1);
+        return;
+    } else if (zz > LEVER_COUNT) {
+        scanFours(yy + 3, yy + 2, yy + 1, qq);
+        return;
+    } else if (xx > LEVER_COUNT) {
+        scanFours(zz + 2, zz + 1, yy, qq);
+        return;
+    }
+    pressButton(xx); // turn on 1st btn
+    pressButton(zz); // turn on 2nd btn
+    pressButton(yy); // turn on 3rd btn
+    pressButton(qq); // turn off 4th btn
+    updateResultsForStats();
+    saveArrayStats();
+    pressButton(xx); // turn off 1st btn
+    pressButton(zz); // turn off 2nd btn
+    pressButton(yy); // turn off 3rd btn
+    pressButton(qq); // turn off 4th btn
+    // recursive call
+    scanFours(xx + 1, zz, yy, qq);
+}
+
+scanFives = (xx, zz, yy, qq, ww) => {
+    // console.log("xx = " + xx + ", zz = " + zz + ", yy = " + yy + ", qq = " + qq + ", ww = " + ww);
+    if (ww > LEVER_COUNT) {
+        return;
+    } else if (qq > LEVER_COUNT) {
+        scanFives(ww + 5, ww + 4, ww + 3, ww + 2, ww + 1);
+        return;
+    } else if (yy > LEVER_COUNT) {
+        scanFives(qq + 4, qq + 3, qq + 2, qq + 1, ww);
+        return;
+    } else if (zz > LEVER_COUNT) {
+        scanFives(yy + 3, yy + 2, yy + 1, qq, ww);
+        return;
+    } else if (xx > LEVER_COUNT) {
+        scanFives(zz + 2, zz + 1, yy, qq, ww);
+        return;
+    }
+    pressButton(xx); // turn on 1st btn
+    pressButton(zz); // turn on 2nd btn
+    pressButton(yy); // turn on 3nd btn
+    pressButton(qq); // turn on 4th btn
+    pressButton(ww); // turn on 5th btn
+    updateResultsForStats();
+    saveArrayStats();
+    pressButton(xx); // turn off 1st btn
+    pressButton(zz); // turn off 2nd btn
+    pressButton(yy); // turn off 3nd btn
+    pressButton(qq); // turn off 4th btn
+    pressButton(ww); // turn off 5th btn
+    // recursive call
+    scanFives(xx + 1, zz, yy, qq, ww);
+}
+
+scanSixes = (xx, zz, yy, qq, ww, uu) => {
+    if (uu > LEVER_COUNT) {
+        return;
+    } else if (ww > LEVER_COUNT) {
+        scanSixes(uu + 6, uu + 5, uu + 4, uu + 3, uu + 2, uu + 1);
+        return;
+    } else if (qq > LEVER_COUNT) {
+        scanSixes(ww + 5, ww + 4, ww + 3, ww + 2, ww + 1, uu);
+        return;
+    } else if (yy > LEVER_COUNT) {
+        scanSixes(qq + 4, qq + 3, qq + 2, qq + 1, ww, uu);
+        return;
+    } else if (zz > LEVER_COUNT) {
+        scanSixes(yy + 3, yy + 2, yy + 1, qq, ww, uu);
+        return;
+    } else if (xx > LEVER_COUNT) {
+        scanSixes(zz + 2, zz + 1, yy, qq, ww, uu);
+        return;
+    }
+    pressButton(xx); // turn on 1st btn
+    pressButton(zz); // turn on 2nd btn
+    pressButton(yy); // turn on 3nd btn
+    pressButton(qq); // turn on 4th btn
+    pressButton(ww); // turn on 5th btn
+    pressButton(uu); // turn on 6th btn
+    updateResultsForStats();
+    saveArrayStats();
+    pressButton(xx); // turn off 1st btn
+    pressButton(zz); // turn off 2nd btn
+    pressButton(yy); // turn off 3nd btn
+    pressButton(qq); // turn off 4th btn
+    pressButton(ww); // turn off 5th btn
+    pressButton(uu); // turn off 6th btn
+    // recursive call
+    scanSixes(xx + 1, zz, yy, qq, ww, uu);
+}
+
+scanResults = () => {
+    scanOnes(1);
+    if (LEVER_COUNT > 1) {
+        scanTwos(2, 1);
+    }
+    if (LEVER_COUNT > 2) {
+        scanThrees(3, 2, 1);
+    }
+    if (LEVER_COUNT > 3) {
+        scanFours(4, 3, 2, 1);
+    }
+    if (LEVER_COUNT > 4) {
+        scanFives(5, 4, 3, 2, 1);
+    }
+    if (LEVER_COUNT > 5) {
+        scanSixes(6, 5, 4, 3, 2, 1);
+    }
+    console.log("listOfArrays: ");
+    console.log(listOfArrays);
+}
+
 scanPossibleOnes = () => {
     // activate and save results
-    for (let ii = 0; ii < BUTTON_COUNT; ii++) {
+    for (let ii = 0; ii < LEVER_COUNT; ii++) {
         pressButton(ii + 1);
         updateResultsForStats(); // update result array
         saveArrayStats(); // save output
@@ -364,14 +374,15 @@ scanPossibleOnes = () => {
 
 scanPossibleSixes = () => {
     // Activate all btns
-    for (let jj = 0; jj < BUTTON_COUNT; jj++) {
+    for (let jj = 0; jj < LEVER_COUNT; jj++) {
         pressButton(jj + 1);
     }
     updateResultsForStats();
     saveArrayStats();
     // DEactivate all btns
-    for (let jj = 0; jj < BUTTON_COUNT; jj++) {
+    for (let jj = 0; jj < LEVER_COUNT; jj++) {
         pressButton(jj + 1);
     }
 }
-*/
+// unused OLD code 
+*/ 

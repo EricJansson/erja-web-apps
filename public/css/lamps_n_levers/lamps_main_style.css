@@ -8,36 +8,61 @@ body {
 
 
 
-.filled {
-    background-color: black;
-}
 
 .number {
     margin-right: 10px;
+    margin-bottom: -5px;
     font-size: 2.2em;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     display: inline-block;
 }
 
-.active {
-    background: rgb(197, 197, 25);
+.levers {
+    background-image: url("/images/lamps_n_levers/Light_switch_off.png");
+    background-repeat: no-repeat;
+    background-size: 60px;
+    margin-right: 10px;
+    margin-bottom: -5px;
+    font-size: 2.2em;
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+}
+
+.levers:hover {
+    background-color: rgba(168, 168, 168, 0.5);
+}
+
+
+.activeLevers {
+    background-image: url("/images/lamps_n_levers/Light_switch_on.png");
+}
+
+.activeLevers:hover {
+    background-color: rgba(168, 168, 168, 0.5);
 }
 
 .row {
-    margin-bottom: -10px;
     display: inline-block;
-    height: 40px;
-    width: 40px;
-    border: 1px solid black;
+    height: 60px;
+    width: 60px;
+    margin-bottom: -5px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-image: url("/images/lamps_n_levers/Light_bulb_off.png");
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: center;
 }
 
-#startlampNumber_1:hover, 
-#startlampNumber_2:hover, 
-#startlampNumber_3:hover, 
-#startlampNumber_4:hover, 
-#startlampNumber_5:hover, 
-#startlampNumber_6:hover, 
-#startlampNumber_7:hover {
+.active, .filled {
+    background-size: 60px;
+    background-color: yellow;
+    background-image: url("/images/lamps_n_levers/Light_bulb_on.png");
+}
+
+
+.row:hover {
     background-color: grey;
     cursor: pointer;
 }
@@ -50,4 +75,8 @@ body {
 #buttonNumber_6:hover, 
 #buttonNumber_7:hover {
     cursor: pointer;
+}
+
+#devmode {
+    display: none;
 }
