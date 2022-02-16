@@ -1,20 +1,6 @@
 
-var startboard = [
-    0, 0, 0, 0, 0, 0, 0
-]
+// changes to fullBoard[] will change the whole program
 
-var resultArr = [];
-
-/*
-var fullBoard = [
-    [1, 0, 1, 0, 1],
-    [0, 1, 1, 0, 1],
-    [1, 1, 0, 1, 0],
-    [0, 1, 1, 1, 0],
-    [1, 0, 0, 1, 0],
-    [1, 0, 0, 0, 1]
-]
-*/
 
 var fullBoard = [
     [1, 0, 0, 1, 0, 1, 0],
@@ -22,20 +8,54 @@ var fullBoard = [
     [0, 1, 1, 0, 0, 0, 1],
     [1, 0, 0, 0, 1, 1, 0],
     [1, 0, 0, 1, 1, 0, 0],
-    [0, 1, 1, 1, 0, 0, 0]
+    [0, 0, 1, 1, 0, 0, 0]
 ]
 
-
-var activeNumbers = [
-    
+/*
+var fullBoard = [
+    [1, 0, 0, 1, 0],
+    [0, 0, 0, 0, 1],
+    [0, 1, 1, 0, 1],
+    [1, 0, 0, 0, 0],
+    [1, 0, 0, 0, 0],
+    [0, 0, 1, 1, 0]
 ]
+*/
+var LAMP_COUNT = fullBoard[0].length;
+var BUTTON_COUNT = fullBoard.length;
 
-const LAMP_COUNT = 7;
-const BUTTON_COUNT = 6;
+// must have same length as fullBoard[0]
+var startboard = [1, 0, 1, 0, 0, 0, 1]
+startboard = []
+
+// startboard == empty -> fill startboard with 0s
+if (startboard.length == 0) {
+    for (let ii = 0; ii < fullBoard[0].length; ii++) {
+        startboard.push(0); 
+    }
+}
+
+var resultArr = [];
+var activeNumbers = []
+
+
 
 var board = document.getElementById("board");
 var results = document.getElementById("boardResults");
 var startLamps = document.getElementById("startLamps");
+
+
+
+toggleLeverLamps = (x, y) => {
+    // console.log("Switch" + (x + 1) + "x" + (y + 1) + "y");
+    if (fullBoard[y][x] == 1) {
+        fullBoard[y][x] = 0;
+        document.getElementById("switch" + (x + 1) + "x" + (y + 1) + "y").classList.remove("filled");
+    } else {
+        fullBoard[y][x] = 1;
+        document.getElementById("switch" + (x + 1) + "x" + (y + 1) + "y").classList.add("filled");
+    }
+}
 
 
 
@@ -98,13 +118,23 @@ boardSetup = () => {
         }
         for (let jj = 0; jj < LAMP_COUNT; jj++) {
             if (fullBoard[ii][jj] == 1) {
-                board.innerHTML += "<div class='filled row'></div>";
+                board.innerHTML += "<div id='switch" + (jj + 1) + "x" + (ii + 1) + "y' class='filled row'></div>";
             } else {
-                board.innerHTML += "<div class='row'></div>";
+                board.innerHTML += "<div id='switch" + (jj + 1) + "x" + (ii + 1) + "y' class='row'></div>";
             }
         }
         board.innerHTML += "<br>";
     }
+    // Lever lamp switches EventListeners
+    for (let yy = 0; yy < BUTTON_COUNT; yy++) {
+        for (let xx = 0; xx < LAMP_COUNT; xx++) {
+            document.getElementById("switch" + (xx + 1) + "x" + (yy + 1) + "y").addEventListener('click', () => {
+                toggleLeverLamps(xx, yy);
+                updateResults();
+            });
+        }
+    }
+    // Lever EventListeners
     for (let ii = 0; ii < BUTTON_COUNT; ii++) {
         document.getElementById("buttonNumber_" + (ii + 1)).addEventListener('click', () => {
             pressButton(ii + 1);
@@ -158,7 +188,7 @@ presetCombination = (startOutPutArr, leverActiveArr) => {
 }
 
 
-resetField = () => {    
+resetLevers = () => {    
     for (let ii = 0; ii < startboard.length; ii++) {
         if (startboard[ii] > 0) {
             turnOnStartLamp(ii);
@@ -173,6 +203,39 @@ resetField = () => {
 }
 
 
+resetField = () => {
+    resultArr = [];
+    activeNumbers = [];
+    startboard = [];
+    for (let ii = 0; ii < fullBoard[0].length; ii++) {
+        startboard.push(0); 
+    }
+    
+    LAMP_COUNT = fullBoard[0].length;
+    BUTTON_COUNT = fullBoard.length;
+    document.getElementById("board").innerHTML = "";
+    setup_StartLamps();
+    boardSetup();
+    resetLevers(); // reset levers
+    updateResults();
+}
+
+
+
+displayStats = () => {
+    statisticsArray = [];
+    // place one empty board in too...
+    listOfArrays = [startboard];
+    // ... which has no combinations
+    listOfCombinations = [
+        []
+    ];
+    scanResults();
+    calculateStats();
+    findZeroCopies();
+    updateResultsForStats();
+    console.log(statisticsArray);
+}
 
 setup_StartLamps();
 boardSetup();

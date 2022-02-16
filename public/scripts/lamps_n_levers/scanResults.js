@@ -1,4 +1,23 @@
 
+function Combo(result, combination, copies) {
+    this.copies = copies;
+    this.combinations = combination;
+    this.result = result;
+}
+
+var statisticsArray = [];
+
+// place one empty board in too...
+var listOfArrays = [startboard];
+
+// ... which has no combinations
+var listOfCombinations = [
+    []
+];
+
+var delayTime = 500;
+
+
 
 updateResultsForStats = () => {
     resultArr = [];
@@ -17,207 +36,185 @@ updateResultsForStats = () => {
     }
 }
 
-
-var listOfArrays = [
-    [0, 0, 0, 0, 0, 0, 0]
-];
-
-var listOfCombinations = [
-    []
-];
-
 saveArrayStats = () => {
     listOfCombinations.push(activeNumbers);
     listOfArrays.push(resultArr);
 }
 
-var index = 0;
-var indexZ = 0;
-var indexY = 0;
-var delayTime = 500;
 
-displayOnes = () => {            //  create a loop function
-    if (index < BUTTON_COUNT & index != 0) {
-        pressButton(index); // reset
-    } else if (index == BUTTON_COUNT) {
-        pressButton(index); // reset
-        index = 0;
-        // run next check
-        setTimeout(() => {
-            displayTwos();
-        }, delayTime)
+scanOnes = (xx) => {
+    if (xx > BUTTON_COUNT) {
         return;
     }
-    pressButton(index + 1);
-    updateResultsForStats(); // update result array
-    saveArrayStats(); // save output
-    setTimeout(() => {        //  call a 3s setTimeout when the loop is called
-        index++;                    //  increment the counter
-        displayOnes();             //  ..  again which will trigger another 
-    }, delayTime)
-}
-
-displayTwos = () => { // DOES NOT WORK!!
-    console.log("index = " + index);
-    if (index < BUTTON_COUNT & index != 0) {
-        pressButton(index); // reset
-    } else if (index == BUTTON_COUNT) {
-        pressButton(index);
-        // DONE 
-        console.log(listOfArrays);
-        return;
-    }
-
-    if (indexZ == 0) {
-        pressButton(index + 1);
-    }
-
-    updateResultsForStats(); // update result array
-    saveArrayStats(); // save output
-
-    setTimeout(() => {        //  call a 3s setTimeout when the loop is called
-        if (index < BUTTON_COUNT) {
-            indexZ++;
-        } else {
-            indexZ = 0;
-        }
-        index++;                    //  increment the counter
-        displayTwos();             //  ..  again which will trigger another 
-    }, delayTime)
-}
-
-setTimeout(() => {
-    // displayOnes();
-}, delayTime);
-
-
-
-
-
-
-scanPossibleOnes = () => {
     // activate and save results
-    for (let ii = 0; ii < BUTTON_COUNT; ii++) {
-        pressButton(ii + 1);
-        updateResultsForStats(); // update result array
-        saveArrayStats(); // save output
-        pressButton(ii + 1); // reset
-    }
+    pressButton(xx); // turn on btn
+    updateResultsForStats(); // update result array
+    saveArrayStats(); // save output
+    pressButton(xx); // turn off btn
+    // recursive call
+    scanOnes(xx + 1);
 }
 
-scanPossibleTwos = () => {
-    for (let ii = 0; ii < BUTTON_COUNT; ii++) {
-        pressButton(ii + 1);
-        for (let zz = ii + 1; zz < BUTTON_COUNT; zz++) {
-            pressButton(zz + 1);
-            updateResultsForStats();
-            saveArrayStats();
-            pressButton(zz + 1);
-        }
-        pressButton(ii + 1);
+scanTwos = (xx, zz) => {
+    if (zz > BUTTON_COUNT) {
+        return;
+    } else if (xx > BUTTON_COUNT) {
+        scanTwos(zz + 2, zz + 1);
+        return;
     }
-}
-
-scanPossibleThrees = () => {
-    for (let ii = 0; ii < BUTTON_COUNT; ii++) {
-        pressButton(ii + 1);
-        for (let zz = ii + 1; zz < BUTTON_COUNT; zz++) {
-            pressButton(zz + 1);
-            for (let xx = zz + 1; xx < BUTTON_COUNT; xx++) {
-                pressButton(xx + 1);
-                updateResultsForStats();
-                saveArrayStats();
-                pressButton(xx + 1);
-            }
-            pressButton(zz + 1);
-        }
-        pressButton(ii + 1);
-    }
-}
-
-scanPossibleFours = () => {  // copy of scanPossibleTwos but inverted
-    // activate all btns
-    for (let jj = 0; jj < BUTTON_COUNT; jj++) {
-        pressButton(jj + 1);
-    }
-    for (let ii = 0; ii < BUTTON_COUNT; ii++) {
-        pressButton(ii + 1);
-        for (let zz = ii + 1; zz < BUTTON_COUNT; zz++) {
-            pressButton(zz + 1);
-            updateResultsForStats(); // update result array
-            saveArrayStats(); // save output
-            pressButton(zz + 1); // reset
-        }
-        pressButton(ii + 1);
-    }
-    // deactivate all btns
-    for (let jj = 0; jj < BUTTON_COUNT; jj++) {
-        pressButton(jj + 1);
-    }
-}
-
-scanPossibleFives = () => {  // copy of scanPossibleOnes but inverted
-    // activate all btns
-    for (let jj = 0; jj < BUTTON_COUNT; jj++) {
-        pressButton(jj + 1);
-    }
-    for (let ii = 0; ii < BUTTON_COUNT; ii++) {
-        pressButton(ii + 1);
-        updateResultsForStats();
-        saveArrayStats();
-        pressButton(ii + 1);
-    }
-    // deactivate all btns
-    for (let jj = 0; jj < BUTTON_COUNT; jj++) {
-        pressButton(jj + 1);
-    }
-}
-
-scanPossibleSixes = () => {
-    // Activate all btns
-    for (let jj = 0; jj < BUTTON_COUNT; jj++) {
-        pressButton(jj + 1);
-    }
+    pressButton(xx); // turn on 1st btn
+    pressButton(zz); // turn on 2nd btn
     updateResultsForStats();
     saveArrayStats();
-    // DEactivate all btns
-    for (let jj = 0; jj < BUTTON_COUNT; jj++) {
-        pressButton(jj + 1);
-    }
+    pressButton(xx); // turn off 1st btn
+    pressButton(zz); // turn off 2nd btn
+    // recursive call
+    scanTwos(xx + 1, zz);
 }
 
+scanThrees = (xx, zz, yy) => {
+    if (yy > BUTTON_COUNT) {
+        return;
+    } else if (zz > BUTTON_COUNT) {
+        scanThrees(yy + 3, yy + 2, yy + 1);
+        return;
+    } else if (xx > BUTTON_COUNT) {
+        scanThrees(zz + 2, zz + 1, yy);
+        return;
+    }
+    pressButton(xx); // turn on 1st btn
+    pressButton(zz); // turn on 2nd btn
+    pressButton(yy); // turn on 3rd btn
+    updateResultsForStats();
+    saveArrayStats();
+    pressButton(xx); // turn off 1st btn
+    pressButton(zz); // turn off 2nd btn
+    pressButton(yy); // turn off 3rd btn
+    // recursive call
+    scanThrees(xx + 1, zz, yy);
+}
+
+scanFours = (xx, zz, yy, qq) => {
+    if (qq > BUTTON_COUNT) {
+        return;
+    } else if (yy > BUTTON_COUNT) {
+        scanFours(qq + 4, qq + 3, qq + 2, qq + 1);
+        return;
+    } else if (zz > BUTTON_COUNT) {
+        scanFours(yy + 3, yy + 2, yy + 1, qq);
+        return;
+    } else if (xx > BUTTON_COUNT) {
+        scanFours(zz + 2, zz + 1, yy, qq);
+        return;
+    }
+    pressButton(xx); // turn on 1st btn
+    pressButton(zz); // turn on 2nd btn
+    pressButton(yy); // turn on 3rd btn
+    pressButton(qq); // turn off 4th btn
+    updateResultsForStats();
+    saveArrayStats();
+    pressButton(xx); // turn off 1st btn
+    pressButton(zz); // turn off 2nd btn
+    pressButton(yy); // turn off 3rd btn
+    pressButton(qq); // turn off 4th btn
+    // recursive call
+    scanFours(xx + 1, zz, yy, qq);
+}
+
+scanFives = (xx, zz, yy, qq, ww) => {
+    // console.log("xx = " + xx + ", zz = " + zz + ", yy = " + yy + ", qq = " + qq + ", ww = " + ww);
+    if (ww > BUTTON_COUNT) {
+        return;
+    } else if (qq > BUTTON_COUNT) {
+        scanFives(ww + 5, ww + 4, ww + 3, ww + 2, ww + 1);
+        return;
+    } else if (yy > BUTTON_COUNT) {
+        scanFives(qq + 4, qq + 3, qq + 2, qq + 1, ww);
+        return;
+    } else if (zz > BUTTON_COUNT) {
+        scanFives(yy + 3, yy + 2, yy + 1, qq, ww);
+        return;
+    } else if (xx > BUTTON_COUNT) {
+        scanFives(zz + 2, zz + 1, yy, qq, ww);
+        return;
+    }
+    pressButton(xx); // turn on 1st btn
+    pressButton(zz); // turn on 2nd btn
+    pressButton(yy); // turn on 3nd btn
+    pressButton(qq); // turn on 4th btn
+    pressButton(ww); // turn on 5th btn
+    updateResultsForStats();
+    saveArrayStats();
+    pressButton(xx); // turn off 1st btn
+    pressButton(zz); // turn off 2nd btn
+    pressButton(yy); // turn off 3nd btn
+    pressButton(qq); // turn off 4th btn
+    pressButton(ww); // turn off 5th btn
+    // recursive call
+    scanFives(xx + 1, zz, yy, qq, ww);
+}
+
+scanSixes = (xx, zz, yy, qq, ww, uu) => {
+    if (uu > BUTTON_COUNT) {
+        return;
+    } else if (ww > BUTTON_COUNT) {
+        scanSixes(uu + 6, uu + 5, uu + 4, uu + 3, uu + 2, uu + 1);
+        return;
+    } else if (qq > BUTTON_COUNT) {
+        scanSixes(ww + 5, ww + 4, ww + 3, ww + 2, ww + 1, uu);
+        return;
+    } else if (yy > BUTTON_COUNT) {
+        scanSixes(qq + 4, qq + 3, qq + 2, qq + 1, ww, uu);
+        return;
+    } else if (zz > BUTTON_COUNT) {
+        scanSixes(yy + 3, yy + 2, yy + 1, qq, ww, uu);
+        return;
+    } else if (xx > BUTTON_COUNT) {
+        scanSixes(zz + 2, zz + 1, yy, qq, ww, uu);
+        return;
+    }
+    pressButton(xx); // turn on 1st btn
+    pressButton(zz); // turn on 2nd btn
+    pressButton(yy); // turn on 3nd btn
+    pressButton(qq); // turn on 4th btn
+    pressButton(ww); // turn on 5th btn
+    pressButton(uu); // turn on 6th btn
+    updateResultsForStats();
+    saveArrayStats();
+    pressButton(xx); // turn off 1st btn
+    pressButton(zz); // turn off 2nd btn
+    pressButton(yy); // turn off 3nd btn
+    pressButton(qq); // turn off 4th btn
+    pressButton(ww); // turn off 5th btn
+    pressButton(uu); // turn off 6th btn
+    // recursive call
+    scanSixes(xx + 1, zz, yy, qq, ww, uu);
+}
+
+
 scanResults = () => {
-    scanPossibleOnes();
+    scanOnes(1);
     if (BUTTON_COUNT > 1) {
-        scanPossibleTwos();
+        scanTwos(2, 1);
     }
     if (BUTTON_COUNT > 2) {
-        scanPossibleThrees();
+        scanThrees(3, 2, 1);
     }
     if (BUTTON_COUNT > 3) {
-        scanPossibleFours();
+        scanFours(4, 3, 2, 1);
     }
     if (BUTTON_COUNT > 4) {
-        scanPossibleFives();
+        scanFives(5, 4, 3, 2, 1);
     }
     if (BUTTON_COUNT > 5) {
-        scanPossibleSixes();
+        scanSixes(6, 5, 4, 3, 2, 1);
     }
     console.log("listOfArrays: ");
     console.log(listOfArrays);
 }
 
-scanResults();
 
 
-
-function Combo(result, combination, copies) {
-    this.result = result;
-    this.combinations = combination;
-    this.copies = copies;
-}
-
-var statisticsArray = [];
 
 console.log(statisticsArray);
 
@@ -258,8 +255,10 @@ findZeroCopies = () => {
     for (let ii = 0; ii < statisticsArray.length; ii++) {
         if (statisticsArray[ii].copies == 1) {
             setTimeout(() => {
-                console.log("Found solution index = " + ii)
+                // console.log("Found solution index = " + ii)
             }, 100);
+            console.log("Only unique solutions!")
+            break;
         } else {
             console.log("Copies på " + statisticsArray[ii].result + " = " + statisticsArray[ii].copies);
         }
@@ -269,8 +268,7 @@ findZeroCopies = () => {
 
 
 findMatch = (combinationArr, index) => {
-    let matchFound;
-    matchFound = 0;
+    let matchFound = 0;
     for (let jj = 0; jj < combinationArr.length; jj++) {
         if (combinationArr[jj] == statisticsArray[index].result[jj]) {
             matchFound++;
@@ -289,10 +287,10 @@ findCombination = (combinationArr) => {
     // statisticsArray
     for (let ii = 0; ii < statisticsArray.length; ii++) {
         if (findMatch(combinationArr, ii)) {
-            return true;
+            return ii;
         }
     }
-    return false
+    return -1
 }
 
 // findCombination([0,0,1,0,1,0])
@@ -316,22 +314,26 @@ findSingleInverseCombination = (arrayCombination, display = true) => {
     for (let ii = 0; ii < 8; ii++) { // gå igenom hela statArr
         for (let kk = 0; kk < statisticsArray.length; kk++) {
             // jämför med hela statArr EFTER statArr[current]
-            if (findCombination(tempInverseArr)) {
-                if (display) {console.log("Found inverse at index: " + ii);}
+            combIndex = findCombination(tempInverseArr);
+            if (combIndex >= 0) {
+                if (display) {
+                    console.log("Found inverse at index: " + combIndex);
+                }
                 return true
             }
         }
     }
-    console.log("No inverse found.");
+    if (display) {
+        console.log("No inverse found.");
+    }
     return false
 }
 
 
-
-
 search_non_reverseable = () => {
     for (let ii = 0; ii < statisticsArray.length; ii++) {
-        if (findSingleInverseCombination(statisticsArray[ii].result, false)) {
+        foundInverse = findSingleInverseCombination(statisticsArray[ii].result, false);
+        if (foundInverse) {
             continue;
         } else {
             console.log("Inverse missing! Index: " + ii);
@@ -341,6 +343,35 @@ search_non_reverseable = () => {
 }
 
 
+scanResults();
 calculateStats();
 findZeroCopies();
 updateResultsForStats();
+
+
+
+/* unused OLD code 
+
+scanPossibleOnes = () => {
+    // activate and save results
+    for (let ii = 0; ii < BUTTON_COUNT; ii++) {
+        pressButton(ii + 1);
+        updateResultsForStats(); // update result array
+        saveArrayStats(); // save output
+        pressButton(ii + 1); // reset
+    }
+}
+
+scanPossibleSixes = () => {
+    // Activate all btns
+    for (let jj = 0; jj < BUTTON_COUNT; jj++) {
+        pressButton(jj + 1);
+    }
+    updateResultsForStats();
+    saveArrayStats();
+    // DEactivate all btns
+    for (let jj = 0; jj < BUTTON_COUNT; jj++) {
+        pressButton(jj + 1);
+    }
+}
+*/
