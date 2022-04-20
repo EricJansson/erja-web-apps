@@ -13,6 +13,7 @@
 }
 
 #overlay {
+  display: block;
   z-index: 10;
   left: 0;
   width: 100%;
@@ -31,17 +32,14 @@
   box-shadow: 3px 3px 25px 0px #1b1b1b;
 }
 
-#overlay_content {
+#overlay_quit_session {
   text-align: center;
 }
 
-#overlay_content_action {
+.overlay_block_header {
   margin: 20px;
   font-size: 2em;
   font-weight: bold;
-}
-
-#overlay_content a {
   display: block;
 }
 
@@ -57,4 +55,16 @@
   margin-top: 10px;
   font-size: 2em;
   box-shadow: 2px 2px 4px 0px black;
+}
+
+
+#overlay_score_recap {
+  text-align: center;
+}
+
+#overlay_recap_time,
+#overlay_recap_score {   
+  font-size: 1.4em;
+  margin: 20px;
+  font-weight: bold;
 }

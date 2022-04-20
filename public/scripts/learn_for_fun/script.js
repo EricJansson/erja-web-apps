@@ -8,12 +8,256 @@ setTimeout(() => {
 
 // ¬∀x P(x) ⇔ ∃x ¬P(x) 
 
-var number_of_lists = 4;
+var number_of_lists = 6;
 
 
 var MY_LIST_1 = {
+    title: "Guitar chords",
+    description: "Guess which CHORD matches the diagram.",
+    answer_img: true,
+    question_img: false,
+    ALL_QUESTIONS: [
+        {
+            question: "url(/images/learn_for_fun_img/A.png)",
+            answer: "A",
+            alt_answer: "A"
+        },
+        {
+            question: "url(/images/learn_for_fun_img/A7.png)",
+            answer: "A7",
+            alt_answer: "A7"
+        },
+        {
+            question: "url(/images/learn_for_fun_img/Am.png)",
+            answer: "Am",
+            alt_answer: "Am"
+        },
+        {
+            question: "url(/images/learn_for_fun_img/C.png)",
+            answer: "C",
+            alt_answer: "C"
+        },
+        {
+            question: "url(/images/learn_for_fun_img/C7.png)",
+            answer: "C7",
+            alt_answer: "C7"
+        },
+        {
+            question: "url(/images/learn_for_fun_img/D.png)",
+            answer: "D",
+            alt_answer: "D"
+        },
+        {
+            question: "url(/images/learn_for_fun_img/D7.png)",
+            answer: "D7",
+            alt_answer: "D7"
+        },
+        {
+            question: "url(/images/learn_for_fun_img/Dm.png)",
+            answer: "Dm",
+            alt_answer: "Dm"
+        },
+        {
+            question: "url(/images/learn_for_fun_img/E.png)",
+            answer: "E",
+            alt_answer: "E"
+        },
+        {
+            question: "url(/images/learn_for_fun_img/E7.png)",
+            answer: "E7",
+            alt_answer: "E7"
+        },
+        {
+            question: "url(/images/learn_for_fun_img/Em.png)",
+            answer: "Em",
+            alt_answer: "Em"
+        },
+        {
+            question: "url(/images/learn_for_fun_img/G.png)",
+            answer: "G",
+            alt_answer: "G"
+        }
+    ]
+}
+
+var MY_LIST_2 = {
+    title: "Guitar chords",
+    description: "Guess which DIAGRAM the chord matches.",
+    answer_img: false,
+    question_img: true,
+    ALL_QUESTIONS: [
+        {
+            question: "A",
+            answer: "url(/images/learn_for_fun_img/A.png)",
+            alt_answer: "url(/images/learn_for_fun_img/A.png)"
+        },
+        {
+            question: "A7",
+            answer: "url(/images/learn_for_fun_img/A7.png)",
+            alt_answer: "url(/images/learn_for_fun_img/A7.png)"
+        },
+        {
+            question: "Am",
+            answer: "url(/images/learn_for_fun_img/Am.png)",
+            alt_answer: "url(/images/learn_for_fun_img/Am.png)"
+        },
+        {
+            question: "C",
+            answer: "url(/images/learn_for_fun_img/C.png)",
+            alt_answer: "url(/images/learn_for_fun_img/C.png)"
+        },
+        {
+            question: "C7",
+            answer: "url(/images/learn_for_fun_img/C7.png)",
+            alt_answer: "url(/images/learn_for_fun_img/C7.png)"
+        },
+        {
+            question: "D",
+            answer: "url(/images/learn_for_fun_img/D.png)",
+            alt_answer: "url(/images/learn_for_fun_img/D.png)"
+        },
+        {
+            question: "D7",
+            answer: "url(/images/learn_for_fun_img/D7.png)",
+            alt_answer: "url(/images/learn_for_fun_img/D7.png)"
+        },
+        {
+            question: "Dm",
+            answer: "url(/images/learn_for_fun_img/Dm.png)",
+            alt_answer: "url(/images/learn_for_fun_img/Dm.png)"
+        },
+        {
+            question: "E",
+            answer: "url(/images/learn_for_fun_img/E.png)",
+            alt_answer: "url(/images/learn_for_fun_img/E.png)"
+        },
+        {
+            question: "E7",
+            answer: "url(/images/learn_for_fun_img/E7.png)",
+            alt_answer: "url(/images/learn_for_fun_img/E7.png)"
+        },
+        {
+            question: "Em",
+            answer: "url(/images/learn_for_fun_img/Em.png)",
+            alt_answer: "url(/images/learn_for_fun_img/Em.png)"
+        },
+        {
+            question: "G",
+            answer: "url(/images/learn_for_fun_img/G.png)",
+            alt_answer: "url(/images/learn_for_fun_img/G.png)"
+        }
+    ]
+}
+
+
+var MY_LIST_3 = {
+    title: "Beginner Japanese",
+    description: "Japanese vocabulary for beginners",
+    answer_img: false,
+    question_img: false,
+    ALL_QUESTIONS: [
+        {
+            question: "I am very glad to meet you.",
+            answer: "Oaidekite ureshii desu",
+            alt_answer: "おあいできて　うれしいです。"
+        }, {
+            question: "Do you speak English?",
+            answer: "Eigo o hanasemasu ka",
+            alt_answer: "えいごをはなせますか。"
+        }, {
+            question: "How are you?",
+            answer: "O-genki desu ka",
+            alt_answer: "おげんきですか。"
+        }, {
+            question: "I don't understand.",
+            answer: "Wakarimasen",
+            alt_answer: "わかりません。"
+        }, {
+            question: "I only speak a little Japanese.",
+            answer: "Watashi wa nihongo ga sukoshi shika hanasemasen.",
+            alt_answer: "わたしは　にほんごがすこししか　はなせません。"
+        }, {
+            question: "My name is Kaorii.",
+            answer: "Watashi no namae wa Kaori desu.",
+            alt_answer: "わたしのなまえは　かおりです。"
+        }, {
+            question: "Long time, no see!",
+            answer: "Hisashiburi",
+            alt_answer: "久しぶり。"
+        }, {
+            question: "See you later/Goodbye",
+            answer: "Ja Mata",
+            alt_answer: "じゃまた。"
+        }
+    ]
+}
+
+
+
+
+
+
+var MY_LIST_4 = {
+    title: "Math repetition",
+    description: "Preparation for university.",
+    answer_img: false,
+    question_img: false,
+    ALL_QUESTIONS: [
+        {
+            question: "z³ = 64(cos270° + i sin270°)",
+            answer: "Polär form",
+            alt_answer: "4i" // -2√3 - 2i   // 2√3 - 2i
+        }, {
+            question: "x³ ⋅ x³",
+            answer: "Potensregler multiplikation",
+            alt_answer: "x³⁺³"
+        }, {
+            question: "x³ / x²",
+            answer: "Potensregler division",
+            alt_answer: "x³-² = x"
+        }, {
+            question: "|-6|",
+            answer: "√x²+y²",
+            alt_answer: "6"
+        }, {
+            question: "sin x = 1",
+            answer: "90°",
+            alt_answer: "π/4"
+        }, {
+            question: "cos x = -1",
+            answer: "180°",
+            alt_answer: "π/2"
+        }, {
+            question: "D eˣ",
+            answer: "eˣ",
+            alt_answer: ""
+        }, {
+            question: "D lnx",
+            answer: "1/x",
+            alt_answer: "1/x + C"
+        }, {
+            question: "Asymptot",
+            answer: "Närmar sig definitionsmängdens gränser men når aldrig dit.",
+            alt_answer: "Närmar sig definitionsmängdens gränser men når aldrig dit."
+        }, {
+            question: "213° i radianer",
+            answer: "3.72",
+            alt_answer: "213π/180"
+        }, {
+            question: "2 rad i grader",
+            answer: "115",
+            alt_answer: "2*180/π"
+        }
+    ]
+}
+
+
+
+var MY_LIST_5 = {
     title: "Diskret matematik",
     description: "Räkneregler för mängdlära.",
+    answer_img: false,
+    question_img: false,
     ALL_QUESTIONS: [
         {
             question: "(A ∪ B) ∪ C = A ∪ (B ∪ C)",
@@ -70,9 +314,11 @@ var MY_LIST_1 = {
 
 // ¬∀x P(x) ⇔ ∃x ¬P(x) 
 
-var MY_LIST_2 = {
+var MY_LIST_6 = {
     title: "Logik och boolesk algebra",
     description: "Räkneregler för logik.",
+    answer_img: false,
+    question_img: false,
     ALL_QUESTIONS: [
         {
             question: "P∧(Q∧R) ⇔ (P∧Q)∧R",
@@ -136,107 +382,6 @@ var MY_LIST_2 = {
         }
     ]
 }
-
-var MY_LIST_3 = {
-    title: "Beginner Japanese",
-    description: "Japanese vocabulary for beginners",
-    ALL_QUESTIONS: [
-        {
-            question: "I am very glad to meet you.",
-            answer: "Oaidekite ureshii desu",
-            alt_answer: "おあいできて　うれしいです。"
-        }, {
-            question: "Do you speak English?",
-            answer: "Eigo o hanasemasu ka",
-            alt_answer: "えいごをはなせますか。"
-        }, {
-            question: "How are you?",
-            answer: "O-genki desu ka",
-            alt_answer: "おげんきですか。"
-        }, {
-            question: "I don't understand.",
-            answer: "Wakarimasen",
-            alt_answer: "わかりません。"
-        }, {
-            question: "I only speak a little Japanese.",
-            answer: "Watashi wa nihongo ga sukoshi shika hanasemasen.",
-            alt_answer: "わたしは　にほんごがすこししか　はなせません。"
-        }, {
-            question: "My name is Kaorii.",
-            answer: "Watashi no namae wa Kaori desu.",
-            alt_answer: "わたしのなまえは　かおりです。"
-        }, {
-            question: "Long time, no see!",
-            answer: "Hisashiburi",
-            alt_answer: "久しぶり。"
-        }, {
-            question: "See you later/Goodbye",
-            answer: "Ja Mata",
-            alt_answer: "じゃまた。"
-        }
-    ]
-}
-
-
-
-
-
-
-var MY_LIST_4 = {
-    title: "Math repetition",
-    description: "Preparation for university.",
-    ALL_QUESTIONS: [
-        {
-            question: "z³ = 64(cos270° + i sin270°)",
-            answer: "Polär form",
-            alt_answer: "4i" // -2√3 - 2i   // 2√3 - 2i
-        }, {
-            question: "x³ ⋅ x³",
-            answer: "Potensregler multiplikation",
-            alt_answer: "x³⁺³"
-        }, {
-            question: "x³ / x²",
-            answer: "Potensregler division",
-            alt_answer: "x³-² = x"
-        }, {
-            question: "|-6|",
-            answer: "√x²+y²",
-            alt_answer: "6"
-        }, {
-            question: "sin x = 1",
-            answer: "90°",
-            alt_answer: "π/4"
-        }, {
-            question: "cos x = -1",
-            answer: "180°",
-            alt_answer: "π/2"
-        }, {
-            question: "D eˣ",
-            answer: "eˣ",
-            alt_answer: ""
-        }, {
-            question: "D lnx",
-            answer: "1/x",
-            alt_answer: "1/x + C"
-        }, {
-            question: "Asymptot",
-            answer: "Närmar sig definitionsmängdens gränser men når aldrig dit.",
-            alt_answer: "Närmar sig definitionsmängdens gränser men når aldrig dit."
-        }, {
-            question: "213° i radianer",
-            answer: "3.72",
-            alt_answer: "213π/180"
-        }, {
-            question: "2 rad i grader",
-            answer: "115",
-            alt_answer: "2*180/π"
-        }
-    ]
-}
-
-
-
-
 
 // ∪  ∩  ∅ 
 

@@ -17,6 +17,8 @@ startSession = () => {
         MY_LIST.ALL_QUESTIONS[i]["option_id"] = i;
         MY_LIST.ALL_QUESTIONS[i]["alt_option_repeat"] = 0;
     }
+    
+
     document.getElementById("main_content").style.display = "block";
     document.getElementById("main_Header").style.display = "none";
     document.getElementById("setup_session").style.display = "none";
@@ -39,19 +41,18 @@ startSession = () => {
 var timer;
 var session_progress_total;
 var session_progress_amount;
-var session_success_rate;
 var start_time = "0:00";
+var timer_minute;
 
 session_stats = (setup_data) => {
     if (setup_data == "setup") {
         session_progress_total = session_array.length;
-        session_success_rate = 0;
         document.getElementById("session_success_rate").innerText = "";
         document.getElementById("session_timer").innerText = start_time;
         // set time
         start_timer = () => {
             var start = Date.now();
-            var timer_minute = 0;
+            timer_minute = 0;
             timer = setInterval(function () {
                 var millisec_now = Date.now() - start; // milliseconds elapsed since start
                 timer_seconds = Math.floor(millisec_now / 1000);
@@ -69,13 +70,9 @@ session_stats = (setup_data) => {
         start_timer();
     }
     // set success rate
-
-    // calculate success_rate
-    session_success_rate = (number_of_corrects / current_question_number) * 100;
-    // floor the success_rate to 1 decimal.
-    session_success_rate = (Math.floor(session_success_rate * 10)) / 10;
+    var success_rate = session_success_rate();
     if (setup_data != "setup") {
-        document.getElementById("session_success_rate").innerText = session_success_rate + "%";
+        document.getElementById("session_success_rate").innerText = success_rate + "%";
     }
     // set question amount/completion
     session_progress_amount = current_question_number;
@@ -86,6 +83,14 @@ session_stats = (setup_data) => {
     document.getElementById("session_progress").innerText = session_progress_amount + "/" + session_progress_total + " (" + session_progress_percent + "%)";
 }
 
+session_success_rate = () => {
+    // calculate success_rate
+    result = (number_of_corrects / current_question_number) * 100;
+    // floor the success_rate to 1 decimal.
+    result = (Math.floor(result * 10)) / 10;
+    return result;
+}
+
 
 var question_loop_number = 0;
 
@@ -93,7 +98,13 @@ generate_question = (question_num) => {
     var current_question_num = session_array[question_num]; // number of the question at index[PARAM]
     var current_question_index = session_array.indexOf(current_question_num); // index of "number of the question"
     MY_LIST.ALL_QUESTIONS[current_question_num]["alt_option_repeat"]++;
-    document.getElementById("question_block").innerText = MY_LIST.ALL_QUESTIONS[current_question_num].question;
+    if (MY_LIST.answer_img == true) {
+        document.getElementById("question_block").innerText = "";
+        document.getElementById("question_block").style.backgroundImage = MY_LIST.ALL_QUESTIONS[current_question_num].question;
+    } else {
+        document.getElementById("question_block").innerText = MY_LIST.ALL_QUESTIONS[current_question_num].question;
+        document.getElementById("question_block").style.backgroundImage = "";
+    }
 
     var current_task_options = [];
     current_task_options.push(current_question_num);
@@ -151,7 +162,12 @@ generate_question = (question_num) => {
         if (MY_LIST.ALL_QUESTIONS[session_array[current_question_number]].answer == current_task_options[i] || MY_LIST.ALL_QUESTIONS[session_array[current_question_number]].alt_answer == current_task_options[i]) {
             correct_answer = i + 1;
         }
-        document.getElementById("optionBtn" + (i + 1)).innerText = current_task_options[i];
+        if (MY_LIST.question_img == true) {
+            document.getElementById("optionBtn" + (i + 1)).innerHTML = "<div id='optionBtn" + (i + 1) + "_overlay'></div>";
+            document.getElementById("optionBtn" + (i + 1) + "_overlay").style.backgroundImage = current_task_options[i];
+        } else {
+            document.getElementById("optionBtn" + (i + 1)).innerText = current_task_options[i];
+        }
     }
     current_question_number++;  // session question
 }
@@ -190,7 +206,7 @@ selectOption = (option_number) => {
         document.getElementById("next_question_hide_toggle").style.display = "block";
     } else {
         clearInterval(timer); // stop timer
-        document.getElementById("post_session_recap_btn").style.display = "block";
+        display_overlay("session_results");
     }
     // document.getElementById("optionBtn" + correct_answer).classList.add("correct_answer");
     document.getElementById("optionBtn" + correct_answer).style.background = "rgba(13, 197, 13, 0.6)";
@@ -218,7 +234,6 @@ goToNextQuestion = (end_Session) => {
     if (end_Session == 'end_session') {
         document.getElementById("main_Header").style.display = "block";
         document.getElementById("start_menu").style.display = "block";
-        document.getElementById("post_session_recap_btn").style.display = "none";
         document.getElementById("main_content").style.display = "none";
         clearInterval(timer); // stop timer
     } else {

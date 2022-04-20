@@ -47,6 +47,8 @@
 }
 
 #question_block {
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: rgb(228 228 228);
   text-align: center;
   padding: 0 20px;
@@ -84,13 +86,6 @@
   cursor: pointer;
 }
 
-#post_session_recap_btn {
-  display: none;
-}
-
-#post_session_recap_btn button {
-  box-shadow: 2px 2px 5px -1px black;
-}
 
 #next_question_correct {
   font-weight: bold;
@@ -121,6 +116,8 @@
 }
 
 .selectable_options {
+  background-repeat: no-repeat;
+  background-position: center;
   background: #bbe6f3;
   box-shadow: 0px 3px 10px black;
   border: 1px solid;
@@ -141,8 +138,24 @@
   background-color: rgba(228, 228, 70, 0.5);
 }
 
+#optionBtn1, 
+#optionBtn2, 
+#optionBtn3, 
+#optionBtn4 {
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
+#optionBtn1_overlay, 
+#optionBtn2_overlay, 
+#optionBtn3_overlay, 
+#optionBtn4_overlay {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 
+}
 
 
 

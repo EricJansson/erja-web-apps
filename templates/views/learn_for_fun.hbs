@@ -15,19 +15,30 @@
 </head>
 
 <body>
-    <div id="overlay_fade_effect"></div>
-    <div id="overlay">
-        <div id="overlay_block">
-            <div id="overlay_content">
-                <a id="overlay_content_action">Quit session</a>
-                <a>Are you sure?</a>
-                <div id="overlay_btns">
-                    <button onclick="overlay_accept('end session')">Yes</button>
-                    <button onclick="overlay_decline()">No</button>
+    <div id="overlay_fade_effect">
+        <div id="overlay">
+            <div id="overlay_block">
+                <div id="overlay_quit_session">
+                    <a class="overlay_block_header">Quit session</a>
+                    <a>Are you sure?</a>
+                    <div id="overlay_btns">
+                        <button onclick="overlay_quit_options('end_session')">Yes</button>
+                        <button onclick="overlay_quit_options()">No</button>
+                    </div>
+                </div>
+                <div id="overlay_score_recap">
+                    <a class="overlay_block_header">Session recap</a>
+                    <div id="overlay_full_recap">
+                        <div id="overlay_recap_time">Time: 1:15</div>
+                        <div id="overlay_recap_score">Score: 1/8 (12.5%)</div>
+                    </div>
+                    <br>
+                    <button onclick="overlay_quit_options('end_session')">Back to menu</button>
                 </div>
             </div>
         </div>
     </div>
+    
 
     <div id="main_Header">Quiz Maker</div>
     <div id="start_menu">
@@ -119,6 +130,7 @@
                 <div class="edit_lesson_exit">
                     <button class="edit_lesson_go_back" onclick="toggle_listReview_menu('menu')">Menu</button>
                     <br>
+                    <div style="font-weight: bold;">Beta</div>
                     <button onclick="show_create_item()">Make a new item</button>
                     <br><br>
                     <button onclick="delete_item_mode()">Remove an item</button>
@@ -180,7 +192,7 @@
             </div>
             <div id="question_block">Seems like</div>
             <div id="quit_session">
-                <button onclick="display_overlay()">x</button>
+                <button onclick="display_overlay('quit_session')">x</button>
             </div>
         </div>
         <div id="next_question_block">
@@ -189,16 +201,20 @@
                 <div id="next_question_wrong">Wrong</div>
                 <button onclick="goToNextQuestion()">Next</button>
             </div>
-            <div id="post_session_recap_btn">
-                <div>You are done!</div>
-                <button onclick="goToNextQuestion('end_session')">Go back</button>
-            </div>
         </div>
         <div class="options_grid">
-            <button onclick="selectOption(1)" id="optionBtn1" class="active_options selectable_options"></button>
-            <button onclick="selectOption(2)" id="optionBtn2" class="active_options selectable_options"></button>
-            <button onclick="selectOption(3)" id="optionBtn3" class="active_options selectable_options"></button>
-            <button onclick="selectOption(4)" id="optionBtn4" class="active_options selectable_options"></button>
+            <button onclick="selectOption(1)" id="optionBtn1" class="active_options selectable_options">
+                <div id="optionBtn1_overlay"></div>
+            </button>
+            <button onclick="selectOption(2)" id="optionBtn2" class="active_options selectable_options">
+                <div id="optionBtn2_overlay"></div>
+            </button>
+            <button onclick="selectOption(3)" id="optionBtn3" class="active_options selectable_options">
+                <div id="optionBtn3_overlay"></div>
+            </button>
+            <button onclick="selectOption(4)" id="optionBtn4" class="active_options selectable_options">
+                <div id="optionBtn4_overlay"></div>
+            </button>
         </div>
     </div>
 
