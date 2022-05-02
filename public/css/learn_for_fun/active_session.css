@@ -50,6 +50,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-color: rgb(228 228 228);
+  background-size: contain;
   text-align: center;
   padding: 0 20px;
   min-height: 150px;
