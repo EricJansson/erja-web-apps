@@ -13,8 +13,8 @@ const b3 = [1,0,0,1];
 const b4 = [1,0,1,0];
 
 // Straight path
-const b5 = [1,1,0,0];
-const b6 = [0,0,1,1];
+const b5 = [0,0,1,1];
+const b6 = [1,1,0,0];
 
 // 3x crossroad
 const c1 = [1,1,0,1];

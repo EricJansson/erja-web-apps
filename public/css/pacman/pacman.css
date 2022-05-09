@@ -22,5 +22,5 @@
 
 @media only screen and (max-width: 800px) {
     :root { --canvasW: calc(var(--canvasW) / 2); }
-    #myCanvas {margin-left: -160px };
+    #myCanvas, #backgroundCanvas {margin-left: -160px };
 }
