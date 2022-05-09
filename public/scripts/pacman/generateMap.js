@@ -35,7 +35,7 @@ const defaultMap = [
     [c1, b5, d1, c2, c3, c3, c2, d1, b5, c4],
     [b3, b5, c4, b3, b2, b1, b4, c1, b5, b4],
     [e1, e1, b6, b1, c3, c3, b2, b6, e1, e1],
-    [b5, b5, d1, c4, e1, e1, c1, d1, b5, b5],
+    [b5, b5, d1, c4, a4, a3, c1, d1, b5, b5],
     [e1, e1, b6, c1, b5, b5, c4, b6, e1, e1],
     [b1, b5, d1, c3, b2, b1, c3, d1, b5, b2], 
     [b3, b2, c1, c2, c3, c3, c2, c4, b1, b4], 

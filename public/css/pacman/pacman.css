@@ -7,9 +7,34 @@
 #gameblock {
     width: 0;
     margin: auto;
-    margin-top: 100px;
-
+    margin-top: 10px;
 }
+
+#gameDetails {
+    text-align: center;
+}
+
+#arrowKeyBlock {
+    display: none;
+    width: 320px;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 400px;
+    justify-content: center;
+}
+
+.arrowKeys {
+    text-align: center;
+    padding: 24px 0;
+    width: 90px;
+    margin: 6px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    font-size: 3em;
+}
+
 
 #myCanvas, #backgroundCanvas {
     position: absolute;
@@ -22,5 +47,6 @@
 
 @media only screen and (max-width: 800px) {
     :root { --canvasW: calc(var(--canvasW) / 2); }
-    #myCanvas, #backgroundCanvas {margin-left: -160px };
+    #myCanvas, #backgroundCanvas {margin-left: -160px }
+    #arrowKeyBlock { display: flex; }
 }
