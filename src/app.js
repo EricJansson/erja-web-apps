@@ -494,6 +494,11 @@ app.get('/tictactoe/aboutSvenska', (req, res) => {
     })
 })
 
+app.get('/pacman', (req, res) => {
+    res.render('pacman', {
+        title: 'Pacman'
+    })
+})
 
 
 app.get('/products', (req, res) => {
