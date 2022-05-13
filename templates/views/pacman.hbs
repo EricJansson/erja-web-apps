@@ -11,7 +11,9 @@
     <div id="gameDetails">
         <div id="gameCoords"></div>
     </div>
-    <div id="gameblock"></div>
+    <div id="gameblock">
+        <div id="gameOverlay"></div>
+    </div>
     <div id="arrowKeyBlock">
         <div class="arrowKeys" style="border: none; background-color: white;"></div>
         <div class="arrowKeys" onclick="keyPressDirection(myGamePiece, 'up');">/\</div>
@@ -21,6 +23,8 @@
         <div class="arrowKeys" onclick="keyPressDirection(myGamePiece, 'right');">></div>
     </div>
     <script src="./scripts/pacman/generateMap.js"></script>
+    <script src="./scripts/pacman/component.js"></script>
+    <script src="./scripts/pacman/controls.js"></script>
     <script src="./scripts/pacman/pacman.js"></script>
 </body>
 </html>

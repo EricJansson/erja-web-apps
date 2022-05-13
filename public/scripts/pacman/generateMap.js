@@ -43,9 +43,7 @@ const defaultMap = [
     [b3, b5, b5, b5, c3, c3, b5, b5, b5, b4]
 ];
 
-
 function fieldTile(up, down, left, right) {
-    
     this.up = false;
     this.down = false;
     this.left = false;
@@ -75,3 +73,37 @@ function generateMapTiles(arrToFill, tileWidth, tileHeight) {
         }
     }
 }
+
+function createOverlayTiles(tileWidth, tileHeight) {
+    let gameOverlay = document.getElementById("gameOverlay");
+    let newTile;
+    let totalTileNum;
+    for (let yy = 0; yy < tileHeight; yy++) {
+        for (let xx = 0; xx < tileWidth; xx++) {
+            totalTileNum = (xx + 1) + ((yy) * 10)
+
+            let xTile = (xx + 1);
+            let yTile = (yy + 1);
+            let xTileCor = (xx + 1) * 32;
+            let yTileCor = (yy + 1) * 32;
+
+
+            newTile = document.createElement("div");
+            newTile.className = "overlayTile"
+            newTile.id = "oTileX" + totalTileNum;
+            gameOverlay.appendChild(newTile);
+            
+            document.getElementById("oTileX" + totalTileNum).addEventListener("click", () => {
+
+
+            console.log("X: " + xTile + ", Y: " + yTile + ", Distance: " + Math.round(pacman.calcDistance([pacman.y + 32, pacman.x + 32], [yTileCor, xTileCor])));
+            
+            
+            
+            });
+        }
+    }
+    console.log("numOfTiles: " + tileWidth * tileHeight);
+}
+
+createOverlayTiles(10, 11);

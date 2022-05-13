@@ -2,12 +2,34 @@
 :root {
     --canvasW: 320px;
     --canvasH: 352px;
+    --canvasTileSize: 64px;
 }
 
 #gameblock {
     width: 0;
     margin: auto;
     margin-top: 10px;
+}
+
+#gameOverlay {
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    margin-left: calc(var(--canvasW) * -1);
+    width: calc(var(--canvasW) * 2);
+    height: calc(var(--canvasH) * 2);
+    border: 1px solid black;
+}
+
+.overlayTile {
+    box-shadow: inset 0 0 0 1px #343434;
+    width: calc(var(--canvasTileSize));
+    height: calc(var(--canvasTileSize));
+    display: block;
+}
+
+.overlayTile:hover {
+    background: #ffff0026;
 }
 
 #gameDetails {
@@ -40,13 +62,16 @@
     position: absolute;
     display: block;
     margin-left: calc(var(--canvasW) * -1);
-    border: 1px solid #000000;
     width: calc(var(--canvasW) * 2);
 }
 
 
 @media only screen and (max-width: 800px) {
-    :root { --canvasW: calc(var(--canvasW) / 2); }
+    :root { 
+        --canvasW: calc(var(--canvasW) / 2);
+        --canvasH: calc(var(--canvasH) / 2);
+        --canvasTileSize: calc(var(--canvasTileSize) / 2);
+    }
     #myCanvas, #backgroundCanvas {margin-left: -160px }
     #arrowKeyBlock { display: flex; }
 }
