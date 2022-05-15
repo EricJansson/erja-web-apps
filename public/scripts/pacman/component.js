@@ -290,15 +290,16 @@ class component {
         */
     }
 
-    deathCheck = function() {
-        if (this.unitType == "enemy") {
-            for (let ii = 0; ii < this.hero.length; ii++) {
-                let deltaX = Math.abs(this.x - this.hero[ii].x)
-                let deltaY = Math.abs(this.y - this.hero[ii].y)
+    deathCheck = function(killAble) {
+        if (this.unitType == "hero") {
+            for (let ii = 0; ii < this.enemy.length; ii++) {
+                let deltaX = Math.abs(this.x - this.enemy[ii].x)
+                let deltaY = Math.abs(this.y - this.enemy[ii].y)
                 if (deltaX + deltaY < 6) {
                     console.log("Collision!");
-                    myGameArea.stop()
-                    document.getElementById("startOver").style.display = "block";
+                    if (killAble) {
+                        myGameArea.stop();
+                    }
                 }
             }
         }

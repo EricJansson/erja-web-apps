@@ -1,5 +1,6 @@
 
 var gameblock = document.getElementById("gameblock");
+var killAble = true;
 var pacman;
 var myGamePiece2;
 var myGamePiece3;
@@ -19,9 +20,9 @@ const FIELD_TILE_W = FIELD_W / FIELD_TILE_PIXEL_SIZE;
 const FIELD_TILE_H = FIELD_H / FIELD_TILE_PIXEL_SIZE;
 
 var coords = document.getElementById("gameCoords");
-
-
 var isMobile = false;
+var myGameArea;
+
 
 function mobileSettings() {
     // device detection
@@ -34,7 +35,17 @@ function mobileSettings() {
     }
 }
 
-var myGameArea;
+function toggleInvincibilty() {
+    killAble = !killAble;
+    if (!killAble) {
+        document.getElementById("invinceBox").innerText = "✓"
+        document.getElementById("invinceBox").style.background = "#01dd01";
+    } else {
+        document.getElementById("invinceBox").innerText = "X"
+        document.getElementById("invinceBox").style.background = "red";
+    }
+    console.log("killable: " + killAble)
+}
 
 document.body.onload = function() {
     myGameArea = new gameArea;
@@ -47,7 +58,7 @@ document.body.onload = function() {
 
 startNewGame = function() {
     myGameArea.clear();
-    document.getElementById("startOver").style.display = "none";
+    myGameArea.stop();
     myGameArea = new gameArea;
     myGameArea.start();
     component.prototype.hero = [];
@@ -132,22 +143,19 @@ updateGameArea = () => {
     myGameArea.clear();
     pacman.move();
     pacman.update();
+    pacman.deathCheck(killAble);
 
     myGamePiece2.move();
     myGamePiece2.update();
-    myGamePiece2.deathCheck();
     
     myGamePiece3.move();
     myGamePiece3.update();
-    myGamePiece3.deathCheck();
     
     myGamePiece4.move();
     myGamePiece4.update();
-    myGamePiece4.deathCheck();
 
     myGamePiece5.move();
     myGamePiece5.update();
-    myGamePiece5.deathCheck();
 
     myXcor = (pacman.x / FIELD_TILE_PIXEL_SIZE)
     myYcor = (pacman.y / FIELD_TILE_PIXEL_SIZE)

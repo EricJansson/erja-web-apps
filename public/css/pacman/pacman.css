@@ -53,10 +53,26 @@
 }
 
 #startOver {
-    display: none;
     position: absolute;
     z-index: 1;
+    width: 180px;
     margin-left: 40%;
+}
+
+#invinceBlock {
+    font-size: 1.4em;
+    margin-top: 6px;
+    display: flex;
+}
+
+#invinceBox {
+    display: inline-block;
+    border: 1px solid;
+    width: 30px;
+    height: 30px;
+    font-family: arial;
+    background: red;
+    font-weight: bold;
 }
 
 #arrowKeyBlock {
