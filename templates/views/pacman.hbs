@@ -9,6 +9,9 @@
 </head>
 <body>
     <div id="gameDetails">
+        <div id="startOver">
+            <button id="restartBtn" onclick="startNewGame()">Restart</button>
+        </div>
         <div id="gameCoords"></div>
     </div>
     <div id="gameblock">
@@ -16,11 +19,11 @@
     </div>
     <div id="arrowKeyBlock">
         <div class="arrowKeys" style="border: none; background-color: white;"></div>
-        <div class="arrowKeys" onclick="keyPressDirection(myGamePiece, 'up');">/\</div>
+        <div class="arrowKeys" onclick="keyPressDirection(pacman, 'up');">/\</div>
         <div class="arrowKeys" style="border: none; background-color: white;"></div>
-        <div class="arrowKeys" onclick="keyPressDirection(myGamePiece, 'left');"><</div>
-        <div class="arrowKeys" onclick="keyPressDirection(myGamePiece, 'down');">V</div>
-        <div class="arrowKeys" onclick="keyPressDirection(myGamePiece, 'right');">></div>
+        <div class="arrowKeys" onclick="keyPressDirection(pacman, 'left');"><</div>
+        <div class="arrowKeys" onclick="keyPressDirection(pacman, 'down');">V</div>
+        <div class="arrowKeys" onclick="keyPressDirection(pacman, 'right');">></div>
     </div>
     <script src="./scripts/pacman/generateMap.js"></script>
     <script src="./scripts/pacman/component.js"></script>

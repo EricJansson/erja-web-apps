@@ -87,19 +87,13 @@ function createOverlayTiles(tileWidth, tileHeight) {
             let xTileCor = (xx + 1) * 32;
             let yTileCor = (yy + 1) * 32;
 
-
             newTile = document.createElement("div");
             newTile.className = "overlayTile"
             newTile.id = "oTileX" + totalTileNum;
             gameOverlay.appendChild(newTile);
-            
+        
             document.getElementById("oTileX" + totalTileNum).addEventListener("click", () => {
-
-
-            console.log("X: " + xTile + ", Y: " + yTile + ", Distance: " + Math.round(pacman.calcDistance([pacman.y + 32, pacman.x + 32], [yTileCor, xTileCor])));
-            
-            
-            
+            console.log("X: " + xTile + ", Y: " + yTile + ", Distance: " + (Math.round(10 * pacman.calcDistance([pacman.x + 32, pacman.y + 32], [xTileCor, yTileCor]))) / 10);
             });
         }
     }

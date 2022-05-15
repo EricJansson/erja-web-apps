@@ -3,6 +3,8 @@ var gameblock = document.getElementById("gameblock");
 var pacman;
 var myGamePiece2;
 var myGamePiece3;
+var myGamePiece4;
+var myGamePiece5;
 const PACMAN_IMG = "./images/pacman/pacman.png";
 const RED_GHOST_IMG = "./images/pacman/red_ghost.png";
 const PINK_GHOST_IMG = "./images/pacman/pink_ghost.png";
@@ -32,13 +34,26 @@ function mobileSettings() {
     }
 }
 
+var myGameArea;
+
 document.body.onload = function() {
+    myGameArea = new gameArea;
     myGameArea.start();
+    component.prototype.hero = [];
+    component.prototype.enemy = [];
     gameBackground.start();
-    pacman = new component(32, 32, PACMAN_IMG, 160, 256, "image");
-    myGamePiece2 = new component(32, 32, RED_GHOST_IMG, 128, 160, "image");
-    myGamePiece3 = new component(32, 32, BLUE_GHOST_IMG, 160, 160, "image");
     mobileSettings();
+}
+
+startNewGame = function() {
+    myGameArea.clear();
+    document.getElementById("startOver").style.display = "none";
+    myGameArea = new gameArea;
+    myGameArea.start();
+    component.prototype.hero = [];
+    component.prototype.enemy = [];
+    gameBackground.start();
+
 }
 
 var gameBackground = {
@@ -54,9 +69,17 @@ var gameBackground = {
         img.onload = function() {
             ctx.drawImage(img, 0, 0, 320, 352);
         }
+
+        pacman = new component(32, 32, PACMAN_IMG, 160, 256, "hero");
+        myGamePiece2 = new component(32, 32, RED_GHOST_IMG, 128, 128, "enemy");
+        myGamePiece3 = new component(32, 32, BLUE_GHOST_IMG, 160, 128, "enemy");
+        myGamePiece4 = new component(32, 32, YELLOW_GHOST_IMG, 160, 128, "enemy");
+        myGamePiece5 = new component(32, 32, PINK_GHOST_IMG, 128, 128, "enemy");
     }
 }
 
+
+/*
 var myGameArea = {
     canvas : document.createElement("canvas"),
     fieldTiles : [],
@@ -78,26 +101,63 @@ var myGameArea = {
         clearInterval(this.interval);
     }
 }
+*/
+class gameArea {
+    constructor() {
+        this.canvas = document.createElement("canvas")
+        this.fieldTiles = []
+    }
+    start = function() {
+        generateMapTiles(this.fieldTiles, 10, 11);
+        this.canvas.height = 352;
+        this.canvas.width = 320;
+        this.canvas.id = "myCanvas";
+        this.context = this.canvas.getContext("2d");
+        gameblock.insertBefore(this.canvas, gameblock.childNodes[0]);
+        // Make sure the image is loaded first otherwise nothing will draw.
+        // this.frameNo = 0;
+        this.interval = setInterval(updateGameArea, MILLIS_FRAMERATE);
+    } 
+    clear = function() {
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    }
+    stop = function() {
+        clearInterval(this.interval);
+    }
+}
 
 
 
 updateGameArea = () => {
     myGameArea.clear();
-    pacman.moveOneTile();
+    pacman.move();
     pacman.update();
 
-    myGamePiece2.moveOneTile();
+    myGamePiece2.move();
     myGamePiece2.update();
+    myGamePiece2.deathCheck();
     
-    myGamePiece3.moveOneTile();
+    myGamePiece3.move();
     myGamePiece3.update();
+    myGamePiece3.deathCheck();
     
+    myGamePiece4.move();
+    myGamePiece4.update();
+    myGamePiece4.deathCheck();
+
+    myGamePiece5.move();
+    myGamePiece5.update();
+    myGamePiece5.deathCheck();
+
     myXcor = (pacman.x / FIELD_TILE_PIXEL_SIZE)
     myYcor = (pacman.y / FIELD_TILE_PIXEL_SIZE)
     coords.innerHTML = "Xcoor: " + pacman.x + "<br>Ycoor: " + pacman.y + "<br>Last Xcoor: " + (pacman.stepX + 1) +  "<br>Last Ycoor: " + (pacman.stepY + 1);
     coords.innerHTML += "<br>SpeedY: " + pacman.speedY + "<br>SpeedX: " + pacman.speedX;
 }
+
 setTimeout(()=>{
     keyPressDirection(myGamePiece2, "right");
     keyPressDirection(myGamePiece3, "left");
+    keyPressDirection(myGamePiece4, "right");
+    keyPressDirection(myGamePiece5, "left");
 }, 100);
