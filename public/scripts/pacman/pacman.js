@@ -19,6 +19,11 @@ const FIELD_TILE_PIXEL_SIZE = 32;
 const FIELD_TILE_W = FIELD_W / FIELD_TILE_PIXEL_SIZE;
 const FIELD_TILE_H = FIELD_H / FIELD_TILE_PIXEL_SIZE;
 
+const PACMAN_FRAME_SPEED = [3, 10, 15, 20, 25, 30, 32];
+const PACMAN_FRAME_PIXEL = [32, 0, 32, 64, 96, 64, 32];
+const GHOST_FRAME_SPEED = [8, 16, 24, 32];
+const GHOST_FRAME_PIXEL = [0, 32, 0, 32];
+
 var coords = document.getElementById("gameCoords");
 var isMobile = false;
 var myGameArea;
@@ -44,7 +49,6 @@ function toggleInvincibilty() {
         document.getElementById("invinceBox").innerText = "X"
         document.getElementById("invinceBox").style.background = "red";
     }
-    console.log("killable: " + killAble)
 }
 
 document.body.onload = function() {
@@ -81,11 +85,11 @@ var gameBackground = {
             ctx.drawImage(img, 0, 0, 320, 352);
         }
 
-        pacman = new component(32, 32, PACMAN_IMG, 160, 256, "hero");
-        myGamePiece2 = new component(32, 32, RED_GHOST_IMG, 128, 128, "enemy");
-        myGamePiece3 = new component(32, 32, BLUE_GHOST_IMG, 160, 128, "enemy");
-        myGamePiece4 = new component(32, 32, YELLOW_GHOST_IMG, 160, 128, "enemy");
-        myGamePiece5 = new component(32, 32, PINK_GHOST_IMG, 128, 128, "enemy");
+        pacman = new component(32, 32, PACMAN_IMG, 160, 256, "hero", PACMAN_FRAME_SPEED, PACMAN_FRAME_PIXEL);
+        myGamePiece2 = new component(32, 32, RED_GHOST_IMG, 128, 128, "enemy", GHOST_FRAME_SPEED, GHOST_FRAME_PIXEL);
+        myGamePiece3 = new component(32, 32, BLUE_GHOST_IMG, 160, 128, "enemy", GHOST_FRAME_SPEED, GHOST_FRAME_PIXEL);
+        myGamePiece4 = new component(32, 32, YELLOW_GHOST_IMG, 160, 128, "enemy", GHOST_FRAME_SPEED, GHOST_FRAME_PIXEL);
+        myGamePiece5 = new component(32, 32, PINK_GHOST_IMG, 128, 128, "enemy", GHOST_FRAME_SPEED, GHOST_FRAME_PIXEL);
     }
 }
 

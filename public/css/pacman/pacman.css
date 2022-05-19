@@ -5,6 +5,10 @@
     --canvasTileSize: 64px;
 }
 
+body {
+    background: #222222;
+}
+
 #gameblock {
     width: 0;
     margin: auto;
@@ -34,10 +38,12 @@
 
 #gameDetails {
     text-align: center;
+    height: 108px;
 }
 
 #gameCoords {
-    opacity: 0; 
+    text-align: left;
+    color: white;
     z-index: -1;
 }
 
@@ -63,6 +69,13 @@
     font-size: 1.4em;
     margin-top: 6px;
     display: flex;
+}
+
+#invinceText {
+    padding: 4px;
+    color: white;
+    font-weight: bold;
+    font-family: arial;
 }
 
 #invinceBox {
@@ -120,6 +133,11 @@
 /* 
     This is for uploaded site.
 */
+
+#gameCoords {
+    display: none;
+}
+
 #gameOverlay {
     display: none
 }

@@ -97,7 +97,6 @@ function createOverlayTiles(tileWidth, tileHeight) {
             });
         }
     }
-    console.log("numOfTiles: " + tileWidth * tileHeight);
 }
 
 createOverlayTiles(10, 11);
