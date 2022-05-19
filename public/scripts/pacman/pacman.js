@@ -20,7 +20,8 @@ const FIELD_TILE_W = FIELD_W / FIELD_TILE_PIXEL_SIZE;
 const FIELD_TILE_H = FIELD_H / FIELD_TILE_PIXEL_SIZE;
 
 const PACMAN_FRAME_SPEED = [3, 10, 15, 20, 25, 30, 32];
-const PACMAN_FRAME_PIXEL = [32, 0, 32, 64, 96, 64, 32];
+// const PACMAN_FRAME_PIXEL = [32, 0, 32, 64, 96, 64, 32];
+const PACMAN_FRAME_PIXEL = [0, 32, 64, 96, 64, 32, 0];
 const GHOST_FRAME_SPEED = [8, 16, 24, 32];
 const GHOST_FRAME_PIXEL = [0, 32, 0, 32];
 
@@ -36,6 +37,7 @@ function mobileSettings() {
         isMobile = true;
     }
     if (isMobile) {
+        
         document.getElementById("arrowKeyBlock").style.display = "flex";
     }
 }
@@ -67,13 +69,13 @@ startNewGame = function() {
     myGameArea.start();
     component.prototype.hero = [];
     component.prototype.enemy = [];
-    gameBackground.start();
+    gameBackground.start(true);
 
 }
 
 var gameBackground = {
     canvas : document.createElement("canvas"),
-    start : function() {
+    start : function(restart) {
         this.canvas.height = 352;
         this.canvas.width = 320;
         this.canvas.id = "backgroundCanvas";
@@ -86,6 +88,10 @@ var gameBackground = {
         }
 
         pacman = new component(32, 32, PACMAN_IMG, 160, 256, "hero", PACMAN_FRAME_SPEED, PACMAN_FRAME_PIXEL);
+        if (restart == true) {
+            pacman2 = new component(32, 32, PACMAN_IMG, 64, 64, "hero", PACMAN_FRAME_SPEED, PACMAN_FRAME_PIXEL);
+            pacman3 = new component(32, 32, PACMAN_IMG, 224, 64, "hero", PACMAN_FRAME_SPEED, PACMAN_FRAME_PIXEL);
+        }
         myGamePiece2 = new component(32, 32, RED_GHOST_IMG, 128, 128, "enemy", GHOST_FRAME_SPEED, GHOST_FRAME_PIXEL);
         myGamePiece3 = new component(32, 32, BLUE_GHOST_IMG, 160, 128, "enemy", GHOST_FRAME_SPEED, GHOST_FRAME_PIXEL);
         myGamePiece4 = new component(32, 32, YELLOW_GHOST_IMG, 160, 128, "enemy", GHOST_FRAME_SPEED, GHOST_FRAME_PIXEL);
@@ -145,21 +151,18 @@ class gameArea {
 
 updateGameArea = () => {
     myGameArea.clear();
-    pacman.move();
-    pacman.update();
-    pacman.deathCheck(killAble);
-
-    myGamePiece2.move();
-    myGamePiece2.update();
+    let heroList = component.prototype.hero;
+    for (let jj = 0; jj < heroList.length; jj++) {
+        heroList[jj].move();
+        heroList[jj].update();
+        heroList[jj].deathCheck(killAble);
+    }
     
-    myGamePiece3.move();
-    myGamePiece3.update();
-    
-    myGamePiece4.move();
-    myGamePiece4.update();
-
-    myGamePiece5.move();
-    myGamePiece5.update();
+    let enemyList = component.prototype.enemy;
+    for (let jj = 0; jj < enemyList.length; jj++) {
+        enemyList[jj].move();
+        enemyList[jj].update();
+    }
 
     myXcor = (pacman.x / FIELD_TILE_PIXEL_SIZE)
     myYcor = (pacman.y / FIELD_TILE_PIXEL_SIZE)

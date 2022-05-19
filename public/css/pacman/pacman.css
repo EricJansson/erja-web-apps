@@ -1,17 +1,24 @@
 
 :root {
-    --canvasW: 320px;
-    --canvasH: 352px;
+    --constCanvasWidth: 320px;
+    --constCanvasHeight: 352px;
+
+    --canvasW: var(--constCanvasWidth);
+    --canvasH: var(--constCanvasHeight);
     --canvasTileSize: 64px;
 }
 
-body {
+
+body, html { 
+    margin: 0px;
     background: #222222;
 }
 
 #gameblock {
     width: 0;
     margin: auto;
+    
+    height: calc(var(--canvasH) * 2);
     margin-top: 10px;
 }
 
@@ -38,7 +45,7 @@ body {
 
 #gameDetails {
     text-align: center;
-    height: 108px;
+    height: 88px;
 }
 
 #gameCoords {
@@ -48,7 +55,7 @@ body {
 }
 
 #restartBtn {
-    padding: 10px 30px;
+    padding: 2px 30px;
     margin-top: 10px;
     font-weight: bold;
     font-size: 2em;
@@ -59,21 +66,20 @@ body {
 }
 
 #startOver {
-    position: absolute;
     z-index: 1;
-    width: 180px;
-    margin-left: 40%;
 }
 
 #invinceBlock {
     font-size: 1.4em;
+    width: fit-content;
+    margin: auto;
     margin-top: 6px;
-    display: flex;
 }
 
 #invinceText {
     padding: 4px;
     color: white;
+    display: inline-block;
     font-weight: bold;
     font-family: arial;
 }
@@ -93,13 +99,12 @@ body {
     width: 320px;
     flex-wrap: wrap;
     margin: auto;
-    margin-top: 400px;
     justify-content: center;
 }
 
 .arrowKeys {
     text-align: center;
-    padding: 24px 0;
+    padding: 4px 0;
     width: 90px;
     margin: 6px;
     border: 1px solid black;
@@ -113,22 +118,38 @@ body {
 #myCanvas, #backgroundCanvas {
     position: absolute;
     display: block;
-    margin-left: calc(var(--canvasW) * -1);
+    
+    margin-left: calc(var(--canvasW) / -1);
     width: calc(var(--canvasW) * 2);
 }
 
+/*
+#arrowKeyBlock { display: flex; }
+*/
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 700px), (max-height: 840px) {
     :root { 
-        --canvasW: calc(var(--canvasW) / 2);
-        --canvasH: calc(var(--canvasH) / 2);
-        --canvasTileSize: calc(var(--canvasTileSize) / 2);
+        --canvasW: calc(var(--constCanvasWidth) / 1.2);
+        --canvasH: calc(var(--constCanvasHeight) / 1.2);
+        --canvasTileSize: calc(var(--canvasTileSize) / 1.2);
     }
-    #myCanvas, #backgroundCanvas {margin-left: -160px }
-    #arrowKeyBlock { display: flex; }
 }
 
+@media only screen and (max-width: 560px), (max-height: 840px) {
+    :root { 
+        --canvasW: calc(var(--constCanvasWidth) / 1.5);
+        --canvasH: calc(var(--constCanvasHeight) / 1.5);
+        --canvasTileSize: calc(var(--canvasTileSize) / 1.5);
+    }
+}
 
+@media only screen and (max-width: 440px), (max-height: 722px) {
+    :root { 
+        --canvasW: calc(var(--constCanvasWidth) / 2);
+        --canvasH: calc(var(--constCanvasHeight) / 2);
+        --canvasTileSize: calc(var(--canvasTileSize) / 2);
+    }
+}
 
 /* 
     This is for uploaded site.

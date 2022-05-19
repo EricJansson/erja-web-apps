@@ -99,7 +99,18 @@ class component {
                 let deltaX = Math.abs(this.x - this.enemy[ii].x)
                 let deltaY = Math.abs(this.y - this.enemy[ii].y)
                 if (deltaX + deltaY < 6) {
-                    if (killAble) { myGameArea.stop(); }
+                    if (killAble) { 
+                        let heroList = component.prototype.hero;
+                        if (heroList.length <= 1) { // when last pacman dies -> game over
+                            myGameArea.stop();
+                        }
+                        // remove pacman from game
+                        for (let ii = 0; ii < heroList.length; ii++) {
+                            if (this == heroList[ii]) {
+                                heroList.splice(ii, 1);
+                            }
+                        }
+                    }
                 }
             }
         }
