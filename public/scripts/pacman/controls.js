@@ -32,3 +32,11 @@ keyPressDirection = (unit, direction) => {
         unit.pressedDirection = direction;
     }
 }
+
+
+btnPressDirection = (direction) => {
+    let herolist = component.prototype.hero;
+    for (let ii = 0; ii < herolist.length; ii++) {
+        keyPressDirection(herolist[ii], direction);
+    }
+}
