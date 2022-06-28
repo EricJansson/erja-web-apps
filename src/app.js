@@ -2,6 +2,7 @@ const express = require('express')
 const chalk = require('chalk')
 const path = require('path')
 const hbs = require('hbs')
+// const MongoClient = require('mongodb').MongoClient;
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 const friendlist = require('./utils/steam/friendlist')
@@ -9,9 +10,9 @@ const idconverter = require('./utils/steam/idconverter')
 const recentlyplayed = require('./utils/steam/recentlyplayed')
 const ownedgames = require('./utils/steam/ownedgames')
 // Learn for fun
-const fs = require('fs');
 const read_my_lesson = require('./utils/learn_for_fun/lesson_util')
 const add_to_lesson = require('./utils/learn_for_fun/lesson_write')
+const getDbData = require('./utils/getCloudMongo')
 
 
 const app = express();
@@ -73,6 +74,30 @@ app.get('/weatherapp/help', (req, res) => {
         name: 'Eric Jansson'
     })
 })
+
+
+app.get('/temp_project', (req, res) => {
+    res.render('iot', {
+        mydata: 'Coming soon'
+    })
+})
+
+app.get('/temp_project/getdata', (req, res) => {
+    getDbData().then((value) => {
+        res.send({
+            mydata: value
+        })
+    }).catch(error => {
+        res.send({
+            error : error
+        })
+    })
+    res.send({
+        mydata: newData
+    })
+})
+
+
 
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
