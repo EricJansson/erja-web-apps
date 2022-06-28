@@ -76,29 +76,6 @@ app.get('/weatherapp/help', (req, res) => {
 })
 
 
-app.get('/temp_project', (req, res) => {
-    res.render('iot', {
-        mydata: 'Coming soon'
-    })
-})
-
-app.get('/temp_project/getdata', (req, res) => {
-    getDbData().then((value) => {
-        res.send({
-            mydata: value
-        })
-    }).catch(error => {
-        res.send({
-            error : error
-        })
-    })
-    res.send({
-        mydata: newData
-    })
-})
-
-
-
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
         return res.send({
