@@ -2,6 +2,7 @@ const express = require('express')
 const chalk = require('chalk')
 const path = require('path')
 const hbs = require('hbs')
+const dotenv = require('dotenv')
 // const MongoClient = require('mongodb').MongoClient;
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
@@ -13,7 +14,14 @@ const ownedgames = require('./utils/steam/ownedgames')
 const read_my_lesson = require('./utils/learn_for_fun/lesson_util')
 const add_to_lesson = require('./utils/learn_for_fun/lesson_write')
 const getDbData = require('./utils/getCloudMongo')
+const TemperatureData = require('../models/Temperature')
 
+const connectDB = require('../config/db')
+
+// load config
+dotenv.config({ path: './config/config.env' })
+
+connectDB()
 
 const app = express();
 const port = process.env.PORT || 3000
@@ -103,6 +111,14 @@ app.get('/weather', (req, res) => {
     })
 })
 
+app.get('/getdata', (req, res) => {
+    TemperatureData.find()
+    .then((result) => {
+        res.send(result)
+    }).catch((err)=> {
+        console.error(err)
+    })
+})
 
 app.get('/steam/ownedgames', (req, res) => {
     if (!req.query.steamid) {
