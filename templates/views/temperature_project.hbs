@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" href="./images/steam/steam_logo.png">
+    <link rel="stylesheet" href="./css/temperature_project/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body>
+    <br>
+    <div id="allContent">
+        <div id="chartDate"></div>
+        <div>Day statistics</div>
+        <div id="chartCurDateAvgTemp"></div>
+        <div id="chartCurDateMaxTemp"></div>
+        <div id="chartCurDateMinTemp"></div>
+        <br>
+        <div>Records</div>
+        <div id="chartAllTimeMaxTemp"></div>
+        <div id="chartAllTimeMinTemp"></div>
+        <div id="myChart" style="width:100%;max-width:600px;height:500px;"></div>
+        <div>
+            <button onclick="chartChangeDay('previous')">Back</button>
+            <button onclick="chartChangeDay('next')">Next</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="./scripts/temperature_project/temp_script.js"></script>
+    <script src="./scripts/temperature_project/calculations.js"></script>
+</body>
+
+</html>

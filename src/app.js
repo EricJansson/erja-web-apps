@@ -10,6 +10,7 @@ const friendlist = require('./utils/steam/friendlist')
 const idconverter = require('./utils/steam/idconverter')
 const recentlyplayed = require('./utils/steam/recentlyplayed')
 const ownedgames = require('./utils/steam/ownedgames')
+const gather_data = require('./utils/temperature_project/gather_data')
 // Learn for fun
 const read_my_lesson = require('./utils/learn_for_fun/lesson_util')
 const add_to_lesson = require('./utils/learn_for_fun/lesson_write')
@@ -111,14 +112,26 @@ app.get('/weather', (req, res) => {
     })
 })
 
-app.get('/getdata', (req, res) => {
+
+app.get('/temperature_project/getdata', (req, res) => {
     TemperatureData.find()
     .then((result) => {
-        res.send(result)
+        res.send({
+            result
+        })
     }).catch((err)=> {
         console.error(err)
     })
 })
+ 
+
+app.get('/temperature_project', (req, res) => {
+    res.render('temperature_project', {
+        title: 'IoT: temperature project',
+        errormessage: 'Page not found.'
+    })
+})
+
 
 app.get('/steam/ownedgames', (req, res) => {
     if (!req.query.steamid) {
