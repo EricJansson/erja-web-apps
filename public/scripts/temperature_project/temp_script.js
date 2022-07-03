@@ -19,18 +19,22 @@ function initChart(array) {
     data = new google.visualization.DataTable();
     data.addColumn('datetime', 'Time of Day');
     data.addColumn('number', 'Temperature');
+    data.addColumn('number', 'Average day');
     data.addRows(
-        array 
+        array
     );
+    
     displayStats()
     options = {
+        title: 'Apartment Temperature Data',
+        subtitle: 'Dots represent temperature measurements',
         width: 900,
+        // backgroundColor: 'transparent',
         height: 500,
+        colors: ['#1554c7', '#4bc70c', '#ec8f6e', '#f3b49f', '#f6c7b6'],
         pointSize: 5,
+        dataOpacity: 0.5,
         legend: { position: 'none' },
-        chartArea: {
-            // width: '35%'
-        },
         hAxis: {
             title: 'Time of day',
             viewWindow: {
@@ -56,7 +60,7 @@ function initChart(array) {
             viewWindow: {
                 min: 0,
                 max: 40
-            },
+            }
         }
     };
     chart = new google.visualization.LineChart(document.getElementById('myChart'));
@@ -84,7 +88,7 @@ function chartChangeDay(next_or_previous_day) {
 }
 
 function displayStats() {
-    document.getElementById("chartDate").innerHTML = days[lowerTimeLimit.getDay()] + " " + lowerTimeLimit.getDate() + " " + months[lowerTimeLimit.getMonth()] + " " + lowerTimeLimit.getFullYear();
+    document.getElementById("chartDate").innerHTML = days[lowerTimeLimit.getDay()] + " " + lowerTimeLimit.getDate() + "<br>" + months[lowerTimeLimit.getMonth()] + " " + lowerTimeLimit.getFullYear();
     if (curDayAvgTemp > 0) {
         var avgMsg = Math.round(curDayAvgTemp * 10) / 10 + " C";
         var maxMsg = Math.round(mymax.temperature * 10) / 10 + " C";
@@ -94,9 +98,9 @@ function displayStats() {
         var maxMsg = "None";
         var minMsg = "None";
     }
-    document.getElementById("chartCurDateAvgTemp").innerHTML = "Day average temperature: " + avgMsg;
-    document.getElementById("chartCurDateMinTemp").innerHTML = "Min temperature: " + minMsg;
-    document.getElementById("chartCurDateMaxTemp").innerHTML = "Max temperature: " + maxMsg;
+    document.getElementById("chartCurDateAvgTemp").innerHTML = "Day Average: " + avgMsg;
+    document.getElementById("chartCurDateMinTemp").innerHTML = "Lowest: " + minMsg;
+    document.getElementById("chartCurDateMaxTemp").innerHTML = "Highest: " + maxMsg;
 }
 
 function googleChart() {
@@ -106,11 +110,13 @@ function googleChart() {
 }
 
 
+
 function createGoogleDataArray() {
     googleDataArray = []
+    googleDataArray2 = []
     for (let i = 0; i < allData.length; i++) {
         googleDataArray.push(
-            [new Date(allData[i].year, allData[i].month, allData[i].day, allData[i].hour, allData[i].min), allData[i].temperature]
+            [new Date(allData[i].year, allData[i].month, allData[i].day, allData[i].hour, allData[i].min), allData[i].temperature, null]
         )
     }
     return googleDataArray
@@ -189,8 +195,8 @@ function runCode() {
         
         globalMax = findArrayMinMaxTemp(allData, "max")
         globalMin = findArrayMinMaxTemp(allData, "min")
-        var globalMaxMsg = "Min temperature ever: (" + Math.round(globalMax.temperature * 10) / 10 + " C) at: " + globalMax.day + " " + months[globalMax.month] + ", " + globalMax.hour + ":" + globalMax.min;
-        var globalMinMsg = "Min temperature ever: (" + Math.round(globalMin.temperature * 10) / 10 + " C) at: " + globalMin.day + " " + months[globalMin.month] + ", " + globalMin.hour + ":" + globalMin.min;
+        var globalMaxMsg = "Highest: (" + Math.round(globalMax.temperature * 10) / 10 + " C) at: " + globalMax.day + " " + months[globalMax.month] + ", " + globalMax.hour + ":" + globalMax.min;
+        var globalMinMsg = "Lowest: (" + Math.round(globalMin.temperature * 10) / 10 + " C) at: " + globalMin.day + " " + months[globalMin.month] + ", " + globalMin.hour + ":" + globalMin.min;
         document.getElementById("chartAllTimeMinTemp").innerHTML = globalMinMsg;
         document.getElementById("chartAllTimeMaxTemp").innerHTML = globalMaxMsg;
         

@@ -6,28 +6,31 @@
     <link rel="stylesheet" href="./css/temperature_project/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>Apartment Temperature Project</title>
 </head>
 
 <body>
     <br>
     <div id="allContent">
         <div id="chartDate"></div>
-        <div>Day statistics</div>
-        <div id="chartCurDateAvgTemp"></div>
-        <div id="chartCurDateMaxTemp"></div>
-        <div id="chartCurDateMinTemp"></div>
         <br>
-        <div>Records</div>
-        <div id="chartAllTimeMaxTemp"></div>
-        <div id="chartAllTimeMinTemp"></div>
-        <div id="myChart" style="width:100%;max-width:600px;height:500px;"></div>
         <div>
-            <button onclick="chartChangeDay('previous')">Back</button>
-            <button onclick="chartChangeDay('next')">Next</button>
+            <button class="btns" onclick="chartChangeDay('previous')">Back</button>
+            <button class="btns" onclick="chartChangeDay('next')">Next</button>
+        </div>
+        <div id="myChart" style="width:100%;max-width:600px;height:500px;"></div>
+        <div id="statBlock">
+            <h3>Day Temperature statistics</h3>
+            <div id="chartCurDateAvgTemp"></div>
+            <div id="chartCurDateMaxTemp"></div>
+            <div id="chartCurDateMinTemp"></div>
+            <br>
+            <h3>Temperature Records</h3>
+            <div id="chartAllTimeMaxTemp"></div>
+            <div id="chartAllTimeMinTemp"></div>
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="./scripts/temperature_project/temp_script.js"></script>
     <script src="./scripts/temperature_project/calculations.js"></script>
 </body>
