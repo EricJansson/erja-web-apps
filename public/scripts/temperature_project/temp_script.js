@@ -87,8 +87,17 @@ function chartChangeDay(next_or_previous_day) {
     displayStats()
 }
 
+
+function displayDate() {
+    var day = days[lowerTimeLimit.getDay()]
+    var date = lowerTimeLimit.getDate()
+    var month = months[lowerTimeLimit.getMonth()]
+    var year = lowerTimeLimit.getFullYear()
+    document.getElementById("chartDate").innerHTML = day + " " + date + "<br>" + month + " " + year;
+}
+
 function displayStats() {
-    document.getElementById("chartDate").innerHTML = days[lowerTimeLimit.getDay()] + " " + lowerTimeLimit.getDate() + "<br>" + months[lowerTimeLimit.getMonth()] + " " + lowerTimeLimit.getFullYear();
+    displayDate()
     if (curDayAvgTemp > 0) {
         var avgMsg = Math.round(curDayAvgTemp * 10) / 10 + " C";
         var maxMsg = Math.round(mymax.temperature * 10) / 10 + " C";
@@ -171,6 +180,7 @@ function getDataFunc() {
                     console.log(dataArray)
                     allData = dataArray
                     dataLoaded = true
+                    runCode()
                 })
                 .catch((err) => {
                     console.error(err)
@@ -184,34 +194,44 @@ function getDataFunc() {
 
 
 function runCode() {
-    if (!dataLoaded) {
-        setTimeout(() => {
-            console.log("Trying again...")
-            runCode()
-        }, 500);
-    } else {
-        console.log("Runing program!")
-        googleChart()
-        
-        globalMax = findArrayMinMaxTemp(allData, "max")
-        globalMin = findArrayMinMaxTemp(allData, "min")
-        var globalMaxMsg = "Highest: (" + Math.round(globalMax.temperature * 10) / 10 + " C) at: " + globalMax.day + " " + months[globalMax.month] + ", " + globalMax.hour + ":" + globalMax.min;
-        var globalMinMsg = "Lowest: (" + Math.round(globalMin.temperature * 10) / 10 + " C) at: " + globalMin.day + " " + months[globalMin.month] + ", " + globalMin.hour + ":" + globalMin.min;
-        document.getElementById("chartAllTimeMinTemp").innerHTML = globalMinMsg;
-        document.getElementById("chartAllTimeMaxTemp").innerHTML = globalMaxMsg;
-        
-        getCurDayArr(allData)
-        dayAvgArray = []
-        curDayAvgTemp = calcAvgDayTemp();
-        
-        mymax = findArrayMinMaxTemp(curDayArray, "max")
-        mymin = findArrayMinMaxTemp(curDayArray, "min")
-        displayStats()
-    }
+    console.log("Runing program!")
+    googleChart()
+    
+    globalMax = findArrayMinMaxTemp(allData, "max")
+    globalMin = findArrayMinMaxTemp(allData, "min")
+    var globalMaxMsg = "Highest: (" + Math.round(globalMax.temperature * 10) / 10 + " C) at: " + globalMax.day + " " + months[globalMax.month] + ", " + globalMax.hour + ":" + globalMax.min;
+    var globalMinMsg = "Lowest: (" + Math.round(globalMin.temperature * 10) / 10 + " C) at: " + globalMin.day + " " + months[globalMin.month] + ", " + globalMin.hour + ":" + globalMin.min;
+    document.getElementById("chartAllTimeMinTemp").innerHTML = globalMinMsg;
+    document.getElementById("chartAllTimeMaxTemp").innerHTML = globalMaxMsg;
+    
+    getCurDayArr(allData)
+    dayAvgArray = []
+    curDayAvgTemp = calcAvgDayTemp();
+    
+    mymax = findArrayMinMaxTemp(curDayArray, "max")
+    mymin = findArrayMinMaxTemp(curDayArray, "min")
+    displayStats()
 }
 
+
+function websiteOnload() {
+    var day = days[curTime.getDay()]
+    var date = curTime.getDate()
+    var month = months[curTime.getMonth()]
+    var year = curTime.getFullYear()
+    document.getElementById("chartDate").innerHTML = day + " " + date + "<br>" + month + " " + year;
+    document.getElementById("chartCurDateAvgTemp").innerHTML = "Day Average: Loading...";
+    document.getElementById("chartCurDateMinTemp").innerHTML = "Lowest: Loading...";
+    document.getElementById("chartCurDateMaxTemp").innerHTML = "Highest: Loading...";
+    document.getElementById("chartAllTimeMinTemp").innerHTML = "<br>";
+    document.getElementById("chartAllTimeMaxTemp").innerHTML = "<br>";
+    google.charts.load('current', { packages: ['corechart'] });
+    google.charts.setOnLoadCallback(() => { initChart([]) });
+}
+
+websiteOnload();
 getDataFunc();
-runCode()
+
 
 
 
