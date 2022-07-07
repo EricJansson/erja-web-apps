@@ -133,6 +133,29 @@ app.get('/temperature_project', (req, res) => {
 })
 
 
+app.get('/dragon-warrior-monsters-2', (req, res) => {
+    res.render('dwm', {
+        title: 'Home page',
+        body: 'Select a monster to start!',
+        author: 'Eric Jansson'
+    })
+})
+
+app.get('/dragon-warrior-monsters-2/data', (req, res) => {
+    if (!req.query.monster) {
+        return res.send({
+            error: "You must provide a monster query!",
+        })
+    }
+    res.send({
+        monsterToSelect: req.query.monster,
+        title: 'Home page',
+        body: 'Select a monster to start!',
+        author: 'Eric Jansson'
+    })
+})
+
+
 app.get('/steam/ownedgames', (req, res) => {
     if (!req.query.steamid) {
         return res.send({

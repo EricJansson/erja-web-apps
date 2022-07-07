@@ -1,0 +1,120 @@
+
+/* Hover over monster to light up Main-navbar */
+.world-monster-hover {
+    background-color: rgb(179, 199, 0);
+}
+
+
+#mainWorlds {
+    display: none;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px 55px 10px 55px;
+    padding-bottom: 60px;
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
+
+#worldNav-bar {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.worldNav-bar-item {
+    padding: 10px 42px 10px 42px;
+    border: 1px solid black;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+#worldMapAndDataBlock-oasis, #worldMapAndDataBlock-pirate, #worldMapAndDataBlock-ice, #worldMapAndDataBlock-sky, #worldMapAndDataBlock-limbo, #worldMapAndDataBlock-elf, #worldMapAndDataBlock-traveler,
+#worldMapAndDataBlock {
+    display: none;
+    grid-template-columns: auto auto;
+}
+
+#worldMapAndDataBlock-oasis {
+    display: grid;
+}
+
+#worldMap-oasis, #worldMap-pirate, #worldMap-ice, #worldMap-sky, #worldMap-limbo, #worldMap-elf, #worldMap-traveler,
+#worldMap {
+    border: 1px solid black;
+    margin: 9px;
+    width: 640px;
+    height: 576px;
+    background-size: contain;
+}
+
+#worldMap-oasis {background-image: url("/images/dwm/oasisWorld.png");}
+#worldMap-pirate {background-image: url("/images/dwm/pirateWorld.png");}
+#worldMap-ice {background-image: url("/images/dwm/iceWorld.png");}
+#worldMap-sky {background-image: url("/images/dwm/skyWorld.png");}
+#worldMap-limbo {background-image: url("/images/dwm/limboWorld.png");}
+#worldMap-elf {background-image: url("/images/dwm/elfWorld.png");}
+#worldMap-traveler {background-image: url("/images/dwm/travelerWorld.png");}
+
+
+
+
+
+
+
+
+.worldData {
+    width: 200px;
+    padding: 30px;
+    height: 516px;
+    border: 10px solid rgb(155, 155, 155);
+    display: flex;
+    flex-direction: column;
+    /*
+    grid-template-columns: auto;
+    grid-template-rows: min-content;
+    gap: 10px;
+    */
+}
+
+
+
+#worldMapGrid-oasis,
+#worldMapGrid-pirate,
+#worldMapGrid-ice,
+#worldMapGrid-sky,
+#worldMapGrid-limbo,
+#worldMapGrid-elf,
+#worldMapGrid-traveler {
+    top: -10px;
+    left: -10px;
+    display: grid;
+    position: relative;
+    border: 10px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 640px;
+    height: 576px;
+}
+
+
+.worldMaterials {
+    display: list-item;
+    width: fit-content;
+    margin-top: 8px;
+    height: 2.6vh;
+}
+
+.worldDataTopHeader, .worldwaterList, .worldsNoMonsters {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.worldwaterList {
+    margin-top: 20px;
+}
+
+

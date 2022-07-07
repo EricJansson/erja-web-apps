@@ -1,0 +1,163 @@
+
+
+
+
+#mainSpells {
+    padding: 20px;
+    padding-bottom: 50px;
+    width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+    border: 1px solid black;
+    background-color: white;
+    display: none;
+}
+
+#spellsNavBar {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.spellsNavBar_Item {
+    margin-right: -7px;
+    padding: 5px 12px 5px 12px;
+    border: 2px solid black;
+    display: inline-flex;
+}
+
+.spells_learn_onerow:hover, .spellsNavBar_Item:hover, #spells_learn_searchbox:hover {
+    background-color: rgb(134, 134, 134);
+    cursor: pointer;
+}
+
+#spells_info, #spells_learn, #spells_descriptionList {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+}
+
+#spells_info {
+    height: 540px;
+    width: 500px;
+    display: none;
+}
+
+#spells_learn {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto;
+    border: 3px solid black;
+    border-top: none;
+    width: 614px;
+    margin-bottom: 60px;
+}
+
+
+
+#spells_learn_TOProw {
+    cursor: initial;
+    background-color: white;
+    position: sticky;
+    top: 10px;
+}
+
+.spells_learnTOPname, .spells_learnTOPstat, .spells_learnTOPfromskill {
+    border: 3px solid black;
+    border-left: none;
+    padding: 8px 0px 8px 0px;
+    text-align: center;
+    height: 20px;
+}
+
+.spells_learnTOPname, .spells_learn_name, .spells_learnTOPfromskill, .spells_learn_fromskill {
+    width: 110px;
+}
+
+.spells_learnTOPstat {
+    padding: 8px 4px 8px 4px;
+    width: 42px;
+}
+
+.spells_learnTOPfromskill {
+    border-right: none;    
+}
+
+
+.spells_learn_name, .spells_learn_stats, .spells_learn_fromskill {
+    border-right: 3px dotted black;
+    border-left: none;
+    padding: 8px 0px 8px 0px;
+    height: 20px;
+} 
+
+
+.spells_learn_name, .spells_learnTOPname, .spells_learn_fromskill, .spells_learnTOPfromskill {
+    padding: 8px 0px 8px 10px;
+}
+
+
+
+.spells_learn_name {
+    text-align: left;
+}
+
+.spells_learn_stats {
+    width: 42px;
+    padding-right: 8px;
+    text-align: right;
+}
+
+.spells_learn_fromskill {
+    text-align: left;
+    border-right: none;
+}
+
+.spells_learn_space {
+    grid-column: span 9;
+}
+
+.spells_learn_inputName, .spells_learn_inputfromskill {
+    width: 90px;
+}
+
+.spells_learn_input {
+    width: 26px;
+}
+
+
+#spells_learn_searchbox {
+    background-image: url("/images/dwm/magnifyingGlass.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 1px;
+    margin-top: 50px;
+    margin-left: -28px;
+    height: 22px;
+    width: 22px;
+    border: 3px solid black;
+    border-right: none;
+    position: absolute;
+}
+
+
+.spells_learn_emptyrow, .spells_learn_onerow, #learn_searchfield {
+    grid-column: span 9;
+    display: inline-flex;
+}
+
+#learn_searchfield {
+    background-color: white;
+    cursor: initial;
+    /*
+    display: none;
+    */
+}
+
+#spells_descriptionList {
+    height: 540px;
+    width: 500px;
+    display: none;
+}
+

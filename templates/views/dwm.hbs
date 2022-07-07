@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DWM2 Breeding Guide</title>
+  <link rel="stylesheet" type="text/css" href="./css/dwm/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/dwm/style_breeding.css">
+  <link rel="stylesheet" type="text/css" href="./css/dwm/style_families.css">
+  <link rel="stylesheet" type="text/css" href="./css/dwm/style_spells.css">
+  <link rel="stylesheet" type="text/css" href="./css/dwm/style_worlds.css">
+  <link rel="icon" href="./images/dwm/keyIcon.png" type="image/gif" sizes="16x16">
+</head>
+<body>
+
+<h1 id="headline">DRAGON WARRIOR MONSTERS 2: COBI'S JOURNEY</h1>
+<div id="nav-bar">
+    <div class="nav-bar-subs" onclick="searchHide()" id="nav-bar-search">Search</div>
+    <div class="nav-bar-subs nav-bar-active" onclick="navBarSelect('breeding')" id="nav-bar-breeding">Breeding</div>
+    <div class="nav-bar-subs" onclick="navBarSelect('families')" id="nav-bar-families">Families</div>
+    <div class="nav-bar-subs" onclick="navBarSelect('spells')" id="nav-bar-spells">Spells</div>
+    <div class="nav-bar-subs" onclick="navBarSelect('worlds')" id="nav-bar-worlds">Worlds</div>
+</div>
+
+
+<div id="searchWindow">
+    <div id="searchBackground"></div>
+    <div id="searchBlock">
+        <a>Search monster:</a>
+        <input id="searchInput">
+        <div id="result"><br></div>
+    </div>
+</div>
+
+<div id="mainMonsterBreeding">
+    <div id="sidebarFoundLocation">
+        <div id="foundDetails">Overworld</div>
+        <div id="foundMaps">
+            <div class="breedMapNav" id="bmn-oasis">
+                <div class="bms-selected" id="bmNavSub-W1-0">Oasis</div><br>
+                <div onclick="breedMapNavSelect(1, 0)" class="bms-selected" id="bmNavSub-W1-1">Overworld</div>
+                <div onclick="breedMapNavSelect(1, 1)" class="breedMapSubs" id="bmNavSub-W1-2">Sewers</div>
+            </div>
+            <div class="breedMapNav" id="bmn-pirate">
+                <div class="bms-selected" id="bmNavSub-W2-0">Pirate</div><br>
+                <div onclick="breedMapNavSelect(2, 0)" class="bms-selected" id="bmNavSub-W2-1">Overworld</div>
+                <div onclick="breedMapNavSelect(2, 1)" class="breedMapSubs" id="bmNavSub-W2-2">HoodSquid Cave</div>
+                <div onclick="breedMapNavSelect(2, 2)" class="breedMapSubs" id="bmNavSub-W2-3">MoonRock Tower</div>
+                <div onclick="breedMapNavSelect(2, 3)" class="breedMapSubs" id="bmNavSub-W2-4">Volcano</div>
+            </div>
+            <div class="breedMapNav" id="bmn-ice">
+                <div class="bms-selected" id="bmNavSub-W3-0">Ice</div><br>
+                <div onclick="breedMapNavSelect(3, 0)" class="bms-selected" id="bmNavSub-W3-1">Overworld</div>
+                <div onclick="breedMapNavSelect(3, 1)" class="breedMapSubs" id="bmNavSub-W3-2">Mines</div>
+                <div onclick="breedMapNavSelect(3, 2)" class="breedMapSubs" id="bmNavSub-W3-3">Spooky Forest</div>
+                <div onclick="breedMapNavSelect(3, 3)" class="breedMapSubs" id="bmNavSub-W3-4">Sleepherb Mountain</div>
+                <div onclick="breedMapNavSelect(3, 4)" class="breedMapSubs" id="bmNavSub-W3-5">Ice Tower</div>
+            </div>
+            <div class="breedMapNav" id="bmn-sky">
+                <div class="bms-selected" id="bmNavSub-W4-0">Sky</div><br>
+                <div onclick="breedMapNavSelect(4, 0)" class="bms-selected" id="bmNavSub-W4-1">Overworld</div>
+                <div onclick="breedMapNavSelect(4, 1)" class="breedMapSubs" id="bmNavSub-W4-2">Fhunt Tower</div>
+                <div onclick="breedMapNavSelect(4, 2)" class="breedMapSubs" id="bmNavSub-W4-3">Darcks castle</div><br>
+                <div onclick="breedMapNavSelect(4, 3)" class="breedMapSubs" id="bmNavSub-W4-4">Heaven Armor Tower</div>
+                <div onclick="breedMapNavSelect(4, 4)" class="breedMapSubs" id="bmNavSub-W4-5">Heaven Sword Castle</div>
+                <div onclick="breedMapNavSelect(4, 5)" class="breedMapSubs" id="bmNavSub-W4-6">Heaven Helm Cave</div>
+            </div>
+            <div class="breedMapNav" id="bmn-limbo">
+                <div class="bms-selected" id="bmNavSub-W5-0">Limbo</div><br>
+                <div onclick="breedMapNavSelect(5, 0)" class="bms-selected" id="bmNavSub-W5-1">Overworld</div>
+                <div onclick="breedMapNavSelect(5, 1)" class="breedMapSubs" id="bmNavSub-W5-2">Darcks Castle</div>
+            </div>
+            <div class="breedMapNav" id="bmn-elf">
+                <div class="bms-selected" id="bmNavSub-W6-0">Elf</div><br>
+                <div onclick="breedMapNavSelect(6, 0)" class="bms-selected" id="bmNavSub-W6-1">Overworld</div>
+                <div onclick="breedMapNavSelect(6, 1)" class="breedMapSubs" id="bmNavSub-W6-2">Eastern Mountain</div>
+            </div>
+            <div class="breedMapNav" id="bmn-traveler">
+                <div class="bms-selected" id="bmNavSub-W7-0">Traveler</div><br>
+                <div onclick="breedMapNavSelect(7, 0)" class="bms-selected" id="bmNavSub-W7-1">Overworld</div>
+                <div onclick="breedMapNavSelect(7, 1)" class="breedMapSubs" id="bmNavSub-W7-2">Tower</div>
+            </div>
+            <div id="mapSelected"><div id="fullMapGrid"></div></div>
+            <div id="sub-mapSelected"><div id="subMapGrid"></div></div>
+        </div>
+    </div>
+
+    <div id="monsterBreeding">
+        <div id="monsterBox">
+            <div id="monsterName">LOADING...</div>
+            <a>Skills:</a>
+            <div id="monsterSkills">
+                LOADING...
+            </div><br>
+            <div id="monster-family-icon"></div>
+            <div id="monster-family-iconText">LOADING...</div>
+        </div>
+        <div id="foundBox">
+            <a>Located:</a>
+            <div id="foundLocation">LOADING...</div>
+            <div id="doesLocationExist">
+                <a>Area:</a>
+                <div id="foundLocationDetails">LOADING...</div>
+                <button onclick="toggleMap()" id="mapToggleBtn">SHOW MAP ></button>
+            </div>
+        </div>
+        <div id="monsterCombinationBox">
+            <div id="monster-sort-title">
+                <a id="monster-base-title">Base</a>
+                <a id="monster-mate-title">Mate</a>
+            </div>
+
+            <div id="monster-recipes-box">
+                    <div class="monster-base" id="monster-base-1"><a>LOADING...</a></div>
+                    <div class="monster-mate" id="monster-mate-1"><a>LOADING...</a></div>
+                
+                    <div class="monster-base" id="monster-base-2"></div>
+                    <div class="monster-mate" id="monster-mate-2"></div>
+                
+                    <div class="monster-base" id="monster-base-3"></div>
+                    <div class="monster-mate" id="monster-mate-3"></div>
+                
+                    <div class="monster-base" id="monster-base-4"></div>
+                    <div class="monster-mate" id="monster-mate-4"></div>
+                
+                    <div class="monster-base" id="monster-base-5"></div>
+                    <div class="monster-mate" id="monster-mate-5"></div>
+                
+                    <div class="monster-base" id="monster-base-6"></div>
+                    <div class="monster-mate" id="monster-mate-6"></div>
+            </div>
+
+            <div id="monster-req-box">
+                <div id="monster-req-name">Required to make:</div>
+                <div id="monster-req-list">LOADING...</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="mainFamilies">
+    <div id="familyList">
+        <div id="familyList-column1">LOADING...</div>
+        <div id="familyList-column2">LOADING...</div>
+        <div id="familyList-column3">LOADING...</div>
+        <div id="familyList-column4">LOADING...</div>
+        <div id="familyList-column5">LOADING...</div>
+        <div id="familyList-column6">LOADING...</div>
+    </div>
+    <div id="famKeyBox">= Monster can be found in the wild.</div>
+    <div id="familyClickList">
+        <div class="family-row">
+            <div id="fam-click-slime" class="fam-click-boxes"><div id="fam-slime"></div> <div class="fam-text">Slime</div></div>
+            <div id="fam-click-dragon"><div id="fam-dragon"></div> <div class="fam-text">Dragon</div></div>
+            <div id="fam-click-beast"><div id="fam-beast"></div> <div class="fam-text">Beast</div></div>
+            <div id="fam-click-bird"><div id="fam-bird"></div> <div class="fam-text">Bird</div></div>
+        </div>
+        <div class="family-row">
+            <div id="fam-click-plant"><div id="fam-plant"></div> <div class="fam-text">Plant</div></div>
+            <div id="fam-click-bug"><div id="fam-bug"></div> <div class="fam-text">Bug</div></div>
+            <div id="fam-click-devil"><div id="fam-devil"></div> <div class="fam-text">Devil</div></div>
+            <div id="fam-click-zombie"><div id="fam-zombie"></div> <div class="fam-text">Zombie</div></div>
+        </div>
+        <div class="family-row">
+            <div id="fam-click-material"><div id="fam-material"></div> <div class="fam-text">Material</div></div>
+            <div id="fam-click-water"><div id="fam-water"></div> <div class="fam-text">Water</div></div>
+            <div id="fam-click-boss"><div id="fam-boss"></div> <div class="fam-text">Boss</div></div>
+        </div>
+    </div> 
+</div>
+
+<div id="mainSpells">
+    <div id="spellsNavBar">
+        <div class="spellsNavBar_Item">Info</div>
+        <div class="spellsNavBar_Item">Learn</div>
+        <div class="spellsNavBar_Item">Description List</div>
+    </div>
+    <div id="spells_info">
+        
+    </div>
+    <div id="spells_learn">
+        
+
+        <div id="spells_learn_TOProw" class="sticky spells_learn_onerow">
+            <div class="spells_learnTOPname">Skill</div>
+            <div class="spells_learnTOPstat">LV</div>
+            <div class="spells_learnTOPstat">HP</div>
+            <div class="spells_learnTOPstat">MP</div>
+            <div class="spells_learnTOPstat">ATK</div>
+            <div class="spells_learnTOPstat">DEF</div>
+            <div class="spells_learnTOPstat">AGL</div>
+            <div class="spells_learnTOPstat">INT</div>
+            <div class="spells_learnTOPfromskill">from skill</div>
+        </div>
+        
+        <div id="spells_learn_searchbox"></div>
+        <div id="learn_searchfield" class="spells_learn_onerow">
+            <div class="spells_learn_name"><input id="spellslearninputname" class="spells_learn_inputName" type="text"></div>
+            <div class="spells_learn_stats"><input id="spells_learn_input_lv" class="spells_learn_input" type="text"></div>
+            <div class="spells_learn_stats"><input id="spells_learn_input_hp" class="spells_learn_input" type="text"></div>
+            <div class="spells_learn_stats"><input id="spells_learn_input_mp" class="spells_learn_input" type="text"></div>
+            <div class="spells_learn_stats"><input id="spells_learn_input_atk" class="spells_learn_input" type="text"></div>
+            <div class="spells_learn_stats"><input id="spells_learn_input_def" class="spells_learn_input" type="text"></div>
+            <div class="spells_learn_stats"><input id="spells_learn_input_agl" class="spells_learn_input" type="text"></div>
+            <div class="spells_learn_stats"><input id="spells_learn_input_int" class="spells_learn_input" type="text"></div>
+            <div class="spells_learn_fromskill"><input id="spells_learn_input_fromskill" class="spells_learn_inputfromskill" type="text"></div>
+        </div>
+        <div id="spells_learn_list"></div>
+
+    </div>
+    <div id="spells_descriptionList">
+        
+    </div>
+</div>
+
+<div id="mainWorlds">
+    <div id="worldNav-bar">
+        <div class="worldNav-bar-item nav-bar-active" onclick="worldNavbar('Oasis')" id="worldNav-Oasis">Oasis</div>
+        <div class="worldNav-bar-item" onclick="worldNavbar('Pirate')" id="worldNav-Pirate">Pirate</div>
+        <div class="worldNav-bar-item" onclick="worldNavbar('Ice')" id="worldNav-Ice">Ice</div>
+        <div class="worldNav-bar-item" onclick="worldNavbar('Sky')" id="worldNav-Sky">Sky</div>
+        <div class="worldNav-bar-item" onclick="worldNavbar('Limbo')" id="worldNav-Limbo">Limbo</div>
+        <div class="worldNav-bar-item" onclick="worldNavbar('Elf')" id="worldNav-Elf">Elf</div>
+        <div class="worldNav-bar-item" onclick="worldNavbar('Traveler')" id="worldNav-Traveler">Traveler</div>
+    </div>
+</div>
+
+<script src="./scripts/dwm/script.js"></script>
+<script src="./scripts/dwm/spells_script.js"></script>
+<script src="./scripts/dwm/worlds_script.js"></script>
+<script src="./scripts/dwm/launch.js"></script>
+</body>
+</html> 

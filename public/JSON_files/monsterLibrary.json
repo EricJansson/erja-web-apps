@@ -1,0 +1,4760 @@
+
+{
+
+
+    "oldM": [
+
+        "1-26 Slime, 27-57 Dragon, 58-89 Beast, 90-116 Bird, 117-143 Plant, 144-169 Bug, 170-199 Devil, 200-226 Zombie, 227-258 Material, 259-290 Water, 291-312 Boss", 
+        "DrakSlime", "SpotSlime", "WingSlime", "TreeSlime", "Snaily", "SlimeNite", "Babble", "BoxSlime", "PearlGel", "Slime", "Healer", "FangSlime", "RockSlime", "SlimeBorg", "Slabbit", "KingSlime", "Metaly", "Metabble", "SpotKing", "TropicGel", "MimeSlime", "HaloSlime", "MetalKing", "GoldSlime", "GranSlime", "WonderEgg",
+        "DragonKid", "Tortragon", "Pteranod", "Gasgon", "FairyDrak", "LizardMan", "Poisongon", "Swordgon", "Drygon", "Dragon", "MiniDrak", "MadDragon", "Rayburn", "Chamelgon", "LizardFly", "Andreal", "KingCobra", "Vampirus", "SnakeBat", "Spikerous", "GreatDrak", "Crestpent", "WingSnake", "Coatol", "Orochi", "BattleRex", "SkyDragon", "Serpentia", "Divinegon", "Orligon", "GigaDraco",
+        "Tonguella", "Almiraj", "Catfly", "PillowRat", "Saccer", "GulpBeast", "Skullroo", "WindBeast", "Beavern", "Antbear", "SuperTen", "IronTurt", "Mommonja", "HammerMan", "Grizzly", "Yeti", "ArrowDog", "NoctoKing", "BeastNite", "MadGopher", "FairyRat", "Unicorn", "Goategon", "WildApe", "Trumpeter", "KingLeo", "DarkHorn", "MadCat", "BigEye", "Gorago", "CatMage", "Dumbira",
+        "Picky", "Wyvern", "BullBird", "FloraJay", "DuckKite", "MadPecker", "MadRaven", "MistyWing", "AquaHawk", "Dracky", "KiteHawk", "BigRoost", "StubBird", "LandOwl", "MadGoose", "MadCondor", "Emyu", "Blizzardy", "Phoenix", "ZapBird", "Garudian", "WhipBird", "FunkyBird", "RainHawk", "Azurile", "Shantak", "CragDevil",
+        "MadPlant", "FireWeed", "FloraMan", "WingTree", "CactiBall", "Gulpple", "Toadstool", "AmberWeed", "Slurperon", "StubSuck", "Oniono", "DanceVegi", "TreeBoy", "Devipine", "FaceTree", "HerbMan", "BeanMan", "EvilSeed", "ManEater", "Snapper", "GhosTree", "Rosevine", "Egdracil", "Warubou", "Watabou", "Eggplaton", "FooHero",
+        "GiantSlug", "Catapila", "Gophecada", "Butterfly", "WeedBug", "GiantWorm", "Lipsy", "StagBug", "Pyuro", "ArmyAnt", "GoHopper", "TailEater", "ArmorPede", "Eyeder", "GiantMoth", "Droll", "ArmyCrab", "MadHornet", "Belzebub", "WarMantis", "HornBeet", "Sickler", "Armorpion", "Digster", "Skularach", "MultiEyes",
+        "Pixy", "MedusaEye", "AgDevil", "Demonite", "DarkEye", "EyeBall", "SkulRider", "EvilBeast", "Bubblemon", "1EyeClown", "Gremlin", "ArcDemon", "Lionex", "GoatHorn", "Orc", "Ogre", "GateGuard", "ChopClown", "BossTroll", "Grendal", "Akubar", "MadKnight", "EvilWell", "Gigantes", "Centasaur", "EvilArmor", "Jamirus", "Durran", "Titanis", "LampGenie", 
+        "Spooky", "Skullgon", "Putrepup", "RotRaven", "Mummy", "DarkCrab", "DeadNite", "Shadow", "Skulpent", "Hork", "Mudron", "NiteWhip", "WindMerge", "Reaper", "Inverzon", "FoxFire", "CaptDead", "DeadNoble", "WhiteKing", "BoneSlave", "Skeletor", "Servant", "Lazamanus", "Copycat", "MadSpirit", "PomPomBom", "Niterich",
+        "JewelBag", "EvilWand", "MadCandle", "CoilBird", "Facer", "SpikyBoy", "MadMirror", "RogueNite", "Puppetor", "Goopi", "Voodoll", "MetalDrak", "Balzak", "SabreMan", "CurseLamp", "Brushead", "Roboster1", "Roboster2", "EvilPot", "Gismo", "LavaMan", "IceMan", "Mimic", "Exaucers", "MudDoll", "Golem", "StoneMan", "BombCrag", "GoldGolem", "DarkMate", "ProtoMech", "CloudKing",
+        "Petiteel", "Moray", "WalrusMan", "RayGigas", "Anemon", "Aquarella", "Merman", "Octokid", "PutreFish", "Octoreach", "Angleron", "FishRider", "RushFish", "Gamanian", "Clawster", "CancerMan", "RogueWave", "Scallopa", "SeaHorse", "HoodSquid", "MerTiger", "AxeShark", "Octogon", "KingSquid", "Digong", "WhaleMage", "Aquadon", "Octoraid", "Grakos", "Poseidon", "Pumpoise", "Starfish",
+        "DracoLord1", "DracoLord2", "LordDraco", "Hargon", "Sidoh", "Genosidoh", "Baramos", "Zoma", "AsuraZoma", "Pizzaro", "PsychoPiz", "Esterk", "Mirudraas1", "Mirudraas2", "Mudou", "DeathMore1", "DeathMore2", "DeathMore3", "DarkDrium", "Orgodemir1", "Orgodemir2", "Darck"
+    ],
+
+
+
+    "allM": [
+        "1-27 Slime, 27-58 Dragon, 58-90 Beast, 90-117 Bird, 117-144 Plant, 144-170 Bug, 170-200 Devil, 200-227 Zombie, 227-259 Material, 259-291 Water, 291-313 Boss", 
+        "drakslime", "spotslime", "wingslime", "treeslime", "snaily", "slimenite", "babble", "boxslime", "pearlgel", "slime", "healer", "fangslime", "rockslime", "slimeborg", "slabbit", "kingslime", "metaly", "metabble", "spotking", "tropicgel", "mimeslime", "haloslime", "metalking", "goldslime", "granslime", "wonderegg", 
+        "dragonkid", "tortragon", "pteranod", "gasgon", "fairydrak", "lizardman", "poisongon", "swordgon", "drygon", "dragon", "minidrak", "maddragon", "rayburn", "chamelgon", "lizardfly", "andreal", "kingcobra", "vampirus", "snakebat", "spikerous", "greatdrak", "crestpent", "wingsnake", "coatol", "orochi", "battlerex", "skydragon", "serpentia", "divinegon", "orligon", "gigadraco",
+        "tonguella", "almiraj", "catfly", "pillowrat", "saccer", "gulpbeast", "skullroo", "windbeast", "beavern", "antbear", "superten", "ironturt", "mommonja", "hammerman", "grizzly", "yeti", "arrowdog", "noctoking", "beastnite", "madgopher", "fairyrat", "unicorn", "goategon", "wildape", "trumpeter", "kingleo", "darkhorn", "madcat", "bigeye", "gorago", "catmage", "dumbira",
+        "picky", "wyvern", "bullbird", "florajay", "duckkite", "madpecker", "madraven", "mistywing", "aquahawk", "dracky", "kitehawk", "bigroost", "stubbird", "landowl", "madgoose", "madcondor", "emyu", "blizzardy", "phoenix", "zapbird", "garudian", "whipbird", "funkybird", "rainhawk", "azurile", "shantak", "cragdevil",
+        "madplant", "fireweed", "floraman", "wingtree", "cactiball", "gulpple", "toadstool", "amberweed", "slurperon", "stubsuck", "oniono", "dancevegi", "treeboy", "devipine", "facetree", "herbman", "beanman", "evilseed", "maneater", "snapper", "ghostree", "rosevine", "egdracil", "warubou", "watabou", "eggplaton", "foohero",
+        "giantslug", "catapila", "gophecada", "butterfly", "weedbug", "giantworm", "lipsy", "stagbug", "pyuro", "armyant", "gohopper", "taileater", "armorpede", "eyeder", "giantmoth", "droll", "armycrab", "madhornet", "belzebub", "warmantis", "hornbeet", "sickler", "armorpion", "digster", "skularach", "multieyes",
+        "pixy", "medusaeye", "agdevil", "demonite", "darkeye", "eyeball", "skulrider", "evilbeast", "bubblemon", "1eyeclown", "gremlin", "arcdemon", "lionex", "goathorn", "orc", "ogre", "gateguard", "chopclown", "bosstroll", "grendal", "akubar", "madknight", "evilwell", "gigantes", "centasaur", "evilarmor", "jamirus", "durran", "titanis", "lampgenie",
+        "spooky", "skullgon", "putrepup", "rotraven", "mummy", "darkcrab", "deadnite", "shadow", "skulpent", "hork", "mudron", "nitewhip", "windmerge", "reaper", "inverzon", "foxfire", "captdead", "deadnoble", "whiteking", "boneslave", "skeletor", "servant", "lazamanus", "copycat", "madspirit", "pompombom", "niterich",
+        "jewelbag", "evilwand", "madcandle", "coilbird", "facer", "spikyboy", "madmirror", "roguenite", "puppetor", "goopi", "voodoll", "metaldrak", "balzak", "sabreman", "curselamp", "brushead", "roboster1", "roboster2", "evilpot", "gismo", "lavaman", "iceman", "mimic", "exaucers", "muddoll", "golem", "stoneman", "bombcrag", "goldgolem", "darkmate", "protomech", "cloudking",
+        "petiteel", "moray", "walrusman", "raygigas", "anemon", "aquarella", "merman", "octokid", "putrefish", "octoreach", "angleron", "fishrider", "rushfish", "gamanian", "clawster", "cancerman", "roguewave", "scallopa", "seahorse", "hoodsquid", "mertiger", "axeshark", "octogon", "kingsquid", "digong", "whalemage", "aquadon", "octoraid", "grakos", "poseidon", "pumpoise", "starfish",
+        "dracolord1", "dracolord2", "lorddraco", "hargon", "sidoh", "genosidoh", "baramos", "zoma", "asurazoma", "pizzaro", "psychopiz", "esterk", "mirudraas1", "mirudraas2", "mudou", "deathmore1", "deathmore2", "deathmore3", "darkdrium", "orgodemir1", "orgodemir2", "darck",
+        "x"
+    ],
+
+
+        "babble": {
+            "name": "Babble",
+            "fam": "Slime",
+            "skills": ["Surround", "PoisonHit", "EerieLite"],
+            "found": ["Sky", "Heaven Sword Castle F1"],
+            "base": [
+                ["SLIMEFM"]
+            ],
+            "mate": [
+                ["ZOMBIEFM", "GiantMoth", "Poisongon"]
+            ],
+            "reqFor": ["KingCobra"]
+        },
+
+        "boxslime": {
+            "name": "BoxSlime",
+            "fam": "Slime",
+            "skills": ["Blaze", "Upper", "Ramming"],
+            "found": ["Sky", "Heaven Helm Cave F1"],
+            "base": [
+                ["SLIMEFM"]
+            ],
+            "mate": [
+                ["MATERIALFM"]
+            ],
+            "reqFor": ["Mudron", "Mimic"]
+        },
+
+        "drakslime": {
+            "name": "DrakSlime",
+            "fam": "Slime",
+            "skills": ["BeDragon", "FireAir", "SuckAir"],
+            "found": ["none"],
+            "base": [
+                ["SLIMEFM"]
+            ],
+            "mate": [
+                ["DRAGONFM"]
+            ],
+            "reqFor": ["SlimeBorg", "Goategon", "Phoenix", "Gismo", "Voodoll"]
+        },
+
+        "fangslime": {
+            "name": "FangSlime",
+            "fam": "Slime",
+            "skills": ["CallHelp", "ChargeUp", "WarCry"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["SLIMEFM"]
+            ],
+            "mate": [
+                ["Almiraj", "DarkHorn", "GulpBeast", "KingLeo", "MadCat", "Trumpeter"]
+            ],
+            "reqFor": ["SuperTen", "Unicorn", "Mudron"]
+        },
+
+        "goldslime": {
+            "name": "GoldSlime",
+            "fam": "Slime",
+            "skills": ["Chance", "BigBang", "Surge"],
+            "found": ["none"],
+            "base": [
+                ["KingSlime", "SpotKing", "MetalKing"],
+                ["MetalKing", "WonderEgg"]
+            ],
+            "mate": [
+                ["GoldGolem"],
+                ["MetalKing"]
+            ],
+            "reqFor": ["GranSlime", "Mirudraas1"]
+        },
+
+        "granslime": {
+            "name": "GranSlime",
+            "fam": "Slime",
+            "skills": ["Farewell", "Focus", "Informer"],
+            "found": ["none"],
+            "base": [
+                ["GoldSlime"],
+                ["WonderEgg"]
+            ],
+            "mate": [
+                ["DarkMate", "GoldSlime", "DeathMore1"],
+                ["GoldSlime"]
+            ],
+            "reqFor": ["DarkDrium"]
+        },
+
+        "haloslime": {
+            "name": "HaloSlime",
+            "fam": "Slime",
+            "skills": ["Sleep", "SealPray", "LifeSong"],
+            "found": ["none"],
+            "base": [
+                ["MimeSlime"],
+                ["Slime"],
+                ["WonderEgg"]
+            ],
+            "mate": [
+                ["ZOMBIEFM", "Pixy", "StubBird"],
+                ["Copycat"],
+                ["BIRDFM"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "healer": {
+            "name": "Healer",
+            "fam": "Slime",
+            "skills": ["Heal", "HealUs", "Upper"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["SLIMEFM"]
+            ],
+            "mate": [
+                ["Copycat", "MadPlant", "FunkyBird", "PillowRat"]
+            ],
+            "reqFor": ["MimeSlime"]
+        },
+
+        "kingslime": {
+            "name": "KingSlime",
+            "fam": "Slime",
+            "skills": ["MPass", "Barrier", "Vivify"],
+            "found": ["none"],
+            "base": [
+                ["Slime"],
+                ["SLIMEFM"],
+                ["SpotKing"]
+            ],
+            "mate": [
+                ["Slime+5 or better"],
+                ["BOSSFM"],
+                ["BattleRex", "BossTroll", "Centasaur", "DeadNoble", "Divinegon", "Gigantes", "GreatDrak", "KingLeo", "MadCondor", "Unicorn", "WhipBird", "WhiteKing", "ZapBird"]
+            ],
+            "reqFor": ["GoldSlime", "MetalKing", "SpotKing", "GreatDrak", "ArcDemon", "WhiteKing", "CloudKing"]
+        },
+
+        "metabble": {
+            "name": "Metabble",
+            "fam": "Slime",
+            "skills": ["Firebal", "Bang", "Sacrifice"],
+            "found": ["none"],
+            "base": [
+                ["Metaly"]
+            ],
+            "mate": [
+                ["Metaly", "WonderEgg"]
+            ],
+            "reqFor": ["MetalKing", "SlimeBorg", "Blizzardy"]
+        },
+
+        "metalking": {
+            "name": "MetalKing",
+            "fam": "Slime",
+            "skills": ["Bolt", "Ironize", "Hellblast"],
+            "found": ["none"],
+            "base": [
+                ["KingSlime", "SpotKing"],
+                ["Metabble", "WonderEgg"]
+            ],
+            "mate": [
+                ["MetalDrak"],
+                ["Metabble"]
+            ],
+            "reqFor": ["GoldSlime", "SpotKing", "GreatDrak", "ArcDemon", "WhiteKing", "DarkMate", "Hargon"]
+        },
+
+        "metaly": {
+            "name": "Metaly",
+            "fam": "Slime",
+            "skills": ["Blaze", "IceBolt", "Beat"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["SLIMEFM"]
+            ],
+            "mate": [
+                ["MetalDrak"]
+            ],
+            "reqFor": ["Metabble", "Blizzardy"]
+        },
+
+        "mimeslime": {
+            "name": "MimeSlime",
+            "fam": "Slime",
+            "skills": ["PanicAll", "Ahhh", "LoveRain"],
+            "found": ["none"],
+            "base": [
+                ["Healer"],
+                ["WonderEgg"]
+            ],
+            "mate": [
+                ["1EyeClown", "TreeBoy", "EvilWand"],
+                ["DEVILFM"]
+            ],
+            "reqFor": ["HaloSlime", "CatMage", "ChopClown"]
+        },
+        
+        "pearlgel": {
+            "name": "PearlGel",
+            "fam": "Slime",
+            "skills": ["Upper", "ChargeUp", "Radiant"],
+            "found": ["Pirate", "HoodSquid Cave"],
+            "base": [
+                ["SLIMEFM"]
+            ],
+            "mate": [
+                ["WATERFM"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "rockslime": {
+            "name": "RockSlime",
+            "fam": "Slime",
+            "skills": ["HighJump", "Ramming", "StrongD"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["SLIMEFM"]
+            ],
+            "mate": [
+                ["BombCrag", "Golem", "DeadNite", "StoneMan"]
+            ],
+            "reqFor": ["SlimeBorg", "StubBird", "WhipBird", "Evilseed", "ArmorPede", "BoneSlave", "Voodoll"]
+        },
+                
+        "slabbit": {
+            "name": "Slabbit",
+            "fam": "Slime",
+            "skills": ["SideStep", "LegSweep", "Whistle"],
+            "found": ["Elf", "Overworld"],
+            "base": [
+                ["SLIMEFM"]
+            ],
+            "mate": [
+                ["Skullroo"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "slime": {
+            "name": "Slime",
+            "fam": "Slime",
+            "skills": ["Firebal", "MegaMagic", "Radiant"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["CNB"]
+            ],
+            "mate": [
+                ["N/A"]
+            ],
+            "reqFor": ["HaloSlime", "KingSlime", "TropicGel", "WonderEgg"]
+        },
+
+        "slimeborg": {
+            "name": "SlimeBorg",
+            "fam": "Slime",
+            "skills": ["Lightning", "RainSlash", "BladeD"],
+            "found": ["none"],
+            "base": [
+                ["SLIMEFM"],
+                ["DrakSlime"],
+                ["Metabble"],
+                ["RockSlime"],
+                ["SlimeNite"]
+            ],
+            "mate": [
+                ["Roboster1"],
+                ["Swordgon"],
+                ["BattleRex", "SkyDragon"],
+                ["GreatDrak"],
+                ["Spikerous"]
+            ],
+            "reqFor": ["WhipBird", "GateGuard", "BoneSlave", "Roboster1"]
+        },
+
+        "slimenite": {
+            "name": "SlimeNite",
+            "fam": "Slime",
+            "skills": ["Heal", "Upper", "BeastCut"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["SLIMEFM"]
+            ],
+            "mate": [
+                ["DEVILFM"]
+            ],
+            "reqFor": ["SlimeBorg", "FooHero", "Voodoll"]
+        },
+
+        "snaily": {
+            "name": "Snaily",
+            "fam": "Slime",
+            "skills": ["IceBolt", "NumbOff", "CallHelp"],
+            "found": ["Pirate", "Moonrock Tower F1"],
+            "base": [
+                ["SLIMEFM"]
+            ],
+            "mate": [
+                ["BUGFM"]
+            ],
+            "reqFor": ["EvilPot", "Voodoll"]
+        },
+
+        "spotking": {
+            "name": "SpotKing",
+            "fam": "Slime",
+            "skills": ["CleanCut", "NapAttack", "MouthShut"],
+            "found": ["none"],
+            "base": [
+                ["KingSlime", "MetalKing"],
+                ["SpotSlime"]
+            ],
+            "mate": [
+                ["BattleRex", "BossTroll", "Centasaur", "DeadNoble", "Divinegon", "Gigantes", "GreatDrak", "KingLeo", "MadCondor", "Unicorn", "WhipBird", "WhiteKing", "ZapBird"],
+                ["SpotSlime+5 or better"]
+            ],
+            "reqFor": ["GoldSlime", "KingSlime", "MetalKing", "GreatDrak", "ArcDemon", "WhiteKing", "CloudKing"]
+        },
+
+        "spotslime": {
+            "name": "SpotSlime",
+            "fam": "Slime",
+            "skills": ["CallHelp", "LushLicks", "Imitate"],
+            "found": ["Oasis", "Overworld"],
+            "base": [
+                ["SLIMEFM"]
+            ],
+            "mate": [
+                ["BEASTFM"]
+            ],
+            "reqFor": ["SpotKing"]
+        },
+
+        "treeslime": {
+            "name": "TreeSlime",
+            "fam": "Slime",
+            "skills": ["Sap", "Paralyze", "SleepAir"],
+            "found": ["none"],
+            "base": [
+                ["SLIMEFM"]
+            ],
+            "mate": [
+                ["PLANTFM"]
+            ],
+            "reqFor": ["TropicGel", "SuperTen"]
+        },
+
+        "tropicgel": {
+            "name": "TropicGel",
+            "fam": "Slime",
+            "skills": ["MPass", "SleepAir", "LushLicks"],
+            "found": ["none"],
+            "base": [
+                ["Slime"],
+                ["TreeSlime"],
+                ["WonderEgg"]
+            ],
+            "mate": [
+                ["Mommonja", "PillowRat"],
+                ["BEASTFM"],
+                ["PLANTFM"]
+            ],
+            "reqFor": ["FunkyBird"]
+        },
+
+        "wingslime": {
+            "name": "WingSlime",
+            "fam": "Slime",
+            "skills": ["WindBeast", "SquallHit", "TailWind"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["SLIMEFM"]
+            ],
+            "mate": [
+                ["BIRDFM"]
+            ],
+            "reqFor": ["Rayburn"]
+        },
+
+        "wonderegg": {
+            "name": "WonderEgg",
+            "fam": "Slime",
+            "skills": ["Sacrifice", "Ironize", "Chance"],
+            "found": ["none"],
+            "base": [
+                ["Slime (Only Link breeding)"]
+            ],
+            "mate": [
+                ["BigRoost (Only Link breeding)"]
+            ],
+            "reqFor": ["GoldSlime", "GranSlime", "HaloSlime", "Metabble", "MetalKing", "MimeSlime", "TropicGel"]
+        },
+
+
+
+
+
+
+
+
+        "andreal": {
+            "name": "Andreal",
+            "fam": "Dragon",
+            "skills": ["Infernos", "Surround", "PoisonGas"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["DRAGONFM"], 
+                ["BattleRex", "Gasgon", "MadDragon", "SkyDragon"]
+            ],
+            "mate": [
+                ["Gulpple"],
+                ["Akubar", "ArcDemon", "DeadNoble", "FunkyBird", "GoatHorn", "Goategon", "Golem", "Lionex", "MadCondor", "Ogre", "Trumpeter"]
+            ],
+            "reqFor": ["GigaDraco", "Orochi", "ArcDemon", "Skullgon", "WhiteKing", "MetalDrak", "DracoLord1"]
+        },
+
+        "battlerex": {
+            "name": "BattleRex",
+            "fam": "Dragon",
+            "skills": ["FireAir", "MetalCut", "EvilSlash"],
+            "found": ["none"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["KingLeo", "MadKnight", "EvilArmor", "Lionex", "Ogre"]
+            ],
+            "reqFor": ["KingSlime", "SlimeBorg", "SpotKing", "Andreal", "Coatol", "GigaDraco", "GreatDrak", "Yeti", "Skullgon", "AxeShark"]
+        },
+
+        "chamelgon": {
+            "name": "Chamelgon",
+            "fam": "Dragon",
+            "skills": ["PanicAll", "Paralyze", "PalsyAir"],
+            "found": ["Sky", "Helm Cave F1"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["Voodoll"]
+            ],
+            "reqFor": ["none"]
+        },
+        
+        "coatol": {
+            "name": "Coatol",
+            "fam": "Dragon",
+            "skills": ["Bang", "BoltSlash", "EvilSlash"],
+            "found": ["none"],
+            "base": [
+                ["WingSnake"],
+                ["BattleRex", "Gasgon", "LizardMan", "Pteranod", "SkyDragon", "Vampirus"]
+            ],
+            "mate": [
+                ["WingSnake"],
+                ["Copycat", "DarkHorn", "MadKnight", "StoneMan", "WhipBird"]
+            ],
+            "reqFor": ["GateGuard", "Aquadon"]
+        },
+
+        "crestpent": {
+            "name": "Crestpent",
+            "fam": "Dragon",
+            "skills": ["StopSpell", "BeDragon", "PoisonHit"],
+            "found": ["Oasis", "Overworld"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["BigRoost"]
+            ],
+            "reqFor": ["WingSnake"]
+        },
+        
+        "divinegon": {
+            "name": "Divinegon",
+            "fam": "Dragon",
+            "skills": ["BigBang", "FrigidAir", "Meditate"],
+            "found": ["none"],
+            "base": [
+                ["SkyDragon"]
+            ],
+            "mate": [
+                ["Orochi", "Serpentia"]
+            ],
+            "reqFor": ["KingSlime", "SpotKing", "Orligon", "Skullgon", "DracoLord2", "Pizzaro"]
+        },
+        
+        "dragon": {
+            "name": "Dragon",
+            "fam": "Dragon",
+            "skills": ["FireAir", "FireSlash", "SuckAll"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["DragonKid"]
+            ],
+            "mate": [
+                ["DragonKid"]
+            ],
+            "reqFor": ["GreatDrak", "MadCat"]
+        },
+        
+        "dragonkid": {
+            "name": "DragonKid",
+            "fam": "Dragon",
+            "skills": ["FireAir", "SleepAir", "Dodge"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["Dragon", "GreatDrak"]
+        },
+        
+        "drygon": {
+            "name": "Drygon",
+            "fam": "Dragon",
+            "skills": ["Sap", "Ramming", "WarCry"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["WATERFM"]
+            ],
+            "reqFor": ["BigEye"]
+        },
+        
+        "fairydrak": {
+            "name": "FairyDrak",
+            "fam": "Dragon",
+            "skills": ["Surround", "SleepAir", "LushLicks"],
+            "found": ["none"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["BUGFM"]
+            ],
+            "reqFor": ["none"]
+        },
+        
+        "gasgon": {
+            "name": "Gasgon",
+            "fam": "Dragon",
+            "skills": ["Sacrifice", "Farewell", "Berserker"],
+            "found": ["none"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["PLANTFM"]
+            ],
+            "reqFor": ["Andreal", "Coatol", "MadDragon", "Yeti", "PomPomBom"]
+        },
+        
+        "gigadraco": {
+            "name": "GigaDraco",
+            "fam": "Dragon",
+            "skills": ["FireAir", "RockThrow", "Massacre"],
+            "found": ["none"],
+            "base": [
+                ["Andreal", "BattleRex", "GreatDrak", "SkyDragon"]
+            ],
+            "mate": [
+                ["BossTroll", "Gigantes"]
+            ],
+            "reqFor": ["Orligon", "Orgodemir2"]
+        },
+        
+        "greatdrak": {
+            "name": "GreatDrak",
+            "fam": "Dragon",
+            "skills": ["FrigidAir", "IceSlash", "SuckAll"],
+            "found": ["Limbo", "Overworld"],
+            "base": [
+                ["DRAGONFM"],
+                ["Dragon+5 or better"],
+                ["DragonKid+5 or better"]
+            ],
+            "mate": [
+                ["BattleRex", "Gigantes", "MetalKing", "Unicorn", "ZapBird", "Centasaur", "KingSlime", "SpotKing", "WhipBird"],
+                ["Dragon"],
+                ["DragonKid"]
+            ],
+            "reqFor": ["KingSlime", "SlimeBorg", "SpotKing", "GigaDraco", "Orochi", "Serpentia", "Shantak", "ArcDemon", "BossTroll", "Skullgon", "WhiteKing", "MetalDrak", "Roboster1", "Aquadon", "DracoLord1"]
+        },
+
+        "kingcobra": {
+            "name": "KingCobra",
+            "fam": "Dragon",
+            "skills": ["PoisonHit", "Curse", "K.O.Dance"],
+            "found": ["Oasis", "Overworld"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["Babble"]
+            ],
+            "reqFor": ["SnakeBat"]
+        },
+
+        "lizardfly": {
+            "name": "LizardFly",
+            "fam": "Dragon",
+            "skills": ["Firebal", "Sap", "FireAir"],
+            "found": ["none"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["GoHopper"]
+            ],
+            "reqFor": ["FairyRat"]
+        },
+
+        "lizardman": {
+            "name": "LizardMan",
+            "fam": "Dragon",
+            "skills": ["AquaCut", "GigaSlash", "EvilSlash"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["DEVILFM"]
+            ],
+            "reqFor": ["Coatol", "Rayburn", "Dumbira", "Goategon", "Lionex"]
+        },
+
+        "maddragon": {
+            "name": "MadDragon",
+            "fam": "Dragon",
+            "skills": ["EvilSlash", "Massacre", "LureDance"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["DRAGONFM"],
+                ["Gasgon"]
+            ],
+            "mate": [
+                ["GulpBeast"],
+                ["BEASTFM"]
+            ],
+            "reqFor": ["Andreal", "SuperTen", "Yeti", "Grendal"]
+        },
+
+        "minidrak": {
+            "name": "MiniDrak",
+            "fam": "Dragon",
+            "skills": ["CallHelp", "Ramming", "SandStorm"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["Picky"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "orligon": {
+            "name": "Orligon",
+            "fam": "Dragon",
+            "skills": ["TwinHits", "Berserker", "StrongD"],
+            "found": ["none"],
+            "base": [
+                ["Divinegon"]
+            ],
+            "mate": [
+                ["GigaDraco", "GoldGolem"]
+            ],
+            "reqFor": ["Aquadon", "LordDraco", "Mirudraas2"]
+        },
+
+        "orochi": {
+            "name": "Orochi",
+            "fam": "Dragon",
+            "skills": ["FireAir", "FireSlash", "BiAttack"],
+            "found": ["none"],
+            "base": [
+                ["DRAGONFM"],
+                ["Andreal", "GreatDrak"]
+            ],
+            "mate": [
+                ["BOSSFM"],
+                ["MedusaEye"]
+            ],
+            "reqFor": ["Divinegon", "Gorago", "ArcDemon", "Skullgon", "LavaMan", "Baramos"]
+        },
+
+        "poisongon": {
+            "name": "PoisonGon",
+            "fam": "Dragon",
+            "skills": ["PoisonHit", "PoisonGas", "LushLicks"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["ZOMBIEFM"]
+            ],
+            "reqFor": ["Babble"]
+        },
+
+        "pteranod": {
+            "name": "Pteranod",
+            "fam": "Dragon",
+            "skills": ["Firebal", "WindBeast", "TailWind"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["BIRDFM"]
+            ],
+            "reqFor": ["Coatol", "Vampirus", "Yeti"]
+        },
+        
+        "rayburn": {
+            "name": "Rayburn",
+            "fam": "Dragon",
+            "skills": ["VacuSlash", "DevilCut", "PoisonHit"],
+            "found": ["none"],
+            "base": [
+                ["DRAGONFM"],
+                ["LizardMan"]
+            ],
+            "mate": [
+                ["MadCondor"],
+                ["FaceTree", "GateGuard", "Gigantes", "GoatHorn", "Lionex", "MadCat", "Trumpeter", "WingSlime"]
+            ],
+            "reqFor": ["WhipBird", "Skullgon"]
+        },
+
+        "serpentia": {
+            "name": "Serpentia",
+            "fam": "Dragon",
+            "skills": ["SlimeBlow", "DevilCut", "RainSlash"],
+            "found": ["none"],
+            "base": [
+                ["GreatDrak"]
+            ],
+            "mate": [
+                ["Lionex", "Skeletor", "Octoraid"]
+            ],
+            "reqFor": ["Divinegon", "Durran", "Niterich"]
+        },
+
+        "skydragon": {
+            "name": "SkyDragon",
+            "fam": "Dragon",
+            "skills": ["FireAir", "MultiCut", "SuckAir"],
+            "found": ["Sky", "Heaven Armor Tower F3"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["Phoenix"]
+            ],
+            "reqFor": ["SlimeBorg", "Andreal", "Coatol", "Divinegon", "GigaDraco", "Yeti", "CloudKing"]
+        },
+
+        "snakebat": {
+            "name": "SnakeBat",
+            "fam": "Dragon",
+            "skills": ["RockThrow", "LushLicks", "Errand"],
+            "found": ["none"],
+            "base": [
+                ["DRAGONFM"],
+                ["KingCobra"]
+            ],
+            "mate": [
+                ["Catfly"],
+                ["Dracky"]
+            ],
+            "reqFor": ["WhipBird"]
+        },
+        
+        "spikerous": {
+            "name": "Spikerous",
+            "fam": "Dragon",
+            "skills": ["RockThrow", "Berserker", "Kamikaze"],
+            "found": ["Traveler", "Overworld"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["ArmyCrab", "Digster"]
+            ],
+            "reqFor": ["SlimeBorg", "MetalDrak", "Digong"]
+        },
+
+        "swordgon": {
+            "name": "Swordgon",
+            "fam": "Dragon",
+            "skills": ["CleanCut", "RainSlash", "BladeD"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["MATERIALFM"]
+            ],
+            "reqFor": ["SlimeBorg", "Yeti", "GateGuard", "Skullgon"]
+        },
+
+        "tortragon": {
+            "name": "Tortragon",
+            "fam": "Dragon",
+            "skills": ["Ironize", "MagicBack", "Lightning"],
+            "found": ["Pirate", "Harmirror cave B2"],
+            "base": [
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["BEASTFM"]
+            ],
+            "reqFor": ["IronTurt", "ArmorPede"]
+        },
+
+        "vampirus": {
+            "name": "Vampirus",
+            "fam": "Dragon",
+            "skills": ["Infernos", "CallHelp", "BiAttack"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["DRAGONFM"],
+                ["Pteranod"]
+            ],
+            "mate": [
+                ["MadGoose"],
+                ["Pteranod"]
+            ],
+            "reqFor": ["Coatol", "RainHawk"]
+        },
+
+        "wingsnake": {
+            "name": "WingSnake",
+            "fam": "Dragon",
+            "skills": ["SquallHit", "HighJump", "PoisonGas"],
+            "found": ["none"],
+            "base": [
+                ["Crestpent"]
+            ],
+            "mate": [
+                ["Crestpent"]
+            ],
+            "reqFor": ["Coatol"]
+        },
+
+
+
+
+
+
+
+
+
+
+        "almiraj": {
+            "name": "Almiraj",
+            "fam": "Beast",
+            "skills": ["Sleep", "ChargeUp", "Berserker"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["DRAGONFM"]
+            ],
+            "reqFor": ["FangSlime", "WildApe"]
+        },
+
+        "antbear": {
+            "name": "Antbear",
+            "fam": "Beast",
+            "skills": ["MetalCut", "SquallHit", "LushLicks"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["Saccer"]
+            ],
+            "mate": [
+                ["DRAGONFM"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "arrowdog": {
+            "name": "ArrowDog",
+            "fam": "Beast",
+            "skills": ["Blaze", "CallHelp", "MouthShut"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["Putrepup"]
+            ],
+            "reqFor": ["NoctoKing"]
+        },
+
+        "beastnite": {
+            "name": "BeastNite",
+            "fam": "Beast",
+            "skills": ["Sleep", "RainSlash", "GigaSlash"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["BEASTFM"],
+                ["CatMage"],
+                ["MadGopher"]
+            ],
+            "mate": [
+                ["EvilArmor"],
+                ["DEVILFM"],
+                ["Dumbira"]
+            ],
+            "reqFor": ["Dumbira", "FooHero", "Grendal"]
+        },
+
+        "beavern": {
+            "name": "Beavern",
+            "fam": "Beast",
+            "skills": ["IceBolt", "ChargeUp", "Geyser"],
+            "found": ["none"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["WATERFM"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "bigeye": {
+            "name": "BigEye",
+            "fam": "Beast",
+            "skills": ["IceBolt", "FrigidAir", "LoveRain"],
+            "found": ["none"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["EyeBall", "Drygon"]
+            ],
+            "reqFor": ["GulpBeast", "Emyu", "Evilseed", "Gigantes"]
+        },
+
+        "catfly": {
+            "name": "Catfly",
+            "fam": "Beast",
+            "skills": ["Slow", "StopSpell", "OddDance"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["BIRDFM"]
+            ],
+            "reqFor": ["SnakeBat", "CatMage", "WindBeast"]
+        },
+
+        "catmage": {
+            "name": "CatMage",
+            "fam": "Beast",
+            "skills": ["Blaze", "Surround", "Transform"],
+            "found": ["Traveler", "Overworld"],
+            "base": [
+                ["Catfly"]
+            ],
+            "mate": [
+                ["MimeSlime", "TreeBoy", "Sickler", "1EyeClown", "Reaper", "EvilWand"]
+            ],
+            "reqFor": ["BeastNite", "MadCat"]
+        },
+
+        "darkhorn": {
+            "name": "DarkHorn",
+            "fam": "Beast",
+            "skills": ["Sleep", "StopSpell", "PsycheUp"],
+            "found": ["none"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["BOSSFM"]
+            ],
+            "reqFor": ["FangSlime", "Coatol", "Gorago", "GoatHorn", "Titanis"]
+        },
+
+        "dumbira": {
+            "name": "Dumbira",
+            "fam": "Beast",
+            "skills": ["MetalCut", "RainSlash", "TwinSlash"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["NoctoKing"],
+                ["SuperTen"]
+            ],
+            "mate": [
+                ["Gigantes"],
+                ["BeastNite", "LizardMan", "Orc", "WalrusMan", "Bubblemon", "MerTiger", "SabreMan"]
+            ],
+            "reqFor": ["BeastNite", "GulpBeast", "SuperTen"]
+        },
+
+        "fairyrat": {
+            "name": "FairyRat",
+            "fam": "Beast",
+            "skills": ["Slow", "Surround", "SlimeBlow"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["LizardFly"]
+            ],
+            "reqFor": ["MadHornet"]
+        },
+
+        "goategon": {
+            "name": "Goategon",
+            "fam": "Beast",
+            "skills": ["Firebal", "Slow", "SleepAir"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["DrakSlime", "LizardMan"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "gorago": {
+            "name": "Gorago",
+            "fam": "Beast",
+            "skills": ["Bang", "Massacre", "EerieLite"],
+            "found": ["none"],
+            "base": [
+                ["DarkHorn"]
+            ],
+            "mate": [
+                ["BOSSFM", "Orochi"]
+            ],
+            "reqFor": ["Esterk", "Mudou"]
+        },
+
+        "grizzly": {
+            "name": "Grizzly",
+            "fam": "Beast",
+            "skills": ["SquallHit", "BiAttack", "LegSweep"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["DEVILFM", "MetalDrak", "Roboster1", "LavaMan", "IceMan", "Golem", "StoneMan"]
+            ],
+            "reqFor": ["GulpBeast", "Trumpeter", "Unicorn", "Phoenix", "Skeletor", "Roboster1"]
+        },
+
+        "gulpbeast": {
+            "name": "GulpBeast",
+            "fam": "Beast",
+            "skills": ["Massacre", "Ramming", "WarCry"],
+            "found": ["none"],
+            "base": [
+                ["Tonguella"], 
+                ["WildApe", "Grizzly", "Yeti", "Unicorn", "Dumbira", "Trumpeter"],
+                ["Grizzly", "Yeti", "Trumpeter", "BigEye"],
+                ["Grizzly"]
+            ],
+            "mate": [
+                ["Digster", "Skullgon", "DeadNoble", "WhiteKing", "Skeletor"],
+                ["Digster", "Skullgon", "DeadNoble", "WhiteKing", "Skeletor", "MetalDrak", "Roboster1", "LavaMan", "IceMan", "Golem", "StoneMan"],
+                ["DRAGONFM"],
+                ["DEVILFM"]
+            ],
+            "reqFor": ["FangSlime", "MadDragon", "SuperTen", "Trumpeter", "Unicorn", "Phoenix", "MerTiger"]
+        },
+
+        "hammerman": {
+            "name": "HammerMan",
+            "fam": "Beast",
+            "skills": ["ChargeUp", "EvilSlash", "Kamikaze"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["StubSuck"]
+            ],
+            "reqFor": ["FooHero", "Ogre"]
+        },
+
+        "ironturt": {
+            "name": "IronTurt",
+            "fam": "Beast",
+            "skills": ["MagicWall", "StrongD", "Cover"],
+            "found": ["Sky", "Fhunt Tower F1"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["Tortragon"]
+            ],
+            "reqFor": ["Yeti", "Phoenix", "ArmorPede"]
+        },
+
+        "kingleo": {
+            "name": "KingLeo",
+            "fam": "Beast",
+            "skills": ["Firebal", "FrigidAir", "BiAttack"],
+            "found": ["none"],
+            "base": [
+                ["Trumpeter"]
+            ],
+            "mate": [
+                ["Trumpeter", "MetalDrak", "Balzak", "GoldGolem", "BossTroll"]
+            ],
+            "reqFor": ["FangSlime", "KingSlime", "SpotKing", "BattleRex", "ArcDemon", "WhiteKing", "IceMan", "LavaMan", "Roboster1", "Esterk"]
+        },
+
+        "madcat": {
+            "name": "MadCat",
+            "fam": "Beast",
+            "skills": ["VacuSlash", "SquallHit", "LegSweep"],
+            "found": ["none"],
+            "base": [
+                ["BEASTFM"],
+                ["CatMage"]
+            ],
+            "mate": [
+                ["Dragon"],
+                ["Goategon", "Unicorn"]
+            ],
+            "reqFor": ["FangSlime", "Rayburn", "Yeti", "Skeletor", "MerTiger"]
+        },
+
+        "madgopher": {
+            "name": "MadGopher",
+            "fam": "Beast",
+            "skills": ["BirdBlow", "ZombieCut", "Informer"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["SabreMan"]
+            ],
+            "reqFor": ["BeastNite"]
+        },
+
+        "mommonja": {
+            "name": "Mommonja",
+            "fam": "Beast",
+            "skills": ["LureDance", "MouthShut", "EagleEye"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["DuckKite"]
+            ],
+            "reqFor": ["TropicGel", "Pumpoise"]
+        },
+
+        "noctoking": {
+            "name": "NoctoKing",
+            "fam": "Beast",
+            "skills": ["Surround", "SleepAir", "ThickFog"],
+            "found": ["none"],
+            "base": [
+                ["ArrowDog"]
+            ],
+            "mate": [
+                ["Dracky", "Shadow"]
+            ],
+            "reqFor": ["Dumbira"]
+        },
+
+        "pillowrat": {
+            "name": "PillowRat",
+            "fam": "Beast",
+            "skills": ["Slow", "Ramming", "SideStep"],
+            "found": ["none"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["PLANTFM"]
+            ],
+            "reqFor": ["Healer", "TropicGel", "BeanMan"]
+        },
+
+        "saccer": {
+            "name": "Saccer",
+            "fam": "Beast",
+            "skills": ["Upper", "PsycheUp", "PalsyAir"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["BUGFM"]
+            ],
+            "reqFor": ["Antbear", "GiantMoth"]
+        },
+
+        "skullroo": {
+            "name": "Skullroo",
+            "fam": "Beast",
+            "skills": ["ChargeUp", "PaniDance", "EagleEye"],
+            "found": ["none"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["ZOMBIEFM"]
+            ],
+            "reqFor": ["Slabbit"]
+        },
+
+        "superten": {
+            "name": "SuperTen",
+            "fam": "Beast",
+            "skills": ["K.O.Dance", "Hustle", "Imitate"],
+            "found": ["none"],
+            "base": [
+                ["Tonguella", "GulpBeast"],
+                ["BEASTFM"],
+                ["Dumbira"]
+            ],
+            "mate": [
+                ["TreeSlime", "FangSlime", "MadDragon", "FunkyBird", "MadPlant", "FaceTree", "Lipsy", "Demonite", "Gremlin", "Copycat", "JewelBag", "Mimic"],
+                ["Mudron"],
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["Dumbira", "Trumpeter", "Blizzardy"]
+        },
+
+        "tonguella": {
+            "name": "Tonguella",
+            "fam": "Beast",
+            "skills": ["NapAttack", "SleepAir", "LushLicks"],
+            "found": ["none"],
+            "base": [
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["GulpBeast", "SuperTen", "Trumpeter", "Unicorn", "Mudron"]
+        },
+
+        "trumpeter": {
+            "name": "Trumpeter",
+            "fam": "Beast",
+            "skills": ["Berserker", "SandStorm", "WarCry"],
+            "found": ["none"],
+            "base": [
+                ["Tonguella", "GulpBeast", "Grizzly", "Yeti"],
+                ["GulpBeast"],
+                ["WildApe"],
+                ["SuperTen"]
+            ],
+            "mate": [
+                ["LandOwl", "MadCondor", "ZapBird", "WhipBird"],
+                ["MetalDrak", "Balzak", "LavaMan", "IceMan", "Golem", "StoneMan", "Roboster1"],
+                ["WildApe"],
+                ["DRAGONFM"]
+            ],
+            "reqFor": ["FangSlime", "Andreal", "Rayburn", "GulpBeast", "KingLeo", "Unicorn", "Blizzardy", "ArcDemon", "Roboster1"]
+        },
+
+        "unicorn": {
+            "name": "Unicorn",
+            "fam": "Beast",
+            "skills": ["Heal", "Vivify", "Errand"],
+            "found": ["none"],
+            "base": [
+                ["Tonguella", "GulpBeast", "Grizzly", "Yeti", "Goategon", "WildApe", "Trumpeter"],
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["SLIMEFM"],
+                ["FangSlime"]
+            ],
+            "reqFor": ["KingSlime", "SpotKing", "GreatDrak", "GulpBeast", "MadCat", "Ogre", "Roboster1"]
+        },
+
+        "wildape": {
+            "name": "WildApe",
+            "fam": "Beast",
+            "skills": ["TwinSlash", "SideStep", "Errand"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["Almiraj"],
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["DRAGONFM"],
+                ["MadPecker"]
+            ],
+            "reqFor": ["GulpBeast", "Trumpeter", "Unicorn", "Yeti"]
+        },
+
+        "windbeast": {
+            "name": "WindBeast",
+            "fam": "Beast",
+            "skills": ["Infernos", "IceBolt", "VacuSlash"],
+            "found": ["none"],
+            "base": [
+                ["Catfly"],
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["BIRDFM"],
+                ["MATERIALFM"]
+            ],
+            "reqFor": ["WindMerge"]
+        },
+
+        "yeti": {
+            "name": "Yeti",
+            "fam": "Beast",
+            "skills": ["IceBolt", "IceSlash", "WarCry"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["IronTurt", "Goategon", "WildApe", "MadCat"],
+                ["BEASTFM"]
+            ],
+            "mate": [
+                ["Pteranod", "Gasgon", "Swordgon", "MadDragon", "BattleRex", "SkyDragon"],
+                ["Orc"]
+            ],
+            "reqFor": ["GulpBeast", "Trumpeter", "Unicorn", "Blizzardy", "Mudron"]
+        },
+
+
+
+
+
+
+
+
+        "aquahawk": {
+            "name": "AquaHawk",
+            "fam": "Bird",
+            "skills": ["CurseOff", "SquallHit", "AquaWall"],
+            "found": ["Pirate", "Harmirror cave B1"],
+            "base": [
+                ["BIRDFM"]
+            ],
+            "mate": [
+                ["WATERFM"]
+            ],
+            "reqFor": ["none"]
+        },
+        
+        "azurile": {
+            "name": "Azurile",
+            "fam": "Bird",
+            "skills": ["Hellblast", "Meditate", "LifeSong"],
+            "found": ["none"],
+            "base": [
+                ["RainHawk", "Shantak"]
+            ],
+            "mate": [
+                ["BOSSFM", "GoldGolem"]
+            ],
+            "reqFor": ["DeathMore1"]
+        },
+
+        "bigroost": {
+            "name": "BigRoost",
+            "fam": "Bird",
+            "skills": ["VacuSlash", "SandStorm", "Dodge"],
+            "found": ["none"],
+            "base": [
+                ["CNB"]
+            ],
+            "mate": [
+                ["N/A"]
+            ],
+            "reqFor": ["WonderEgg", "Crestpent", "CragDevil", "MadCondor"]
+        },
+
+        "blizzardy": {
+            "name": "Blizzardy",
+            "fam": "Bird",
+            "skills": ["Beat", "FrigidAir", "IceSlash"],
+            "found": ["none"],
+            "base": [
+                ["BIRDFM"]
+            ],
+            "mate": [
+                ["Metaly", "Metabble", "SuperTen", "Yeti", "Goategon", "Trumpeter", "Skullgon", "DeadNoble", "WhiteKing", "Skeletor", "Servant", "IceMan"]
+            ],
+            "reqFor": ["Garudian", "RainHawk", "WhipBird", "WhiteKing"]
+        },
+
+        "bullbird": {
+            "name": "BullBird",
+            "fam": "Bird",
+            "skills": ["Shears", "ChargeUp", "Ramming"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["BIRDFM"]
+            ],
+            "mate": [
+                ["BEASTFM"]
+            ],
+            "reqFor": ["LandOwl"]
+        },
+     
+        "cragdevil": {
+            "name": "CragDevil",
+            "fam": "Bird",
+            "skills": ["Infernos", "PanicAll", "EagleEye"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["BigRoost", "Emyu", "MadGoose"]
+            ],
+            "mate": [
+                ["BEASTFM"]
+            ],
+            "reqFor": ["FunkyBird", "MadGoose", "Pumpoise"]
+        },
+
+        "dracky": {
+            "name": "Dracky",
+            "fam": "Bird",
+            "skills": ["Antidote", "Sleep", "RobMagic"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["Picky"]
+            ],
+            "mate": [
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["SnakeBat", "NoctoKing", "Exaucers"]
+        },
+
+        "duckkite": {
+            "name": "DuckKite",
+            "fam": "Bird",
+            "skills": ["Sleep", "PanicAll", "Curse"],
+            "found": ["none"],
+            "base": [
+                ["BIRDFM"]
+            ],
+            "mate": [
+                ["BUGFM"]
+            ],
+            "reqFor": ["Mommonja", "KiteHawk", "MadGoose", "Evilseed", "Pumpoise"]
+        },
+
+        "emyu": {
+            "name": "Emyu",
+            "fam": "Bird",
+            "skills": ["WindBeast", "Hustle", "Errand"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["KiteHawk"],
+                ["MadCondor"],
+                ["MadPecker"]
+            ],
+            "mate": [
+                ["BEASTFM"],
+                ["MadPecker"],
+                ["BigEye", "DarkEye"]
+            ],
+            "reqFor": ["CragDevil"]
+        },
+
+        "florajay": {
+            "name": "FloraJay",
+            "fam": "Bird",
+            "skills": ["Speed", "BeastCut", "LifeSong"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["BIRDFM"]
+            ],
+            "mate": [
+                ["PLANTFM"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "funkybird": {
+            "name": "FunkyBird",
+            "fam": "Bird",
+            "skills": ["PaniDance", "LifeDance", "Hustle"],
+            "found": ["none"],
+            "base": [
+                ["BIRDFM"],
+                ["CragDevil"]
+            ],
+            "mate": [
+                ["DanceVegi", "TropicGel", "Brushead", "Pyuro"],
+                ["CragDevil"]
+            ],
+            "reqFor": ["Healer", "Andreal", "SuperTen", "Garudian", "HerbMan", "Mudron", "SabreMan"]
+        },
+
+        "garudian": {
+            "name": "Garudian",
+            "fam": "Bird",
+            "skills": ["Infernos", "WindBeast", "AquaCut"],
+            "found": ["none"],
+            "base": [
+                ["Blizzardy", "Phoenix", "ZapBird"],
+                ["FunkyBird"]
+            ],
+            "mate": [
+                ["Lionex"],
+                ["Jamirus"]
+            ],
+            "reqFor": ["LandOwl", "ArcDemon", "Lionex"]
+        },
+
+        "kitehawk": {
+            "name": "KiteHawk",
+            "fam": "Bird",
+            "skills": ["MagicWall", "Curse", "TailWind"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["BIRDFM"],
+                ["DuckKite"]
+            ],
+            "mate": [
+                ["Facer"],
+                ["MATERIALFM"]
+            ],
+            "reqFor": ["Emyu", "MadCondor", "Evilseed"]
+        },
+
+        "landowl": {
+            "name": "LandOwl",
+            "fam": "Bird",
+            "skills": ["Infernos", "BoltSlash", "SideStep"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["BullBird"],
+                ["Garudian"]
+            ],
+            "mate": [
+                ["BEASTFM"],
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["Trumpeter", "MadCondor", "MadGoose", "WhipBird", "BoneSlave", "SabreMan"]
+        },
+        
+        "madcondor": {
+            "name": "MadCondor",
+            "fam": "Bird",
+            "skills": ["Firebal", "HealUs", "MultiCut"],
+            "found": ["none"],
+            "base": [
+                ["LandOwl"],
+                ["BIRDFM"],
+                ["KiteHawk"]
+            ],
+            "mate": [
+                ["DEVILFM"],
+                ["CoilBird"],
+                ["BigRoost"]
+            ],
+            "reqFor": ["KingSlime", "SpotKing", "Andreal", "Rayburn", "Trumpeter", "Emyu", "MadGoose", "WhipBird", "ZapBird", "GateGuard", "Skeletor"]
+        },
+
+        "madgoose": {
+            "name": "MadGoose",
+            "fam": "Bird",
+            "skills": ["Heal", "WindBeast", "LureDance"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["Wyvern", "LandOwl", "MadCondor", "Phoenix"],
+                ["CragDevil"],
+                ["BIRDFM"]
+            ],
+            "mate": [
+                ["DRAGONFM", "ZOMBIEFM"],
+                ["DuckKite", "MadRaven"],
+                ["Droll"]
+            ],
+            "reqFor": ["Vampirus", "CragDevil", "WhipBird", "BoneSlave", "SabreMan", "Digong", "Pumpoise"]
+        },
+
+        "madpecker": {
+            "name": "MadPecker",
+            "fam": "Bird",
+            "skills": ["Infernos", "Sap", "VacuSlash"],
+            "found": ["none"],
+            "base": [
+                ["BIRDFM"]
+            ],
+            "mate": [
+                ["DEVILFM"]
+            ],
+            "reqFor": ["WildApe", "Emyu", "Pumpoise"]
+        },
+
+        "madraven": {
+            "name": "MadRaven",
+            "fam": "Bird",
+            "skills": ["HighJump", "TailWind", "EagleEye"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["BIRDFM"]
+            ],
+            "mate": [
+                ["ZOMBIEFM"]
+            ],
+            "reqFor": ["MadGoose", "Skeletor"]
+        },
+
+        "mistywing": {
+            "name": "MistyWing",
+            "fam": "Bird",
+            "skills": ["Barrier", "EerieLite", "Informer"],
+            "found": ["Limbo", "Overworld"],
+            "base": [
+                ["BIRDFM"]
+            ],
+            "mate": [
+                ["MATERIALFM"]
+            ],
+            "reqFor": ["GateGuard", "FoxFire", "NiteWhip", "Gismo"]
+        },
+
+        "phoenix": {
+            "name": "Phoenix",
+            "fam": "Bird",
+            "skills": ["FireAir", "SquallHit", "TailWind"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["BIRDFM"]
+            ],
+            "mate": [
+                ["DrakSlime", "GulpBeast", "IronTurt", "Grizzly", "ArcDemon", "Copycat", "Gismo", "LavaMan"]
+            ],
+            "reqFor": ["SkyDragon", "Garudian", "MadGoose", "RainHawk", "ZapBird", "Gismo", "SabreMan"]
+        },
+
+        "picky": {
+            "name": "Picky",
+            "fam": "Bird",
+            "skills": ["Sap", "Surround", "BugBlow"],
+            "found": ["none"],
+            "base": [
+                ["BIRDFM"]
+            ],
+            "mate": [
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["MiniDrak", "Dracky"]
+        },
+
+        "rainhawk": {
+            "name": "RainHawk",
+            "fam": "Bird",
+            "skills": ["MegaMagic", "Surge", "StrongD"],
+            "found": ["none"],
+            "base": [
+                ["Blizzardy"]
+            ],
+            "mate": [
+                ["Phoenix", "Vampirus"]
+            ],
+            "reqFor": ["Azurile", "Jamirus"]
+        },
+
+        "shantak": {
+            "name": "Shantak",
+            "fam": "Bird",
+            "skills": ["HealUs", "FireAir", "SuckAll"],
+            "found": ["none"],
+            "base": [
+                ["WhipBird"]
+            ],
+            "mate": [
+                ["GreatDrak", "Jamirus"]
+            ],
+            "reqFor": ["Azurile"]
+        },
+
+        "stubbird": {
+            "name": "StubBird",
+            "fam": "Bird",
+            "skills": ["TwinHits", "BugBlow", "RainSlash"],
+            "found": ["Ice", "Sleepherb Mountain"],
+            "base": [
+                ["BIRDFM"]
+            ],
+            "mate": [
+                ["RockSlime"]
+            ],
+            "reqFor": ["HaloSlime"]
+        },
+
+        "whipbird": {
+            "name": "WhipBird",
+            "fam": "Bird",
+            "skills": ["Ironize", "ThickFog", "TatsuCall"],
+            "found": ["none"],
+            "base": [
+                ["LandOwl", "MadGoose", "MadCondor", "Blizzardy", "ZapBird"],
+                ["BIRDFM"]
+            ],
+            "mate": [
+                ["RockSlime", "SlimeBorg", "Digster", "MetalDrak", "Golem", "StoneMan", "Merman"],
+                ["Rayburn", "SnakeBat"]
+            ],
+            "reqFor": ["KingSlime", "SpotKing", "Coatol", "GreatDrak", "Trumpeter", "Shantak", "ZapBird", "ArcDemon", "WhiteKing"]
+        },
+
+        "wyvern": {
+            "name": "Wyvern",
+            "fam": "Bird",
+            "skills": ["Heal", "Sleep", "FrigidAir"],
+            "found": ["Pirate", "Moonrock Tower F3"],
+            "base": [
+                ["BIRDFM"]
+            ],
+            "mate": [
+                ["DRAGONFM"]
+            ],
+            "reqFor": ["MadGoose", "Gismo"]
+        },
+
+        "zapbird": {
+            "name": "ZapBird",
+            "fam": "Bird",
+            "skills": ["Hellblast", "Lightning", "BoltSlash"],
+            "found": ["none"],
+            "base": [
+                ["MadCondor", "Phoenix", "WhipBird"],
+                ["BIRDFM"]
+            ],
+            "mate": [
+                ["Gismo"],
+                ["BOSSFM"]
+            ],
+            "reqFor": ["KingSlime", "SpotKing", "GreatDrak", "Trumpeter", "Garudian", "WhipBird", "ArcDemon", "WhiteKing", "LavaMan"]
+        },
+
+
+
+
+        
+
+
+
+
+        "amberweed": {
+            "name": "AmberWeed",
+            "fam": "Plant",
+            "skills": ["TwinHits", "Barrier", "MagicWall"],
+            "found": ["none"],
+            "base": [
+                ["PLANTFM"]
+            ],
+            "mate": [
+                ["MATERIALFM"]
+            ],
+            "reqFor": ["StubSuck", "Eyeder"]
+        },
+
+        "beanman": {
+            "name": "BeanMan",
+            "fam": "Plant",
+            "skills": ["TwinHits", "RobMagic", "MapMagic"],
+            "found": ["none"],
+            "base": [
+                ["PLANTFM"],
+                ["Eggplaton"]
+            ],
+            "mate": [
+                ["PillowRat", "FishRider"],
+                ["DEVILFM"]
+            ],
+            "reqFor": ["Orc"]
+        },
+
+        "cactiball": {
+            "name": "CactiBall",
+            "fam": "Plant",
+            "skills": ["Paralyze", "HighJump", "OddDance"],
+            "found": ["Oasis", "Overworld"],
+            "base": [
+                ["PLANTFM"]
+            ],
+            "mate": [
+                ["BUGFM"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "dancevegi": {
+            "name": "DanceVegi",
+            "fam": "Plant",
+            "skills": ["K.O.Dance", "LureDance", "SideStep"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["MadPlant"],
+                ["PLANTFM"]
+            ],
+            "mate": [
+                ["BEASTFM"],
+                ["Facer"]
+            ],
+            "reqFor": ["FunkyBird", "HerbMan", "Mudron"]
+        },
+
+        "devipine": {
+            "name": "Devipine",
+            "fam": "Plant",
+            "skills": ["Beat", "SleepAir", "PoisonGas"],
+            "found": ["none"],
+            "base": [
+                ["PLANTFM"]
+            ],
+            "mate": [
+                ["Gulpple"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "egdracil": {
+            "name": "Egdracil",
+            "fam": "Plant",
+            "skills": ["Vivify", "SleepAir", "SuckAll"],
+            "found": ["none"],
+            "base": [
+                ["Rosevine"]
+            ],
+            "mate": [
+                ["Gigantes"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "eggplaton": {
+            "name": "Eggplaton",
+            "fam": "Plant",
+            "skills": ["MPass", "OddDance", "LureDance"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["PLANTFM"]
+            ],
+            "mate": [
+                ["Aquarella", "Lipsy", "Droll"]
+            ],
+            "reqFor": ["BeanMan", "Evilseed"]
+        },
+
+        "evilseed": {
+            "name": "Evilseed",
+            "fam": "Plant",
+            "skills": ["CleanCut", "Paralyze", "Radiant"],
+            "found": ["Sky", "Heaven Helm Cave F1"],
+            "base": [
+                ["PLANTFM"],
+                ["Eggplaton"]
+            ],
+            "mate": [
+                ["RockSlime", "BigEye", "DuckKite", "Butterfly", "Eyeder", "DarkEye", "EyeBall", "MadMirror", "Gamanian", "KiteHawk"],
+                ["ZOMBIEFM"]
+            ],
+            "reqFor": ["ManEater", "Gismo"]
+        },
+
+        "facetree": {
+            "name": "FaceTree",
+            "fam": "Plant",
+            "skills": ["StopSpell", "Curse", "OddDance"],
+            "found": ["Traveler", "Overworld"],
+            "base": [
+                ["HerbMan"],
+                ["PLANTFM"],
+                ["GhosTree"]
+            ],
+            "mate": [
+                ["DRAGONFM"],
+                ["NiteWhip"],
+                ["Snapper"]
+            ],
+            "reqFor": ["Rayburn", "SuperTen"]
+        },
+
+        "fireweed": {
+            "name": "FireWeed",
+            "fam": "Plant",
+            "skills": ["Blaze", "DeChaos", "PalsyAir"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["PLANTFM"]
+            ],
+            "mate": [
+                ["DRAGONFM"]
+            ],
+            "reqFor": ["Gismo"]
+        },
+
+        "floraman": {
+            "name": "FloraMan",
+            "fam": "Plant",
+            "skills": ["Firebal", "Antidote", "CurseOff"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["PLANTFM"]
+            ],
+            "mate": [
+                ["BEASTFM"]
+            ],
+            "reqFor": ["TailEater", "BoneSlave"]
+        },
+
+        "foohero": {
+            "name": "FooHero",
+            "fam": "Plant",
+            "skills": ["Bolt", "Heal", "GigaSlash"],
+            "found": ["Sky", "Heaven Helm Cave F1"],
+            "base": [
+                ["TreeBoy"]
+            ],
+            "mate": [
+                ["BeastNite", "SlimeNite", "HammerMan"]
+            ],
+            "reqFor": ["TreeBoy"]
+        },
+
+        "ghostree": {
+            "name": "GhosTree",
+            "fam": "Plant",
+            "skills": ["RobMagic", "LureDance", "EerieLite"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["StubSuck"]
+            ],
+            "mate": [
+                ["Puppetor", "ZOMBIEFM"]
+            ],
+            "reqFor": ["FaceTree", "StubSuck"]
+        },
+
+        "gulpple": {
+            "name": "Gulpple",
+            "fam": "Plant",
+            "skills": ["NapAttack", "HighJump", "SleepAir"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["PLANTFM"]
+            ],
+            "mate": [
+                ["DEVILFM"]
+            ],
+            "reqFor": ["Andreal", "Devipine"]
+        },
+
+        "herbman": {
+            "name": "HerbMan",
+            "fam": "Plant",
+            "skills": ["Curse", "Focus", "DanceShut"],
+            "found": ["none"],
+            "base": [
+                ["DanceVegi"],
+                ["PLANTFM"]
+            ],
+            "mate": [
+                ["DEVILFM"],
+                ["FunkyBird"]
+            ],
+            "reqFor": ["FaceTree"]
+        },
+
+        "madplant": {
+            "name": "MadPlant",
+            "fam": "Plant",
+            "skills": ["NumbOff", "Sap", "Slow"],
+            "found": ["Elf", "Overworld"],
+            "base": [
+                ["PLANTFM"]
+            ],
+            "mate": [
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["Healer", "SuperTen", "DanceVegi", "Mudron"]
+        },
+
+        "maneater": {
+            "name": "ManEater",
+            "fam": "Plant",
+            "skills": ["DrakSlash", "PsycheUp", "SleepAir"],
+            "found": ["Ice", "Spooky Forest"],
+            "base": [
+                ["EvilSeed"]
+            ],
+            "mate": [
+                ["EvilSeed", "Slurperon"]
+            ],
+            "reqFor": ["Snapper"]
+        },
+
+        "oniono": {
+            "name": "Oniono",
+            "fam": "Plant",
+            "skills": ["RobMagic", "ChargeUp", "SleepAir"],
+            "found": ["none"],
+            "base": [
+                ["PLANTFM"]
+            ],
+            "mate": [
+                ["Gophecada"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "rosevine": {
+            "name": "Rosevine",
+            "fam": "Plant",
+            "skills": ["BiAttack", "UltraDown", "BladeD"],
+            "found": ["none"],
+            "base": [
+                ["PLANTFM"]
+            ],
+            "mate": [
+                ["BOSSFM"]
+            ],
+            "reqFor": ["Egdracil", "GateGuard", "Sidoh"]
+        },
+
+        "slurperon": {
+            "name": "Slurperon",
+            "fam": "Plant",
+            "skills": ["Sleep", "OddDance", "LushLicks"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["PLANTFM"]
+            ],
+            "mate": [
+                ["WATERFM"]
+            ],
+            "reqFor": ["ManEater"]
+        },
+
+        "snapper": {
+            "name": "Snapper",
+            "fam": "Plant",
+            "skills": ["StopSpell", "CallHelp", "RainSlash"],
+            "found": ["Elf", "Overworld"],
+            "base": [
+                ["ManEater"]
+            ],
+            "mate": [
+                ["ManEater"]
+            ],
+            "reqFor": ["FaceTree"]
+        },
+
+        "stubsuck": {
+            "name": "StubSuck",
+            "fam": "Plant",
+            "skills": ["Sleep", "ZombieCut", "StepGuard"],
+            "found": ["Ice", "Spooky Forest"],
+            "base": [
+                ["AmberWeed"],
+                ["GhosTree"]
+            ],
+            "mate": [
+                ["BEASTFM"],
+                ["GhosTree"]
+            ],
+            "reqFor": ["HammerMan", "GhosTree"]
+        },
+
+        "toadstool": {
+            "name": "Toadstool",
+            "fam": "Plant",
+            "skills": ["NapAttack", "SleepAir", "MouthShut"],
+            "found": ["none"],
+            "base": [
+                ["PLANTFM"]
+            ],
+            "mate": [
+                ["ZOMBIEFM"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "treeboy": {
+            "name": "TreeBoy",
+            "fam": "Plant",
+            "skills": ["MPass", "CurseOff", "Hustle"],
+            "found": ["Ice", "Goldmine Cave"],
+            "base": [
+                ["PLANTFM"],
+                ["FooHero"]
+            ],
+            "mate": [
+                ["Pixy"],
+                ["EvilWand"]
+            ],
+            "reqFor": ["MimeSlime", "CatMage", "FooHero"]
+        },
+
+        "watabou": {
+            "name": "Watabou",
+            "fam": "Plant",
+            "skills": ["Unknown", "Unknown", "Unknown"],
+            "found": ["none"],
+            "base": [
+                ["CNB"]
+            ],
+            "mate": [
+                ["NA"]
+            ],
+            "reqFor": ["DarkDrium"]
+        },
+
+        "warubou": {
+            "name": "Warubou",
+            "fam": "Plant",
+            "skills": ["MPass", "DeMagic", "Pheromone"],
+            "found": ["none"],
+            "base": [
+                ["Warubou"]
+            ],
+            "mate": [
+                ["Watabou"]
+            ],
+            "reqFor": ["Watabou"]
+        },
+
+        "wingtree": {
+            "name": "WingTree",
+            "fam": "Plant",
+            "skills": ["Farewell", "ZombieCut", "StepGuard"],
+            "found": ["Ice", "Sleepherb Mountain"],
+            "base": [
+                ["PLANTFM"]
+            ],
+            "mate": [
+                ["BIRDFM"]
+            ],
+            "reqFor": ["CurseLamp"]
+        },
+
+
+
+
+
+
+
+
+
+        "armorpede": {
+            "name": "ArmorPede",
+            "fam": "Bug",
+            "skills": ["Upper", "TwinHits", "TwinSlash"],
+            "found": ["Sky", "Heaven Armor Tower F1"],
+            "base": [
+                ["GiantWorm"],
+                ["Droll"],
+                ["BUGFM"],
+                ["MultiEyes"]
+            ],
+            "mate": [
+                ["MATERIALFM"],
+                ["DRAGONFM"],
+                ["IronTurt"],
+                ["RockSlime", "Tortragon"]
+            ],
+            "reqFor": ["HornBeet", "EvilArmor"]
+        },
+
+        "armorpion": {
+            "name": "Armorpion",
+            "fam": "Bug",
+            "skills": ["ZombieCut", "RainSlash", "EvilSlash"],
+            "found": ["none"],
+            "base": [
+                ["HornBeet"],
+                ["WarMantis"]
+            ],
+            "mate": [
+                ["HornBeet"],
+                ["CancerMan", "RogueNite", "Octoraid"]
+            ],
+            "reqFor": ["Skularach", "DeathMore2"]
+        },
+
+        "armyant": {
+            "name": "ArmyAnt",
+            "fam": "Bug",
+            "skills": ["CallHelp", "NapAttack", "Kamikaze"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["GiantSlug"]
+            ],
+            "mate": [
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "armycrab": {
+            "name": "ArmyCrab",
+            "fam": "Bug",
+            "skills": ["Upper", "CallHelp", "MetalCut"],
+            "found": ["none"],
+            "base": [
+                ["BUGFM"]
+            ],
+            "mate": [
+                ["DarkCrab", "CancerMan"]
+            ],
+            "reqFor": ["Spikerous", "Digster", "Clawster"]
+        },
+
+        "belzebub": {
+            "name": "Belzebub",
+            "fam": "Bug",
+            "skills": ["Firebal", "Farewell", "Ramming"],
+            "found": ["Sky", "Fhunt Tower F4"],
+            "base": [
+                ["MadHornet"],
+                ["MultiEyes"]
+            ],
+            "mate": [
+                ["GoHopper"],
+                ["Butterfly", "Pyuro"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "butterfly": {
+            "name": "Butterfly",
+            "fam": "Bug",
+            "skills": ["Surround", "CallHelp", "Curse"],
+            "found": ["Traveler", "Overworld"],
+            "base": [
+                ["BUGFM"]
+            ],
+            "mate": [
+                ["BIRDFM"]
+            ],
+            "reqFor": ["Evilseed", "Belzebub", "Droll", "GiantMoth", "MadHornet"]
+        },
+
+        "catapila": {
+            "name": "Catapila",
+            "fam": "Bug",
+            "skills": ["Upper", "PoisonHit", "ThickFog"],
+            "found": ["none"],
+            "base": [
+                ["BUGFM"]
+            ],
+            "mate": [
+                ["DRAGONFM"]
+            ],
+            "reqFor": ["Eyeder", "MultiEyes"]
+        },
+
+        "digster": {
+            "name": "Digster",
+            "fam": "Bug",
+            "skills": ["Farewell", "StrongD", "SuckAll"],
+            "found": ["none"],
+            "base": [
+                ["BUGFM"],
+                ["ArmyCrab"]
+            ],
+            "mate": [
+                ["BOSSFM"],
+                ["Clawster"]
+            ],
+            "reqFor": ["Spikerous", "GulpBeast", "WhipBird", "Ogre", "StoneMan"]
+        },
+
+        "droll": {
+            "name": "Droll",
+            "fam": "Bug",
+            "skills": ["Slow", "Shears", "StepGuard"],
+            "found": ["Ice", "Goldmine Cave"],
+            "base": [
+                ["Eyeder"],
+                ["TailEater"],
+                ["Butterfly"],
+                ["Lipsy"],
+                ["BUGFM"]
+            ],
+            "mate": [
+                ["Eyeder"],
+                ["TailEater"],
+                ["Butterfly"],
+                ["SLIMEFM", "Aquarella", "Octokid", "Angleron"],
+                ["Spooky"]
+            ],
+            "reqFor": ["MadGoose", "Eggplaton", "ArmorPede", "MadHornet", "Mudron", "PomPomBom", "RushFish"]
+        },
+
+        "eyeder": {
+            "name": "Eyeder",
+            "fam": "Bug",
+            "skills": ["Firebal", "Heal", "MapMagic"],
+            "found": ["Pirate", "Moonrock Tower F1"],
+            "base": [
+                ["Catapila"],
+                ["BUGFM"]
+            ],
+            "mate": [
+                ["BEASTFM"],
+                ["AmberWeed"]
+            ],
+            "reqFor": ["Evilseed", "Droll", "MadHornet"]
+        },
+
+        "giantmoth": {
+            "name": "GiantMoth",
+            "fam": "Bug",
+            "skills": ["WindBeast", "Paralyze", "Radiant"],
+            "found": ["Ice", "Sleepherb Mountain"],
+            "base": [
+                ["Butterfly"],
+                ["BUGFM"]
+            ],
+            "mate": [
+                ["DEVILFM"],
+                ["Saccer", "RayGigas"]
+            ],
+            "reqFor": ["Babble", "GateGuard"]
+        },
+
+        "giantslug": {
+            "name": "GiantSlug",
+            "fam": "Bug",
+            "skills": ["LushLicks", "Dodge", "Whistle"],
+            "found": ["none"],
+            "base": [
+                ["BUGFM"]
+            ],
+            "mate": [
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["ArmyAnt", "Mudron"]
+        },
+
+        "giantworm": {
+            "name": "GiantWorm",
+            "fam": "Bug",
+            "skills": ["BeastCut", "OddDance", "StepGuard"],
+            "found": ["Oasis", "Sewers"],
+            "base": [
+                ["BUGFM"]
+            ],
+            "mate": [
+                ["DEVILFM"]
+            ],
+            "reqFor": ["ArmorPede", "SabreMan"]
+        },
+
+        "gohopper": {
+            "name": "GoHopper",
+            "fam": "Bug",
+            "skills": ["RobMagic", "CallHelp", "ChargeUp"],
+            "found": ["Elf", "Overworld"],
+            "base": [
+                ["CNB"]
+            ],
+            "mate": [
+                ["N/A"]
+            ],
+            "reqFor": ["LizardFly", "Belzebub"]
+        },
+
+        "gophecada": {
+            "name": "Gophecada",
+            "fam": "Bug",
+            "skills": ["Beat", "MagicBack", "CallHelp"],
+            "found": ["none"],
+            "base": [
+                ["BUGFM"]
+            ],
+            "mate": [
+                ["BEASTFM"]
+            ],
+            "reqFor": ["Oniono"]
+        },
+
+        "hornbeet": {
+            "name": "HornBeet",
+            "fam": "Bug",
+            "skills": ["RockThrow", "BoltSlash", "DevilCut"],
+            "found": ["none"],
+            "base": [
+                ["StagBug"],
+                ["ArmorPede", "WarMantis"]
+            ],
+            "mate": [
+                ["StagBug"],
+                ["DEVILFM"]
+            ],
+            "reqFor": ["Armorpion", "BoneSlave", "StoneMan"]
+        },
+
+        "lipsy": {
+            "name": "Lipsy",
+            "fam": "Bug",
+            "skills": ["LushLicks", "Ahhh", "Pheromone"],
+            "found": ["Traveler", "Overworld"],
+            "base": [
+                ["BUGFM"]
+            ],
+            "mate": [
+                ["ZOMBIEFM"]
+            ],
+            "reqFor": ["SuperTen", "Eggplaton", "Droll", "Mudron", "Voodoll"]
+        },
+
+        "madhornet": {
+            "name": "MadHornet",
+            "fam": "Bug",
+            "skills": ["PoisonHit", "Paralyze", "TailWind"],
+            "found": ["Sky", "Heaven Armor Tower F3"],
+            "base": [
+                ["Eyeder", "Droll", "Pyuro"],
+                ["BUGFM"],
+                ["Butterfly"]
+            ],
+            "mate": [
+                ["ZOMBIEFM"],
+                ["FairyRat"],
+                ["Pyuro"]
+            ],
+            "reqFor": ["Belzebub"]
+        },
+
+        "multieyes": {
+            "name": "MultiEyes",
+            "fam": "Bug",
+            "skills": ["Sap", "TwinHits", "PalsyAir"],
+            "found": ["Elf", "Overworld"],
+            "base": [
+                ["Catapila"],
+                ["TailEater"]
+            ],
+            "mate": [
+                ["Catapila"],
+                ["DEVILFM"]
+            ],
+            "reqFor": ["ArmorPede", "Belzebub"]
+        },
+
+        "pyuro": {
+            "name": "Pyuro",
+            "fam": "Bug",
+            "skills": ["Speed", "WindBeast", "MouthShut"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["BUGFM"]
+            ],
+            "mate": [
+                ["WATERFM"]
+            ],
+            "reqFor": ["FunkyBird", "Belzebub", "MadHornet"]
+        },
+
+        "sickler": {
+            "name": "Sickler",
+            "fam": "Bug",
+            "skills": ["Infernos", "DevilCut", "SquallHit"],
+            "found": ["none"],
+            "base": [
+                ["BUGFM"],
+                ["WarMantis"]
+            ],
+            "mate": [
+                ["1EyeClown", "Reaper"],
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["CatMage", "WarMantis"]
+        },
+
+        "skularach": {
+            "name": "Skularach",
+            "fam": "Bug",
+            "skills": ["Lightning", "BiAttack", "PoisonGas"],
+            "found": ["none"],
+            "base": [
+                ["Armorpion"]
+            ],
+            "mate": [
+                ["WhiteKing"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "stagbug": {
+            "name": "StagBug",
+            "fam": "Bug",
+            "skills": ["Sleep", "FireAir", "LegSweep"],
+            "found": ["Elf", "AgDevils Hideout"],
+            "base": [
+                ["BUGFM"]
+            ],
+            "mate": [
+                ["MATERIALFM"]
+            ],
+            "reqFor": ["HornBeet"]
+        },
+
+        "taileater": {
+            "name": "TailEater",
+            "fam": "Bug",
+            "skills": ["IceSlash", "PoisonGas", "Radiant"],
+            "found": ["Oasis", "Overworld"],
+            "base": [
+                ["WeedBug"],
+                ["BUGFM"]
+            ],
+            "mate": [
+                ["PLANTFM"],
+                ["FloraMan"]
+            ],
+            "reqFor": ["Droll", "MultiEyes"]
+        },
+
+        "warmantis": {
+            "name": "WarMantis",
+            "fam": "Bug",
+            "skills": ["VacuSlash", "Shears", "GigaSlash"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["Sickler"]
+            ],
+            "mate": [
+                ["DEVILFM"]
+            ],
+            "reqFor": ["Armorpion", "HornBeet", "Sickler"]
+        },
+
+        "weedbug": {
+            "name": "WeedBug",
+            "fam": "Bug",
+            "skills": ["RobMagic", "Barrier", "MagicWall"],
+            "found": ["none"],
+            "base": [
+                ["BUGFM"]
+            ],
+            "mate": [
+                ["PLANTFM"]
+            ],
+            "reqFor": ["TailEater", "Reaper"]
+        },
+
+
+
+
+
+
+
+
+
+        "1eyeclown": {
+            "name": "1EyeClown",
+            "fam": "Devil",
+            "skills": ["Blaze", "Firebal", "IceBolt"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["Pixy", "Demonite", "EyeBall"]
+            ],
+            "mate": [
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["MimeSlime", "CatMage", "Sickler", "ChopClown", "MedusaEye", "WhaleMage"]
+        },
+
+        "agdevil": {
+            "name": "AgDevil",
+            "fam": "Devil",
+            "skills": ["Firebal", "Sacrifice", "SleepAir"],
+            "found": ["Ice", "Ice Tower F1"],
+            "base": [
+                ["SkulRider", "EvilBeast", "Gremlin", "MedusaEye"]
+            ],
+            "mate": [
+                ["DRAGONFM"]
+            ],
+            "reqFor": ["ArcDemon", "GateGuard", "Ogre"]
+        },
+
+        "akubar": {
+            "name": "Akubar",
+            "fam": "Devil",
+            "skills": ["Bang", "FrigidAir", "Focus"],
+            "found": ["none"],
+            "base": [
+                ["ArcDemon"],
+                ["Grendal"]
+            ],
+            "mate": [
+                ["GateGuard"],
+                ["Grendal"]
+            ],
+            "reqFor": ["Andreal", "Jamirus"]
+        },
+
+        "arcdemon": {
+            "name": "ArcDemon",
+            "fam": "Devil",
+            "skills": ["Bang", "VacuSlash", "BoltSlash"],
+            "found": ["none"],
+            "base": [
+                ["AgDevil", "Grendal", "Gigantes"],
+                ["GateGuard"],
+                ["Ogre"],
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["Andreal", "Garudian", "GreatDrak", "KingLeo", "KingSlime", "MetalDrak", "MetalKing", "Orochi", "SpotKing", "Trumpeter", "WhipBird", "ZapBird"],
+                ["ZOMBIEFM"],
+                ["DRAGONFM"],
+                ["BOSSFM"]
+            ],
+            "reqFor": ["Andreal", "Phoenix", "Akubar", "Centasaur", "EvilArmor", "GoatHorn", "Lionex", "DeadNoble", "LavaMan", "AxeShark"]
+        },
+
+        "bosstroll": {
+            "name": "BossTroll",
+            "fam": "Devil",
+            "skills": ["Massacre", "Ramming", "Cover"],
+            "found": ["Limbo"],
+            "base": [
+                ["Ogre", "Centasaur"],
+                ["GoatHorn"]
+            ],
+            "mate": [
+                ["GreatDrak", "Balzak", "StoneMan", "WalrusMan"],
+                ["BEASTFM"]
+            ],
+            "reqFor": ["KingSlime", "SpotKing", "GigaDraco", "KingLeo", "Centasaur", "EvilWell", "GoldGolem", "LavaMan"]
+        },
+
+        "bubblemon": {
+            "name": "Bubblemon",
+            "fam": "Devil",
+            "skills": ["Watershot", "IceSlash", "BladeD"],
+            "found": ["none"],
+            "base": [
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["WATERFM"]
+            ],
+            "reqFor": ["Dumbira"]
+        },
+
+        "centasaur": {
+            "name": "Centasaur",
+            "fam": "Devil",
+            "skills": ["StopSpell", "FireSlash", "RainSlash"],
+            "found": ["none"],
+            "base": [
+                ["ArcDemon"],
+                ["Ogre", "GateGuard", "BossTroll"]
+            ],
+            "mate": [
+                ["DRAGONFM"],
+                ["BEASTFM"]
+            ],
+            "reqFor": ["KingSlime", "SpotKing", "GreatDrak", "BossTroll", "Durran", "LampGenie", "LavaMan"]
+        },
+
+        "chopclown": {
+            "name": "ChopClown",
+            "fam": "Devil",
+            "skills": ["TwinHits", "VacuSlash", "SquallHit"],
+            "found": ["Limbo", "Overworld"],
+            "base": [
+                ["1EyeClown"],
+                ["Lionex"]
+            ],
+            "mate": [
+                ["1EyeClown"],
+                ["MimeSlime"]
+            ],
+            "reqFor": ["Octoraid"]
+        },
+
+        "darkeye": {
+            "name": "DarkEye",
+            "fam": "Devil",
+            "skills": ["CleanCut", "PalsyAir", "Radiant"],
+            "found": ["Pirate", "Harmirror cave B1"],
+            "base": [
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["PLANTFM"]
+            ],
+            "reqFor": ["Emyu", "Evilseed", "Gamanian"]
+        },
+
+        "demonite": {
+            "name": "Demonite",
+            "fam": "Devil",
+            "skills": ["Blaze", "FireAir", "FrigidAir"],
+            "found": ["Ice", "Spooky Forest"],
+            "base": [
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["BIRDFM"]
+            ],
+            "reqFor": ["SuperTen", "1EyeClown", "GateGuard", "Brushead", "FishRider"]
+        },
+
+        "durran": {
+            "name": "Durran",
+            "fam": "Devil",
+            "skills": ["WindBeast", "DrakSlash", "BirdBlow"],
+            "found": ["none"],
+            "base": [
+                ["Centasaur"],
+                ["GoldGolem"],
+                ["Jamirus"]
+            ],
+            "mate": [
+                ["GoldGolem"],
+                ["Centasaur"],
+                ["Serpentia"]
+            ],
+            "reqFor": ["Titanis", "Pizzaro"]
+        },
+
+        "evilarmor": {
+            "name": "EvilArmor",
+            "fam": "Devil",
+            "skills": ["FireSlash", "BoltSlash", "AquaCut"],
+            "found": ["none"],
+            "base": [
+                ["ArcDemon", "Ogre", "GateGuard"],
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["MATERIALFM"],
+                ["ArmorPede"]
+            ],
+            "reqFor": ["BattleRex", "BeastNite", "ProtoMech", "Roboster1", "Octoraid"]
+        },
+
+        "evilbeast": {
+            "name": "EvilBeast",
+            "fam": "Devil",
+            "skills": ["Firebal", "Ironize", "FrigidAir"],
+            "found": ["Sky", "Fhunt Tower F4"],
+            "base": [
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["MATERIALFM"]
+            ],
+            "reqFor": ["AgDevil", "Gigantes", "Grendal", "Skeletor"]
+        },
+
+        "evilwell": {
+            "name": "EvilWell",
+            "fam": "Devil",
+            "skills": ["Blaze", "ChargeUp", "WarCry"],
+            "found": ["none"],
+            "base": [
+                ["BossTroll"],
+                ["Ogre"]
+            ],
+            "mate": [
+                ["IceMan"],
+                ["LavaMan"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "eyeball": {
+            "name": "EyeBall",
+            "fam": "Devil",
+            "skills": ["MagicBack", "WarCry", "Outside"],
+            "found": ["Sky", "Heaven Helm Cave F1"],
+            "base": [
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["BUGFM"]
+            ],
+            "reqFor": ["BigEye", "Evilseed", "1EyeClown"]
+        },
+
+        "gateguard": {
+            "name": "GateGuard",
+            "fam": "Devil",
+            "skills": ["Blaze", "CleanCut", "ThickFog"],
+            "found": ["Sky", "Heaven Sword Castle B2"],
+            "base": [
+                ["AgDevil", "Gigantes", "Grendal"],
+                ["Demonite"],
+                ["Ogre"]
+            ],
+            "mate": [
+                ["AxeShark", "Coatol", "DeadNoble", "GiantMoth", "MadCondor", "MistyWing", "Rosevine", "Skullgon", "SlimeBorg", "Swordgon", "WhiteKing"],
+                ["Demonite"],
+                ["ZOMBIEFM"]
+            ],
+            "reqFor": ["Rayburn", "Akubar", "ArcDemon", "Centasaur", "EvilArmor", "Ogre", "DeadNoble", "Octoraid"]
+        },
+
+        "gigantes": {
+            "name": "Gigantes",
+            "fam": "Devil",
+            "skills": ["SlimeBlow", "ChargeUp", "EvilSlash"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["SkulRider", "EvilBeast"],
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["ZOMBIEFM"],
+                ["BigEye"]
+            ],
+            "reqFor": ["KingSlime", "SpotKing", "GigaDraco", "GreatDrak", "Rayburn", "Dumbira", "Egdracil", "ArcDemon", "GateGuard", "Ogre", "Digong"]
+        },
+
+        "goathorn": {
+            "name": "GoatHorn",
+            "fam": "Devil",
+            "skills": ["Bang", "Infernos", "IceBolt"],
+            "found": ["none"],
+            "base": [
+                ["ArcDemon"],
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["BEASTFM"],
+                ["DarkHorn"]
+            ],
+            "reqFor": ["Andreal", "Rayburn", "BossTroll"]
+        },
+
+        "gremlin": {
+            "name": "Gremlin",
+            "fam": "Devil",
+            "skills": ["Firebal", "Heal", "StopSpell"],
+            "found": ["none"],
+            "base": [
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["BEASTFM"]
+            ],
+            "reqFor": ["SuperTen", "AgDevil", "Grendal", "MedusaEye", "BoneSlave", "Puppetor", "FishRider"]
+        },
+
+        "grendal": {
+            "name": "Grendal",
+            "fam": "Devil",
+            "skills": ["FireSlash", "DrakSlash", "Cover"],
+            "found": ["Elf", "Overworld"],
+            "base": [
+                ["SkulRider", "EvilBeast", "Gremlin", "MedusaEye"],
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["BEASTFM"],
+                ["MadDragon", "BeastNite"]
+            ],
+            "reqFor": ["Akubar", "ArcDemon", "GateGuard", "Ogre", "Roboster1"]
+        },
+
+        "jamirus": {
+            "name": "Jamirus",
+            "fam": "Devil",
+            "skills": ["Blaze", "BiAttack", "TailWind"],
+            "found": ["none"],
+            "base": [
+                ["Akubar"]
+            ],
+            "mate": [
+                ["RainHawk"]
+            ],
+            "reqFor": ["Garudian", "Shantak", "Durran", "Sidoh"]
+        },
+
+        "lampgenie": {
+            "name": "LampGenie",
+            "fam": "Devil",
+            "skills": ["Heal", "Sleep", "TailWind"],
+            "found": ["none"],
+            "base": [
+                ["Centasaur"]
+            ],
+            "mate": [
+                ["BOSSFM"]
+            ],
+            "reqFor": ["CloudKing"]
+        },
+
+        "lionex": {
+            "name": "Lionex",
+            "fam": "Devil",
+            "skills": ["Infernos", "HealUs", "VacuSlash"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["ArcDemon"],
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["ZOMBIEFM", "Garudian"],
+                ["LizardMan"]
+            ],
+            "reqFor": ["Andreal", "BattleRex", "Rayburn", "Serpentia", "Garudian", "ChopClown", "DeadNoble", "Octoraid"]
+        },
+
+        "madknight": {
+            "name": "MadKnight",
+            "fam": "Devil",
+            "skills": ["BeastCut", "GigaSlash", "Massacre"],
+            "found": ["Sky", "Fhunt Tower F4"],
+            "base": [
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["RogueNite"]
+            ],
+            "reqFor": ["BattleRex", "Coatol"]
+        },
+
+        "medusaeye": {
+            "name": "MedusaEye",
+            "fam": "Devil",
+            "skills": ["Sap", "Surround", "Shears"],
+            "found": ["none"],
+            "base": [
+                ["MedusaEye", "1EyeClown", "Gremlin"],
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["ZOMBIEFM"],
+                ["DRAGONFM"]
+            ],
+            "reqFor": ["Orochi", "AgDevil", "Grendal", "MedusaEye", "Gamanian"]
+        },
+
+        "ogre": {
+            "name": "Ogre",
+            "fam": "Devil",
+            "skills": ["MetalCut", "PsycheUp", "Massacre"],
+            "found": ["Traveler", "Overworld"],
+            "base": [
+                ["AgDevil", "Grendal", "Gigantes"],
+                ["GateGuard"],
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["GulpBeast", "Unicorn", "Digster", "Roboster1", "WalrusMan", "MerTiger"],
+                ["DRAGONFM"],
+                ["HammerMan"]
+            ],
+            "reqFor": ["Andreal", "BattleRex", "ArcDemon", "BossTroll", "Centasaur", "EvilArmor", "EvilWell", "GateGuard", "Skeletor", "Roboster1"]
+        },
+
+        "orc": {
+            "name": "Orc",
+            "fam": "Devil",
+            "skills": ["Vivify", "Sap", "BirdBlow"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["BeanMan"]
+            ],
+            "reqFor": ["Dumbira", "Yeti"]
+        },
+
+        "pixy": {
+            "name": "Pixy",
+            "fam": "Devil",
+            "skills": ["Antidote", "TwinHits", "SealPray"],
+            "found": ["none"],
+            "base": [
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["HaloSlime", "TreeBoy", "1EyeClown", "Brushead", "FishRider"]
+        },
+
+        "skulrider": {
+            "name": "SkulRider",
+            "fam": "Devil",
+            "skills": ["FireSlash", "RainSlash", "LegSweep"],
+            "found": ["none"],
+            "base": [
+                ["DEVILFM"]
+            ],
+            "mate": [
+                ["ZOMBIEFM"]
+            ],
+            "reqFor": ["AgDevil", "Gigantes", "Grendal", "Roboster1", "FishRider"]
+        },
+
+        "titanis": {
+            "name": "Titanis",
+            "fam": "Devil",
+            "skills": ["Bang", "Berserker", "UltraDown"],
+            "found": ["none"],
+            "base": [
+                ["Durran"]
+            ],
+            "mate": [
+                ["DarkHorn"]
+            ],
+            "reqFor": ["DeathMore2", "Genosidoh"]
+        },
+
+
+
+
+
+
+
+
+
+        "boneslave": {
+            "name": "BoneSlave",
+            "fam": "Zombie",
+            "skills": ["Bang", "BoltSlash", "BiAttack"],
+            "found": ["none"],
+            "base": [
+                ["Mummy", "DeadNite"]
+            ],
+            "mate": [
+                ["RockSlime", "SlimeBorg", "LandOwl", "MadGoose", "FloraMan", "HornBeet", "Gremlin"]
+            ],
+            "reqFor": ["CaptDead", "DeadNoble", "MadSpirit", "Skeletor", "Skullgon", "WhiteKing"]
+        },
+
+        "captdead": {
+            "name": "CaptDead",
+            "fam": "Zombie",
+            "skills": ["CallHelp", "AquaCut", "SquallHit"],
+            "found": ["none"],
+            "base": [
+                ["BoneSlave"],
+                ["NiteWhip"]
+            ],
+            "mate": [
+                ["WATERFM"],
+                ["Moray"]
+            ],
+            "reqFor": ["DeadNoble", "Skeletor"]
+        },
+
+        "copycat": {
+            "name": "Copycat",
+            "fam": "Zombie",
+            "skills": ["Transform", "OddDance", "Imitate"],
+            "found": ["Sky", "Heaven Sword Castle B2"],
+            "base": [
+                ["CNB"]
+            ],
+            "mate": [
+                ["N/A"]
+            ],
+            "reqFor": ["HaloSlime", "Healer", "Coatol", "SuperTen", "Phoenix", "DeadNoble", "PomPomBom"]
+        },
+
+        "darkcrab": {
+            "name": "DarkCrab",
+            "fam": "Zombie",
+            "skills": ["Ironize", "MagicWall", "StepGuard"],
+            "found": ["none"],
+            "base": [
+                ["ZOMBIEFM"]
+            ],
+            "mate": [
+                ["BUGFM", "CancerMan", "Clawster", "Gamanian"]
+            ],
+            "reqFor": ["ArmyCrab", "NiteWhip"]
+        },
+
+        "deadnite": {
+            "name": "DeadNite",
+            "fam": "Zombie",
+            "skills": ["Heal", "DeChaos", "CurseOff"],
+            "found": ["Sky", "Heaven Sword Castle F1"],
+            "base": [
+                ["ZOMBIEFM"]
+            ],
+            "mate": [
+                ["DEVILFM"]
+            ],
+            "reqFor": ["RockSlime", "BoneSlave", "DeadNoble", "MadSpirit", "Skeletor"]
+        },
+
+        "deadnoble": {
+            "name": "DeadNoble",
+            "fam": "Zombie",
+            "skills": ["HealUs", "AquaCut", "TatsuCall"],
+            "found": ["none"],
+            "base": [
+                ["Mudron", "MadSpirit", "BoneSlave", "Skeletor", "CaptDead"],
+                ["Skullgon", "DeadNite", "Mudron", "DeadNoble", "Skeletor", "CaptDead"],
+                ["MadSpirit"],
+                ["DeadNite"]
+            ],
+            "mate": [
+                ["ArcDemon", "Lionex", "GateGuard", "MetalDrak", "Roboster1"],
+                ["Copycat"],
+                ["Roboster2"],
+                ["DeadNite"]
+            ],
+            "reqFor": ["KingSlime", "SpotKing", "Andreal", "GulpBeast", "Blizzardy", "GateGuard", "DeadNoble", "MadSpirit", "Niterich", "Skullgon", "WhiteKing", "Roboster1"]
+        },
+
+        "foxfire": {
+            "name": "FoxFire",
+            "fam": "Zombie",
+            "skills": ["Blaze", "Firebal", "Outside"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["NiteWhip"],
+                ["Putrepup"]
+            ],
+            "mate": [
+                ["BEASTFM"],
+                ["MistyWing"]
+            ],
+            "reqFor": ["PomPomBom"]
+        },
+
+        "hork": {
+            "name": "Hork",
+            "fam": "Zombie",
+            "skills": ["PoisonGas", "EerieLite", "LushLicks"],
+            "found": ["none"],
+            "base": [
+                ["Spooky"]
+            ],
+            "mate": [
+                ["BEASTFM"]
+            ],
+            "reqFor": ["Inverzon", "Reaper", "Skeletor"]
+        },
+
+        "inverzon": {
+            "name": "Inverzon",
+            "fam": "Zombie",
+            "skills": ["Surround", "PoisonGas", "SideStep"],
+            "found": ["none"],
+            "base": [
+                ["Hork"]
+            ],
+            "mate": [
+                ["Hork"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "lazamanus": {
+            "name": "Lazamanus",
+            "fam": "Zombie",
+            "skills": ["TakeMagic", "K.O.Dance", "LifeDance"],
+            "found": ["none"],
+            "base": [
+                ["WhiteKing"]
+            ],
+            "mate": [
+                ["DracoLord1"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "madspirit": {
+            "name": "MadSpirit",
+            "fam": "Zombie",
+            "skills": ["SleepAir", "Radiant", "ThickFog"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["Skullgon", "DeadNite", "Mudron", "DeadNoble", "BoneSlave", "Skeletor", "PomPomBom"],
+                ["ZOMBIEFM"]
+            ],
+            "mate": [
+                ["BIRDFM"],
+                ["DRAGONFM"]
+            ],
+            "reqFor": ["DeadNoble", "NiteWhip", "Skeletor"]
+        },
+
+        "mudron": {
+            "name": "Mudron",
+            "fam": "Zombie",
+            "skills": ["Beat", "MPass", "Vivify"],
+            "found": ["none"],
+            "base": [
+                ["ZOMBIEFM"]
+            ],
+            "mate": [
+                ["BoxSlime", "DanceVegi", "Droll", "FangSlime", "FunkyBird", "GiantSlug", "Lipsy", "MadPlant", "Tonguella", "Yeti"]
+            ],
+            "reqFor": ["SuperTen", "DeadNoble", "MadSpirit", "Skeletor"]
+        },
+
+        "mummy": {
+            "name": "Mummy",
+            "fam": "Zombie",
+            "skills": ["CallHelp", "Paralyze", "EvilSlash"],
+            "found": ["Ice", "Goldmine Cave"],
+            "base": [
+                ["ZOMBIEFM"]
+            ],
+            "mate": [
+                ["PLANTFM"]
+            ],
+            "reqFor": ["BoneSlave", "Skeletor"]
+        },
+
+        "niterich": {
+            "name": "Niterich",
+            "fam": "Zombie",
+            "skills": ["Beat", "ThickFog", "BladeD"],
+            "found": ["none"],
+            "base": [
+                ["DeadNoble", "Skeletor"]
+            ],
+            "mate": [
+                ["Octoraid", "Roboster2", "Serpentia"]
+            ],
+            "reqFor": ["WhiteKing", "Orgodemir1"]
+        },
+
+        "nitewhip": {
+            "name": "NiteWhip",
+            "fam": "Zombie",
+            "skills": ["WindBeast", "Lightning", "Informer"],
+            "found": ["none"],
+            "base": [
+                ["DarkCrab", "MadSpirit"],
+                ["ZOMBIEFM"]
+            ],
+            "mate": [
+                ["DEVILFM"],
+                ["MistyWing"]
+            ],
+            "reqFor": ["FaceTree", "CaptDead", "FoxFire"]
+        },
+
+        "pompombom": {
+            "name": "PomPomBom",
+            "fam": "Zombie",
+            "skills": ["Beat", "ThickFog", "LifeDance"],
+            "found": ["none"],
+            "base": [
+                ["Copycat"],
+                ["FoxFire"]
+            ],
+            "mate": [
+                ["Droll", "Gasgon"],
+                ["BEASTFM"]
+            ],
+            "reqFor": ["MadSpirit"]
+        },
+
+        "putrepup": {
+            "name": "Putrepup",
+            "fam": "Zombie",
+            "skills": ["Sap", "Slow", "MagicBack"],
+            "found": ["none"],
+            "base": [
+                ["ZOMBIEFM"]
+            ],
+            "mate": [
+                ["BEASTFM"]
+            ],
+            "reqFor": ["ArrowDog", "FoxFire"]
+        },
+
+        "reaper": {
+            "name": "Reaper",
+            "fam": "Zombie",
+            "skills": ["DevilCut", "Curse", "EerieLite"],
+            "found": ["none"],
+            "base": [
+                ["Spooky", "Hork"],
+                ["ZOMBIEFM"]
+            ],
+            "mate": [
+                ["DEVILFM"],
+                ["WeedBug"]
+            ],
+            "reqFor": ["CatMage", "Sickler", "WhaleMage"]
+        },
+
+        "rotraven": {
+            "name": "RotRaven",
+            "fam": "Zombie",
+            "skills": ["Lightning", "BoltSlash", "Kamikaze"],
+            "found": ["Pirate", "Harmirror cave B3"],
+            "base": [
+                ["ZOMBIEFM"]
+            ],
+            "mate": [
+                ["BIRDFM"]
+            ],
+            "reqFor": ["WindMerge"]
+        },
+
+        "servant": {
+            "name": "Servant",
+            "fam": "Zombie",
+            "skills": ["Blaze", "IceBolt", "Focus"],
+            "found": ["none"],
+            "base": [
+                ["Skeletor"],
+                ["WhiteKing"]
+            ],
+            "mate": [
+                ["Skeletor"],
+                ["DEVILFM"]
+            ],
+            "reqFor": ["Blizzardy", "Skullgon", "DracoLord1"]
+        },
+
+        "shadow": {
+            "name": "Shadow",
+            "fam": "Zombie",
+            "skills": ["FrigidAir", "K.O.Dance", "ThickFog"],
+            "found": ["Ice", "Spooky Forest"],
+            "base": [
+                ["ZOMBIEFM"]
+            ],
+            "mate": [
+                ["MATERIALFM"]
+            ],
+            "reqFor": ["NoctoKing"]
+        },
+
+        "skeletor": {
+            "name": "Skeletor",
+            "fam": "Zombie",
+            "skills": ["Sap", "BirdBlow", "BiAttack"],
+            "found": ["Sky", "few found in castle"],
+            "base": [
+                ["Mummy", "DeadNite", "Hork", "Mudron", "CaptDead"],
+                ["BoneSlave"],
+                ["MadSpirit"]
+            ],
+            "mate": [
+                ["GulpBeast", "Grizzly", "MadCat", "MadRaven", "MadCondor", "EvilBeast", "Ogre", "Golem", "StoneMan"],
+                ["BoneSlave"],
+                ["DRAGONFM"]
+            ],
+            "reqFor": ["Serpentia", "GulpBeast", "Blizzardy", "DeadNoble", "MadSpirit", "Niterich", "Servant", "Skullgon", "WhiteKing", "Roboster1"]
+        },
+
+        "skullgon": {
+            "name": "Skullgon",
+            "fam": "Zombie",
+            "skills": ["FrigidAir", "IceSlash", "TwinSlash"],
+            "found": ["Traveler", "Merchants' Tower F3"],
+            "base": [
+                ["Skullgon", "DeadNoble", "WhiteKing", "BoneSlave", "Skeletor", "Skulpent"],
+                ["ZOMBIEFM"],
+                ["DRAGONFM"]
+            ],
+            "mate": [
+                ["DRAGONFM"],
+                ["Swordgon", "Rayburn", "Andreal", "GreatDrak", "Orochi", "BattleRex", "Divinegon"],
+                ["Skullgon", "DeadNoble", "WhiteKing", "Servant"]
+            ],
+            "reqFor": ["GulpBeast", "Blizzardy", "GateGuard", "DeadNoble", "MadSpirit", "Skullgon", "WhiteKing", "IceMan"]
+        },
+
+        "skulpent": {
+            "name": "Skulpent",
+            "fam": "Zombie",
+            "skills": ["Beat", "PoisonHit", "Dodge"],
+            "found": ["Traveler", "Merchants' Tower F2"],
+            "base": [
+                ["ZOMBIEFM"]
+            ],
+            "mate": [
+                ["WATERFM"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "spooky": {
+            "name": "Spooky",
+            "fam": "Zombie",
+            "skills": ["Radiant", "MouthShut", "Outside"],
+            "found": ["Oasis", "Sewers"],
+            "base": [
+                ["ZOMBIEFM"]
+            ],
+            "mate": [
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["Droll", "Hork", "Reaper"]
+        },
+
+        "whiteking": {
+            "name": "WhiteKing",
+            "fam": "Zombie",
+            "skills": ["Infernos", "Bolt", "Chance"],
+            "found": ["none"],
+            "base": [
+                ["Skeletor", "Niterich"],
+                ["Skullgon"],
+                ["BoneSlave"],
+                ["DeadNoble"],
+                ["ZOMBIEFM"]
+            ],
+            "mate": [
+                ["Andreal", "GreatDrak", "KingLeo", "Blizzardy", "ZapBird", "WhipBird", "GoldGolem", "WhaleMage", "Grakos"],
+                ["KingSlime"],
+                ["MetalKing"],
+                ["SpotKing"],
+                ["BOSSFM"]
+            ],
+            "reqFor": ["KingSlime", "SpotKing", "GulpBeast", "Blizzardy", "Skularach", "GateGuard", "Lazamanus", "Servant", "Skullgon", "CloudKing", "IceMan", "Hargon"]
+        },
+
+        "windmerge": {
+            "name": "WindMerge",
+            "fam": "Zombie",
+            "skills": ["Infernos", "CurseOff", "BirdBlow"],
+            "found": ["none"],
+            "base": [
+                ["RotRaven"],
+                ["ZOMBIEFM"]
+            ],
+            "mate": [
+                ["BIRDFM"],
+                ["WindBeast"]
+            ],
+            "reqFor": ["none"]
+        },
+
+
+
+
+
+
+
+
+
+        "balzak": {
+            "name": "Balzak",
+            "fam": "Material",
+            "skills": ["Bang", "Bolt", "MultiCut"],
+            "found": ["none"],
+            "base": [
+                ["LavaMan", "IceMan"],
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["DEVILFM"],
+                ["BOSSFM"]
+            ],
+            "reqFor": ["KingLeo", "Trumpeter", "BossTroll"]
+        },
+
+        "bombcrag": {
+            "name": "BombCrag",
+            "fam": "Material",
+            "skills": ["Savrifice", "Farewell", "RockThrow"],
+            "found": ["none"],
+            "base": [
+                ["SpikeBoy"],
+                ["Roboster1", "DarkMate"]
+            ],
+            "mate": [
+                ["SpikyBoy"],
+                ["BUGFM"]
+            ],
+            "reqFor": ["RockSlime", "Pumpoise"]
+        },
+
+        "brushead": {
+            "name": "Brushead",
+            "fam": "Material",
+            "skills": ["OddDance", "SandStorm", "LoveRain"],
+            "found": ["Pirate", "Overworld"],
+            "base": [
+                ["MATERIALFM"],
+                ["Puppetor"]
+            ],
+            "mate": [
+                ["WATERFM"],
+                ["Demonite", "Pixy"]
+            ],
+            "reqFor": ["FunkyBird"]
+        },
+
+        "cloudking": {
+            "name": "CloudKing",
+            "fam": "Material",
+            "skills": ["Infernos", "Barrier", "Surge"],
+            "found": ["none"],
+            "base": [
+                ["Gismo"]
+            ],
+            "mate": [
+                ["KingSlime", "SpotKing", "SkyDragon", "LampGenie", "WhiteKing", "KingSquid", "WhaleMage", "DracoLord1"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "coilbird": {
+            "name": "CoilBird",
+            "fam": "Material",
+            "skills": ["DeChaos", "NumbOff", "SuckAll"],
+            "found": ["Sky", "Overworld"],
+            "base": [
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["BIRDFM"]
+            ],
+            "reqFor": ["MadCondor"]
+        },
+
+        "curselamp": {
+            "name": "CurseLamp",
+            "fam": "Material",
+            "skills": ["Upper", "Speed", "TwinHits"],
+            "found": ["Traveler", "Merchants' Tower F1"],
+            "base": [
+                ["Roboster1"],
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["BIRDFM"],
+                ["WingTree"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "darkmate": {
+            "name": "DarkMate",
+            "fam": "Material",
+            "skills": ["Beat", "Hellblast", "EerieLite"],
+            "found": ["none"],
+            "base": [
+                ["GoldGolem"]
+            ],
+            "mate": [
+                ["MetalKing"]
+            ],
+            "reqFor": ["GranSlime", "BombCrag", "DeathMore3"]
+        },
+
+        "evilpot": {
+            "name": "EvilPot",
+            "fam": "Material",
+            "skills": ["Beat", "Massacre", "Outside"],
+            "found": ["none"],
+            "base": [
+                ["Gismo"],
+                ["MATERIALFM"],
+                ["Mimic"]
+            ],
+            "mate": [
+                ["DEVILFM"],
+                ["Snaily"],
+                ["Scallopa"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "evilwand": {
+            "name": "EvilWand",
+            "fam": "Material",
+            "skills": ["DeChaos", "FrigidAir", "MapMagic"],
+            "found": ["Pirate", "Harmirror cave B1"],
+            "base": [
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["DRAGONFM"]
+            ],
+            "reqFor": ["MimeSlime", "CatMage", "TreeBoy", "SabreMan", "HoodSquid"]
+        },
+
+        "exaucers": {
+            "name": "Exaucers",
+            "fam": "Material",
+            "skills": ["TakeMagic", "WindBeast", "PaniDance"],
+            "found": ["Sky", "Heaven Armor Tower F1"],
+            "base": [
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["Dracky"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "facer": {
+            "name": "Facer",
+            "fam": "Material",
+            "skills": ["Infernos", "Sacrifice", "LifeSong"],
+            "found": ["none"],
+            "base": [
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["PLANTFM"]
+            ],
+            "reqFor": ["KiteHawk", "DanceVegi"]
+        },
+
+        "gismo": {
+            "name": "Gismo",
+            "fam": "Material",
+            "skills": ["FireAir", "FrigidAir", "SuckAir"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["MadCandle", "MadMirror", "Goopi"]
+            ],
+            "mate": [
+                ["DrakSlime", "Wyvern", "MistyWing", "Phoenix", "FireWeed", "EvilSeed"]
+            ],
+            "reqFor": ["Phoenix", "ZapBird", "CloudKing", "EvilPot"]
+        },
+
+        "goldgolem": {
+            "name": "GoldGolem",
+            "fam": "Material",
+            "skills": ["BigBang", "Surge", "TatsuCall"],
+            "found": ["none"],
+            "base": [
+                ["IceMan"],
+                ["LavaMan"]
+            ],
+            "mate": [
+                ["LavaMan"],
+                ["BossTroll"]
+            ],
+            "reqFor": ["GoldSlime", "Orligon", "KingLeo", "Azurile", "Durran", "WhiteKing"]
+        },
+
+        "golem": {
+            "name": "Golem",
+            "fam": "Material",
+            "skills": ["ChargeUp", "PsycheUp", "Meditate"],
+            "found": ["Ice", "Ice Tower F1"],
+            "base": [
+                ["MudDoll"]
+            ],
+            "mate": [
+                ["MudDoll"]
+            ],
+            "reqFor": ["RockSlime", "Andreal", "Grizzly", "GulpBeast", "Trumpeter", "WhipBird", "Skeletor", "SabreMan", "StoneMan", "Voodoll", "Digong"]
+        },
+
+        "goopi": {
+            "name": "Goopi",
+            "fam": "Material",
+            "skills": ["CallHelp", "LegSweep", "Dodge"],
+            "found": ["Ice", "Goldmine Cave"],
+            "base": [
+                ["JewelBag"]
+            ],
+            "mate": [
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["Gismo", "MudDoll"]
+        },
+
+        "iceman": {
+            "name": "IceMan",
+            "fam": "Material",
+            "skills": ["IceBolt", "FrigidAir", "StrongD"],
+            "found": ["none"],
+            "base": [
+                ["MetalDrak"],
+                ["Roboster1", "Roboster2"]
+            ],
+            "mate": [
+                ["Skullgon", "WhiteKing"],
+                ["KingLeo"]
+            ],
+            "reqFor": ["Grizzly", "GulpBeast", "Trumpeter", "Blizzardy", "EvilWell", "Balzak", "GoldGolem"]
+        },
+
+        "jewelbag": {
+            "name": "JewelBag",
+            "fam": "Material",
+            "skills": ["Firebal", "StopSpell", "PanicAll"],
+            "found": ["none"],
+            "base": [
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["SuperTen", "Goopi", "RogueWave"]
+        },
+
+        "lavaman": {
+            "name": "LavaMan",
+            "fam": "Material",
+            "skills": ["Blaze", "FireAir", "Cover"],
+            "found": ["none"],
+            "base": [
+                ["MetalDrak"]
+            ],
+            "mate": [
+                ["Orochi", "KingLeo", "ZapBird", "ArcDemon", "Centasaur", "BossTroll"]
+            ],
+            "reqFor": ["Grizzly", "GulpBeast", "Trumpeter", "Phoenix", "EvilWell", "Balzak", "GoldGolem"]
+        },
+
+        "madcandle": {
+            "name": "MadCandle",
+            "fam": "Material",
+            "skills": ["Blaze", "PsycheUp", "Whistle"],
+            "found": ["Oasis", "Sewers"],
+            "base": [
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["BEASTFM"]
+            ],
+            "reqFor": ["Gismo"]
+        },
+
+        "madmirror": {
+            "name": "MadMirror",
+            "fam": "Material",
+            "skills": ["MagicBack", "Transform", "Outside"],
+            "found": ["Sky", "Fhunt Tower F1"],
+            "base": [
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["DEVILFM"]
+            ],
+            "reqFor": ["Evilseed", "Gismo"]
+        },
+
+        "metaldrak": {
+            "name": "MetalDrak",
+            "fam": "Material",
+            "skills": ["FireAir", "Massacre", "SandStorm"],
+            "found": ["none"],
+            "base": [
+                ["Mimic"],
+                ["MetalDrak", "Roboster1"],
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["Andreal", "Spikerous", "GreatDrak"],
+                ["DRAGONFM"],
+                ["Andreal"]
+            ],
+            "reqFor": ["MetalKing", "Metaly", "Grizzly", "GulpBeast", "KingLeo", "Trumpeter", "WhipBird", "ArcDemon", "DeadNoble", "IceMan", "LavaMan", "MetalDrak"]
+        },
+
+        "mimic": {
+            "name": "Mimic",
+            "fam": "Material",
+            "skills": ["Blaze", "Beat", "EagleEye"],
+            "found": ["Pirate", "Harmirror cave B2"],
+            "base": [
+                ["Roboster1"],
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["ZOMBIEFM", "RushFish"],
+                ["BoxSlime"]
+            ],
+            "reqFor": ["SuperTen", "EvilPot", "MetalDrak", "Scallopa"]
+        },
+
+        "muddoll": {
+            "name": "MudDoll",
+            "fam": "Material",
+            "skills": ["OddDance", "Hustle", "SideStep"],
+            "found": ["none"],
+            "base": [
+                ["Goopi"]
+            ],
+            "mate": [
+                ["Goopi", "CancerMan"]
+            ],
+            "reqFor": ["Golem"]
+        },
+
+        "protomech": {
+            "name": "ProtoMech",
+            "fam": "Material",
+            "skills": ["SlimeBlow", "ChargeUp", "Ramming"],
+            "found": ["none"],
+            "base": [
+                ["MATERIALFM"],
+                ["Roboster1"],
+                ["RogueNite"]
+            ],
+            "mate": [
+                ["EvilArmor"],
+                ["SLIMEFM"],
+                ["DEVILFM"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "puppetor": {
+            "name": "Puppetor",
+            "fam": "Material",
+            "skills": ["OddDance", "LureDance", "Pheromone"],
+            "found": ["Ice", "Ice Tower F1"],
+            "base": [
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["Gremlin"]
+            ],
+            "reqFor": ["GhosTree", "Brushead"]
+        },
+
+        "roboster1": {
+            "name": "Roboster1",
+            "fam": "Material",
+            "skills": ["SquallHit", "BiAttack", "RainSlash"],
+            "found": ["none"],
+            "base": [
+                ["SabreMan"],
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["SlimeBorg", "GreatDrak", "Unicorn", "Ogre", "Grendal", "EvilArmor", "DeadNoble", "Skeletor"],
+                ["GulpBeast", "Grizzly", "Trumpeter", "KingLeo", "SkulRider"]
+            ],
+            "reqFor": ["SlimeBorg", "Grizzly", "GulpBeast", "Trumpeter", "Ogre", "DeadNoble", "BombCrag", "CurseLamp", "IceMan", "MetalDrak", "Mimic", "ProtoMech", "Roboster2"]
+        },
+
+        "roboster2": {
+            "name": "Roboster2",
+            "fam": "Material",
+            "skills": ["BoltSlash", "MetalCut", "GigaSlash"],
+            "found": ["none"],
+            "base": [
+                ["Roboster1"]
+            ],
+            "mate": [
+                ["Roboster1"]
+            ],
+            "reqFor": ["DeadNoble", "Niterich", "IceMan"]
+        },
+
+        "roguenite": {
+            "name": "RogueNite",
+            "fam": "Material",
+            "skills": ["Heal", "MetalCut", "EvilSlash"],
+            "found": ["Ice", "Overworld"],
+            "base": [
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["ZOMBIEFM"]
+            ],
+            "reqFor": ["Armorpion", "MadKnight", "ProtoMech"]
+        },
+
+        "sabreman": {
+            "name": "SabreMan",
+            "fam": "Material",
+            "skills": ["RobMagic", "DevilCut", "Paralyze"],
+            "found": ["Sky", "Fhunt Tower F1"],
+            "base": [
+                ["EvilWand", "Voodoll", "Golem", "StoneMan"],
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["LandOwl", "MadGoose", "Phoenix", "FunkyBird"],
+                ["GiantWorm"]
+            ],
+            "reqFor": ["MadGopher", "Roboster1"]
+        },
+
+        "spikyboy": {
+            "name": "SpikyBoy",
+            "fam": "Material",
+            "skills": ["Sacrifice", "SlimeBlow", "HighJump"],
+            "found": ["Pirate", "Harmirror cave B3"],
+            "base": [
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["BUGFM"]
+            ],
+            "reqFor": ["BombCrag", "Pumpoise"]
+        },
+
+        "stoneman": {
+            "name": "StoneMan",
+            "fam": "Material",
+            "skills": ["StrongD", "Cover", "SuckAll"],
+            "found": ["none"],
+            "base": [
+                ["Golem"],
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["Golem"],
+                ["HornBeet", "Digster"]
+            ],
+            "reqFor": ["RockSlime", "Coatol", "Grizzly", "GulpBeast", "Trumpeter", "WhipBird", "BossTroll", "Skeletor", "SabreMan", "Voodoll"]
+        },
+
+        "voodoll": {
+            "name": "Voodoll",
+            "fam": "Material",
+            "skills": ["Sap", "Surround", "PanicAll"],
+            "found": ["none"],
+            "base": [
+                ["Golem", "StoneMan"],
+                ["MATERIALFM"]
+            ],
+            "mate": [
+                ["DrakSlime", "Snaily", "SlimeNite", "RockSlime"],
+                ["Lipsy"]
+            ],
+            "reqFor": ["Chamelgon", "SabreMan"]
+        },
+
+
+
+
+
+
+
+
+
+        "anemon": {
+            "name": "Anemon",
+            "fam": "Water",
+            "skills": ["Firebal", "Paralyze", "PoisonGas"],
+            "found": ["Oasis", "Surf in Sewers"],
+            "base": [
+                ["WATERFM"]
+            ],
+            "mate": [
+                ["PLANTFM"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "angleron": {
+            "name": "Angleron",
+            "fam": "Water",
+            "skills": ["Bolt", "Surround", "SleepAir"],
+            "found": ["none"],
+            "base": [
+                ["Petiteel"]
+            ],
+            "mate": [
+                ["MATERIALFM"]
+            ],
+            "reqFor": ["Droll", "FishRider", "RushFish"]
+        },
+
+        "aquadon": {
+            "name": "Aquadon",
+            "fam": "Water",
+            "skills": ["RobMagic", "WindBeast", "Berserker"],
+            "found": ["none"],
+            "base": [
+                ["Digong"]
+            ],
+            "mate": [
+                ["GreatDrak", "Coatol", "Orligon"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "aquarella": {
+            "name": "Aquarella",
+            "fam": "Water",
+            "skills": ["Barrier", "SquallHit", "Geyser"],
+            "found": ["none"],
+            "base": [
+                ["WATERFM"]
+            ],
+            "mate": [
+                ["BUGFM"]
+            ],
+            "reqFor": ["Eggplaton", "Droll", "Gamanian"]
+        },
+
+        "axeshark": {
+            "name": "AxeShark",
+            "fam": "Water",
+            "skills": ["Sap", "RainSlash", "Cover"],
+            "found": ["none"],
+            "base": [
+                ["CancerMan"]
+            ],
+            "mate": [
+                ["BattleRex", "ArcDemon"]
+            ],
+            "reqFor": ["GateGuard"]
+        },
+
+        "cancerman": {
+            "name": "CancerMan",
+            "fam": "Water",
+            "skills": ["BoltSlash", "BeastCut", "RainSlash"],
+            "found": ["none"],
+            "base": [
+                ["Clawster"]
+            ],
+            "mate": [
+                ["Clawster", "DEVILFM"]
+            ],
+            "reqFor": ["Armorpion", "ArmyCrab", "DarkCrab", "MudDoll", "AxeShark", "HoodSquid"]
+        },
+
+        "clawster": {
+            "name": "Clawster",
+            "fam": "Water",
+            "skills": ["DrakSlash", "MetalCut", "BiAttack"],
+            "found": ["none"],
+            "base": [
+                ["Gamanian"]
+            ],
+            "mate": [
+                ["ArmyCrab", "DEVILFM"]
+            ],
+            "reqFor": ["Digster", "DarkCrab", "CancerMan"]
+        },
+
+        "digong": {
+            "name": "Digong",
+            "fam": "Water",
+            "skills": ["FireAir", "Ramming", "PoisonGas"],
+            "found": ["none"],
+            "base": [
+                ["RushFish"]
+            ],
+            "mate": [
+                ["Spikerous", "RogueWave", "MadGoose", "Gigantes", "Golem"]
+            ],
+            "reqFor": ["Aquadon"]
+        },
+
+        "fishrider": {
+            "name": "FishRider",
+            "fam": "Water",
+            "skills": ["BoltSlash", "RainSlash", "Dodge"],
+            "found": ["Ice", "Overworld Water"],
+            "base": [
+                ["Angleron"]
+            ],
+            "mate": [
+                ["Pixy", "Demonite", "SkulRider", "Gremlin"]
+            ],
+            "reqFor": ["BeanMan"]
+        },
+
+        "gamanian": {
+            "name": "Gamanian",
+            "fam": "Water",
+            "skills": ["Firebal", "NapAttack", "LushLicks"],
+            "found": ["Pirate", "HoodSquid Cave"],
+            "base": [
+                ["Aquarella"]
+            ],
+            "mate": [
+                ["DarkEye", "MedusaEye", "BUGFM"]
+            ],
+            "reqFor": ["DarkCrab", "Clawster"]
+        },
+
+        "grakos": {
+            "name": "Grakos",
+            "fam": "Water",
+            "skills": ["TwinHits", "HighJump", "SandStorm"],
+            "found": ["none"],
+            "base": [
+                ["WATERFM"]
+            ],
+            "mate": [
+                ["BOSSFM"]
+            ],
+            "reqFor": ["WhiteKing", "Poseidon"]
+        },
+
+        "hoodsquid": {
+            "name": "HoodSquid",
+            "fam": "Water",
+            "skills": ["CallHelp", "BiAttack", "LureDance"],
+            "found": ["none"],
+            "base": [
+                ["CancerMan"]
+            ],
+            "mate": [
+                ["WhaleMage", "EvilWand"]
+            ],
+            "reqFor": ["Starfish", "WhaleMage"]
+        },
+
+        "kingsquid": {
+            "name": "KingSquid",
+            "fam": "Water",
+            "skills": ["Vivify", "RainSlash", "PsycheUp"],
+            "found": ["none"],
+            "base": [
+                ["Octogon"]
+            ],
+            "mate": [
+                ["Octogon", "Mudou"]
+            ],
+            "reqFor": ["CloudKing", "Starfish"]
+        },
+
+        "merman": {
+            "name": "Merman",
+            "fam": "Water",
+            "skills": ["Vivify", "Sap", "SleepAir"],
+            "found": ["Pirate", "Overworld Water"],
+            "base": [
+                ["WATERFM"]
+            ],
+            "mate": [
+                ["DEVILFM"]
+            ],
+            "reqFor": ["WhipBird", "MerTiger"]
+        },
+
+        "mertiger": {
+            "name": "MerTiger",
+            "fam": "Water",
+            "skills": ["IceBolt", "Sleep", "WarCry"],
+            "found": ["none"],
+            "base": [
+                ["Merman"]
+            ],
+            "mate": [
+                ["GulpBeast", "MadCat"]
+            ],
+            "reqFor": ["Dumbira", "Ogre"]
+        },
+
+        "moray": {
+            "name": "Moray",
+            "fam": "Water",
+            "skills": ["Sleep", "PsycheUp", "PoisonGas"],
+            "found": ["Pirate", "HoodSquid Cave"],
+            "base": [
+                ["WATERFM"]
+            ],
+            "mate": [
+                ["DRAGONFM"]
+            ],
+            "reqFor": ["CaptDead"]
+        },
+
+        "octogon": {
+            "name": "Octogon",
+            "fam": "Water",
+            "skills": ["MPass", "BiAttack", "Hustle"],
+            "found": ["none"],
+            "base": [
+                ["Octoreach"]
+            ],
+            "mate": [
+                ["Octoreach+5 or better"]
+            ],
+            "reqFor": ["KingSquid", "Octoraid", "Starfish"]
+        },
+
+        "octokid": {
+            "name": "Octokid",
+            "fam": "Water",
+            "skills": ["Heal", "MPass", "LureDance"],
+            "found": ["Pirate", "Overworld Water"],
+            "base": [
+                ["WATERFM"]
+            ],
+            "mate": [
+                ["MATERIALFM"]
+            ],
+            "reqFor": ["Droll"]
+        },
+
+        "octoraid": {
+            "name": "Octoraid",
+            "fam": "Water",
+            "skills": ["DrakSlash", "SquallHit", "GigaSlash"],
+            "found": ["none"],
+            "base": [
+                ["Octogon"]
+            ],
+            "mate": [
+                ["ChopClown", "EvilArmor", "GateGuard", "Lionex"]
+            ],
+            "reqFor": ["Serpentia", "Armorpion", "Niterich"]
+        },
+
+        "octoreach": {
+            "name": "Octoreach",
+            "fam": "Water",
+            "skills": ["OddDance", "PaniDance", "Geyser"],
+            "found": ["none"],
+            "base": [
+                ["Petiteel"]
+            ],
+            "mate": [
+                ["BEASTFM"]
+            ],
+            "reqFor": ["Octogon", "Starfish"]
+        },
+
+        "petiteel": {
+            "name": "Petiteel",
+            "fam": "Water",
+            "skills": ["Speed", "TwinHits", "Ramming"],
+            "found": ["Pirate", "Overworld Water"],
+            "base": [
+                ["WATERFM"]
+            ],
+            "mate": [
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["Angleron", "Octoreach", "SeaHorse"]
+        },
+
+        "poseidon": {
+            "name": "Poseidon",
+            "fam": "Water",
+            "skills": ["Bolt", "Focus", "Dodge"],
+            "found": ["none"],
+            "base": [
+                ["Grakos"]
+            ],
+            "mate": [
+                ["Mudou"]
+            ],
+            "reqFor": ["DeathMore3"]
+        },
+
+        "pumpoise": {
+            "name": "Pumpoise",
+            "fam": "Water",
+            "skills": ["CallHelp", "SuckAir", "Dodge"],
+            "found": ["Ice", "Overworld Water"],
+            "base": [
+                ["WATERFM"]
+            ],
+            "mate": [
+                ["Mommonja", "DuckKite", "MadPecker", "MadGoose", "CragDevil", "SpikeBoy", "BombCrag"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "putrefish": {
+            "name": "PutreFish",
+            "fam": "Water",
+            "skills": ["PanicAll", "Watershot", "Ramming"],
+            "found": ["Pirate", "HoodSquid Cave"],
+            "base": [
+                ["WATERFM"]
+            ],
+            "mate": [
+                ["ZOMBIEFM"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "raygigas": {
+            "name": "RayGigas",
+            "fam": "Water",
+            "skills": ["Firebal", "MouthShut", "AquaWall"],
+            "found": ["Pirate", "Moonrock Tower F1"],
+            "base": [
+                ["WATERFM"]
+            ],
+            "mate": [
+                ["BIRDFM"]
+            ],
+            "reqFor": ["GiantMoth"]
+        },
+
+        "roguewave": {
+            "name": "RogueWave",
+            "fam": "Water",
+            "skills": ["Watershot", "PoisonGas", "AquaWall"],
+            "found": ["Pirate", "Overworld Water"],
+            "base": [
+                ["WATERFM"]
+            ],
+            "mate": [
+                ["JewelBag"]
+            ],
+            "reqFor": ["Digong", "Scallopa"]
+        },
+
+        "rushfish": {
+            "name": "RushFish",
+            "fam": "Water",
+            "skills": ["Upper", "Kamikaze", "SandStorm"],
+            "found": ["none"],
+            "base": [
+                ["Angleron"]
+            ],
+            "mate": [
+                ["GulpBeast", "Droll", "DRAGONFM"]
+            ],
+            "reqFor": ["Mimic", "Digong", "WhaleMage"]
+        },
+
+        "scallopa": {
+            "name": "Scallopa",
+            "fam": "Water",
+            "skills": ["Upper", "MagicWall", "Radiant"],
+            "found": ["none"],
+            "base": [
+                ["RogueWave"]
+            ],
+            "mate": [
+                ["Mimic", "DEVILFM"]
+            ],
+            "reqFor": ["EvilPot"]
+        },
+
+        "seahorse": {
+            "name": "SeaHorse",
+            "fam": "Water",
+            "skills": ["FrigidAir", "Geyser", "BladeD"],
+            "found": ["Ice", "Overworld Water"],
+            "base": [
+                ["Petiteel"]
+            ],
+            "mate": [
+                ["DRAGONFM", "DEVILFM"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "starfish": {
+            "name": "Starfish",
+            "fam": "Water",
+            "skills": ["Upper", "PoisonHit", "OddDance"],
+            "found": ["Ice", "Overworld Water"],
+            "base": [
+                ["HoodSquid", "Octoreach", "Octogon", "KingSquid"]
+            ],
+            "mate": [
+                ["SLIMEFM"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "walrusman": {
+            "name": "WalrusMan",
+            "fam": "Water",
+            "skills": ["BugBlow", "EvilSlash", "Massacre"],
+            "found": ["Ice", "Overworld Water"],
+            "base": [
+                ["WATERFM"]
+            ],
+            "mate": [
+                ["BEASTFM"]
+            ],
+            "reqFor": ["Dumbira", "BossTroll", "Ogre"]
+        },
+        
+        "whalemage": {
+            "name": "WhaleMage",
+            "fam": "Water",
+            "skills": ["Antidote", "Watershot", "Geyser"],
+            "found": ["none"],
+            "base": [
+                ["HoodSquid"]
+            ],
+            "mate": [
+                ["1EyeClown", "Reaper", "RushFish"]
+            ],
+            "reqFor": ["WhiteKing", "CloudKing", "HoodSquid"]
+        },
+
+
+
+
+
+
+
+
+
+        "asurazoma": {
+            "name": "AsuraZoma",
+            "fam": "Boss",
+            "skills": ["FireAir", "GigaSlash", "Focus"],
+            "found": ["none"],
+            "base": [
+                ["Zoma"]
+            ],
+            "mate": [
+                ["PsychoPiz"]
+            ],
+            "reqFor": ["DarkDrium"]
+        },
+
+        "baramos": {
+            "name": "Baramos",
+            "fam": "Boss",
+            "skills": ["Bang", "Hellblast", "RockThrow"],
+            "found": ["none"],
+            "base": [
+                ["Hargon"]
+            ],
+            "mate": [
+                ["Orochi"]
+            ],
+            "reqFor": ["Mudou"]
+        },
+
+        "darck": {
+            "name": "Darck",
+            "fam": "Boss",
+            "skills": ["Firebal", "Bang", "ChargeUp"],
+            "found": ["none"],
+            "base": [
+                ["CNB"]
+            ],
+            "mate": [
+                ["N/A"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "darkdrium": {
+            "name": "DarkDrium",
+            "fam": "Boss",
+            "skills": ["Bolt", "FireAir", "FrigidAir"],
+            "found": ["none"],
+            "base": [
+                ["DeathMore3"]
+            ],
+            "mate": [
+                ["Watabou", "GranSlime", "AsuraZoma"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "deathmore1": {
+            "name": "DeathMore1",
+            "fam": "Boss",
+            "skills": ["BigBang", "Hellblast", "TatsuCall"],
+            "found": ["none"],
+            "base": [
+                ["Mirudraas1"],
+                ["Mirudraas2"],
+                ["Zoma"]
+            ],
+            "mate": [
+                ["Azurile"],
+                ["Zoma"],
+                ["Azurile", "Mirudraas1", "Mirudraas2"]
+            ],
+            "reqFor": ["GranSlime", "DeathMore2"]
+        },
+
+        "deathmore2": {
+            "name": "DeathMore2",
+            "fam": "Boss",
+            "skills": ["FireAir", "Ramming", "UltraDown"],
+            "found": ["none"],
+            "base": [
+                ["DeathMore1"]
+            ],
+            "mate": [
+                ["Armorpion", "Titanis"]
+            ],
+            "reqFor": ["DeathMore3"]
+        },
+
+        "deathmore3": {
+            "name": "DeathMore3",
+            "fam": "Boss",
+            "skills": ["BigBang", "DeMagic", "Focus"],
+            "found": ["none"],
+            "base": [
+                ["DeathMore2"]
+            ],
+            "mate": [
+                ["DarkMate", "Mudou", "Poseidon"]
+            ],
+            "reqFor": ["DarkDrium"]
+        },
+
+        "dracolord1": {
+            "name": "DracoLord1",
+            "fam": "Boss",
+            "skills": ["Firebal", "BeDragon", "Meditate"],
+            "found": ["none"],
+            "base": [
+                ["Servant"]
+            ],
+            "mate": [
+                ["Andreal", "GreatDrak"]
+            ],
+            "reqFor": ["Lazamanus", "CloudKing", "DracoLord2", "LordDraco", "Zoma"]
+        },
+
+        "dracolord2": {
+            "name": "DracoLord2",
+            "fam": "Boss",
+            "skills": ["FireAir", "Massacre", "Surge"],
+            "found": ["none"],
+            "base": [
+                ["DracoLord1"]
+            ],
+            "mate": [
+                ["Divinegon"]
+            ],
+            "reqFor": ["Zoma"]
+        },
+
+        "esterk": {
+            "name": "Esterk",
+            "fam": "Boss",
+            "skills": ["BiAttack", "RainSlash", "GigaSlash"],
+            "found": ["none"],
+            "base": [
+                ["Pizzaro"]
+            ],
+            "mate": [
+                ["Gorago", "KingLeo"]
+            ],
+            "reqFor": ["Mirudraas1", "PsychoPiz"]
+        },
+
+        "genosidoh": {
+            "name": "Genosidoh",
+            "fam": "Boss",
+            "skills": ["Barrier", "WindBeast", "MultiCut"],
+            "found": ["none"],
+            "base": [
+                ["Sidoh"]
+            ],
+            "mate": [
+                ["Titanis"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "hargon": {
+            "name": "Hargon",
+            "fam": "Boss",
+            "skills": ["Firebal", "Bang", "TatsuCall"],
+            "found": ["none"],
+            "base": [
+                ["WhiteKing"]
+            ],
+            "mate": [
+                ["MetalKing"]
+            ],
+            "reqFor": ["Baramos"]
+        },
+
+        "lorddraco": {
+            "name": "LordDraco",
+            "fam": "Boss",
+            "skills": ["Bolt", "Hellblast", "Focus"],
+            "found": ["none"],
+            "base": [
+                ["DracoLord1"]
+            ],
+            "mate": [
+                ["Orligon"]
+            ],
+            "reqFor": ["Orgodemir2"]
+        },
+
+        "mirudraas1": {
+            "name": "Mirudraas1",
+            "fam": "Boss",
+            "skills": ["Blaze", "Bang", "Bolt"],
+            "found": ["none"],
+            "base": [
+                ["Esterk"]
+            ],
+            "mate": [
+                ["GoldSlime"]
+            ],
+            "reqFor": ["DeathMore1"]
+        },
+
+        "mirudraas2": {
+            "name": "Mirudraas2",
+            "fam": "Boss",
+            "skills": ["FireAir", "DeMagic", "SuckAir"],
+            "found": ["none"],
+            "base": [
+                ["Mirudraas1"]
+            ],
+            "mate": [
+                ["Orligon"]
+            ],
+            "reqFor": ["DeathMore1"]
+        },
+
+        "mudou": {
+            "name": "Mudou",
+            "fam": "Boss",
+            "skills": ["FireAir", "FrigidAir", "PoisonGas"],
+            "found": ["none"],
+            "base": [
+                ["Baramos"]
+            ],
+            "mate": [
+                ["Gorago"]
+            ],
+            "reqFor": ["KingSquid", "Poseidon", "DeathMore3"]
+        },
+
+        "orgodemir1": {
+            "name": "Orgodemir1",
+            "fam": "Boss",
+            "skills": ["Bang", "EvilSlash", "Focus"],
+            "found": ["none"],
+            "base": [
+                ["PsychoPiz"]
+            ],
+            "mate": [
+                ["Niterich"]
+            ],
+            "reqFor": ["Orgodemir2"]
+        },
+
+        "orgodemir2": {
+            "name": "Orgodemir2",
+            "fam": "Boss",
+            "skills": ["MegaMagic", "DeMagic", "LifeSong"],
+            "found": ["none"],
+            "base": [
+                ["Orgodemir1"]
+            ],
+            "mate": [
+                ["LordDraco", "GigaDraco"]
+            ],
+            "reqFor": ["none"]
+        },
+
+        "pizzaro": {
+            "name": "Pizzaro",
+            "fam": "Boss",
+            "skills": ["Hellblast", "FireAir", "BiAttack"],
+            "found": ["none"],
+            "base": [
+                ["Durran"]
+            ],
+            "mate": [
+                ["Divinegon"]
+            ],
+            "reqFor": ["Esterk", "PsychoPiz"]
+        },
+
+        "psychopiz": {
+            "name": "PsychoPiz",
+            "fam": "Boss",
+            "skills": ["BigBang", "FrigidAir", "DeMagic"],
+            "found": ["none"],
+            "base": [
+                ["Pizzaro"]
+            ],
+            "mate": [
+                ["Esterk"]
+            ],
+            "reqFor": ["AsuraZoma", "Orgodemir1"]
+        },
+
+        "sidoh": {
+            "name": "Sidoh",
+            "fam": "Boss",
+            "skills": ["Hellblast", "FireAir", "FrigidAir"],
+            "found": ["none"],
+            "base": [
+                ["Jamirus"]
+            ],
+            "mate": [
+                ["Rosevine"]
+            ],
+            "reqFor": ["Genosidoh", "Zoma"]
+        },
+
+        "zoma": {
+            "name": "Zoma",
+            "fam": "Boss",
+            "skills": ["BigBang", "FrigidAir", "DeMagic"],
+            "found": ["none"],
+            "base": [
+                ["DracoLord1", "DracoLord2"]
+            ],
+            "mate": [
+                ["Sidoh"]
+            ],
+            "reqFor": ["AsuraZoma", "DeathMore1"]
+        }
+
+}
+

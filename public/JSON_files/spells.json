@@ -1,0 +1,4017 @@
+{
+
+  "list": [
+    "index 0 is this one, OR \"spells.list\" if you want to call it that :)",
+    "Ahhh", "Antidote", "AquaCut", "AquaWall", 
+    "Bang", "Barrier", "BazooCall", "BeastCut", "Beat", "BeDragon", "Berserker", "BiAttack", "BigBang", "BigTrip", "BirdBlow", "BladeD", "Blaze", "BlazeAir", "Blazemore", "Blazemost", "Blizzard", "Bolt", "BoltSlash", "Boom", "Bounce", "BugBlow",
+    "CallHelp", "Chance", "ChargeUp", "CleanCut", "Cover", "Curse", "CurseOff",
+    "DanceShut", "DeChaos", "Defeat", "Defense", "DeMagic", "DevilCut", "DiagoCall", "Dodge", "DrakSlash",
+    "EagleEye", "EerieLite", "Errand", "EvilSlash", "Explodet", 
+    "Farewell", "FireAir", "Firebal", "Firebane", "Firebolt", "FireSlash", "Focus", "FrigidAir",
+    "Geyser", "GigaSlash", "Guardian",
+    "Heal", "HealAll", "HealMore", "HealUs", "HealUsAll", "Hellblast", "HighJump", "Hustle",
+    "IceAir", "IceBolt", "IceSlash", "IceStorm", "Imitate", "Increase", "Infermore", "Infermost", "Infernos", "Informer", "Ironize",
+    "K.O.Dance", "Kamikaze",
+    "LegSweep", "LifeDance", "LifeSong", "Lightning", "LoveRain", "LureDance", "LushLicks",
+    "MagicBack", "MagicWall", "MapMagic", "Massacre", "Meditate", "MegaMagic", "MetalCut", "MouthShut", "MPass", "MPassmore", "MPassmost", "MultiCut",
+    "NapAttack", "NumbOff",
+    "OddDance", "Outside",
+    "PalsyAir", "PanicAll", "PaniDance", "Paralyze", "Pheromone", "PoisonAir", "PoisonGas", "PoisonHit", "PsycheUp",
+    "QuadHits",
+    "Radiant", "RainSlash", "Ramming", "Revive", "RobDance", "RobMagic", "RockThrow",
+    "Sacrifice", "SamsiCall", "SandStorm", "Sap", "Scorching", "SealPray", "Shears", "SickLick", "SideStep", "Sleep", "SleepAir", "SleepAll", "SlimeBlow", "Slow", "SlowAll", "SnowStorm", "Speed", "SpeedUp", "SquallHit", "StepGuard", "StopSpell", "StormWind", "StrongD", "SuckAir", "SuckAll", "Surge", "Surround",
+    "TailWind", "TakeMagic", "TatsuCall", "ThickFog", "Thordian", "Tidalwave", "Transform", "TwinHits", "TwinSlash",
+    "UltraDown", "Upper", 
+    "VacuSlash", "Vacuum", "Vivify", 
+    "WarCry", "Watershot", "Whistle", "WhiteAir", "WhiteFire", "WindBeast",
+    "YellHelp", 
+    "Zap", "ZombieCut"
+  ], 
+  "ahhh": {
+    "name": "Ahhh",
+    "manaCost": 1,
+    "type": "Stun",
+    "description": "Soft plushy and very pleasant.",
+    "monstersWithThisSpell": ["MimeSlime", "Lipsy"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 10,
+      "hp": 0,
+      "mp": 0,
+      "atk": 60,
+      "def": 0,
+      "agi": 60,
+      "int": 0
+    }
+  },
+  "antidote": {
+    "name": "Antidote",
+    "manaCost": 2,
+    "type": "Heal",
+    "description": "Cures one monster of poison.",
+    "monstersWithThisSpell": ["Dracky", "FloraMan", "Pixy", "WhaleMage"],
+    "castableBattle": true,
+    "castableWorld": true,
+    "learnStats": {
+      "lv": 5,
+      "hp": 0,
+      "mp": 21,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 47
+    }
+  },
+  "aquacut": {
+    "name": "AquaCut",
+    "manaCost": 3,
+    "type": "Anti-FM",
+    "description": "Inflicts severe damage on the water family",
+    "monstersWithThisSpell": [
+      "LizardMan",
+      "Garudian",
+      "EvilArmor",
+      "CaptDead",
+      "DeadNoble"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 68,
+      "mp": 0,
+      "atk": 72,
+      "def": 0,
+      "agi": 62,
+      "int": 0
+    }
+  },
+  "aquawall": {
+    "name": "AquaWall",
+    "manaCost": 5,
+    "type": "Buff",
+    "description": "Creates a barrier that blocks an attack.",
+    "monstersWithThisSpell": ["AquaHawk,", "RayGigas,", "RogueWave"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 20,
+      "hp": 100,
+      "mp": 94,
+      "atk": 0,
+      "def": 84,
+      "agi": 0,
+      "int": 202
+    }
+  },
+  "bang": {
+    "name": "Bang",
+    "manaCost": 5,
+    "type": "Multi",
+    "description": "Small explosions strike enemies (all)",
+    "monstersWithThisSpell": [
+      "Metabble",
+      "Coatol",
+      "Gorago",
+      "ArcDemon",
+      "GoatHorn",
+      "Akubar",
+      "Titanis",
+      "BoneSlave",
+      "Balzak",
+      "Hargon",
+      "Baramos",
+      "Mirudraas",
+      "Orgodemir",
+      "Darck"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 20,
+      "hp": 100,
+      "mp": 94,
+      "atk": 0,
+      "def": 84,
+      "agi": 0,
+      "int": 202
+    }
+  },
+  "barrier": {
+    "name": "Barrier",
+    "manaCost": 3,
+    "type": "Buff",
+    "description": "Reduces damage from breath attacks (all)",
+    "monstersWithThisSpell": [
+      "KingSlime",
+      "MistyWing",
+      "AmberWeed",
+      "WeedBug",
+      "CloudKing",
+      "Aquarella",
+      "Genosidoh"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 18,
+      "hp": 0,
+      "mp": 76,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 126
+    }
+  },
+  "bazoocall": {
+    "name": "BazooCall",
+    "manaCost": 20,
+    "type": "Unique",
+    "description": "Summons Bazoo to battle.",
+    "monstersWithThisSpell": ["Refer to", "TatsuCall"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 35,
+      "hp": 0,
+      "mp": 160,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 550
+    }
+  },
+  "beastcut": {
+    "name": "BeastCut",
+    "manaCost": 3,
+    "type": "Anti-FM",
+    "description": "Inflicts severe damage on the beast family.",
+    "monstersWithThisSpell": [
+      "SlimeNite",
+      "Florajay",
+      "GiantWorm",
+      "MadKnight",
+      "CancerMan"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 62,
+      "mp": 0,
+      "atk": 68,
+      "def": 0,
+      "agi": 62,
+      "int": 0
+    }
+  },
+  "beat": {
+    "name": "Beat",
+    "manaCost": 4,
+    "type": "K.O.",
+    "description": "Instantly slays an enemy.",
+    "monstersWithThisSpell": [
+      "Metaly",
+      "Blizzardy",
+      "Devipine",
+      "Gophecada",
+      "Skulpent",
+      "Mudron",
+      "PomPomBom",
+      "Niterich",
+      "EvilPot",
+      "Mimic",
+      "DarkMate"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 16,
+      "hp": 0,
+      "mp": 58,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 137
+    }
+  },
+  "bedragon": {
+    "name": "BeDragon",
+    "manaCost": 9,
+    "type": "Unique",
+    "description": "Transforms the user into a ferocious dragon.",
+    "monstersWithThisSpell": ["DrakSlime", "Crestpent", "DracoLord"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 23,
+      "hp": 0,
+      "mp": 72,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 162
+    }
+  },
+  "berserker": {
+    "name": "Berserker",
+    "manaCost": 1,
+    "type": "Unique",
+    "description": "A powerful attack that leaves the user vulnerable.",
+    "monstersWithThisSpell": [
+      "Gasgon",
+      "Spikerous",
+      "Orligon",
+      "Almiraj",
+      "Trumpeter",
+      "Titanis",
+      "Aquadon"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 14,
+      "hp": 98,
+      "mp": 0,
+      "atk": 84,
+      "def": 84,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "biattack": {
+    "name": "BiAttack",
+    "manaCost": 3,
+    "type": "Physical",
+    "description": "A physical attack that strikes twice in succession.",
+    "monstersWithThisSpell": [
+      "Vampirus",
+      "Orochi",
+      "Grizzly",
+      "KingLeo",
+      "Rosevine",
+      "Skularach",
+      "Jamirus",
+      "BoneSlave",
+      "Skeletor",
+      "Roboster",
+      "Clawster",
+      "HoodSquid",
+      "Octogon",
+      "Pizzaro",
+      "Esterk"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 19,
+      "hp": 98,
+      "mp": 0,
+      "atk": 88,
+      "def": 0,
+      "agi": 112,
+      "int": 0
+    }
+  },
+  "bigbang": {
+    "name": "BigBang",
+    "manaCost": 30,
+    "type": "Multi",
+    "description": "Creates an enormous explosion (all)",
+    "monstersWithThisSpell": [
+      "GoldSlime",
+      "Divinegon",
+      "GoldGolem",
+      "Zoma",
+      "PsychoPiz",
+      "DeathMore1",
+      "DeathMore3"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 36,
+      "hp": 196,
+      "mp": 196,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 612
+    }
+  },
+  "bigtrip": {
+    "name": "BigTrip",
+    "manaCost": 3,
+    "type": "Stun",
+    "description": "Sweeps the legs out from under all enemies.",
+    "monstersWithThisSpell": ["Refer to", "LegSweep"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 66,
+      "mp": 0,
+      "atk": 63,
+      "def": 0,
+      "agi": 77,
+      "int": 0
+    }
+  },
+  "birdblow": {
+    "name": "BirdBlow",
+    "manaCost": 3,
+    "type": "Anti-FM",
+    "description": "Inflicts severe damage on the bird family.",
+    "monstersWithThisSpell": [
+      "MadGopher",
+      "Orc",
+      "Durran",
+      "WindMerge",
+      "Skeletor"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 62,
+      "mp": 0,
+      "atk": 68,
+      "def": 0,
+      "agi": 72,
+      "int": 0
+    }
+  },
+  "bladed": {
+    "name": "BladeD",
+    "manaCost": 3,
+    "type": "IDK",
+    "description": "Protects the user and enables retaliation.",
+    "monstersWithThisSpell": [
+      "SlimeBorg",
+      "Swordgon",
+      "Rosevine",
+      "Bubblemon",
+      "Niterich",
+      "SeaHorse"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 14,
+      "hp": 98,
+      "mp": 0,
+      "atk": 84,
+      "def": 84,
+      "agi": 84,
+      "int": 0
+    }
+  },
+  "blaze": {
+    "name": "Blaze",
+    "manaCost": 2,
+    "type": "Fire1",
+    "description": "Attacks an enemy with a fireball.",
+    "monstersWithThisSpell": [
+      "BoxSlime",
+      "Metaly",
+      "ArrowDog",
+      "CatMage",
+      "FireWeed",
+      "Demonite",
+      "1EyeClown",
+      "GateGuard",
+      "EvilWell",
+      "Jamirus",
+      "FoxFire",
+      "Servant",
+      "MadCandle",
+      "LavaMan",
+      "Mimic",
+      "Mirudraas"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 1,
+      "hp": 0,
+      "mp": 7,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 36
+    }
+  },
+  "blazeair": {
+    "name": "BlazeAir",
+    "manaCost": 4,
+    "type": "Fire2",
+    "description": "Inflicts damage with a blast of fire (all)",
+    "monstersWithThisSpell": ["Refer to", "FireAir"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 10,
+      "hp": 70,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "blazemore": {
+    "name": "Blazemore",
+    "manaCost": 4,
+    "type": "Fire1",
+    "description": "Attacks an enemy with a large fireball.",
+    "monstersWithThisSpell": ["Refer to", "Blaze"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 13,
+      "hp": 0,
+      "mp": 46,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 116
+    }
+  },
+  "blazemost": {
+    "name": "BlazeMost",
+    "manaCost": 10,
+    "type": "Fire1",
+    "description": "A towering pillar of fire roasts an enemy.",
+    "monstersWithThisSpell": ["Refer to", "BlazeMore"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 28,
+      "hp": 0,
+      "mp": 112,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 263
+    }
+  },
+  "blizzard": {
+    "name": "Blizzard",
+    "manaCost": 12,
+    "type": "Ice1",
+    "description": "A wicked blizzard howls through enemies (all)",
+    "monstersWithThisSpell": ["Refer to", "Icebolt"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 25,
+      "hp": 0,
+      "mp": 88,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 198
+    }
+  },
+  "bolt": {
+    "name": "Bolt",
+    "manaCost": 5,
+    "type": "Lightning",
+    "description": "Lightning strikes enemies (all)",
+    "monstersWithThisSpell": [
+      "MetalKing",
+      "FooHero",
+      "WhiteKing",
+      "Balzak",
+      "Angleron",
+      "Poseidon",
+      "LordDraco",
+      "Mirudraas",
+      "Darkdrium"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 6,
+      "hp": 0,
+      "mp": 20,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 63
+    }
+  },
+  "boltslash": {
+    "name": "BoltSlash",
+    "manaCost": 3,
+    "type": "Lightning",
+    "description": "A sword attack made stronger by lightning.",
+    "monstersWithThisSpell": [
+      "Coatol",
+      "LandOwl",
+      "ZapBird",
+      "HornBeet",
+      "ArcDemon",
+      "EvilArmor",
+      "RotRaven",
+      "BoneSlave",
+      "Roboster2",
+      "FishRider",
+      "CancerMan"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 11,
+      "hp": 77,
+      "mp": 34,
+      "atk": 66,
+      "def": 0,
+      "agi": 0,
+      "int": 76
+    }
+  },
+  "boom": {
+    "name": "Boom",
+    "manaCost": 8,
+    "type": "Multi",
+    "description": "A succession of explosions strikes enemies (all)",
+    "monstersWithThisSpell": ["Refer to", "Bang"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 14,
+      "hp": 0,
+      "mp": 50,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 123
+    }
+  },
+  "bounce": {
+    "name": "Bounce",
+    "manaCost": 4,
+    "type": "Buff",
+    "description": "Bounces back all enemy spells.",
+    "monstersWithThisSpell": ["Refer to", "MagicBack"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 20,
+      "hp": 0,
+      "mp": 84,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 141
+    }
+  },
+  "bugblow": {
+    "name": "BugBlow",
+    "manaCost": 3,
+    "type": "Anti-FM",
+    "description": "Inflicts severe damage on the bug family.",
+    "monstersWithThisSpell": ["Picky", "StubBird", "WalrusMan"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 68,
+      "mp": 0,
+      "atk": 72,
+      "def": 0,
+      "agi": 62,
+      "int": 0
+    }
+  },
+  "callhelp": {
+    "name": "CallHelp",
+    "manaCost": 4,
+    "type": "Nature",
+    "description": "Summons friends who attack in droves.",
+    "monstersWithThisSpell": [
+      "SpotSlime",
+      "Snaily",
+      "FangSlime",
+      "MiniDrak",
+      "Vampirus",
+      "ArrowDog",
+      "Snapper",
+      "Gophecada",
+      "Butterfly",
+      "ArmyAnt",
+      "GoHopper",
+      "ArmyCrab",
+      "Mummy",
+      "CaptDead",
+      "Goopi",
+      "HoodSquid",
+      "Pumpoise"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 17,
+      "hp": 84,
+      "mp": 42,
+      "atk": 0,
+      "def": 0,
+      "agi": 68,
+      "int": 98
+    }
+  },
+  "chance": {
+    "name": "Chance",
+    "manaCost": 20,
+    "type": "Unique",
+    "description": "There is no telling what may happen.",
+    "monstersWithThisSpell": ["GoldSlime", "WonderEgg", "Watabou", "WhiteKing"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 40,
+      "hp": 0,
+      "mp": 224,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 420
+    }
+  },
+  "chargeup": {
+    "name": "ChargeUp",
+    "manaCost": 0,
+    "type": "damage amp",
+    "description": "Inflicts severe damage on the next turn.",
+    "monstersWithThisSpell": [
+      "PearlGel",
+      "FangSlime",
+      "Almiraj",
+      "Skullroo",
+      "Beavern",
+      "HammerMan",
+      "BullBird",
+      "Oniono",
+      "GoHopper",
+      "EvilWell",
+      "Gigantes",
+      "Golem",
+      "ProtoMech",
+      "Darck"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 14,
+      "hp": 98,
+      "mp": 0,
+      "atk": 0,
+      "def": 84,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "cleancut": {
+    "name": "CleanCut",
+    "manaCost": 3,
+    "type": "Anti-FM",
+    "description": "Inflicts severe damage on the material family.",
+    "monstersWithThisSpell": [
+      "SpotKing",
+      "Swordgon",
+      "EvilSeed",
+      "DarkEye",
+      "GateGuard"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 68,
+      "mp": 0,
+      "atk": 72,
+      "def": 0,
+      "agi": 62,
+      "int": 0
+    }
+  },
+  "cover": {
+    "name": "Cover",
+    "manaCost": 2,
+    "type": "Defensive",
+    "description": "Takes all attacks meant for another monster.",
+    "monstersWithThisSpell": [
+      "IronTurt",
+      "BossTroll",
+      "Grendal",
+      "LavaMan",
+      "StoneMan",
+      "AxeShark"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 5,
+      "hp": 35,
+      "mp": 0,
+      "atk": 0,
+      "def": 30,
+      "agi": 30,
+      "int": 0
+    }
+  },
+  "curse": {
+    "name": "Curse",
+    "manaCost": 3,
+    "type": "Curse",
+    "description": "Lays a curse on all enemies.",
+    "monstersWithThisSpell": [
+      "KingCobra",
+      "DuckKite",
+      "KiteHawk",
+      "FaceTree",
+      "HerbMan",
+      "Butterfly",
+      "Reaper"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 15,
+      "hp": 0,
+      "mp": 65,
+      "atk": 0,
+      "def": 0,
+      "agi": 82,
+      "int": 148
+    }
+  },
+  "curseoff": {
+    "name": "CurseOff",
+    "manaCost": 2,
+    "type": "Purge",
+    "description": "Lifts a curse (all)",
+    "monstersWithThisSpell": [
+      "AquaHawk",
+      "FloraMan",
+      "TreeBoy",
+      "DeadNite",
+      "WindMerge"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 7,
+      "hp": 0,
+      "mp": 27,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 44
+    }
+  },
+  "danceshut": {
+    "name": "DanceShut",
+    "manaCost": 6,
+    "type": "Anti-Dance",
+    "description": "Prevents all enemies from dancing.",
+    "monstersWithThisSpell": ["HerbMan"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 16,
+      "hp": 100,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 120,
+      "int": 0
+    }
+  },
+  "dechaos": {
+    "name": "DeChaos",
+    "manaCost": 2,
+    "type": "Purge",
+    "description": "Clears confusion in all party monsters.",
+    "monstersWithThisSpell": ["FireWeed", "DeadNite", "EvilWand", "CoilBird"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 6,
+      "hp": 0,
+      "mp": 24,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 47
+    }
+  },
+  "defeat": {
+    "name": "Defeat",
+    "manaCost": 7,
+    "type": "K.O.",
+    "description": "Instantly slays enemies (all)",
+    "monstersWithThisSpell": ["Refer to", "Beat"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 24,
+      "hp": 0,
+      "mp": 80,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 177
+    }
+  },
+  "defence": {
+    "name": "Defence",
+    "manaCost": 4,
+    "type": "Debuff",
+    "description": "Lowers DEF of all enemy monsters.",
+    "monstersWithThisSpell": ["Refer to", "Sap"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 8,
+      "hp": 0,
+      "mp": 36,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 58
+    }
+  },
+  "demagic": {
+    "name": "DeMagic",
+    "manaCost": 7,
+    "type": "Purge",
+    "description": "Lifts the effects of all spells on enemies (all)",
+    "monstersWithThisSpell": [
+      "Warubou",
+      "Zoma",
+      "PsychoPiz",
+      "Mirudraas2",
+      "DeathMore3",
+      "Orgodemir2"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 20,
+      "hp": 0,
+      "mp": 100,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 252
+    }
+  },
+  "devilcut": {
+    "name": "DevilCut",
+    "manaCost": 3,
+    "type": "Anti-FM",
+    "description": "Inflicts severe damage on the devil family.",
+    "monstersWithThisSpell": [
+      "Rayburn",
+      "Serpentia",
+      "HornBeet",
+      "Sickler",
+      "Reaper",
+      "SabreMan"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 64,
+      "mp": 0,
+      "atk": 58,
+      "def": 0,
+      "agi": 62,
+      "int": 87
+    }
+  },
+  "diagocall": {
+    "name": "DiagoCall",
+    "manaCost": 20,
+    "type": "Unique",
+    "description": "Summon Diago to battle.",
+    "monstersWithThisSpell": ["Refer to", "TatsuCall"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 25,
+      "hp": 0,
+      "mp": 100,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 250
+    }
+  },
+  "dodge": {
+    "name": "Dodge",
+    "manaCost": 4,
+    "type": "Defensive",
+    "description": "Deflects any physical attack to another monster.",
+    "monstersWithThisSpell": [
+      "DragonKid",
+      "BigRoost",
+      "GiantSlug",
+      "Skulpent",
+      "Goopi",
+      "FishRider",
+      "Poseidon",
+      "Pumpoise"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 18,
+      "hp": 126,
+      "mp": 0,
+      "atk": 108,
+      "def": 108,
+      "agi": 108,
+      "int": 0
+    }
+  },
+  "drakslash": {
+    "name": "DrakSlash",
+    "manaCost": 3,
+    "type": "Anti-FM",
+    "description": "Inflicts severe damage on the dragon family.",
+    "monstersWithThisSpell": [
+      "ManEater",
+      "Grendal",
+      "Durran",
+      "Clawster",
+      "Octoraid"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 62,
+      "mp": 0,
+      "atk": 72,
+      "def": 0,
+      "agi": 62,
+      "int": 0
+    }
+  },
+  "eagleeye": {
+    "name": "EagleEye",
+    "manaCost": 0,
+    "type": "World",
+    "description": "Determines the presence of items nearby.",
+    "monstersWithThisSpell": [
+      "Skullroo",
+      "Mommonja",
+      "MadRaven",
+      "CragDevil",
+      "Mimic"
+    ],
+    "castableBattle": false,
+    "castableWorld": true,
+    "learnStats": {
+      "lv": 10,
+      "hp": 0,
+      "mp": 40,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 62
+    }
+  },
+  "eerielite": {
+    "name": "EerieLite",
+    "manaCost": 2,
+    "type": "Debuff",
+    "description": "Weakens all enemies to magic spells.",
+    "monstersWithThisSpell": [
+      "Babble",
+      "Gorago",
+      "MistyWing",
+      "GhosTree",
+      "Hork",
+      "Reaper",
+      "DarkMate"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 14,
+      "hp": 0,
+      "mp": 65,
+      "atk": 0,
+      "def": 0,
+      "agi": 84,
+      "int": 152
+    }
+  },
+  "errand": {
+    "name": "Errand",
+    "manaCost": 2,
+    "type": "World",
+    "description": "Makes the monster run an errand for 100G.",
+    "monstersWithThisSpell": ["SnakeBat", "Unicorn", "WildApe", "Emyu"],
+    "castableBattle": false,
+    "castableWorld": true,
+    "learnStats": {
+      "lv": 10,
+      "hp": 0,
+      "mp": 40,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 62
+    }
+  },
+  "evilslash": {
+    "name": "EvilSlash",
+    "manaCost": 3,
+    "type": "Physical",
+    "description": "A powerful but wildly aimed sword attack.",
+    "monstersWithThisSpell": [
+      "LizardMan",
+      "MadDragon",
+      "Coatol",
+      "BattleRex",
+      "HammerMan",
+      "Armorpion",
+      "Gigantes",
+      "Mummy",
+      "RogueNite",
+      "WalrusMan",
+      "Orgodemir"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 15,
+      "hp": 106,
+      "mp": 0,
+      "atk": 90,
+      "def": 0,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "explodet": {
+    "name": "Explodet",
+    "manaCost": 15,
+    "type": "Multi",
+    "description": "Huge explosions blast enemies (all)",
+    "monstersWithThisSpell": ["Refer to", "Bang"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 29,
+      "hp": 0,
+      "mp": 120,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 285
+    }
+  },
+  "farewell": {
+    "name": "Farewell",
+    "manaCost": 999,
+    "type": "Heal",
+    "description": "Revives dead mates in exchange for own life (all)",
+    "monstersWithThisSpell": [
+      "GranSlime",
+      "Gasgon",
+      "WingTree",
+      "Belzebub",
+      "Digster",
+      "BombCrag"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 32,
+      "hp": 0,
+      "mp": 188,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 317
+    }
+  },
+  "fireair": {
+    "name": "FireAir",
+    "manaCost": 2,
+    "type": "Fire2",
+    "description": "Inflicts damage with a breath of fire (all)",
+    "monstersWithThisSpell": [
+      "DrakSlime",
+      "DragonKid",
+      "Dragon",
+      "LizardFly",
+      "Orochi",
+      "BattleRex",
+      "SkyDragon",
+      "GigaDraco",
+      "Phoenix",
+      "Shantak",
+      "StagBug",
+      "Demonite",
+      "MetalDrak",
+      "Gismo",
+      "LavaMan",
+      "Digong",
+      "DracoLord2",
+      "Sidoh",
+      "AsuraZoma",
+      "Pizzaro",
+      "Mirudraas2",
+      "Mudou",
+      "DeathMore2",
+      "Darkdrium"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 3,
+      "hp": 21,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "firebal": {
+    "name": "Firebal",
+    "manaCost": 4,
+    "type": "Fire2",
+    "description": "Attacks enemies with a blast of fire (all)",
+    "monstersWithThisSpell": [
+      "Slime",
+      "Metabble",
+      "Pteranod",
+      "LizardFly",
+      "Goategon",
+      "KingLeo",
+      "MadCondor",
+      "FloraMan",
+      "Eyeder",
+      "Belzebub",
+      "AgDevil",
+      "EvilBeast",
+      "1EyeClown",
+      "Gremlin",
+      "FoxFire",
+      "JewelBag",
+      "RayGigas",
+      "Anemon",
+      "Gamanian",
+      "DracoLord",
+      "Hargon",
+      "Darck"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 3,
+      "hp": 0,
+      "mp": 11,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 42
+    }
+  },
+  "firebane": {
+    "name": "Firebane",
+    "manaCost": 6,
+    "type": "Fire2",
+    "description": "Attacks enemies with a wall of fire (all)",
+    "monstersWithThisSpell": ["Refer to", "Firebal"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 10,
+      "hp": 0,
+      "mp": 34,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 94
+    }
+  },
+  "firebolt": {
+    "name": "FireBolt",
+    "manaCost": 10,
+    "type": "Fire2",
+    "description": "A huge wall of fire incinerates enemies (all)",
+    "monstersWithThisSpell": ["Refer to", "Firebane"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 26,
+      "hp": 0,
+      "mp": 96,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 220
+    }
+  },
+  "fireslash": {
+    "name": "FireSlash",
+    "manaCost": 3,
+    "type": "Fire1",
+    "description": "A fiery sword attack.",
+    "monstersWithThisSpell": [
+      "Dragon",
+      "Orochi",
+      "SkulRider",
+      "Grendal",
+      "Centasaur",
+      "EvilArmor"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 11,
+      "hp": 77,
+      "mp": 34,
+      "atk": 66,
+      "def": 0,
+      "agi": 0,
+      "int": 98
+    }
+  },
+  "focus": {
+    "name": "Focus",
+    "manaCost": 0,
+    "type": "Damage Amp",
+    "description": "Enables two moves in the next turn.",
+    "monstersWithThisSpell": [
+      "GranSlime",
+      "HerbMan",
+      "Akubar",
+      "Servant",
+      "Poseidon",
+      "LordDraco",
+      "AsuraZoma",
+      "DeathMore3",
+      "Orgodemir"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 18,
+      "hp": 126,
+      "mp": 0,
+      "atk": 0,
+      "def": 108,
+      "agi": 108,
+      "int": 195
+    }
+  },
+  "frigidair": {
+    "name": "FrigidAir",
+    "manaCost": 2,
+    "type": "Ice1",
+    "description": "Inflicts damage with a breath of ice (all)",
+    "monstersWithThisSpell": [
+      "GreatDrak",
+      "Divinegon",
+      "KingLeo",
+      "BigEye",
+      "Wyvern",
+      "Blizzardy",
+      "Demonite",
+      "EvilBeast",
+      "Akubar",
+      "Skullgon",
+      "Shadow",
+      "EvilWand",
+      "Gismo",
+      "IceMan",
+      "SeaHorse",
+      "Sidoh",
+      "Zoma",
+      "PsychoPiz",
+      "Mudou",
+      "Darkdrium"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 3,
+      "hp": 21,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "geyser": {
+    "name": "Geyser",
+    "manaCost": 2,
+    "type": "Water",
+    "description": "Opens a geyser to send an enemy flying.",
+    "monstersWithThisSpell": [
+      "Beavern",
+      "Aquarella",
+      "Octoreach",
+      "SeaHorse",
+      "WhaleMage"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 22,
+      "hp": 140,
+      "mp": 120,
+      "atk": 120,
+      "def": 0,
+      "agi": 120,
+      "int": 288
+    }
+  },
+  "gigaslash": {
+    "name": "GigaSlash",
+    "manaCost": 20,
+    "type": "Single",
+    "description": "The ultimate sword attack.",
+    "monstersWithThisSpell": [
+      "LizardMan",
+      "BeastNite",
+      "FooHero",
+      "WarMantis",
+      "MadKnight",
+      "Roboster2",
+      "Octoraid",
+      "AsuraZoma",
+      "Esterk"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 33,
+      "hp": 231,
+      "mp": 164,
+      "atk": 198,
+      "def": 0,
+      "agi": 198,
+      "int": 608
+    }
+  },
+  "guardian": {
+    "name": "Guardian",
+    "manaCost": 4,
+    "type": "Defensive",
+    "description": "Takes all attacks meant for party monsters.",
+    "monstersWithThisSpell": ["Refer to", "Cover"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 84,
+      "mp": 0,
+      "atk": 0,
+      "def": 72,
+      "agi": 72,
+      "int": 0
+    }
+  },
+  "heal": {
+    "name": "Heal",
+    "manaCost": 2,
+    "type": "Heal",
+    "description": "Restores HP by 30 - 40.",
+    "monstersWithThisSpell": [
+      "SlimeNite",
+      "Healer",
+      "Unicorn",
+      "Wyvern",
+      "MadGoose",
+      "FooHero",
+      "Eyeder",
+      "Gremlin",
+      "LampGenie",
+      "DeadNite",
+      "RogueNite",
+      "Octokid"
+    ],
+    "castableBattle": true,
+    "castableWorld": true,
+    "learnStats": {
+      "lv": 1,
+      "hp": 0,
+      "mp": 7,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 11
+    }
+  },
+  "healall": {
+    "name": "HealAll",
+    "manaCost": 7,
+    "type": "Heal",
+    "description": "Fully restores HP.",
+    "monstersWithThisSpell": ["Refer to", "Heal"],
+    "castableBattle": true,
+    "castableWorld": true,
+    "learnStats": {
+      "lv": 16,
+      "hp": 0,
+      "mp": 82,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 144
+    }
+  },
+  "healmore": {
+    "name": "HealMore",
+    "manaCost": 5,
+    "type": "Heal",
+    "description": "Restores HP by 75 - 90.",
+    "monstersWithThisSpell": ["Refer to", "Heal"],
+    "castableBattle": true,
+    "castableWorld": true,
+    "learnStats": {
+      "lv": 10,
+      "hp": 0,
+      "mp": 52,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 87
+    }
+  },
+  "healus": {
+    "name": "HealUs",
+    "manaCost": 18,
+    "type": "Heal",
+    "description": "Restores HP by 90 - 120 (all)",
+    "monstersWithThisSpell": [
+      "Healer",
+      "MadCondor",
+      "Shantak",
+      "Lionex",
+      "DeadNoble",
+      "Lamia"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 20,
+      "hp": 0,
+      "mp": 140,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 216
+    }
+  },
+  "healusall": {
+    "name": "HealUsAll",
+    "manaCost": 36,
+    "type": "Heal",
+    "description": "Fully restores HP (all)",
+    "monstersWithThisSpell": ["Refer to", "HealUs"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 28,
+      "hp": 0,
+      "mp": 196,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 288
+    }
+  },
+  "hellblast": {
+    "name": "HellBlast",
+    "manaCost": 25,
+    "type": "Lightning",
+    "description": "Strikes all enemies with huge lightning.",
+    "monstersWithThisSpell": [
+      "MetalKing",
+      "ZapBird",
+      "Azurile",
+      "DarkMate",
+      "LordDraco",
+      "Sidoh",
+      "Baramos",
+      "Pizzaro",
+      "DeathMore1"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 34,
+      "hp": 184,
+      "mp": 184,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 538
+    }
+  },
+  "highjump": {
+    "name": "HighJump",
+    "manaCost": 5,
+    "type": "Physical",
+    "description": "The user leaps and attacks in the next turn.",
+    "monstersWithThisSpell": [
+      "RockSlime",
+      "WingSnake",
+      "MadRaven",
+      "CactiBall",
+      "Gulpple",
+      "SpikyBoy",
+      "Grakos"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 20,
+      "hp": 75,
+      "mp": 0,
+      "atk": 70,
+      "def": 0,
+      "agi": 48,
+      "int": 80
+    }
+  },
+  "hustle": {
+    "name": "Hustle",
+    "manaCost": 12,
+    "type": "Heal",
+    "description": "A dance that restores HP by 70 - 80 (all)",
+    "monstersWithThisSpell": [
+      "SuperTen",
+      "Emyu",
+      "FunkyBird",
+      "TreeBoy",
+      "MudDoll",
+      "Octogon"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 18,
+      "hp": 114,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 130,
+      "int": 173
+    }
+  },
+  "iceair": {
+    "name": "IceAir",
+    "manaCost": 4,
+    "type": "Ice1",
+    "description": "Inflicts damage with a freezing breath (all)",
+    "monstersWithThisSpell": ["Refer to", "FrigidAir"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 10,
+      "hp": 70,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "icebolt": {
+    "name": "IceBolt",
+    "manaCost": 3,
+    "type": "Ice1",
+    "description": "Small chunks of ice hail down on enemies (all)",
+    "monstersWithThisSpell": [
+      "Snaily",
+      "Metaly",
+      "WindBeast",
+      "Beavern",
+      "Yeti",
+      "BigEye",
+      "1EyeClown",
+      "GoatHorn",
+      "Servant",
+      "IceMan",
+      "MerTiger"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 5,
+      "hp": 0,
+      "mp": 16,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 54
+    }
+  },
+  "iceslash": {
+    "name": "IceSlash",
+    "manaCost": 3,
+    "type": "Ice1",
+    "description": "A sword attack made stronger by the power of ice.",
+    "monstersWithThisSpell": [
+      "GreatDrak",
+      "Yeti",
+      "Blizzardy",
+      "TailEater",
+      "Bubblemon",
+      "Skullgon"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 11,
+      "hp": 77,
+      "mp": 34,
+      "atk": 66,
+      "def": 0,
+      "agi": 0,
+      "int": 76
+    }
+  },
+  "icestorm": {
+    "name": "IceStorm",
+    "manaCost": 8,
+    "type": "Ice2",
+    "description": "Inflicts damage by exhaling a blizzard (all)",
+    "monstersWithThisSpell": ["Refer to", "FrigidAir"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 20,
+      "hp": 140,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "imitate": {
+    "name": "Imitate",
+    "manaCost": 4,
+    "type": "Defensive",
+    "description": "Imitates the enemy's moves.",
+    "monstersWithThisSpell": ["SpotSlime", "SuperTen", "Watabou", "Copycat"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 21,
+      "hp": 147,
+      "mp": 147,
+      "atk": 126,
+      "def": 126,
+      "agi": 126,
+      "int": 227
+    }
+  },
+  "increase": {
+    "name": "Increase",
+    "manaCost": 4,
+    "type": "Stat Buff",
+    "description": "Raises DEF of party monsters (all)",
+    "monstersWithThisSpell": ["Refer to", "Upper"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 6,
+      "hp": 0,
+      "mp": 27,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 44
+    }
+  },
+  "infermore": {
+    "name": "Infermore",
+    "manaCost": 4,
+    "type": "Wind",
+    "description": "Twisters tear through enemies (all)",
+    "monstersWithThisSpell": ["Refer to", "Infernos"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 10,
+      "hp": 0,
+      "mp": 38,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 101
+    }
+  },
+  "infermost": {
+    "name": "Infermost",
+    "manaCost": 8,
+    "type": "Wind",
+    "description": "A huge tornado roars through enemies (all)",
+    "monstersWithThisSpell": ["Refer to", "Infermore"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 21,
+      "hp": 0,
+      "mp": 104,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 242
+    }
+  },
+  "infernos": {
+    "name": "Infernos",
+    "manaCost": 2,
+    "type": "Wind",
+    "description": "Razor sharp whirlwinds slash enemies (all)",
+    "monstersWithThisSpell": [
+      "Andreal",
+      "Vampirus",
+      "WindBeast",
+      "MadPecker",
+      "LandOwl",
+      "Garudian",
+      "CragDevil",
+      "Sickler",
+      "Lionex",
+      "GoatHorn",
+      "WindMerge",
+      "WhiteKing",
+      "Facer",
+      "CloudKing"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 2,
+      "hp": 0,
+      "mp": 10,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 38
+    }
+  },
+  "informer": {
+    "name": "Informer",
+    "manaCost": 0,
+    "type": "World",
+    "description": "Use to obtain information on monsters.",
+    "monstersWithThisSpell": [
+      "GranSlime",
+      "MadGopher",
+      "MistyWing",
+      "NiteWhip"
+    ],
+    "castableBattle": false,
+    "castableWorld": true,
+    "learnStats": {
+      "lv": 10,
+      "hp": 0,
+      "mp": 40,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 62
+    }
+  },
+  "ironize": {
+    "name": "Ironize",
+    "manaCost": 2,
+    "type": "Buff",
+    "description": "Changes all party monsters into chunks of iron.",
+    "monstersWithThisSpell": [
+      "MetalKing",
+      "WonderEgg",
+      "Tortragon",
+      "WhipBird",
+      "EvilBeast",
+      "DarkCrab"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 15,
+      "hp": 0,
+      "mp": 62,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 87
+    }
+  },
+  "k.o.dance": {
+    "name": "K.O.Dance",
+    "manaCost": 6,
+    "type": "K.O.",
+    "description": "A dance that induces death in all enemies.",
+    "monstersWithThisSpell": [
+      "KingCobra",
+      "SuperTen",
+      "DanceVegi",
+      "Shadow",
+      "Lazamanus"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 20,
+      "hp": 140,
+      "mp": 72,
+      "atk": 0,
+      "def": 0,
+      "agi": 120,
+      "int": 216
+    }
+  },
+  "kamikaze": {
+    "name": "Kamikaze",
+    "manaCost": 1,
+    "type": "Suicide",
+    "description": "Leaves the user and target on the verge of death.",
+    "monstersWithThisSpell": [
+      "Spikerous",
+      "HammerMan",
+      "ArmyAnt",
+      "RotRaven",
+      "RushFish"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 18,
+      "hp": 126,
+      "mp": 0,
+      "atk": 108,
+      "def": 108,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "legsweep": {
+    "name": "LegSweep",
+    "manaCost": 1,
+    "type": "Stun",
+    "description": "Sweeps the leg out from under one enemy.",
+    "monstersWithThisSpell": [
+      "Slabbit",
+      "Grizzly",
+      "MadCat",
+      "StagBug",
+      "SkulRider",
+      "Goopi"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 6,
+      "hp": 32,
+      "mp": 0,
+      "atk": 31,
+      "def": 0,
+      "agi": 48,
+      "int": 0
+    }
+  },
+  "lifedance": {
+    "name": "LifeDance",
+    "manaCost": 999,
+    "type": "Suicide",
+    "description": "A sacrificial dance to revive dead friends.",
+    "monstersWithThisSpell": ["FunkyBird", "Lazamanus", "PomPomBom"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 30,
+      "hp": 210,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 180,
+      "int": 446
+    }
+  },
+  "lifesong": {
+    "name": "LifeSong",
+    "manaCost": 20,
+    "type": "Heal",
+    "description": "Revives all dead friends in the next turn.",
+    "monstersWithThisSpell": [
+      "HaloSlime",
+      "Florajay",
+      "Azurile",
+      "Facer",
+      "Orgodemir2"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 27,
+      "hp": 198,
+      "mp": 94,
+      "atk": 0,
+      "def": 0,
+      "agi": 145,
+      "int": 292
+    }
+  },
+  "lightning": {
+    "name": "Lightning",
+    "manaCost": 3,
+    "type": "Lightning",
+    "description": "Summons a lightning storm (all)",
+    "monstersWithThisSpell": [
+      "SlimeBorg",
+      "Tortragon",
+      "ZapBird",
+      "Skularach",
+      "RotRaven",
+      "NiteWhip"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 10,
+      "hp": 65,
+      "mp": 0,
+      "atk": 90,
+      "def": 0,
+      "agi": 52,
+      "int": 0
+    }
+  },
+  "loverain": {
+    "name": "LoveRain",
+    "manaCost": 28,
+    "type": "Heal",
+    "description": "Summons rain that restores HP.",
+    "monstersWithThisSpell": ["MimeSlime", "BigEye", "Brushead"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 24,
+      "hp": 116,
+      "mp": 96,
+      "atk": 0,
+      "def": 0,
+      "agi": 78,
+      "int": 263
+    }
+  },
+  "luredance": {
+    "name": "LureDance",
+    "manaCost": 2,
+    "type": "Stun",
+    "description": "A dance that makes all enemies want to join in.",
+    "monstersWithThisSpell": [
+      "MadDragon",
+      "Mommonja",
+      "MadGoose",
+      "DanceVegi",
+      "GhosTree",
+      "Eggplaton",
+      "Puppetor",
+      "Octokid",
+      "HoodSquid"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 14,
+      "hp": 84,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 98,
+      "int": 0
+    }
+  },
+  "lushlicks": {
+    "name": "LushLicks",
+    "manaCost": 2,
+    "type": "Stun",
+    "description": "Licks one enemy to stop it for one turn.",
+    "monstersWithThisSpell": [
+      "SpotSlime",
+      "TropicGel",
+      "FairyDrak",
+      "Poisongon",
+      "SnakeBat",
+      "Tonguella",
+      "Antbear",
+      "Slurperon",
+      "GiantSlug",
+      "Lipsy",
+      "Hork",
+      "Gamanian"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 7,
+      "hp": 55,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 67,
+      "int": 0
+    }
+  },
+  "magicback": {
+    "name": "MagicBack",
+    "manaCost": 4,
+    "type": "Buff",
+    "description": "Bounces back a spell once.",
+    "monstersWithThisSpell": [
+      "Tortragon",
+      "Gophecada",
+      "EyeBall",
+      "PutrePup",
+      "MadMirror"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 16,
+      "hp": 0,
+      "mp": 68,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 112
+    }
+  },
+  "magicwall": {
+    "name": "MagicWall",
+    "manaCost": 3,
+    "type": "Buff",
+    "description": "Raises protection against magic spells (all)",
+    "monstersWithThisSpell": [
+      "IronTurt",
+      "KiteHawk",
+      "AmberWeed",
+      "WeedBug",
+      "DarkCrab",
+      "Scallopa"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 19,
+      "hp": 0,
+      "mp": 80,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 134
+    }
+  },
+  "mapmagic": {
+    "name": "MapMagic",
+    "manaCost": 2,
+    "type": "World",
+    "description": "Checks the surrounding area's terrain.",
+    "monstersWithThisSpell": ["BeanMan", "Eyeder", "EvilWand"],
+    "castableBattle": false,
+    "castableWorld": true,
+    "learnStats": {
+      "lv": 10,
+      "hp": 0,
+      "mp": 40,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 62
+    }
+  },
+  "massacre": {
+    "name": "Massacre",
+    "manaCost": 3,
+    "type": "Physical",
+    "description": "Inflicts severe damage on one friend or foe.",
+    "monstersWithThisSpell": [
+      "MadDragon",
+      "GigaDraco",
+      "GulpBeast",
+      "Gorago",
+      "Ogre",
+      "BossTroll",
+      "MadKnight",
+      "MetalDrak",
+      "EvilPot",
+      "WalrusMan",
+      "DracoLord2"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 84,
+      "mp": 0,
+      "atk": 72,
+      "def": 0,
+      "agi": 72,
+      "int": 0
+    }
+  },
+  "meditate": {
+    "name": "Meditate",
+    "manaCost": 8,
+    "type": "Heal",
+    "description": "Meditates to restore HP by 500.",
+    "monstersWithThisSpell": ["Divinegon", "Azurile", "Golem", "DracoLord"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 26,
+      "hp": 182,
+      "mp": 0,
+      "atk": 0,
+      "def": 156,
+      "agi": 0,
+      "int": 281
+    }
+  },
+  "megamagic": {
+    "name": "MegaMagic",
+    "manaCost": 999,
+    "type": "Multi",
+    "description": "The ultimate attack spell.",
+    "monstersWithThisSpell": ["Slime", "RainHawk", "Orgodemir2", "Dimensaur"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 38,
+      "hp": 0,
+      "mp": 210,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 794
+    }
+  },
+  "metalcut": {
+    "name": "MetalCut",
+    "manaCost": 3,
+    "type": "Anti-FM",
+    "description": "Inflicts damage on a high DEF enemy.",
+    "monstersWithThisSpell": [
+      "BattleRex",
+      "Antbear",
+      "Dumbira",
+      "ArmyCrab",
+      "Ogre",
+      "RogueNite",
+      "Roboster2",
+      "Clawster"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 68,
+      "mp": 0,
+      "atk": 72,
+      "def": 0,
+      "agi": 62,
+      "int": 0
+    }
+  },
+  "mouthshut": {
+    "name": "MouthShut",
+    "manaCost": 6,
+    "type": "Debuff",
+    "description": "Prevents all enemies from using breath attacks.",
+    "monstersWithThisSpell": [
+      "SpotKing",
+      "Mommonja",
+      "ArrowDog",
+      "Toadstool",
+      "Pyuro",
+      "Spooky",
+      "RayGigas"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 17,
+      "hp": 120,
+      "mp": 0,
+      "atk": 100,
+      "def": 0,
+      "agi": 140,
+      "int": 0
+    }
+  },
+  "mpass": {
+    "name": "MPass",
+    "manaCost": 20,
+    "type": "MP",
+    "description": "Gives 15MP to a party monster.",
+    "monstersWithThisSpell": [
+      "KingSlime",
+      "TropicGel",
+      "TreeBoy",
+      "Warubou",
+      "Eggplaton",
+      "Mudron",
+      "Octokid",
+      "Octogon",
+      "Lamia"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 1,
+      "hp": 0,
+      "mp": 55,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 11
+    }
+  },
+  "mpassmore": {
+    "name": "MPassmore",
+    "manaCost": 40,
+    "type": "MP",
+    "description": "Gives 30MP to a party monster.",
+    "monstersWithThisSpell": ["Refer to", "MPass"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 10,
+      "hp": 0,
+      "mp": 120,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 87
+    }
+  },
+  "mpassmost": {
+    "name": "MPassmost",
+    "manaCost": 100,
+    "type": "MP",
+    "description": "Gives 80MP to a party monster.",
+    "monstersWithThisSpell": ["Refer to", "MPassmore"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 16,
+      "hp": 0,
+      "mp": 82,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 144
+    }
+  },
+  "multicut": {
+    "name": "MultiCut",
+    "manaCost": 20,
+    "type": "Wind",
+    "description": "A crosscutting sword attack (all)",
+    "monstersWithThisSpell": ["SkyDragon", "MadCondor", "Balzak", "Genosidoh"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 28,
+      "hp": 154,
+      "mp": 140,
+      "atk": 168,
+      "def": 0,
+      "agi": 168,
+      "int": 572
+    }
+  },
+  "napattack": {
+    "name": "NapAttack",
+    "manaCost": 2,
+    "type": "Sleep",
+    "description": "A physical attack that may put the target to sleep.",
+    "monstersWithThisSpell": [
+      "SpotKing",
+      "Tonguella",
+      "Gulpple",
+      "Toadstool",
+      "ArmyAnt",
+      "Gamanian"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 7,
+      "hp": 49,
+      "mp": 0,
+      "atk": 42,
+      "def": 0,
+      "agi": 0,
+      "int": 76
+    }
+  },
+  "numboff": {
+    "name": "NumbOff",
+    "manaCost": 2,
+    "type": "Purge",
+    "description": "Cures paralysis and sleep (all)",
+    "monstersWithThisSpell": ["Snaily", "MadPlant", "CoilBird"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 8,
+      "hp": 0,
+      "mp": 30,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 47
+    }
+  },
+  "odddance": {
+    "name": "OddDance",
+    "manaCost": 0,
+    "type": "MP-Drain",
+    "description": "A dance that reduces an enemy'S MP.",
+    "monstersWithThisSpell": [
+      "CatFly",
+      "CactiBall",
+      "Slurperon",
+      "FaceTree",
+      "Eggplaton",
+      "GiantWorm",
+      "Copycat",
+      "Puppetor",
+      "Brushead",
+      "MudDoll",
+      "Octoreach",
+      "Starfish"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 10,
+      "hp": 54,
+      "mp": 27,
+      "atk": 0,
+      "def": 0,
+      "agi": 63,
+      "int": 89
+    }
+  },
+  "outside": {
+    "name": "Outside",
+    "manaCost": 2,
+    "type": "World",
+    "description": "Instantly warps the party out from caves and towers.",
+    "monstersWithThisSpell": [
+      "EyeBall",
+      "Spooky",
+      "FoxFire",
+      "MadMirror",
+      "EvilPot"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 10,
+      "hp": 0,
+      "mp": 40,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 62
+    }
+  },
+  "palsyair": {
+    "name": "PalsyAir",
+    "manaCost": 4,
+    "type": "Paralysis",
+    "description": "A breath that paralyzes all enemies.",
+    "monstersWithThisSpell": [
+      "Chamelgon",
+      "Saccer",
+      "FireWeed",
+      "MultiEyes",
+      "DarkEye"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 16,
+      "hp": 112,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 173
+    }
+  },
+  "panicall": {
+    "name": "PanicAll",
+    "manaCost": 5,
+    "type": "Confusion",
+    "description": "Confuses all enemies.",
+    "monstersWithThisSpell": [
+      "MimeSlime",
+      "Chamelgon",
+      "DuckKite",
+      "CragDevil",
+      "JewelBag",
+      "Voodoll",
+      "PutreFish"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 0,
+      "mp": 56,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 89
+    }
+  },
+  "panidance": {
+    "name": "PaniDance",
+    "manaCost": 4,
+    "type": "Confusion",
+    "description": "A dance that confuses all enemies.",
+    "monstersWithThisSpell": ["Skullroo", "FunkyBird", "Exaucers", "Octoreach"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 13,
+      "hp": 74,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 78,
+      "int": 141
+    }
+  },
+  "paralyze": {
+    "name": "Paralyze",
+    "manaCost": 3,
+    "type": "Paralysis",
+    "description": "A physical attack that may paralyze the target.",
+    "monstersWithThisSpell": [
+      "TreeSlime",
+      "Chamelgon",
+      "CactiBall",
+      "EvilSeed",
+      "GiantMoth",
+      "MadHornet",
+      "Mummy",
+      "SabreMan",
+      "Anemon"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 9,
+      "hp": 63,
+      "mp": 0,
+      "atk": 54,
+      "def": 0,
+      "agi": 0,
+      "int": 98
+    }
+  },
+  "pheromone": {
+    "name": "Pheromone",
+    "manaCost": 0,
+    "type": "World",
+    "description": "Attracts enemy monsters of the opposite gender.",
+    "monstersWithThisSpell": ["Warubou", "Lipsy", "Puppetor"],
+    "castableBattle": false,
+    "castableWorld": true,
+    "learnStats": {
+      "lv": 4,
+      "hp": 0,
+      "mp": 28,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 44
+    }
+  },
+  "poisonair": {
+    "name": "PoisonAir",
+    "manaCost": 4,
+    "type": "Poison",
+    "description": "A breath that badly poisons all enemies.",
+    "monstersWithThisSpell": ["Refer to", "PoisonGas"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 14,
+      "hp": 98,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 152
+    }
+  },
+  "poisongas": {
+    "name": "PoisonGas",
+    "manaCost": 3,
+    "type": "Poison",
+    "description": "A breath that poisons all enemies.",
+    "monstersWithThisSpell": [
+      "Poisongon",
+      "Andreal",
+      "WingSnake",
+      "Devipine",
+      "TailEater",
+      "Skularach",
+      "Hork",
+      "Inverzon",
+      "Moray",
+      "Anemon",
+      "RogueWave",
+      "Digong",
+      "Mudou"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 9,
+      "hp": 63,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 98
+    }
+  },
+  "poisonhit": {
+    "name": "PoisonHit",
+    "manaCost": 2,
+    "type": "Poison",
+    "description": "A physical attack that may poison the target.",
+    "monstersWithThisSpell": [
+      "Babble",
+      "Poisongon",
+      "Rayburn",
+      "KingCobra",
+      "Crestpent",
+      "Catapila",
+      "MadHornet",
+      "Skulpent",
+      "Starfish"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 5,
+      "hp": 35,
+      "mp": 0,
+      "atk": 50,
+      "def": 0,
+      "agi": 0,
+      "int": 90
+    }
+  },
+  "psycheup": {
+    "name": "PsycheUp",
+    "manaCost": 3,
+    "type": "Physical",
+    "description": "Inflicts severe damage at the end of the turn.",
+    "monstersWithThisSpell": [
+      "Saccer",
+      "DarkHorn",
+      "ManEater",
+      "Ogre",
+      "MadCandle",
+      "Golem",
+      "Moray",
+      "KingSquid"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 74,
+      "mp": 0,
+      "atk": 82,
+      "def": 68,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "quadhits": {
+    "name": "QuadHits",
+    "manaCost": 6,
+    "type": "Physical",
+    "description": "A physical attack that strikes four times.",
+    "monstersWithThisSpell": ["Refer to", "BiAttack"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 24,
+      "hp": 124,
+      "mp": 0,
+      "atk": 112,
+      "def": 0,
+      "agi": 136,
+      "int": 0
+    }
+  },
+  "radiant": {
+    "name": "Radiant",
+    "manaCost": 2,
+    "type": "Blind",
+    "description": "A blast of light blinds all the enemies.",
+    "monstersWithThisSpell": [
+      "PearlGel",
+      "Slime",
+      "EvilSeed",
+      "TailEater",
+      "GiantMoth",
+      "DarkEye",
+      "Spooky",
+      "MadSpirit",
+      "Scallopa"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 0,
+      "mp": 42,
+      "atk": 0,
+      "def": 0,
+      "agi": 72,
+      "int": 130
+    }
+  },
+  "rainslash": {
+    "name": "RainSlash",
+    "manaCost": 5,
+    "type": "Physical",
+    "description": "A sword attack that hits all enemies.",
+    "monstersWithThisSpell": [
+      "SlimeBorg",
+      "Swordgon",
+      "Serpentia",
+      "BeastNite",
+      "Dumbira",
+      "StubBird",
+      "Snapper",
+      "Armorpion",
+      "SkulRider",
+      "Centasaur",
+      "Roboster",
+      "FishRider",
+      "CancerMan",
+      "AxeShark",
+      "KingSquid",
+      "Esterk"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 15,
+      "hp": 92,
+      "mp": 0,
+      "atk": 90,
+      "def": 0,
+      "agi": 96,
+      "int": 0
+    }
+  },
+  "ramming": {
+    "name": "Ramming",
+    "manaCost": 1,
+    "type": "Suicide",
+    "description": "A fullbody tackle that also hurts the user.",
+    "monstersWithThisSpell": [
+      "BoxSlime",
+      "RockSlime",
+      "Drygon",
+      "MiniDrak",
+      "PillowRat",
+      "GulpBeast",
+      "BullBird",
+      "Belzebub",
+      "BossTroll",
+      "ProtoMech",
+      "Petiteel",
+      "PutreFish",
+      "Digong",
+      "DeathMore2"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 70,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 70,
+      "int": 0
+    }
+  },
+  "revive": {
+    "name": "Revive",
+    "manaCost": 20,
+    "type": "Heal",
+    "description": "Revives a dead monster.",
+    "monstersWithThisSpell": ["Refer to", "Vivify"],
+    "castableBattle": true,
+    "castableWorld": true,
+    "learnStats": {
+      "lv": 27,
+      "hp": 0,
+      "mp": 174,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 274
+    }
+  },
+  "robdance": {
+    "name": "RobDance",
+    "manaCost": 0,
+    "type": "MP-Drain",
+    "description": "A dance that steals an enemy'S MP.",
+    "monstersWithThisSpell": ["Refer to", "OddDance"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 68,
+      "mp": 39,
+      "atk": 0,
+      "def": 0,
+      "agi": 85,
+      "int": 110
+    }
+  },
+  "robmagic": {
+    "name": "RobMagic",
+    "manaCost": 0,
+    "type": "MP-Drain",
+    "description": "Steals MP from an enemy.",
+    "monstersWithThisSpell": [
+      "Dracky",
+      "Oniono",
+      "BeanMan",
+      "GhosTree",
+      "WeedBug",
+      "GoHopper",
+      "SabreMan",
+      "Aquadon"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 7,
+      "hp": 0,
+      "mp": 32,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 51
+    }
+  },
+  "rockthrow": {
+    "name": "RockThrow",
+    "manaCost": 5,
+    "type": "Nature",
+    "description": "Hurls giant boulders at enemies (all)",
+    "monstersWithThisSpell": [
+      "SnakeBat",
+      "Spikerous",
+      "GigaDraco",
+      "HornBeet",
+      "BombCrag",
+      "Baramos"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 16,
+      "hp": 124,
+      "mp": 0,
+      "atk": 102,
+      "def": 0,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "sacrifice": {
+    "name": "Sacrifice",
+    "manaCost": 1,
+    "type": "Suicide",
+    "description": "The user explodes to inflict damage on all enemies.",
+    "monstersWithThisSpell": [
+      "Metabble",
+      "WonderEgg",
+      "Gasgon",
+      "AgDevil",
+      "Facer",
+      "SpikyBoy",
+      "BombCrag"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 28,
+      "hp": 0,
+      "mp": 40,
+      "atk": 0,
+      "def": 140,
+      "agi": 0,
+      "int": 78
+    }
+  },
+  "samsicall": {
+    "name": "SamsiCall",
+    "manaCost": 20,
+    "type": "Unique",
+    "description": "Summons Samsi to battle.",
+    "monstersWithThisSpell": ["Refer to", "TatsuCall"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 30,
+      "hp": 0,
+      "mp": 130,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 400
+    }
+  },
+  "sandstorm": {
+    "name": "SandStorm",
+    "manaCost": 2,
+    "type": "Blind",
+    "description": "Obscures the visibility of all enemies.",
+    "monstersWithThisSpell": [
+      "MiniDrak",
+      "Trumpeter",
+      "BigRoost",
+      "MetalDrak",
+      "Brushead",
+      "RushFish",
+      "Grakos"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 10,
+      "hp": 70,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 70,
+      "int": 0
+    }
+  },
+  "sap": {
+    "name": "Sap",
+    "manaCost": 3,
+    "type": "Debuff",
+    "description": "Lowers DEF of one enemy.",
+    "monstersWithThisSpell": [
+      "TreeSlime",
+      "Drygon",
+      "LizardFly",
+      "Picky",
+      "MadPecker",
+      "MadPlant",
+      "MultiEyes",
+      "MedusaEye",
+      "Orc",
+      "PutrePup",
+      "Skeletor",
+      "Voodoll",
+      "Merman",
+      "AxeShark"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 4,
+      "hp": 0,
+      "mp": 18,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 27
+    }
+  },
+  "scorching": {
+    "name": "Scorching",
+    "manaCost": 8,
+    "type": "Fire2",
+    "description": "Inflicts damage with a huge blast of fire [all}",
+    "monstersWithThisSpell": ["Refer to", "BlazeAir"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 20,
+      "hp": 140,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "sealpray": {
+    "name": "SealPray",
+    "manaCost": 15,
+    "type": "Debuff",
+    "description": "Seals a skill used by the enemy.",
+    "monstersWithThisSpell": ["HaloSlime", "Pixy"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 35,
+      "hp": 87,
+      "mp": 160,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 794
+    }
+  },
+  "shears": {
+    "name": "Shears",
+    "manaCost": 3,
+    "type": "Anti-FM",
+    "description": "Inflicts severe damage on the plant family.",
+    "monstersWithThisSpell": ["BullBird", "Droll", "WarMantis", "MedusaEye"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 68,
+      "mp": 0,
+      "atk": 62,
+      "def": 0,
+      "agi": 72,
+      "int": 0
+    }
+  },
+  "sicklick": {
+    "name": "SickLick",
+    "manaCost": 4,
+    "type": "Debuff",
+    "description": "Licks one enemy to reduce its DEF.",
+    "monstersWithThisSpell": ["Refer to", "LushLicks"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 13,
+      "hp": 81,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 94,
+      "int": 0
+    }
+  },
+  "sidestep": {
+    "name": "SideStep",
+    "manaCost": 1,
+    "type": "Defensive",
+    "description": "A quickfooted skill for dodging attacks.",
+    "monstersWithThisSpell": [
+      "Slabbit",
+      "PillowRat",
+      "WildApe",
+      "LandOwl",
+      "DanceVegi",
+      "Inverzon",
+      "MudDoll"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 9,
+      "hp": 63,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 54,
+      "int": 0
+    }
+  },
+  "sleep": {
+    "name": "Sleep",
+    "manaCost": 3,
+    "type": "Sleep",
+    "description": "Makes a single enemy sleep.",
+    "monstersWithThisSpell": [
+      "HaloSlime",
+      "Almiraj",
+      "BeastNite",
+      "DarkHorn",
+      "Wyvern",
+      "DuckKite",
+      "Dracky",
+      "Slurperon",
+      "Stubsuck",
+      "StagBug",
+      "LampGenie",
+      "Moray",
+      "MerTiger"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 4,
+      "hp": 0,
+      "mp": 24,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 29
+    }
+  },
+  "sleepair": {
+    "name": "SleepAir",
+    "manaCost": 3,
+    "type": "Sleep",
+    "description": "A breath that induces sleep in all enemies.",
+    "monstersWithThisSpell": [
+      "TreeSlime",
+      "TropicGel",
+      "DragonKid",
+      "FairyDrak",
+      "Tonguella",
+      "NoctoKing",
+      "Goategon",
+      "Gulpple",
+      "Toadstool",
+      "Oniono",
+      "Devipine",
+      "ManEater",
+      "Egdracil",
+      "AgDevil",
+      "MadSpirit",
+      "Merman",
+      "Angleron"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 10,
+      "hp": 70,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 108
+    }
+  },
+  "sleepall": {
+    "name": "SleepAll",
+    "manaCost": 5,
+    "type": "Sleep",
+    "description": "Makes all enemies sleep.",
+    "monstersWithThisSpell": ["Refer to", "Sleep"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 11,
+      "hp": 0,
+      "mp": 52,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 83
+    }
+  },
+  "slimeblow": {
+    "name": "SlimeBlow",
+    "manaCost": 3,
+    "type": "Anti-FM",
+    "description": "Inflicts severe damage on the slime family.",
+    "monstersWithThisSpell": [
+      "Serpentia",
+      "FairyRat",
+      "Gigantes",
+      "SpikyBoy",
+      "ProtoMech"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 62,
+      "mp": 0,
+      "atk": 68,
+      "def": 0,
+      "agi": 72,
+      "int": 0
+    }
+  },
+  "slow": {
+    "name": "Slow",
+    "manaCost": 3,
+    "type": "Debuff",
+    "description": "Lowers AGL of one enemy",
+    "monstersWithThisSpell": [
+      "CatFly",
+      "PillowRat",
+      "FairyRat",
+      "Goategon",
+      "MadPlant",
+      "Droll",
+      "PutrePup"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 3,
+      "hp": 0,
+      "mp": 16,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 26
+    }
+  },
+  "slowall": {
+    "name": "SlowAll",
+    "manaCost": 4,
+    "type": "Debuff",
+    "description": "Lowers AGL of all enemy monsters.",
+    "monstersWithThisSpell": ["Refer to", "Slow"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 7,
+      "hp": 0,
+      "mp": 32,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 51
+    }
+  },
+  "snowstorm": {
+    "name": "SnowStorm",
+    "manaCost": 5,
+    "type": "Ice1",
+    "description": "Enemies are flash frozen (all)",
+    "monstersWithThisSpell": ["Refer to", "IceBolt"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 0,
+      "mp": 42,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 108
+    }
+  },
+  "speed": {
+    "name": "Speed",
+    "manaCost": 2,
+    "type": "Stat Buff",
+    "description": "Raises AGL of one monster.",
+    "monstersWithThisSpell": ["Florajay", "Pyuro", "CurseLamp", "Petiteel"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 1,
+      "hp": 0,
+      "mp": 10,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 15
+    }
+  },
+  "speedup": {
+    "name": "SpeedUp",
+    "manaCost": 3,
+    "type": "Stat Buff",
+    "description": "Raises AGL of party monsters (all)",
+    "monstersWithThisSpell": ["Refer to", "Speed"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 5,
+      "hp": 0,
+      "mp": 24,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 36
+    }
+  },
+  "squallhit": {
+    "name": "SquallHit",
+    "manaCost": 2,
+    "type": "Physical",
+    "description": "A physical attack that hits first.",
+    "monstersWithThisSpell": [
+      "WingSlime",
+      "WingSnake",
+      "Antbear",
+      "Grizzly",
+      "MadCat",
+      "AquaHawk",
+      "Phoenix",
+      "Sickler",
+      "ChopClown",
+      "CaptDead",
+      "Roboster",
+      "Aquarella",
+      "Octoraid"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 72,
+      "mp": 0,
+      "atk": 68,
+      "def": 0,
+      "agi": 82,
+      "int": 0
+    }
+  },
+  "stepguard": {
+    "name": "StepGuard",
+    "manaCost": 2,
+    "type": "World",
+    "description": "Protects the party from injurious terrain.",
+    "monstersWithThisSpell": [
+      "WingTree",
+      "Stubsuck",
+      "GiantWorm",
+      "Droll",
+      "DarkCrab"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 10,
+      "hp": 0,
+      "mp": 40,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 62
+    }
+  },
+  "stopspell": {
+    "name": "StopSpell",
+    "manaCost": 3,
+    "type": "Debuff",
+    "description": "Prevents spell casting by all enemies.",
+    "monstersWithThisSpell": [
+      "Crestpent",
+      "CatFly",
+      "DarkHorn",
+      "FaceTree",
+      "Snapper",
+      "Gremlin",
+      "Centasaur",
+      "JewelBag"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 9,
+      "hp": 0,
+      "mp": 44,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 69
+    }
+  },
+  "stormwind": {
+    "name": "StormWind",
+    "manaCost": 10,
+    "type": "Defensive",
+    "description": "Bounces back all breath attacks to all enemies.",
+    "monstersWithThisSpell": ["Refer to", "TailWind"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 19,
+      "hp": 140,
+      "mp": 0,
+      "atk": 0,
+      "def": 126,
+      "agi": 140,
+      "int": 0
+    }
+  },
+  "strongd": {
+    "name": "StrongD",
+    "manaCost": 10,
+    "type": "Defensive",
+    "description": "Strongly protects the user against all attacks.",
+    "monstersWithThisSpell": [
+      "RockSlime",
+      "Orligon",
+      "IronTurt",
+      "RainHawk",
+      "Digster",
+      "IceMan",
+      "StoneMan"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 14,
+      "hp": 98,
+      "mp": 0,
+      "atk": 0,
+      "def": 84,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "suckair": {
+    "name": "SuckAir",
+    "manaCost": 0,
+    "type": "Damage Amp",
+    "description": "Holds in a breath to inflict severe damage next turn",
+    "monstersWithThisSpell": [
+      "DrakSlime",
+      "SkyDragon",
+      "Gismo",
+      "Pumpoise",
+      "Mirudraas2"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 17,
+      "hp": 119,
+      "mp": 0,
+      "atk": 0,
+      "def": 102,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "suckall": {
+    "name": "SuckAll",
+    "manaCost": 2,
+    "type": "Defensive",
+    "description": "Inhales all breath attacks meant for the party.",
+    "monstersWithThisSpell": [
+      "Dragon",
+      "GreatDrak",
+      "Shantak",
+      "Egdracil",
+      "Digster",
+      "CoilBird",
+      "StoneMan"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 13,
+      "hp": 91,
+      "mp": 0,
+      "atk": 0,
+      "def": 78,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "surge": {
+    "name": "Surge",
+    "manaCost": 7,
+    "type": "Purge",
+    "description": "Eliminates all status problems among friends.",
+    "monstersWithThisSpell": [
+      "GoldSlime",
+      "RainHawk",
+      "GoldGolem",
+      "CloudKing",
+      "DracoLord2"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 23,
+      "hp": 0,
+      "mp": 130,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 306
+    }
+  },
+  "surround": {
+    "name": "Surround",
+    "manaCost": 3,
+    "type": "Blind",
+    "description": "Surrounds all enemies in a mirage.",
+    "monstersWithThisSpell": [
+      "Babble",
+      "FairyDrak",
+      "Andreal",
+      "NoctoKing",
+      "FairyRat",
+      "CatMage",
+      "Picky",
+      "Butterfly",
+      "MedusaEye",
+      "Inverzon",
+      "Voodoll",
+      "Angleron"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 10,
+      "hp": 0,
+      "mp": 47,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 74
+    }
+  },
+  "tailwind": {
+    "name": "TailWind",
+    "manaCost": 6,
+    "type": "Defensive",
+    "description": "Bounces back a breath attack to an enemy.",
+    "monstersWithThisSpell": [
+      "WingSlime",
+      "Pteranod",
+      "MadRaven",
+      "KiteHawk",
+      "Phoenix",
+      "MadHornet",
+      "Jamirus",
+      "LampGenie"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 11,
+      "hp": 75,
+      "mp": 0,
+      "atk": 0,
+      "def": 84,
+      "agi": 70,
+      "int": 0
+    }
+  },
+  "takemagic": {
+    "name": "TakeMagic",
+    "manaCost": 2,
+    "type": "MP",
+    "description": "Absorbs the MP of a spell cast against the user.",
+    "monstersWithThisSpell": ["Lazamanus", "Exaucers"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 13,
+      "hp": 0,
+      "mp": 58,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 94
+    }
+  },
+  "tatsucall": {
+    "name": "TatsuCall",
+    "manaCost": 20,
+    "type": "Unique",
+    "description": "Summons Tatsu to battle.",
+    "monstersWithThisSpell": [
+      "WhipBird",
+      "DeadNoble",
+      "GoldGolem",
+      "Hargon",
+      "DeathMore1",
+      "Kagebou"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 20,
+      "hp": 0,
+      "mp": 70,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 100
+    }
+  },
+  "thickfog": {
+    "name": "ThickFog",
+    "manaCost": 8,
+    "type": "Purge",
+    "description": "Creates a fog that prevents the use of all spells.",
+    "monstersWithThisSpell": [
+      "Niterich",
+      "NoctoKing",
+      "WhipBird",
+      "Catapila",
+      "GateGuard",
+      "Shadow",
+      "MadSpirit",
+      "PomPomBom"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 22,
+      "hp": 0,
+      "mp": 120,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 288
+    }
+  },
+  "thordain": {
+    "name": "Thordain",
+    "manaCost": 15,
+    "type": "Lightning",
+    "description": "Huge shards of lightning rip enemies (all)",
+    "monstersWithThisSpell": ["Refer to", "Bolt"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 30,
+      "hp": 0,
+      "mp": 128,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 306
+    }
+  },
+  "tidalwave": {
+    "name": "Tidalwave",
+    "manaCost": 15,
+    "type": "Water",
+    "description": "Summons a towering wall of water (all)",
+    "monstersWithThisSpell": ["Refer to", "WaterShot"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 19,
+      "hp": 112,
+      "mp": 0,
+      "atk": 114,
+      "def": 0,
+      "agi": 132,
+      "int": 0
+    }
+  },
+  "transform": {
+    "name": "Transform",
+    "manaCost": 5,
+    "type": "Unique",
+    "description": "Transforms the user into a chosen enemy.",
+    "monstersWithThisSpell": ["CatMage", "Copycat", "MadMirror"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 21,
+      "hp": 0,
+      "mp": 92,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 159
+    }
+  },
+  "twinhits": {
+    "name": "TwinHits",
+    "manaCost": 6,
+    "type": "Buff",
+    "description": "Doubles the ATK of one monster.",
+    "monstersWithThisSpell": [
+      "Orligon",
+      "StubBird",
+      "AmberWeed",
+      "BeanMan",
+      "ArmorPede",
+      "MultiEyes",
+      "Pixy",
+      "ChopClown",
+      "CurseLamp",
+      "Petiteel",
+      "Grakos"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 17,
+      "hp": 0,
+      "mp": 72,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 119
+    }
+  },
+  "twinslash": {
+    "name": "TwinSlash",
+    "manaCost": 2,
+    "type": "Physical",
+    "description": "Inflicts severe damage but also hurts the user.",
+    "monstersWithThisSpell": ["WildApe", "Dumbira", "ArmorPede", "Skullgon"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 8,
+      "hp": 80,
+      "mp": 0,
+      "atk": 80,
+      "def": 0,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "ultradown": {
+    "name": "UltraDown",
+    "manaCost": 7,
+    "type": "Debuff",
+    "description": "Greatly weakens an enemy.",
+    "monstersWithThisSpell": ["Rosevine", "Titanis", "DeathMore2"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 21,
+      "hp": 0,
+      "mp": 110,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 270
+    }
+  },
+  "upper": {
+    "name": "Upper",
+    "manaCost": 2,
+    "type": "Buff",
+    "description": "Raises DEF of one monster.",
+    "monstersWithThisSpell": [
+      "SlimeNite",
+      "BoxSlime",
+      "PearlGel",
+      "Healer",
+      "Saccer",
+      "Catapila",
+      "ArmorPede",
+      "ArmyCrab",
+      "CurseLamp",
+      "RushFish",
+      "Scallopa",
+      "Starfish"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 2,
+      "hp": 0,
+      "mp": 14,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 22
+    }
+  },
+  "vacuslash": {
+    "name": "VacuSlash",
+    "manaCost": 3,
+    "type": "Wind",
+    "description": "A sword attack enhanced by whirlwinds.",
+    "monstersWithThisSpell": [
+      "Rayburn",
+      "WindBeast",
+      "MadCat",
+      "MadPecker",
+      "BigRoost",
+      "WarMantis",
+      "ArcDemon",
+      "Lionex",
+      "ChopClown"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 11,
+      "hp": 77,
+      "mp": 34,
+      "atk": 66,
+      "def": 0,
+      "agi": 0,
+      "int": 76
+    }
+  },
+  "vacuum": {
+    "name": "Vacuum",
+    "manaCost": 6,
+    "type": "Wind",
+    "description": "Creates a tornado with vicious winds (all)",
+    "monstersWithThisSpell": ["Refer to", "WindBeast"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 19,
+      "hp": 112,
+      "mp": 0,
+      "atk": 114,
+      "def": 0,
+      "agi": 132,
+      "int": 0
+    }
+  },
+  "vivify": {
+    "name": "Vivify",
+    "manaCost": 10,
+    "type": "Heal",
+    "description": "May revive a dead monster.",
+    "monstersWithThisSpell": [
+      "KingSlime",
+      "Unicorn",
+      "Egdracil",
+      "Orc",
+      "Mudron",
+      "Merman",
+      "KingSquid",
+      "Lamia"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 14,
+      "hp": 0,
+      "mp": 63,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 98
+    }
+  },
+  "warcry": {
+    "name": "WarCry",
+    "manaCost": 3,
+    "type": "Stun",
+    "description": "A terrifying cry that stops all enemies.",
+    "monstersWithThisSpell": [
+      "FangSlime",
+      "Drygon",
+      "GulpBeast",
+      "Yeti",
+      "Trumpeter",
+      "EyeBall",
+      "EvilWell",
+      "MerTiger"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 14,
+      "hp": 120,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "watershot": {
+    "name": "Watershot",
+    "manaCost": 5,
+    "type": "Water",
+    "description": "Shoots a high volume of water at an enemy.",
+    "monstersWithThisSpell": [
+      "Bubblemon",
+      "PutreFish",
+      "RogueWave",
+      "WhaleMage"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 13,
+      "hp": 74,
+      "mp": 0,
+      "atk": 60,
+      "def": 0,
+      "agi": 84,
+      "int": 0
+    }
+  },
+  "whistle": {
+    "name": "Whistle",
+    "manaCost": 0,
+    "type": "World",
+    "description": "Attracts enemy monsters.",
+    "monstersWithThisSpell": ["Slabbit", "Watabou", "GiantSlug", "MadCandle"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 4,
+      "hp": 0,
+      "mp": 28,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 44
+    }
+  },
+  "whiteair": {
+    "name": "WhiteAir",
+    "manaCost": 16,
+    "type": "Ice1",
+    "description": "Looses a white shining breath of ice (all)",
+    "monstersWithThisSpell": ["Refer to", "IceStorm"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 20,
+      "hp": 210,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "whitefire": {
+    "name": "WhiteFire",
+    "manaCost": 16,
+    "type": "Fire2",
+    "description": "Inflicts damage with incredible fire (all)",
+    "monstersWithThisSpell": ["Refer to", "Scorching"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 20,
+      "hp": 210,
+      "mp": 0,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 0
+    }
+  },
+  "windbeast": {
+    "name": "WindBeast",
+    "manaCost": 3,
+    "type": "Wind",
+    "description": "Slashes a single monster with sharp whirlwinds.",
+    "monstersWithThisSpell": [
+      "WingSlime",
+      "Pteranod",
+      "MadGoose",
+      "Emyu",
+      "Garudian",
+      "Pyuro",
+      "GiantMoth",
+      "Durran",
+      "NiteWhip",
+      "Exaucers",
+      "Aquadon",
+      "Genosidoh"
+    ],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 13,
+      "hp": 74,
+      "mp": 0,
+      "atk": 60,
+      "def": 0,
+      "agi": 84,
+      "int": 0
+    }
+  },
+  "yellhelp": {
+    "name": "YellHelp",
+    "manaCost": 8,
+    "type": "Nature",
+    "description": "Summons a mass of friends that attack in droves.",
+    "monstersWithThisSpell": ["Refer to", "CallHelp"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 23,
+      "hp": 128,
+      "mp": 64,
+      "atk": 0,
+      "def": 0,
+      "agi": 82,
+      "int": 134
+    }
+  },
+  "zap": {
+    "name": "Zap",
+    "manaCost": 10,
+    "type": "Lightning",
+    "description": "Powerful bolts of lightning lash enemies (all)",
+    "monstersWithThisSpell": ["Refer to", "Bolt"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 15,
+      "hp": 0,
+      "mp": 54,
+      "atk": 0,
+      "def": 0,
+      "agi": 0,
+      "int": 130
+    }
+  },
+  "zombiecut": {
+    "name": "ZombieCut",
+    "manaCost": 3,
+    "type": "Anti-FM",
+    "description": "Inflicts severe damage on the zombie family.",
+    "monstersWithThisSpell": ["MadGopher", "WingTree", "Stubsuck", "Armorpion"],
+    "castableBattle": true,
+    "castableWorld": false,
+    "learnStats": {
+      "lv": 12,
+      "hp": 64,
+      "mp": 0,
+      "atk": 58,
+      "def": 0,
+      "agi": 62,
+      "int": 87
+    }
+  }
+}

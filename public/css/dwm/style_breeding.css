@@ -1,0 +1,376 @@
+
+
+
+
+
+.breedingSkills {
+    display: inline-block;
+}
+
+
+#mainMonsterBreeding {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    width: 700px;
+}
+
+#sidebarFoundLocation {
+    position: absolute;
+    display: none;
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    width: 750px;
+    margin-left: 700px;
+    z-index: 0;
+}
+
+#foundDetails {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#foundMaps {
+    margin-top: 30px;
+    padding: 20px 40px 40px 40px;
+}
+
+#monster-base-2, #monster-mate-2, #monster-base-3, #monster-mate-3, #monster-base-4, #monster-mate-4, #monster-base-5, #monster-mate-5, #monster-base-6, #monster-mate-6, 
+#bmn-oasis, #bmn-pirate, #bmn-ice, #bmn-sky, #bmn-limbo, #bmn-elf, #bmn-traveler {
+    display: none;
+}
+
+#bmn-oasis, #bmn-pirate, #bmn-ice, #bmn-sky, #bmn-limbo, #bmn-elf, #bmn-traveler {
+    font-weight: bold;
+}
+
+
+.breedMapNav {
+    margin-left: 17px;
+}
+
+
+.bms-selected {
+    /*
+    background-color: rgba(0, 120, 0, 0.6);
+    */
+    background-color: rgb(179, 199, 0);
+}
+
+.monsterLocation {
+    background-color: rgba(228, 194, 0, 0.6);
+}
+
+
+
+.breedMapSubs, .bms-selected {
+    border: 1px solid black;
+    margin-left: -7px;
+    padding: 4px 10px 4px 10px;
+    display: inline-block;
+}
+
+
+
+.m-floorNav {
+    position: relative;
+    
+
+}
+
+.m-floorNavBtn {
+    position: absolute;
+    top: -40px;
+}
+
+
+
+
+
+
+#fullMapGrid, #mapSelected {
+    position: relative;
+    border: 10px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 640px;
+    height: 576px;
+}
+
+#sub-mapSelected {
+    display: none;
+    position: relative;
+    border: 10px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mapSelected {
+    background-image: url("/images/dwm/skyWorld.png");
+    background-repeat: no-repeat;
+    background-size: 640px 576px;
+}
+
+.map-hoodsquidcave {
+    background-image: url("/images/dwm/pirate_hoodsquidcave.png");
+    background-repeat: no-repeat;
+    background-size: 640px 576px;
+}
+
+.map-volcano {
+    background-image: url("/images/dwm/pirate_volcano.png");
+    background-repeat: no-repeat;
+    background-position: 0px;
+}
+
+.map-spookyforest {
+    background-image: url("/images/dwm/ice_SpookyForest.png");
+    background-repeat: no-repeat;
+    background-size: 640px 576px;
+}
+
+.map-easternmountain {
+    background-image: url("/images/dwm/ice_Mountain.png");
+    background-repeat: no-repeat;
+    background-size: 320px 576px;
+}
+
+
+
+#fullMapGrid {
+    top: -10px;
+    left: -10px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+}
+
+#subMapGrid {    
+    position: relative;
+    border: 10px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 600px;
+    top: -10px;
+    left: -10px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.mapGridBlock {
+    display: block;
+    border-style: inset;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    /*
+    border-left: none;
+    border-top: none;
+    */
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+.mapGridBlock:hover {
+    background-color: rgba(255, 0, 0, 0.4);
+}
+
+
+
+
+#monsterBreeding {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid black;
+    display: block;
+    width: 700px;
+    z-index: 1;
+}
+
+
+#monsterBox, #foundBox {
+    border: 1px solid black;
+    display: block;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#monsterCombinationBox {
+    display: block;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    min-height: 380px;
+}
+
+#monsterBox {
+    padding-top: 20px;
+    padding-left: 50px;
+    height: 60px;
+}
+
+#monsterName {
+    font-size: 1.3em;
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    width: 200px;
+}
+
+#monsterSkills {
+    font-size: 0.9em;
+    position: relative;
+    display: inline-block;
+    width: 320px;
+    padding-left: 5px;
+}
+
+#monster-family-iconText {
+    margin-left: 24px;
+    display: inline-block;
+    font-size: 0.8em;
+}
+
+#monster-family-icon {
+    position: absolute;
+    display: inline-block;
+    background-image: url("/images/dwm/monsterFamilyIcons.png");
+    background-repeat: no-repeat;
+    background-size: 92px 72px;
+    background-position: 0px 0px;
+    width: 20px;
+    height: 20px;
+}
+
+
+
+#foundBox {
+    font-size: 0.9em;
+    padding-left: 20px;
+    height: 55px;
+}
+
+#foundLocation {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 170px;
+}
+
+#doesLocationExist {
+    display: inline-block;
+}
+
+
+#foundLocationDetails {
+    display: inline-block;
+    margin-left: 5px;
+    width: 210px;
+}
+
+#mapToggleBtn {
+    position: absolute;
+    margin-top: -15px;
+    right: 21px;
+    height: 55px;
+}
+
+#monster-sort-title {
+    text-align: left;
+}
+
+#monster-base-title, #monster-mate-title {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    width: 280px;
+}
+
+
+
+
+
+#monster-recipes-box {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 0px;
+}
+
+
+
+
+.monster-base, .monster-mate {
+    text-align: left;
+    padding: 15px;
+    width: 270px;
+}
+
+.monster-base {
+    border: 1px solid black;
+    grid-column: 1;
+}
+
+.monster-mate {
+    border: 1px solid rgb(0, 0, 0);
+    margin-left: -15px;
+    grid-column: 2;
+}
+
+
+
+
+.monMaterials, .monMaterials-notonlist {
+    margin-right: 8px;
+    display: inline-block;
+}
+
+
+.monMaterials {
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+#monster-req-box {
+    padding: 30px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#monster-req-name {
+    font-weight: bolder;
+    grid-column: 1;
+    width: 170px;
+}
+
+
+#monster-req-list {
+    text-align: left;
+    grid-column: 2;
+    padding-left: 20px;
+    height: 100px;
+    width: 370px;
+}
+
+
+.breedingSkills:hover, .breedMapSubs:hover, .monMaterials:hover {
+    background-color: rgb(134, 134, 134);
+    cursor: pointer;
+}
+
+.monMaterials:active, .breedingSkills:active, .breedMapSubs:active {
+    background-color: rgba(133, 102, 0, 0.5);
+}
+
+
+
+
+
+
