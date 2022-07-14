@@ -14,6 +14,21 @@ h3 {
     margin: auto;
 }
 
+
+#chartDate {
+    height: 44px;
+    font-weight: bold;
+    font-family: arial;
+    font-size: 1.2em;
+    margin-top: 20px;
+    width: 200px;
+    margin: auto;
+    background: white;
+    padding: 8px 0;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
 #mainContent {
     background-color: white;
     width: 100%;
@@ -58,18 +73,6 @@ h3 {
     cursor: pointer;
 }
 
-#chartDate {
-    font-weight: bold;
-    font-family: arial;
-    font-size: 1.2em;
-    margin-top: 20px;
-    width: 200px;
-    margin: auto;
-    background: white;
-    padding: 8px 0;
-    border: 2px solid;
-    border-radius: 10px;
-}
 
 #statBlock {
     width: 300px;
@@ -78,4 +81,5 @@ h3 {
     padding: 8px 0;
     border: 2px solid;
     border-radius: 10px;
+    height: 200px;
 }
