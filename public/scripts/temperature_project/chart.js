@@ -14,196 +14,6 @@ function initChart(door_or_curtain_mode = "none") {
     google.charts.setOnLoadCallback(() => { updateChart(chartArray, colorArray, door_or_curtain_mode, true) });
 }
 
-/*
-function initChart() {
-    data = new google.visualization.DataTable();
-    data.addColumn('datetime', 'Time of Day');
-    data.addColumn('number', 'Door Open');
-    data.addColumn('number', 'Door closed');
-    data.addRows([]);
-    
-    options = {
-        title: 'Apartment Temperature Data',
-        subtitle: 'Dots represent temperature measurements',
-        width: 800,
-        // backgroundColor: 'transparent',
-        height: 360,
-        colors: ['#1554c7', '#4bc70c', '#ec8f6e', '#f3b49f', '#f6c7b6'],
-        pointSize: 5,
-        dataOpacity: 0,
-        hAxis: {
-            title: 'Time of day',
-            viewWindow: {
-                min: lowerTimeLimit,
-                max: upperTimeLimit
-            },
-            gridlines: {
-                count: -1,
-                units: {
-                    days: { format: ['MMM dd'] },
-                    hours: { format: ['HH:mm', 'ha'] }
-                }
-            },
-            minorGridlines: {
-              units: {
-                hours: {format: ['hh:mm:ss a', 'ha']},
-                minutes: {format: ['HH:mm a Z', ':mm']}
-              }
-            }
-        },
-        vAxis: {
-            title: 'Temperature (C)',
-            viewWindow: {
-                min: 0,
-                max: 40
-            }
-        }
-    };
-    chart = new google.visualization.AreaChart(document.getElementById('myChart'));
-    chart.draw(data, options);
-}
-*/
-
-
-/*
-function initChart(array) {
-    data = new google.visualization.DataTable();
-    //data = google.visualization.arrayToDataTable(
-    //    googleDataArray
-    //);
-    // data.addColumn('datetime', 'Time of Day');
-    data.addColumn('datetime', 'Temperature');
-    data.addColumn('number', 'Average day');
-    data.addColumn('number', 'day');
-    
-    data.addRows(
-        googleDataArray
-    );
-    
-    displayStats()
-    
-    options = {
-        title: 'Company Performance',
-        hAxis: {
-            titleTextStyle: {color: '#333'},
-            title: 'Time of day',
-            viewWindow: {
-                min: lowerTimeLimit,
-                max: upperTimeLimit
-            },
-            gridlines: {
-                count: -1,
-                units: {
-                    days: { format: ['MMM dd'] },
-                    hours: { format: ['HH:mm', 'ha'] }
-                }
-            },
-            minorGridlines: {
-              units: {
-                hours: {format: ['hh:mm:ss a', 'ha']},
-                minutes: {format: ['HH:mm a Z', ':mm']}
-              }
-            }
-        },
-        
-        vAxis: {
-            title: 'Temperature (C)',
-            minValue: 0,
-            viewWindow: {
-                min: 0,
-                max: 40
-            }
-        }
-    };
-    chart = new google.visualization.AreaChart(document.getElementById('myChart'));
-    chart.draw(data, options);
-}
-*/
-
-function createGoogleDataArray(curtain_or_door) {
-    googleDataArray = []
-    var array = []
-    var curtain_or_doorState = allData.data[0][0][curtain_or_door]
-    for (let i = 0; i < allData.data.length; i++) {
-        for (let j = 0; j < allData.data[i].length; j++) {
-            if (curtain_or_doorState == allData.data[i][j][curtain_or_door]) {
-                if (curtain_or_doorState == true) {
-                    array = [new Date(allData.data[i][j].year, allData.data[i][j].month, allData.data[i][j].day, allData.data[i][j].hour, allData.data[i][j].min), allData.data[i][j].temperature, null]
-                } else if (curtain_or_doorState == false) {
-                    array = [new Date(allData.data[i][j].year, allData.data[i][j].month, allData.data[i][j].day, allData.data[i][j].hour, allData.data[i][j].min), null, allData.data[i][j].temperature]
-                } else {
-                    // if attribute undefined
-                    array = [new Date(allData.data[i][j].year, allData.data[i][j].month, allData.data[i][j].day, allData.data[i][j].hour, allData.data[i][j].min), allData.data[i][j].temperature, null]
-                }
-                array = [new Date(allData.data[i][j].year, allData.data[i][j].month, allData.data[i][j].day, allData.data[i][j].hour, allData.data[i][j].min), allData.data[i][j].temperature, null]
-            } else {
-                array = [new Date(allData.data[i][j].year, allData.data[i][j].month, allData.data[i][j].day, allData.data[i][j].hour, allData.data[i][j].min), allData.data[i][j].temperature, allData.data[i][j].temperature]
-                curtain_or_doorState = allData.data[i][j][curtain_or_door]
-            }
-            googleDataArray.push(
-                array
-            )
-        }
-    }
-    return googleDataArray
-}
-
-
-
-/*
-function initChart(array) {
-    // var data = new google.visualization.DataTable();
-    data = new google.visualization.DataTable();
-    data.addColumn('datetime', 'Time of Day');
-    data.addColumn('number', 'Temperature');
-    data.addColumn('number', 'Average day');
-    data.addRows(
-        array
-    );
-    
-    displayStats()
-    options = {
-        title: 'Apartment Temperature Data',
-        subtitle: 'Dots represent temperature measurements',
-        width: 800,
-        // backgroundColor: 'transparent',
-        height: 360,
-        colors: ['#1554c7', '#4bc70c', '#ec8f6e', '#f3b49f', '#f6c7b6'],
-        pointSize: 5,
-        dataOpacity: 0.5,
-        legend: { position: 'none' },
-        hAxis: {
-            title: 'Time of day',
-            viewWindow: {
-                min: lowerTimeLimit,
-                max: upperTimeLimit
-            },
-            gridlines: {
-                count: -1,
-                units: {
-                    days: { format: ['MMM dd'] },
-                    hours: { format: ['HH:mm', 'ha'] }
-                }
-            },
-            minorGridlines: {
-              units: {
-                hours: {format: ['hh:mm:ss a', 'ha']},
-                minutes: {format: ['HH:mm a Z', ':mm']}
-              }
-            }
-        },
-        vAxis: {
-            title: 'Temperature (C)',
-            viewWindow: {
-                min: 0,
-                max: 40
-            }
-        }
-    };
-    chart = new google.visualization.LineChart(document.getElementById('myChart'));
-    chart.draw(data, options);
-}
-*/
 
 function chartChangeDay(next_or_previous_day) {
     if (next_or_previous_day == "next") {
@@ -235,32 +45,12 @@ function chartChangeDay(next_or_previous_day) {
 }
 
 
-
-
-// var googleDataArray = []
-/*
-function createGoogleDataArray() {
-    googleDataArray = []
-
-    for (let i = 0; i < allData.data.length; i++) {
-        for (let j = 0; j < allData.data[i].length; j++) {
-            googleDataArray.push(
-                [new Date(allData.data[i][j].year, allData.data[i][j].month, allData.data[i][j].day, allData.data[i][j].hour, allData.data[i][j].min), allData.data[i][j].temperature, null]
-            )
-        }
-    }
-    return googleDataArray
-}
-*/
-
-
-
 function updateChart(array, colorArray, door_or_curtain_mode, isLineChart) {
     data = new google.visualization.DataTable();
     data.addColumn('datetime', 'Time of Day');
     if (door_or_curtain_mode == "curtainsClosed") {
-        data.addColumn('number', 'Curtains Open');
-        data.addColumn('number', 'Curtains Closed');
+        data.addColumn('number', 'Curtains Closed: false');
+        data.addColumn('number', 'Curtains Closed: true');
     } else if (door_or_curtain_mode == "doorClosed") {
         data.addColumn('number', 'Door Open');
         data.addColumn('number', 'Door Closed');    
@@ -268,6 +58,7 @@ function updateChart(array, colorArray, door_or_curtain_mode, isLineChart) {
         data.addColumn('number', 'Temperature');
         data.addColumn({type: 'string', role:'annotation'});
     }
+    console.log(array)
     data.addRows(
         array
     );
@@ -280,7 +71,7 @@ function updateChart(array, colorArray, door_or_curtain_mode, isLineChart) {
         height: 360,
         colors: colorArray,
         // colors: ['#1554c7', '#4bc70c', '#ec8f6e', '#f3b49f', '#f6c7b6'],
-        pointSize: 5,
+        pointSize: 0,
         dataOpacity: 0,
         hAxis: {
             title: 'Time of day',
@@ -320,17 +111,87 @@ function updateChart(array, colorArray, door_or_curtain_mode, isLineChart) {
     chart.draw(data, options);
 }
 
+function createGoogleDataArray(curtain_or_door) {
+    googleDataArray = []
+    var array = []
+    var last_action_swap = false
+    var curtain_or_doorState = true
+    for (let i = 0; i < allData.data.length; i++) {
+        for (let j = 0; j < allData.data[i].length; j++) {
+            var tempDate = new Date(allData.data[i][j].year, allData.data[i][j].month, allData.data[i][j].day, allData.data[i][j].hour, allData.data[i][j].min)
+            curtain_or_doorState = allData.data[i][j][curtain_or_door]
+
+            if (curtain_or_doorState == true) {
+                if (j == allData.data[i].length - 1) {
+                    array = [tempDate, allData.data[i][j].temperature, allData.data[i][j].temperature]
+                } else if (allData.data[i][j + 1][curtain_or_door] == true) { // keep
+                    array = [tempDate, allData.data[i][j].temperature, null]
+                    last_action_swap = false;
+                } else if (allData.data[i][j + 1][curtain_or_door] == false) { // swap
+                    if (last_action_swap == true) { // quick-swap
+                        array = [tempDate, allData.data[i][j].temperature, null]
+                        googleDataArray.push(array)
+                        array = [tempDate, null, allData.data[i][j].temperature]
+                    } else { // normal
+                        array = [tempDate, allData.data[i][j].temperature, allData.data[i][j].temperature]
+                    }
+                    last_action_swap = true;
+                }
+            } else if (curtain_or_doorState == false) {
+                if (j == allData.data[i].length - 1) {
+                    array = [tempDate, null, allData.data[i][j].temperature]
+                } else if (allData.data[i][j + 1][curtain_or_door] == false) { // keep
+                    array = [tempDate, null, allData.data[i][j].temperature]
+                    last_action_swap = false;
+                } else if (allData.data[i][j + 1][curtain_or_door] == true) { // swap
+                    if (last_action_swap == true) { // quick-swap
+                        array = [tempDate, null, allData.data[i][j].temperature]
+                        googleDataArray.push(array)
+                        array = [tempDate, allData.data[i][j].temperature, null]
+                    } else { // normal
+                        array = [tempDate, allData.data[i][j].temperature, allData.data[i][j].temperature]
+                    }
+                    last_action_swap = true;
+                }
+            }
+
+            /*
+            if (curtain_or_doorState == allData.data[i][j][curtain_or_door]) {
+                if (curtain_or_doorState == true) {
+                    array = [tempDate, allData.data[i][j].temperature, null]
+                } else if (curtain_or_doorState == false) {
+                    array = [tempDate, null, allData.data[i][j].temperature]
+                } else {
+                    // if attribute undefined
+                    array = [tempDate, allData.data[i][j].temperature, null]
+                }
+                // array = [tempDate, allData.data[i][j].temperature, null]
+            } else {
+                array = [tempDate, allData.data[i][j].temperature, allData.data[i][j].temperature]
+                last_curtain_or_doorState = curtain_or_doorState
+                curtain_or_doorState = allData.data[i][j][curtain_or_door]
+            }
+            */
+
+            googleDataArray.push(
+                array
+            )
+        }
+    }
+    return googleDataArray
+}
 
 function createGoogleDataArray_LineChart() {
     googleDataArray = []
     for (let i = 0; i < allData.data.length; i++) {
         for (let j = 0; j < allData.data[i].length; j++) {
+            var tempDate = new Date(allData.data[i][j].year, allData.data[i][j].month, allData.data[i][j].day, allData.data[i][j].hour, allData.data[i][j].min)
             if (allData.data[i][j].temperature == allData.maxList[i].temperature) {
-                array = [new Date(allData.data[i][j].year, allData.data[i][j].month, allData.data[i][j].day, allData.data[i][j].hour, allData.data[i][j].min), allData.data[i][j].temperature, "Max"]
+                array = [tempDate, allData.data[i][j].temperature, "Max"]
             } else if (allData.data[i][j].temperature == allData.minList[i].temperature) {
-                array = [new Date(allData.data[i][j].year, allData.data[i][j].month, allData.data[i][j].day, allData.data[i][j].hour, allData.data[i][j].min), allData.data[i][j].temperature, "Min"]
+                array = [tempDate, allData.data[i][j].temperature, "Min"]
             } else {
-                array = [new Date(allData.data[i][j].year, allData.data[i][j].month, allData.data[i][j].day, allData.data[i][j].hour, allData.data[i][j].min), allData.data[i][j].temperature, null]
+                array = [tempDate, allData.data[i][j].temperature, null]
             }
             googleDataArray.push(array)
         }
@@ -361,3 +222,4 @@ function selectDropdown() {
         googleChartUpdate(['#1554c7'])
     }
 }
+

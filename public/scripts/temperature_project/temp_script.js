@@ -75,7 +75,7 @@ function getDataFunc() {
                         dataArray.push({})
                         dataArray[i].temperature = data.result[i].payload.temp
                         dataArray[i].curtainsClosed = data.result[i].payload.curtainsClosed
-                        dataArray[i].doorClosed = typeof (data.result[i].payload.doorClosed) == "undefined" ? "none" : data.result[i].payload.doorClosed;
+                        dataArray[i].doorClosed = typeof (data.result[i].payload.doorClosed) == "undefined" ? true : data.result[i].payload.doorClosed;
                         dataArray[i].formattedTime = (data.result[i].payload.time.dayOfYear * 100) + data.result[i].payload.time.hour + (data.result[i].payload.time.min * 0.01)
                         dataArray[i].hour = data.result[i].payload.time.hour
                         dataArray[i].min = data.result[i].payload.time.min
