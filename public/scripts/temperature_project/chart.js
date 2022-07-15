@@ -49,11 +49,11 @@ function updateChart(array, colorArray, door_or_curtain_mode, isLineChart) {
     data = new google.visualization.DataTable();
     data.addColumn('datetime', 'Time of Day');
     if (door_or_curtain_mode == "curtainsClosed") {
-        data.addColumn('number', 'Curtains Open');
         data.addColumn('number', 'Curtains Closed');
+        data.addColumn('number', 'Curtains Open');
     } else if (door_or_curtain_mode == "doorClosed") {
-        data.addColumn('number', 'Balcony door Open');
         data.addColumn('number', 'Balcony door Closed');    
+        data.addColumn('number', 'Balcony door Open');
     } else {
         data.addColumn('number', 'Temperature');
         data.addColumn({type: 'string', role:'annotation'});
@@ -215,9 +215,9 @@ function googleChartUpdate(colorArray, door_or_curtain_mode = "none") {
 function selectDropdown() {
     var activeOption = document.getElementById("dataChartModeOptions").value
     if (activeOption == "curtain") {
-        googleChartUpdate(['#4bc70c', '#346fed'], 'curtainsClosed')
+        googleChartUpdate(['#346fed', '#4bc70c'], 'curtainsClosed')
     } else if (activeOption == "door") {
-        googleChartUpdate(['#346fed', '#e38445'], 'doorClosed')
+        googleChartUpdate(['#e38445', '#346fed'], 'doorClosed')
     } else if (activeOption == "data") {
         googleChartUpdate(['#1554c7'])
     }
