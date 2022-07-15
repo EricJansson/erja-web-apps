@@ -49,11 +49,11 @@ function updateChart(array, colorArray, door_or_curtain_mode, isLineChart) {
     data = new google.visualization.DataTable();
     data.addColumn('datetime', 'Time of Day');
     if (door_or_curtain_mode == "curtainsClosed") {
-        data.addColumn('number', 'Curtains Closed: false');
-        data.addColumn('number', 'Curtains Closed: true');
+        data.addColumn('number', 'Curtains Open');
+        data.addColumn('number', 'Curtains Closed');
     } else if (door_or_curtain_mode == "doorClosed") {
-        data.addColumn('number', 'Door Open');
-        data.addColumn('number', 'Door Closed');    
+        data.addColumn('number', 'Balcony door Open');
+        data.addColumn('number', 'Balcony door Closed');    
     } else {
         data.addColumn('number', 'Temperature');
         data.addColumn({type: 'string', role:'annotation'});
