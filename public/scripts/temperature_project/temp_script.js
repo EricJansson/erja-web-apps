@@ -125,6 +125,10 @@ function createBigData(arrayArg) {
         objCount++;
         resultObject.data[curIndex].push(arrayArg[i])
     }
+    if (typeof(resultObject.curDayOfYearIndex) == 'undefined') {
+        resultObject.curDayOfYearIndex = -1
+        resultObject.curDayOfYear = getDayOfYear(curTime)
+    }
     resultObject.maxList = []
     resultObject.minList = []
     for (let i = 0; i < resultObject.data.length; i++) {
